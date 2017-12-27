@@ -1,0 +1,1072 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3" />
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b" />
+    <meta name="sogou_site_verification" content="fXrXuBQkI2"/>
+   
+
+    <title>试用管理</title>
+
+    <link rel="stylesheet" href="/css/merchant/left_nav.css">
+    <link rel="stylesheet" href="/css/merchant/store_manage.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap">
+    <link rel="stylesheet" href="/css/plugins/dataTables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/merchant/header.css">
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <!--<link rel="stylesheet" href="">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/mall/html5.js"></script>
+    <script src="/js/mall/respond.min.js"></script>
+    <script src="/js/mall/selectivizr-min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.10.2.js"></script>
+<!--	<script src="/js/WdatePicker.js"></script>-->
+    <script src="/js/common.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+
+<!-- Page-Level Plugin Scripts - Tables -->
+<!--<script src="js/plugins/dataTables/jquery.dataTables.js"></script>-->
+<!--<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>-->
+    <script src="/js/merchant/merchant_common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul>
+                <li ><a href="/">返回首页</a></li>
+                <li><a href="/merchant_personal.html">欢迎您：<span>13510541770  <img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>                <li><a href="/login/logout">退出</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <div class="left" style="padding-top: 9px;">
+            <img class="logo" onclick="location.href='/'" src="/images/merchant/xqy_logo_default.png" alt="">
+            <span class="details_title">商家中心</span>
+        </div>
+
+      <!--<div class="advertisement right" >
+                   <a href="" target="_blank" title="">
+             <img style="margin-top:-3px;" src="images/merchant/adv4.png" alt="">
+         </a>
+        </div>-->
+
+    </div>
+    <div class="line"></div>
+</div>
+
+    <div class="left_nav">
+    <!-- 发布试用 -->
+    <div class="issue">
+        <a style=" cursor:pointer" onclick="issue_try()">发布试用</a>
+    </div>
+    <div class="title personal_center">
+        <a href="/merchant_personal.html">个人中心</a>
+    </div>
+    <div class="title store_manage">
+        <a href="/merchant_store.html">店铺管理</a>
+    </div>
+    <div class="title try_manage">
+        <a class="selected" href="javascript:void(0);">活动管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_activity_manage.html">试用管理</a></li>
+            <li><a href="/merchant_order_manage.html">订单管理</a></li>
+        </ul>
+    </div>
+    <div class="title account_information">
+        <a class="selected" href="javascript:void(0);">账号信息</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_basic_setup.html">基本设置</a></li>
+            <li><a href="/merchant_bankcard_manage.html">绑定银行卡</a></li>
+            <li><a href="/merchant_member_manage.html">会员管理</a></li>
+        </ul>
+    </div>
+    <div class="title fund_manage">
+        <a class="selected" href="javascript:void(0);">资金管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_deposit_recharge.html">我要充值</a></li>
+            <li><a href="/merchant_deposit_withdraw.html">押金提现</a></li>
+            <li><a href="/merchant_funds_record.html">资金记录</a></li>
+            <li><a href="/merchant_activity_subsidiary.html">活动明细</a></li>
+        </ul>
+    </div>
+    <div class="title invited_manage">
+        <a class="selected" href="javascript:void(0);">邀请返利</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_invite/friends_invited.html">好友邀请</a></li>
+            <li><a href="/merchant_invite/invited_reward.html">邀请奖励</a></li>
+        </ul>
+    </div>
+    <div class="title message_center">
+        <a id="message_num"  href="/merchant_message_center.html">消息中心</a>
+    </div>
+</div>
+
+<!--联系客服-->
+<!--<div class="contact_customerService">-->
+<!--    <div class="contact_wayContent">-->
+<!--        <div class="left contact_way">-->
+<!--            <div class="title">-->
+<!--                <p>在线客服</p>-->
+<!--            </div>-->
+<!--            <ul>-->
+<!--	    	    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852369353&site=qq&menu=yes" target="_blank">试客巴—阿育王</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506830&site=qq&menu=yes" target="_blank" >试客巴—张洁</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506831&site=qq&menu=yes" target="_blank">试客巴—大表哥</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506832&site=qq&menu=yes" target="_blank">试客巴—肖祥</a></li>-->
+<!--            </ul>-->
+<!--	 </div>-->
+<!--        <div class="right contact_wayBtn">-->
+<!--            <img id="customerService" src="../../images/lianxikefu/contact_bg_right_default.png" alt="">-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+
+<script src="//wp.qiye.qq.com/qidian/2852130118/cc918eff1c09f7ce9c9d5d3285818e2b" charset="utf-8"></script>
+
+<script>
+    (function() {
+        $('.title > a').on('click',function(){
+            var this_ul = $(this).parent().children('ul');
+
+            $(this).toggleClass('selected');
+            $(this).hasClass('selected')?this_ul.slideDown('fast'):this_ul.slideUp('fast');
+        })
+
+    })()
+    $(function(){
+
+        $('.contact_customerService').on('mouseover',function(){
+            $('.contact_way').show();
+        });
+        $('.contact_customerService').on('mouseout',function(){
+            $('.contact_way').hide();
+        });
+        $.ajax({
+            url : '/merchant_userapi/get_sideinfo',
+            data:{},
+            type : 'post',
+            dataType : 'json',
+            cache : false,
+            success : function (result){
+               // $("#act_num").text("试用管理");
+               // $("#order_num").text("订单管理("+result.order_count+")");
+                $("#message_num").text("消息中心("+result.mess_count+")");
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    });
+</script>    <div id="page-wrapper">
+
+   
+    <link rel="stylesheet" href="/css/merchant/reset_content.css">
+<!--    <link rel="stylesheet" href="/css/merchant/modal_alert.css">-->
+    <link rel="stylesheet" href="/css/merchant/activity_manage.css">
+    <link rel="stylesheet" href="/fonts/iconfont.css">
+    <link rel="stylesheet" href="/css/public_alert/modal_alert_new.css">
+<section id="section">
+    <div class="section_main">
+        <!--左侧导航-->
+        <aside class="left" id="left_nav"></aside>        
+        <!--右侧活动中心-->
+        <div id="my_main" class="content left" style="background-color: #fff">
+            <div class="activity_manage">
+                <h1 class="title">试用管理</h1>
+                <!--所有订单的状态种类-->
+                <div class="order_status">
+                    <ul>
+                        <li class="order"><a  class="personal_active"  href="/merchant_activity_manage.html?order_status=0">所有试用（<span>92</span>）</a><b>|</b></li>
+                        <li class="order"><a  href="/merchant_activity_manage.html?order_status=5">待完善试用（<span>0</span>）</a><b>|</b></li>
+                        <li class="order"><a  href="/merchant_activity_manage.html?order_status=1">待付款试用（<span>0</span>）</a><b>|</b></li>
+                        <li class="order"><a  href="/merchant_activity_manage.html?order_status=2">待发布试用（<span>0</span>）</a><b>|</b></li>
+                        <li class="order"><a  href="/merchant_activity_manage.html?order_status=3">活动中试用（<span>5</span>）</a><b>|</b></li>
+                        <li class="order"><a  href="/merchant_activity_manage.html?order_status=4">已结束试用（<span>86</span>）</a></li>
+                    </ul>
+                </div>
+                <!--查询和回收站-->
+                <div class="inquire_recycleBin clearfix">
+                    <!--查询搜索框-->
+                    <div class="left inquire_box">
+                        <ul class="clearfix">
+                            <li class="goods_name">商品名称：</li>
+                            <li class="input_box"><input type="text" id="product_name" placeholder="请输入商品名称" value=""></li>
+                            <li class="inquire_btn"><input type="button" value="查询" onclick="search()"></li>
+                        </ul>
+                    </div>
+                    <!--试用回收站-->
+                    <div class="right recycle_bin">
+                        <a  class="iconfont icon-p-delet" href="/merchant_activity_manage.html/activity_manage_recycleBin" target="_blank">&nbsp;试用回收站</a>
+                    </div>
+                </div>
+                <!--商品发货状态-->
+                                                                                    <div class="delivery_status">
+                    <div class="title">
+                        <p class="left">
+                            <span class="type3">&nbsp;商品综合优化试用</span>
+                            <span>发布时间：2017-10-22</span>
+                            <span>活动编号：16962</span>
+                            <span>押金合计：<b>630.00</b></span>
+
+                            <span>金币合计：<b>42.00</b></span>
+                        </p>
+                        <p class="right">
+                            <a href="/merchant_activity_details?act_id=16962" target="_blank">进展详情</a>
+                        </p>
+                    </div>
+                    <div class="detalis">
+                        <ul>
+                            <li><img style="width:80px;height:80px" src="http://pic-img.shike8888.com/ln_mnt3/201709/30/m/5/22310204-2d87-82b0-73d5-df94c582b9331506757944.jpeg?imageView2/2/w/348" alt=""></li>
+                            <li>
+                                <p>商品名称：<span>奥迪双钻悠悠球</span></p>
+                                <p>店铺名称：<span> 小滑头益智玩具</span></p>
+                                <p>商品来源：<span>淘宝</span></p>
+                                <p>商品分类：<span>
+                                母婴儿童
+                                ，每单拍1个</span></p>
+                            </li>
+<!--                            <li>-->
+<!--                               <p>商品押金：<span>--><!--元</span></p>-->
+<!--                                <p>试用担保金：<span>--><!---元</span></p>-->
+<!--                                <p>商品运费：<span>--><!--元</span></p>-->
+<!--                                <p>订单合计：<span>--><!--元</span></p>-->
+<!--                            </li>-->
+
+                                                                                                                                            <li>
+                                <p><span>待开奖</span></p>
+                            </li>
+                            <li>
+                                <div class="table_cell">
+                                <p class="status"><span>试用活动待开奖</span></p>
+                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>
+                                </div>
+
+                            </li>
+                            <!--                            --><!--                            <li>-->
+<!--                                <p><span>已开奖</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <p class="status"><span>试用活动已开奖</span></p>-->
+<!--                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=--><!--&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>-->
+<!--                            </li>-->
+<!--                            --> 
+                                                                                    <input type="hidden" id="activity_list_id_0" value="16962">
+                                                        <input type="hidden" id="activity_list_time_0" value="1508645334">
+                            <input type="hidden" id="activity_money_16962" value="630.00">
+                        </ul>
+                        <!--新添 begin 第三期-->
+                        <p class="tryNum_detail">
+                            <span>试用总份数：<b>30份</b></span>
+                            <span>申请人数：<b>21人</b></span>
+                            <span>已中奖：<b>0 份</b></span>
+                            <span>已领取：<b>0 份</b></span>
+                                                    </p>
+                        <!--新添 end 第三期-->
+                    </div>
+                </div>
+                                                                    <div class="delivery_status">
+                    <div class="title">
+                        <p class="left">
+                            <span class="type3">&nbsp;商品综合优化试用</span>
+                            <span>发布时间：2017-10-22</span>
+                            <span>活动编号：16931</span>
+                            <span>押金合计：<b>1239.00</b></span>
+
+                            <span>金币合计：<b>43.60</b></span>
+                        </p>
+                        <p class="right">
+                            <a href="/merchant_activity_details?act_id=16931" target="_blank">进展详情</a>
+                        </p>
+                    </div>
+                    <div class="detalis">
+                        <ul>
+                            <li><img style="width:80px;height:80px" src="http://pic-img.shike8888.com/ln_mnt3/201710/12/m/5/08aa683e-4f8b-423e-2d17-e0709301c1561507771433.jpeg?imageView2/2/w/348" alt=""></li>
+                            <li>
+                                <p>商品名称：<span>超级飞侠玩具 卡尔叔叔+战车兽魂</span></p>
+                                <p>店铺名称：<span> 帮帮熊奥迪玩具店</span></p>
+                                <p>商品来源：<span>淘宝</span></p>
+                                <p>商品分类：<span>
+                                母婴儿童
+                                ，每单拍1个</span></p>
+                            </li>
+<!--                            <li>-->
+<!--                               <p>商品押金：<span>--><!--元</span></p>-->
+<!--                                <p>试用担保金：<span>--><!---元</span></p>-->
+<!--                                <p>商品运费：<span>--><!--元</span></p>-->
+<!--                                <p>订单合计：<span>--><!--元</span></p>-->
+<!--                            </li>-->
+
+                                                                                                                                            <li>
+                                <p><span>待开奖</span></p>
+                            </li>
+                            <li>
+                                <div class="table_cell">
+                                <p class="status"><span>试用活动待开奖</span></p>
+                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>
+                                </div>
+
+                            </li>
+                            <!--                            --><!--                            <li>-->
+<!--                                <p><span>已开奖</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <p class="status"><span>试用活动已开奖</span></p>-->
+<!--                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=--><!--&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>-->
+<!--                            </li>-->
+<!--                            --> 
+                                                                                    <input type="hidden" id="activity_list_id_1" value="16931">
+                                                        <input type="hidden" id="activity_list_time_1" value="1508640238">
+                            <input type="hidden" id="activity_money_16931" value="1239.00">
+                        </ul>
+                        <!--新添 begin 第三期-->
+                        <p class="tryNum_detail">
+                            <span>试用总份数：<b>20份</b></span>
+                            <span>申请人数：<b>60人</b></span>
+                            <span>已中奖：<b>4 份</b></span>
+                            <span>已领取：<b>4 份</b></span>
+                                                    </p>
+                        <!--新添 end 第三期-->
+                    </div>
+                </div>
+                                                                    <div class="delivery_status">
+                    <div class="title">
+                        <p class="left">
+                            <span class="type3">&nbsp;商品综合优化试用</span>
+                            <span>发布时间：2017-10-22</span>
+                            <span>活动编号：16929</span>
+                            <span>押金合计：<b>567.00</b></span>
+
+                            <span>金币合计：<b>40.80</b></span>
+                        </p>
+                        <p class="right">
+                            <a href="/merchant_activity_details?act_id=16929" target="_blank">进展详情</a>
+                        </p>
+                    </div>
+                    <div class="detalis">
+                        <ul>
+                            <li><img style="width:80px;height:80px" src="http://pic-img.shike8888.com/ln_mnt3/201710/14/m/5/227833bc-10a4-a1c0-22e7-89f6a8d7eda01507944737.jpeg?imageView2/2/w/348" alt=""></li>
+                            <li>
+                                <p>商品名称：<span>迷你超级飞侠</span></p>
+                                <p>店铺名称：<span> 小滑头益智玩具</span></p>
+                                <p>商品来源：<span>淘宝</span></p>
+                                <p>商品分类：<span>
+                                母婴儿童
+                                ，每单拍1个</span></p>
+                            </li>
+<!--                            <li>-->
+<!--                               <p>商品押金：<span>--><!--元</span></p>-->
+<!--                                <p>试用担保金：<span>--><!---元</span></p>-->
+<!--                                <p>商品运费：<span>--><!--元</span></p>-->
+<!--                                <p>订单合计：<span>--><!--元</span></p>-->
+<!--                            </li>-->
+
+                                                                                                                                            <li>
+                                <p><span>待开奖</span></p>
+                            </li>
+                            <li>
+                                <div class="table_cell">
+                                <p class="status"><span>试用活动待开奖</span></p>
+                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>
+                                </div>
+
+                            </li>
+                            <!--                            --><!--                            <li>-->
+<!--                                <p><span>已开奖</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <p class="status"><span>试用活动已开奖</span></p>-->
+<!--                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=--><!--&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>-->
+<!--                            </li>-->
+<!--                            --> 
+                                                                                    <input type="hidden" id="activity_list_id_2" value="16929">
+                                                        <input type="hidden" id="activity_list_time_2" value="1508645278">
+                            <input type="hidden" id="activity_money_16929" value="567.00">
+                        </ul>
+                        <!--新添 begin 第三期-->
+                        <p class="tryNum_detail">
+                            <span>试用总份数：<b>30份</b></span>
+                            <span>申请人数：<b>45人</b></span>
+                            <span>已中奖：<b>0 份</b></span>
+                            <span>已领取：<b>0 份</b></span>
+                                                    </p>
+                        <!--新添 end 第三期-->
+                    </div>
+                </div>
+                                                                    <div class="delivery_status">
+                    <div class="title">
+                        <p class="left">
+                            <span class="type3">&nbsp;商品综合优化试用</span>
+                            <span>发布时间：2017-10-21</span>
+                            <span>活动编号：16848</span>
+                            <span>押金合计：<b>945.00</b></span>
+
+                            <span>金币合计：<b>38.00</b></span>
+                        </p>
+                        <p class="right">
+                            <a href="/merchant_activity_details?act_id=16848" target="_blank">进展详情</a>
+                        </p>
+                    </div>
+                    <div class="detalis">
+                        <ul>
+                            <li><img style="width:80px;height:80px" src="http://pic-img.shike8888.com/ln_mnt3/201710/15/m/5/f0cb7d18-cb2a-8dec-3df5-9e50434d01391508039686.jpeg?imageView2/2/w/348" alt=""></li>
+                            <li>
+                                <p>商品名称：<span>坦克10合一拼装积木</span></p>
+                                <p>店铺名称：<span> 同步拼装玩具店</span></p>
+                                <p>商品来源：<span>淘宝</span></p>
+                                <p>商品分类：<span>
+                                母婴儿童
+                                ，每单拍1个</span></p>
+                            </li>
+<!--                            <li>-->
+<!--                               <p>商品押金：<span>--><!--元</span></p>-->
+<!--                                <p>试用担保金：<span>--><!---元</span></p>-->
+<!--                                <p>商品运费：<span>--><!--元</span></p>-->
+<!--                                <p>订单合计：<span>--><!--元</span></p>-->
+<!--                            </li>-->
+
+                                                                                                                                            <li>
+                                <p><span>待开奖</span></p>
+                            </li>
+                            <li>
+                                <div class="table_cell">
+                                <p class="status"><span>试用活动待开奖</span></p>
+                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>
+                                </div>
+
+                            </li>
+                            <!--                            --><!--                            <li>-->
+<!--                                <p><span>已开奖</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <p class="status"><span>试用活动已开奖</span></p>-->
+<!--                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=--><!--&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>-->
+<!--                            </li>-->
+<!--                            --> 
+                                                                                    <input type="hidden" id="activity_list_id_3" value="16848">
+                                                        <input type="hidden" id="activity_list_time_3" value="1508551923">
+                            <input type="hidden" id="activity_money_16848" value="945.00">
+                        </ul>
+                        <!--新添 begin 第三期-->
+                        <p class="tryNum_detail">
+                            <span>试用总份数：<b>20份</b></span>
+                            <span>申请人数：<b>95人</b></span>
+                            <span>已中奖：<b>16 份</b></span>
+                            <span>已领取：<b>15 份</b></span>
+                                                    </p>
+                        <!--新添 end 第三期-->
+                    </div>
+                </div>
+                                                                    <div class="delivery_status">
+                    <div class="title">
+                        <p class="left">
+                            <span class="type3">&nbsp;商品综合优化试用</span>
+                            <span>发布时间：2017-10-21</span>
+                            <span>活动编号：16772</span>
+                            <span>押金合计：<b>1239.00</b></span>
+
+                            <span>金币合计：<b>43.60</b></span>
+                        </p>
+                        <p class="right">
+                            <a href="/merchant_activity_details?act_id=16772" target="_blank">进展详情</a>
+                        </p>
+                    </div>
+                    <div class="detalis">
+                        <ul>
+                            <li><img style="width:80px;height:80px" src="http://pic-img.shike8888.com/ln_mnt3/201710/20/m/5/4deda965-d6fc-9871-9203-e36efec753091508484450.jpeg?imageView2/2/w/348" alt=""></li>
+                            <li>
+                                <p>商品名称：<span>小动物系列积木10款10盒套装</span></p>
+                                <p>店铺名称：<span> 同步拼装玩具店</span></p>
+                                <p>商品来源：<span>淘宝</span></p>
+                                <p>商品分类：<span>
+                                母婴儿童
+                                ，每单拍1个</span></p>
+                            </li>
+<!--                            <li>-->
+<!--                               <p>商品押金：<span>--><!--元</span></p>-->
+<!--                                <p>试用担保金：<span>--><!---元</span></p>-->
+<!--                                <p>商品运费：<span>--><!--元</span></p>-->
+<!--                                <p>订单合计：<span>--><!--元</span></p>-->
+<!--                            </li>-->
+
+                                                                                                                                            <li>
+                                <p><span>待开奖</span></p>
+                            </li>
+                            <li>
+                                <div class="table_cell">
+                                <p class="status"><span>试用活动待开奖</span></p>
+                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>
+                                </div>
+
+                            </li>
+                            <!--                            --><!--                            <li>-->
+<!--                                <p><span>已开奖</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <p class="status"><span>试用活动已开奖</span></p>-->
+<!--                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=--><!--&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>-->
+<!--                            </li>-->
+<!--                            --> 
+                                                                                    <input type="hidden" id="activity_list_id_4" value="16772">
+                                                        <input type="hidden" id="activity_list_time_4" value="1508528881">
+                            <input type="hidden" id="activity_money_16772" value="1239.00">
+                        </ul>
+                        <!--新添 begin 第三期-->
+                        <p class="tryNum_detail">
+                            <span>试用总份数：<b>20份</b></span>
+                            <span>申请人数：<b>151人</b></span>
+                            <span>已中奖：<b>14 份</b></span>
+                            <span>已领取：<b>12 份</b></span>
+                                                    </p>
+                        <!--新添 end 第三期-->
+                    </div>
+                </div>
+                                                                    <div class="delivery_status">
+                    <div class="title">
+                        <p class="left">
+                            <span class="type3">&nbsp;商品综合优化试用</span>
+                            <span>发布时间：2017-10-20</span>
+                            <span>活动编号：16698</span>
+                            <span>押金合计：<b>567.00</b></span>
+
+                            <span>金币合计：<b>40.80</b></span>
+                        </p>
+                        <p class="right">
+                            <a href="/merchant_activity_details?act_id=16698" target="_blank">进展详情</a>
+                        </p>
+                    </div>
+                    <div class="detalis">
+                        <ul>
+                            <li><img style="width:80px;height:80px" src="http://pic-img.shike8888.com/ln_mnt3/201710/20/m/5/7beb9ff2-d45b-9c31-a394-f78a8cf8998e1508465627.jpeg?imageView2/2/w/348" alt=""></li>
+                            <li>
+                                <p>商品名称：<span>迷你超级飞侠</span></p>
+                                <p>店铺名称：<span> 小滑头益智玩具</span></p>
+                                <p>商品来源：<span>淘宝</span></p>
+                                <p>商品分类：<span>
+                                母婴儿童
+                                ，每单拍1个</span></p>
+                            </li>
+<!--                            <li>-->
+<!--                               <p>商品押金：<span>--><!--元</span></p>-->
+<!--                                <p>试用担保金：<span>--><!---元</span></p>-->
+<!--                                <p>商品运费：<span>--><!--元</span></p>-->
+<!--                                <p>订单合计：<span>--><!--元</span></p>-->
+<!--                            </li>-->
+
+                                                                                                                <!--                            --><!--                            <li>-->
+<!--                                <p><span>已开奖</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <p class="status"><span>试用活动已开奖</span></p>-->
+<!--                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=--><!--&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>-->
+<!--                            </li>-->
+<!--                            --> 
+                                                        <li>
+                                <p><span>已结束</span></p>
+                            </li>
+                            <li>
+                                <div class="table_cell">
+                                <p class="status"><span>试用活动已结束</span></p>
+                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>
+                                <p style="margin: 3px 0;"><a onclick="return repost_check(3166, 16698, 1);" href="javascript:void(0);" style="display: block;text-decoration: none;font-size: 14px;width: 140px;margin: 0 auto;border-radius: 5px;color: white;background-color: orange;">一键重新发布试用</a></p>
+                                </div>
+                            </li>
+                                                                                    <input type="hidden" id="activity_list_id_5" value="16698">
+                                                        <input type="hidden" id="activity_list_time_5" value="1508472160">
+                            <input type="hidden" id="activity_money_16698" value="567.00">
+                        </ul>
+                        <!--新添 begin 第三期-->
+                        <p class="tryNum_detail">
+                            <span>试用总份数：<b>30份</b></span>
+                            <span>申请人数：<b>142人</b></span>
+                            <span>已中奖：<b>26 份</b></span>
+                            <span>已领取：<b>26 份</b></span>
+                                                    </p>
+                        <!--新添 end 第三期-->
+                    </div>
+                </div>
+                                                                    <div class="delivery_status">
+                    <div class="title">
+                        <p class="left">
+                            <span class="type3">&nbsp;商品综合优化试用</span>
+                            <span>发布时间：2017-10-20</span>
+                            <span>活动编号：16689</span>
+                            <span>押金合计：<b>735.00</b></span>
+
+                            <span>金币合计：<b>49.00</b></span>
+                        </p>
+                        <p class="right">
+                            <a href="/merchant_activity_details?act_id=16689" target="_blank">进展详情</a>
+                        </p>
+                    </div>
+                    <div class="detalis">
+                        <ul>
+                            <li><img style="width:80px;height:80px" src="http://pic-img.shike8888.com/ln_mnt3/201709/30/m/5/22310204-2d87-82b0-73d5-df94c582b9331506757944.jpeg?imageView2/2/w/348" alt=""></li>
+                            <li>
+                                <p>商品名称：<span>奥迪双钻悠悠球（加送一个战车兽魂玩具）</span></p>
+                                <p>店铺名称：<span> 小滑头益智玩具</span></p>
+                                <p>商品来源：<span>淘宝</span></p>
+                                <p>商品分类：<span>
+                                母婴儿童
+                                ，每单拍1个</span></p>
+                            </li>
+<!--                            <li>-->
+<!--                               <p>商品押金：<span>--><!--元</span></p>-->
+<!--                                <p>试用担保金：<span>--><!---元</span></p>-->
+<!--                                <p>商品运费：<span>--><!--元</span></p>-->
+<!--                                <p>订单合计：<span>--><!--元</span></p>-->
+<!--                            </li>-->
+
+                                                                                                                <!--                            --><!--                            <li>-->
+<!--                                <p><span>已开奖</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <p class="status"><span>试用活动已开奖</span></p>-->
+<!--                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=--><!--&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>-->
+<!--                            </li>-->
+<!--                            --> 
+                                                        <li>
+                                <p><span>已结束</span></p>
+                            </li>
+                            <li>
+                                <div class="table_cell">
+                                <p class="status"><span>试用活动已结束</span></p>
+                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>
+                                <p style="margin: 3px 0;"><a onclick="return repost_check(3166, 16689, 1);" href="javascript:void(0);" style="display: block;text-decoration: none;font-size: 14px;width: 140px;margin: 0 auto;border-radius: 5px;color: white;background-color: orange;">一键重新发布试用</a></p>
+                                </div>
+                            </li>
+                                                                                    <input type="hidden" id="activity_list_id_6" value="16689">
+                                                        <input type="hidden" id="activity_list_time_6" value="1508466067">
+                            <input type="hidden" id="activity_money_16689" value="735.00">
+                        </ul>
+                        <!--新添 begin 第三期-->
+                        <p class="tryNum_detail">
+                            <span>试用总份数：<b>35份</b></span>
+                            <span>申请人数：<b>74人</b></span>
+                            <span>已中奖：<b>33 份</b></span>
+                            <span>已领取：<b>33 份</b></span>
+                                                    </p>
+                        <!--新添 end 第三期-->
+                    </div>
+                </div>
+                                                                    <div class="delivery_status">
+                    <div class="title">
+                        <p class="left">
+                            <span class="type3">&nbsp;商品综合优化试用</span>
+                            <span>发布时间：2017-10-20</span>
+                            <span>活动编号：16687</span>
+                            <span>押金合计：<b>1115.10</b></span>
+
+                            <span>金币合计：<b>39.24</b></span>
+                        </p>
+                        <p class="right">
+                            <a href="/merchant_activity_details?act_id=16687" target="_blank">进展详情</a>
+                        </p>
+                    </div>
+                    <div class="detalis">
+                        <ul>
+                            <li><img style="width:80px;height:80px" src="http://pic-img.shike8888.com/ln_mnt3/201710/12/m/5/08aa683e-4f8b-423e-2d17-e0709301c1561507771433.jpeg?imageView2/2/w/348" alt=""></li>
+                            <li>
+                                <p>商品名称：<span>超级飞侠玩具 卡尔叔叔+战车兽魂</span></p>
+                                <p>店铺名称：<span> 帮帮熊奥迪玩具店</span></p>
+                                <p>商品来源：<span>淘宝</span></p>
+                                <p>商品分类：<span>
+                                母婴儿童
+                                ，每单拍1个</span></p>
+                            </li>
+<!--                            <li>-->
+<!--                               <p>商品押金：<span>--><!--元</span></p>-->
+<!--                                <p>试用担保金：<span>--><!---元</span></p>-->
+<!--                                <p>商品运费：<span>--><!--元</span></p>-->
+<!--                                <p>订单合计：<span>--><!--元</span></p>-->
+<!--                            </li>-->
+
+                                                                                                                <!--                            --><!--                            <li>-->
+<!--                                <p><span>已开奖</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <p class="status"><span>试用活动已开奖</span></p>-->
+<!--                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=--><!--&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>-->
+<!--                            </li>-->
+<!--                            --> 
+                                                        <li>
+                                <p><span>已结束</span></p>
+                            </li>
+                            <li>
+                                <div class="table_cell">
+                                <p class="status"><span>试用活动已结束</span></p>
+                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>
+                                <p style="margin: 3px 0;"><a onclick="return repost_check(3166, 16687, 1);" href="javascript:void(0);" style="display: block;text-decoration: none;font-size: 14px;width: 140px;margin: 0 auto;border-radius: 5px;color: white;background-color: orange;">一键重新发布试用</a></p>
+                                </div>
+                            </li>
+                                                                                    <input type="hidden" id="activity_list_id_7" value="16687">
+                                                        <input type="hidden" id="activity_list_time_7" value="1508468883">
+                            <input type="hidden" id="activity_money_16687" value="1115.10">
+                        </ul>
+                        <!--新添 begin 第三期-->
+                        <p class="tryNum_detail">
+                            <span>试用总份数：<b>18份</b></span>
+                            <span>申请人数：<b>173人</b></span>
+                            <span>已中奖：<b>16 份</b></span>
+                            <span>已领取：<b>16 份</b></span>
+                                                    </p>
+                        <!--新添 end 第三期-->
+                    </div>
+                </div>
+                                                                    <div class="delivery_status">
+                    <div class="title">
+                        <p class="left">
+                            <span class="type1">&nbsp;高人气提升试用</span>
+                            <span>发布时间：2017-10-19</span>
+                            <span>活动编号：16518</span>
+                            <span>押金合计：<b>945.00</b></span>
+
+                            <span>金币合计：<b>38.00</b></span>
+                        </p>
+                        <p class="right">
+                            <a href="/merchant_activity_details?act_id=16518" target="_blank">进展详情</a>
+                        </p>
+                    </div>
+                    <div class="detalis">
+                        <ul>
+                            <li><img style="width:80px;height:80px" src="http://pic-img.shike8888.com/ln_mnt3/201710/19/m/5/657e0969-c0b0-f0c3-1c93-233d4785abff1508378226.jpeg?imageView2/2/w/348" alt=""></li>
+                            <li>
+                                <p>商品名称：<span>乐高式积木坦克10合一拼装积木</span></p>
+                                <p>店铺名称：<span> 同步拼装玩具店</span></p>
+                                <p>商品来源：<span>淘宝</span></p>
+                                <p>商品分类：<span>
+                                母婴儿童
+                                ，每单拍1个</span></p>
+                            </li>
+<!--                            <li>-->
+<!--                               <p>商品押金：<span>--><!--元</span></p>-->
+<!--                                <p>试用担保金：<span>--><!---元</span></p>-->
+<!--                                <p>商品运费：<span>--><!--元</span></p>-->
+<!--                                <p>订单合计：<span>--><!--元</span></p>-->
+<!--                            </li>-->
+
+                                                                                                                <!--                            --><!--                            <li>-->
+<!--                                <p><span>已开奖</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <p class="status"><span>试用活动已开奖</span></p>-->
+<!--                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=--><!--&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>-->
+<!--                            </li>-->
+<!--                            --> 
+                                                        <li>
+                                <p><span>已结束</span></p>
+                            </li>
+                            <li>
+                                <div class="table_cell">
+                                <p class="status"><span>试用活动已结束</span></p>
+                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>
+                                <p style="margin: 3px 0;"><a onclick="return repost_check(3166, 16518, 1);" href="javascript:void(0);" style="display: block;text-decoration: none;font-size: 14px;width: 140px;margin: 0 auto;border-radius: 5px;color: white;background-color: orange;">一键重新发布试用</a></p>
+                                </div>
+                            </li>
+                                                                                    <input type="hidden" id="activity_list_id_8" value="16518">
+                                                        <input type="hidden" id="activity_list_time_8" value="1508379831">
+                            <input type="hidden" id="activity_money_16518" value="945.00">
+                        </ul>
+                        <!--新添 begin 第三期-->
+                        <p class="tryNum_detail">
+                            <span>试用总份数：<b>20份</b></span>
+                            <span>申请人数：<b>114人</b></span>
+                            <span>已中奖：<b>20 份</b></span>
+                            <span>已领取：<b>19 份</b></span>
+                                                    </p>
+                        <!--新添 end 第三期-->
+                    </div>
+                </div>
+                                                                    <div class="delivery_status">
+                    <div class="title">
+                        <p class="left">
+                            <span class="type3">&nbsp;商品综合优化试用</span>
+                            <span>发布时间：2017-10-19</span>
+                            <span>活动编号：16514</span>
+                            <span>押金合计：<b>945.00</b></span>
+
+                            <span>金币合计：<b>38.00</b></span>
+                        </p>
+                        <p class="right">
+                            <a href="/merchant_activity_details?act_id=16514" target="_blank">进展详情</a>
+                        </p>
+                    </div>
+                    <div class="detalis">
+                        <ul>
+                            <li><img style="width:80px;height:80px" src="http://pic-img.shike8888.com/ln_mnt3/201710/15/m/5/f0cb7d18-cb2a-8dec-3df5-9e50434d01391508039686.jpeg?imageView2/2/w/348" alt=""></li>
+                            <li>
+                                <p>商品名称：<span>坦克10合一拼装积木</span></p>
+                                <p>店铺名称：<span> 同步拼装玩具店</span></p>
+                                <p>商品来源：<span>淘宝</span></p>
+                                <p>商品分类：<span>
+                                母婴儿童
+                                ，每单拍1个</span></p>
+                            </li>
+<!--                            <li>-->
+<!--                               <p>商品押金：<span>--><!--元</span></p>-->
+<!--                                <p>试用担保金：<span>--><!---元</span></p>-->
+<!--                                <p>商品运费：<span>--><!--元</span></p>-->
+<!--                                <p>订单合计：<span>--><!--元</span></p>-->
+<!--                            </li>-->
+
+                                                                                                                <!--                            --><!--                            <li>-->
+<!--                                <p><span>已开奖</span></p>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <p class="status"><span>试用活动已开奖</span></p>-->
+<!--                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=--><!--&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>-->
+<!--                            </li>-->
+<!--                            --> 
+                                                        <li>
+                                <p><span>已结束</span></p>
+                            </li>
+                            <li>
+                                <div class="table_cell">
+                                <p class="status"><span>试用活动已结束</span></p>
+                                <p>联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a></p>
+                                <p style="margin: 3px 0;"><a onclick="return repost_check(3166, 16514, 1);" href="javascript:void(0);" style="display: block;text-decoration: none;font-size: 14px;width: 140px;margin: 0 auto;border-radius: 5px;color: white;background-color: orange;">一键重新发布试用</a></p>
+                                </div>
+                            </li>
+                                                                                    <input type="hidden" id="activity_list_id_9" value="16514">
+                                                        <input type="hidden" id="activity_list_time_9" value="1508378321">
+                            <input type="hidden" id="activity_money_16514" value="945.00">
+                        </ul>
+                        <!--新添 begin 第三期-->
+                        <p class="tryNum_detail">
+                            <span>试用总份数：<b>20份</b></span>
+                            <span>申请人数：<b>85人</b></span>
+                            <span>已中奖：<b>18 份</b></span>
+                            <span>已领取：<b>18 份</b></span>
+                                                    </p>
+                        <!--新添 end 第三期-->
+                    </div>
+                </div>
+                                <div style="text-align:center;"><ul class="pagination pagination-sm"><li><a href="/merchant_activity_manage.html/?&amp;per_page=">首页</a></li><li><a href="/merchant_activity_manage.html/?&amp;per_page=">上一页</a></li><li class="active"><a><strong>1</strong></a></li><li><a href="/merchant_activity_manage.html/?&amp;per_page=2">2</a></li><li><a href="/merchant_activity_manage.html/?&amp;per_page=3">3</a></li><li><a href="/merchant_activity_manage.html/?&amp;per_page=4">4</a></li><li><a href="/merchant_activity_manage.html/?&amp;per_page=5">5</a></li><li><a href="/merchant_activity_manage.html/?&amp;per_page=2">下一页</a></li><li><a href="/merchant_activity_manage.html/?&amp;per_page=10">尾页</a></li></ul></div>            </div>
+        </div>
+    </div>
+</section>
+
+<!--确认放入回收站-->
+<div id="into_recycleBin" style="display:none;">
+    <div class="modal_box">
+        <div class="modal_prompt">
+            <span>提示</span>
+            <a class="close" href="javascript:void(0);">
+                <img src="/images/merchant/sj_grzx_tc_off_default.png" alt="">
+            </a>
+        </div>
+        <div class="delete_activity">
+            <p class="activity_ID">活动ID：<span id="act_id"></span></p>
+            <p class="yes">确定将该活动放入回收站？</p>
+        </div>
+        <div class="modal_submit">
+            <input class="confirm" type="button" value="放入回收站" onclick="into_recycle_bin()"/>
+            <input class="cancel" type="button" value="取消" />
+        </div>
+    </div>
+    <div class="mask_layer"></div>
+</div>
+<script src="/js/Shike.js"></script>
+<script>
+    $(function(){
+		$('.try_manage ul>li').find('a').eq(0).addClass('leftNav_active');
+//        标题的点击事件
+        $('.order').bind('click',function(){
+            $(this).find('a').addClass('personal_active');
+            $(this).siblings().find('a').removeClass('personal_active');
+        });
+//        模态框的高度(500：表示头部和尾部高度的和)；
+        $('.mask_layer').height(document.body.offsetHeight+500);
+        bindEvent();
+
+    });
+
+    function bindEvent(){
+//        关闭弹框
+        $('.close,.cancel').bind('click',function(){
+            $('.pay_now_modal,.paymentFailure_modal,.payment_modal').css('display','none');
+            $('#into_recycleBin').hide();
+            enableScroll();
+        });
+    }
+
+    // 是否重复点击一键重新发布试用，默认为否
+    var is_repeat_repost_check = 0;
+
+    // 验证一键重新发布试用
+    function repost_check(seller_id, act_id, platform_id){
+        if(is_repeat_repost_check){
+            return;
+        }
+
+        var url = '/merchant_issue_try2?platform_id='+ platform_id +'&seller_id='+ seller_id +'&old_act_id=' + act_id;
+
+        is_repeat_repost_check = 1;
+
+        $.ajax({
+            url : '/merchant_activity_manage/repost_check',
+            data:{seller_id: seller_id},
+            type : 'post',
+            dataType:'json',
+            cache : false,
+            success : function (result){
+                if(result.status){
+                    location.href = url;
+                }else{
+                    is_repeat_repost_check = 0;
+
+                    Shike.alert(result.msg, '确定');
+                }
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    }
+    // 检索试用信息
+    function search(){
+        var product_name = $('#product_name').val();
+        var order_status = '0';
+
+       location.href = '/merchant_activity_manage/?order_status=' + order_status + '&product_name=' + product_name;
+    }
+
+    // 点击放入回收站
+    function show_into_recycle_bin(act_id){
+        $('#act_id').text(act_id);
+        $('#into_recycleBin').show();
+        disableScroll();
+    }
+
+    // 放入回收站
+    function into_recycle_bin() {
+        var act_id = parseInt($('#act_id').text());
+
+        if(!act_id){
+            Shike.alert('活动ID不能为空', '确定');
+            return;
+        }
+
+        $.ajax({
+            url : '/merchant_activity_manage/into_recycle_bin',
+            data:{act_id: act_id},
+            type : 'post',
+            dataType:'json',
+            cache : false,
+            success : function (result){
+                if(result.success == true){
+                    Shike.custom(['确定'], function(){
+                        Shike.close();
+                        location.reload();
+                    },'<p>放入回收站成功</p>');
+                }else{
+                    Shike.alert('放入回收站失败', '确定');
+                }
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        });
+    }
+</script>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal" style="display:none">
+        <div class="modal_box" style="max-width: 500px">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/mall/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="modal_content">
+                <p style="line-height: 40px;margin: 30px 20px 30px 20px;font-size: 16px ">提示的内容</p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li>关于试客巴</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>联系客服</li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li>
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+
+    </div>
+
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+    </div>
+</footer>
+</div>
+
+<script src="/js/mall/mask_layer.js"></script>
+
+</body>
+</html>

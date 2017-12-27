@@ -1,0 +1,31 @@
+.mui-bar-tab {
+  padding-top: 0.16rem;
+  background-color: #fff;
+}
+.mui-bar-tab a.mui-tab-item.mui-active {
+  color: #f10180 !important;
+}
+.mui-bar-tab a.mui-tab-item {
+  color: #666666 !important;
+}
+.mui-bar-tab a.mui-tab-item .mui-icon {
+  width: .4rem;
+  height: .4rem;
+  font-size: .4rem;
+}
+.mui-bar-tab a.mui-tab-item span.mui-tab-label {
+  font-size: .22rem !important;
+  padding-top: .02rem;
+}
+.mui-bar-tab #index img {
+  width: 0.44rem;
+  height: 0.41rem;
+}
+.mui-bar-tab #home img,
+.mui-bar-tab #tryProgress img {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+.mui-bar {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}

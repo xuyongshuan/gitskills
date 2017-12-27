@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<title>商城头部</title>-->
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <link rel="stylesheet" href="/css/mall/header.css">
+</head>
+<body>
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul class="right">
+                <li><a href="">返回首页</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search" style="height:80px;">
+        <div style="padding-top:9px">
+            <img class="logo" onclick="location.href=''" src="/images/mall/xqy_logo_default.png" alt="">
+            <span class="details_title">欢迎登录</span>
+        </div>
+    </div>
+</div>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="">
+    <title>欢迎登录</title>
+    <link rel="stylesheet" href="/css/shike/reset.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<header id="header"></header>
+<section id="section" style="background-color: #ffe97a;">
+    <div class="login_content">
+        <div class="login_box right">
+            <div class="password_login">
+                <h1 class="left">密码登录</h1>
+                <p class="right">
+                    <a href="/mall/register/shike_register.html">注册买家</a>
+                    <span>/</span>
+                    <a href="/mall/register/merchant_register.html">注册商家</a>
+                </p>
+            </div>
+            <ul> 
+                <li class="account"><input type="text" placeholder="账号/手机号" id="account" onblur="check_nullnm()" onkeydown="enter(event)"></li>
+                <li class="password"><input type="password" placeholder="密码" id="password" onblur="check_nullpw()" onkeydown="enter(event)"></li>
+            </ul>
+            <p class="error" id="inputerror"></p>
+            <p class="login_btn">
+                <input class="enter" type="button" value="登录" onclick="login()" />
+            </p>
+            <div class="forget_password">
+                <a href="forget_password">忘记密码</a>
+                <span>/</span>
+                <span>联系客服：</span>
+                <img src="/images/shike/login_button_QQ_default.png" alt="" onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=3004812947&site=qq&menu=yes')">
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer"></footer>
+<script src="/js/shike/jquery-1.10.2.js"></script>
+<script src="/js/common.js"></script>
+<script>
+    // 按Enter键,执行事件
+    function enter(event){
+        if (event.keyCode == 13)
+        {
+            login();
+        }
+    }
+    function check_nullnm(){
+        var name = $("#account").val();
+  
+       if(name===''){
+           $("#inputerror").text("用户名不能为空");
+       }
+     
+    }
+    function check_nullpw(){
+        var password=$('#password').val();
+          if(password===''){
+           $("#inputerror").text("密码不能为空");
+       } 
+       if(password!==''){
+        $("#inputerror").text("");
+       }
+    }
+    function login(){
+        var name = $("#account").val();
+        var password = $("#password").val();
+        if(name === '' || password === ''){
+            $("#inputerror").text("请输入用户名和密码");
+            return;
+        }else{
+            $.ajax({
+                url : 'login/check_login',
+                type : "POST",
+                datatype : "/json",
+                cache : false,
+                timeout : 20000,
+                data : {name:name,password:password},
+                success : function (result){
+
+                    result = $.parseJSON(result);
+                    if(result.status){
+                    	var pre_url = document.referrer;
+                        if(pre_url.indexOf("search")!=-1)
+                        {
+                            history.back();
+                        }else if(pre_url.indexOf("classify")!=-1)
+                        {
+                            history.back();
+                        }else if(pre_url.indexOf("productdetails")!=-1)
+                        {
+                            history.back();
+                        }else
+                        {
+                            location.href = '';
+                        }
+
+                    }else{
+
+                        $("#inputerror").text(result.msg);
+                        return;
+                    }
+                },
+                error : function(XMLHttpRequest, textStatus){
+                }
+            })
+        }
+
+    }
+</script>
+</body>
+</html>
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li><a href=/mall/register/constact>关于试客巴</a></li>
+                <li>|</li>
+                <li><a href=/mall/register/constact>联系我们</a></li>
+                <li>|</li>
+                <li><a href=/mall/register/constact>联系客服</a></li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>   
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li> 
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 	浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+    </div>
+    <!--<div id="bottommost">-->
+    <!--<img src="/images/footer.png " alt="">-->
+    <!--</div>-->
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+    </div>
+</footer>
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<![endif]-->
+<script src="/js/mall/html5shiv.min.js"></script>
+<script src="/js/mall/respond.min.js"></script>
+<script src="/js/mall/selectivizr-min.js"></script>
+
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type="text/javascript">
+    $(".waiting").click(function(){
+        $('.modal').myAlert('功能正在开发中，尽请期待……');
+        disableScroll();
+    });
+    $('.close,.cancel,.confirm').bind('click',function(){
+        $('.modal,.modal_issue').hide();
+        enableScroll();
+    });
+</script>
+</body>
+</html>
+

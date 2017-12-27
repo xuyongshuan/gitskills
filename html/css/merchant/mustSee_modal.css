@@ -1,0 +1,25 @@
+.merchant_mustSee_modal .modal_box {
+  padding: 25px 84px;
+  margin-left: -355px;
+}
+.merchant_mustSee_modal .modal_box .modal_content h1 {
+  font-size: 24px;
+  color: #f10180;
+  padding-bottom: 20px;
+}
+.merchant_mustSee_modal .modal_box .modal_content p {
+  text-align: left;
+  line-height: 28px;
+  font-size: 14px;
+}
+.merchant_mustSee_modal .modal_box .modal_submit input {
+  width: 80px;
+  height: 30px;
+  line-height: 28px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #c8c8c8;
+  cursor: not-allowed;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}

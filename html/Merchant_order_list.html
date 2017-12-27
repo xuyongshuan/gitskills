@@ -1,0 +1,1864 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3" />
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b" />
+    <meta name="sogou_site_verification" content="fXrXuBQkI2"/>
+   
+
+    <title>商家后台</title>
+
+    <link rel="stylesheet" href="/css/merchant/left_nav.css">
+    <link rel="stylesheet" href="/css/merchant/store_manage.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap">
+    <link rel="stylesheet" href="/css/plugins/dataTables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/merchant/header.css">
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <!--<link rel="stylesheet" href="">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/mall/html5.js"></script>
+    <script src="/js/mall/respond.min.js"></script>
+    <script src="/js/mall/selectivizr-min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.10.2.js"></script>
+<!--	<script src="/js/WdatePicker.js"></script>-->
+    <script src="/js/common.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+
+<!-- Page-Level Plugin Scripts - Tables -->
+<!--<script src="js/plugins/dataTables/jquery.dataTables.js"></script>-->
+<!--<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>-->
+    <script src="/js/merchant/merchant_common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul>
+                <li ><a href="/">返回首页</a></li>
+                <li><a href="/merchant_personal.html">欢迎您：<span>13510541770  <img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>                <li><a href="/login/logout">退出</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <div class="left" style="padding-top: 9px;">
+            <img class="logo" onclick="location.href='/'" src="/images/merchant/xqy_logo_default.png" alt="">
+            <span class="details_title">商家中心</span>
+        </div>
+
+      <!--<div class="advertisement right" >
+                   <a href="" target="_blank" title="">
+             <img style="margin-top:-3px;" src="images/merchant/adv4.png" alt="">
+         </a>
+        </div>-->
+
+    </div>
+    <div class="line"></div>
+</div>
+
+    <div class="left_nav">
+    <!-- 发布试用 -->
+    <div class="issue">
+        <a style=" cursor:pointer" onclick="issue_try()">发布试用</a>
+    </div>
+    <div class="title personal_center">
+        <a href="/merchant_personal.html">个人中心</a>
+    </div>
+    <div class="title store_manage">
+        <a href="/merchant_store.html">店铺管理</a>
+    </div>
+    <div class="title try_manage">
+        <a class="selected" href="javascript:void(0);">活动管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_activity_manage.html">试用管理</a></li>
+            <li><a href="/merchant_order_manage.html">订单管理</a></li>
+        </ul>
+    </div>
+    <div class="title account_information">
+        <a class="selected" href="javascript:void(0);">账号信息</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_basic_setup.html">基本设置</a></li>
+            <li><a href="/merchant_bankcard_manage.html">绑定银行卡</a></li>
+            <li><a href="/merchant_member_manage.html">会员管理</a></li>
+        </ul>
+    </div>
+    <div class="title fund_manage">
+        <a class="selected" href="javascript:void(0);">资金管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_deposit_recharge.html">我要充值</a></li>
+            <li><a href="/merchant_deposit_withdraw.html">押金提现</a></li>
+            <li><a href="/merchant_funds_record.html">资金记录</a></li>
+            <li><a href="/merchant_activity_subsidiary.html">活动明细</a></li>
+        </ul>
+    </div>
+    <div class="title invited_manage">
+        <a class="selected" href="javascript:void(0);">邀请返利</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_invite/friends_invited.html">好友邀请</a></li>
+            <li><a href="/merchant_invite/invited_reward.html">邀请奖励</a></li>
+        </ul>
+    </div>
+    <div class="title message_center">
+        <a id="message_num"  href="/merchant_message_center.html">消息中心</a>
+    </div>
+</div>
+
+<!--联系客服-->
+<!--<div class="contact_customerService">-->
+<!--    <div class="contact_wayContent">-->
+<!--        <div class="left contact_way">-->
+<!--            <div class="title">-->
+<!--                <p>在线客服</p>-->
+<!--            </div>-->
+<!--            <ul>-->
+<!--	    	    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852369353&site=qq&menu=yes" target="_blank">试客巴—阿育王</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506830&site=qq&menu=yes" target="_blank" >试客巴—张洁</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506831&site=qq&menu=yes" target="_blank">试客巴—大表哥</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506832&site=qq&menu=yes" target="_blank">试客巴—肖祥</a></li>-->
+<!--            </ul>-->
+<!--	 </div>-->
+<!--        <div class="right contact_wayBtn">-->
+<!--            <img id="customerService" src="../../images/lianxikefu/contact_bg_right_default.png" alt="">-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+
+<script src="//wp.qiye.qq.com/qidian/2852130118/cc918eff1c09f7ce9c9d5d3285818e2b" charset="utf-8"></script>
+
+<script>
+    (function() {
+        $('.title > a').on('click',function(){
+            var this_ul = $(this).parent().children('ul');
+
+            $(this).toggleClass('selected');
+            $(this).hasClass('selected')?this_ul.slideDown('fast'):this_ul.slideUp('fast');
+        })
+
+    })()
+    $(function(){
+
+        $('.contact_customerService').on('mouseover',function(){
+            $('.contact_way').show();
+        });
+        $('.contact_customerService').on('mouseout',function(){
+            $('.contact_way').hide();
+        });
+        $.ajax({
+            url : '/merchant_userapi/get_sideinfo',
+            data:{},
+            type : 'post',
+            dataType : 'json',
+            cache : false,
+            success : function (result){
+               // $("#act_num").text("试用管理");
+               // $("#order_num").text("订单管理("+result.order_count+")");
+                $("#message_num").text("消息中心("+result.mess_count+")");
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    });
+</script>    <div id="page-wrapper">
+
+   <link rel="stylesheet" href="/css/merchant/reset_content.css">
+<link rel="stylesheet" href="/fonts/iconfont.css">
+<link rel="stylesheet" href="/css/merchant/order_manage_both.css">
+<link rel="stylesheet" href="/css/public_alert/modal_alert_new.css">
+<link rel="stylesheet" href="/css/merchant/order_details.css">
+<link rel="stylesheet" href="/css/merchant/lookScreenshot_modal.css">
+
+<style type="text/css">
+    .back_content {
+        color: #005ea7
+    }
+</style>
+<!--晒单图片放大效果   end--->
+
+<section id="section">
+
+    <div class="section_main">
+        <!--所在位置-->
+        <div class="location_title">
+            <ul>
+                <li>你所在的位置：</li>
+                <li class="order">
+                    <a class="personal_active" href='https://www.shike8888.com/'>首页</a>
+                </li>
+                <li class="order"><img src="/images/merchant/sj_hdgl_icon_arrow_default.png" alt=""></li>
+                <li class="order">
+                    <a class="personal_active" href="/merchant_personal.html">商家中心</a>
+                </li>
+                <li class="order"><img src="/images/merchant/sj_hdgl_icon_arrow_default.png" alt=""></li>
+                <li class="order">
+                    <a href="/merchant_order_manage.html">试用订单管理</a>
+                </li>
+                <li class="order"><img src="/images/merchant/sj_hdgl_icon_arrow_default.png" alt=""></li>
+                <li class="order">  待审核评价订单</li>
+            </ul>
+        </div>
+
+        <!--任务说明-->
+        <div class="store_content">
+
+            <div class="title clearfix">
+                <h1 class="left">待审核评价订单                </h1>
+
+                <span class="desc left">
+                    以下试用订单试客已经在试客巴平台提交评价，待审核后试客将会复制评价内容到淘宝，若超过24小时未审核，平台将自动审核通过                </span>
+            </div>
+                        <div class="clearfix mark_tips">
+                <em class="order_mark iconfont icon-biaoji"></em><span class="f14">标记符号，您可以点击进行信息标记~</span>
+            </div>
+            <div class="filter clearfix">
+                <!-- 筛选店铺 -->
+                <ul class="choose-shop left">
+                    <li>店铺：</li>
+                    <li>
+                        <div class="vocation">
+                                                        <select class="select2" style="cursor: pointer" name="status" id="shop_id"
+                                    onchange="search(this.value)">
+                                <option value="0" selected="selected">全部店铺</option>
+                                                                    <option                                         selected='selected'
+                                                                                value="2102">
+                                         帮帮熊奥迪玩具店                                    </option>
+                                                                    <option                                             value="2203">
+                                         同步拼装玩具店                                    </option>
+                                                                    <option                                             value="2304">
+                                         小滑头益智玩具                                    </option>
+                                                            </select>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 筛选淘宝号 -->
+                <ul class="seachform left">
+                    <li>
+                        <input placeholder="请输入试客淘宝号" id="taobao_id" type="text" class="scinput1">
+                    </li>
+                    <li>
+                        <input  placeholder="请输入淘宝订单号" id="outer_id" type="text" class="scinput1">
+                    </li>
+                    <li>
+                        <label>&nbsp;</label>
+                        <input type="button" class="scbtn" value="查询" onclick="search2()">
+                    </li>
+                </ul>
+                                                    <p class="status" id="delivery_sh">
+                        <input type="hidden" id="hidden_orderid" />
+
+                        <a href="javascript:void(0)" id="pl">批量审核评价<span>0</span>单</a>
+                    </p>
+                                                            </div>
+            <!--所有订单的状态种类-->
+            <div class="table-title">
+                <ul>
+                    <div class="select-all">
+                        <p class="checkbox"></p>
+                        <span>全选</span>
+                    </div>
+                    <li class="product-name">商品</li>
+                    <li class="member-bindTB">试客淘宝账号</li>
+                    <li class="order-num-TB">淘宝订单号</li>
+                    <li class="pay">付款金额</li>
+                    <li class="pic">评价信息</li>
+                    <li class="operation">操作</li>
+                </ul>
+            </div>
+            <!--商品发货状态-->
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="362378"></span>
+                            <span>2017-10-19 20:00:01</span>
+                            <span class="order-num">订单编号：<b>362378</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=362378&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/12/m/5/08aa683e-4f8b-423e-2d17-e0709301c1561507771433.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">超级飞侠玩具 卡尔叔叔+战车兽魂</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：59.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>pan建yong</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>77177923485943367</p>
+                            </li>
+                            <li class="pay">
+                                <p>59.00元</p>
+                            </li>
+                            <li class="pic" data-context="玩具质量真的好好，而且安全无味道，宝贝很喜欢，物流超快。快递员服务态度也很好。感谢店主的推荐和耐心回答">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：玩具质量真的好好，而且安全无味道，宝贝很喜欢，物流超快。快递员服务态度也很好。感谢店主的推荐和耐心回答                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_0" value="1508659960" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_0">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=362378 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=362378 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="360629"></span>
+                            <span>2017-10-19 16:00:00</span>
+                            <span class="order-num">订单编号：<b>360629</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=360629&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/18/m/5/df6eaba0-747e-0fba-735e-918316728da51508290259.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">(有红包）悠悠球</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：20.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>贾小伟洛洛</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>77134184185764975</p>
+                            </li>
+                            <li class="pay">
+                                <p>20.00元</p>
+                            </li>
+                            <li class="pic" data-context="太好了，，收到货儿子就迫不及待的拿出来玩了，质量和外边店里买的一模一样，但是价钱便宜了好多，不错的店家呦，下次给孩子买玩具还来你们家">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：太好了，，收到货儿子就迫不及待的拿出来玩了，质量和外边店里买的一模一样，但是价钱便宜了好多，不错的店家呦，下次给孩子买玩具还来你们家                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_1" value="1508654684" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_1">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=360629 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=360629 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="359356"></span>
+                            <span>2017-10-19 12:00:01</span>
+                            <span class="order-num">订单编号：<b>359356</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=359356&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/18/m/5/df6eaba0-747e-0fba-735e-918316728da51508290259.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">(有红包）悠悠球</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：20.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>宝贝阚宇</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>70838567795886228</p>
+                            </li>
+                            <li class="pay">
+                                <p>20.00元</p>
+                            </li>
+                            <li class="pic" data-context="溜溜球质量超好，正版的，热心的老板还送了小礼物，太满意了">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：溜溜球质量超好，正版的，热心的老板还送了小礼物，太满意了                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_2" value="1508656081" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_2">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=359356 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=359356 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="359352"></span>
+                            <span>2017-10-19 12:00:00</span>
+                            <span class="order-num">订单编号：<b>359352</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=359352&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/18/m/5/df6eaba0-747e-0fba-735e-918316728da51508290259.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">(有红包）悠悠球</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：20.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>猫喜欢鱼588</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>70769042560478232</p>
+                            </li>
+                            <li class="pay">
+                                <p>20.00元</p>
+                            </li>
+                            <li class="pic" data-context="老板发货很快，宝贝特别喜欢，好玩，快递也很给力！">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：老板发货很快，宝贝特别喜欢，好玩，快递也很给力！                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_3" value="1508648922" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_3">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=359352 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=359352 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="358685"></span>
+                            <span>2017-10-19 11:02:11</span>
+                            <span class="order-num">订单编号：<b>358685</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=358685&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/12/m/5/08aa683e-4f8b-423e-2d17-e0709301c1561507771433.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">超级飞侠玩具 卡尔叔叔+战车兽魂</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：59.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>小小帅哥小小</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>75655916821495436</p>
+                            </li>
+                            <li class="pay">
+                                <p>59.00元</p>
+                            </li>
+                            <li class="pic" data-context="玩具收到了孩子很喜欢要我把卡尔叔叔变飞机，下次在来买个可以变飞机的，战车兽魂孩子也很喜欢一直没舍得离手">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：玩具收到了孩子很喜欢要我把卡尔叔叔变飞机，下次在来买个可以变飞机的，战车兽魂孩子也很喜欢一直没舍得离手                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_4" value="1508654705" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_4">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=358685 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=358685 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="357007"></span>
+                            <span>2017-10-18 20:00:01</span>
+                            <span class="order-num">订单编号：<b>357007</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=357007&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/18/m/5/df6eaba0-747e-0fba-735e-918316728da51508290259.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">(有红包）悠悠球</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：20.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>碧云1228</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>76687810219089773</p>
+                            </li>
+                            <li class="pay">
+                                <p>20.00元</p>
+                            </li>
+                            <li class="pic" data-context="包装高端大气、质量杠杠滴、宝贝爱不释手、谢谢店家送的礼物超级想象的好、孩子要的玩具认定你家了！">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：包装高端大气、质量杠杠滴、宝贝爱不释手、谢谢店家送的礼物超级想象的好、孩子要的玩具认定你家了！                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_5" value="1508645820" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_5">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=357007 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=357007 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="356244"></span>
+                            <span>2017-10-18 18:00:59</span>
+                            <span class="order-num">订单编号：<b>356244</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=356244&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/18/m/5/df6eaba0-747e-0fba-735e-918316728da51508290259.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">(有红包）悠悠球</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：20.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>burghley007</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>75410640612077244</p>
+                            </li>
+                            <li class="pay">
+                                <p>20.00元</p>
+                            </li>
+                            <li class="pic" data-context="儿子的最爱，天天看少年火力王啊，然后拿到手就在那秀啊秀啊秀，然后问我帅不帅，好不好，哈哈">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：儿子的最爱，天天看少年火力王啊，然后拿到手就在那秀啊秀啊秀，然后问我帅不帅，好不好，哈哈                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_6" value="1508658508" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_6">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=356244 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=356244 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="356235"></span>
+                            <span>2017-10-18 18:00:53</span>
+                            <span class="order-num">订单编号：<b>356235</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=356235&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/18/m/5/df6eaba0-747e-0fba-735e-918316728da51508290259.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">(有红包）悠悠球</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：20.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>一一麻麻0906</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>76553608733498487</p>
+                            </li>
+                            <li class="pay">
+                                <p>20.00元</p>
+                            </li>
+                            <li class="pic" data-context="孩子很喜欢，很漂亮的悠悠球！质量不错，客服也好，会带朋友来买">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：孩子很喜欢，很漂亮的悠悠球！质量不错，客服也好，会带朋友来买                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_7" value="1508649711" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_7">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=356235 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=356235 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="352009"></span>
+                            <span>2017-10-17 20:00:01</span>
+                            <span class="order-num">订单编号：<b>352009</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=352009&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/14/m/5/e85af389-8206-4590-6ea2-0fa2011b2a091507945727.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">(有红包）悠悠球</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：20.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>王云乖乖</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>74960207783959447</p>
+                            </li>
+                            <li class="pay">
+                                <p>20.00元</p>
+                            </li>
+                            <li class="pic" data-context="颜色浅蓝的，很漂亮的颜色，孩子一看到就很喜欢，容易上手，孩子必备玩具">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：颜色浅蓝的，很漂亮的颜色，孩子一看到就很喜欢，容易上手，孩子必备玩具                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_8" value="1508651824" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_8">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=352009 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=352009 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="350720"></span>
+                            <span>2017-10-17 16:00:01</span>
+                            <span class="order-num">订单编号：<b>350720</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=350720&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/14/m/5/e85af389-8206-4590-6ea2-0fa2011b2a091507945727.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">(有红包）悠悠球</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：20.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>lancykaka2008</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>69900371094417932</p>
+                            </li>
+                            <li class="pay">
+                                <p>20.00元</p>
+                            </li>
+                            <li class="pic" data-context="宝贝很快就收到了，悠悠球质量不错，很好玩，宝宝玩的很高兴">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：宝贝很快就收到了，悠悠球质量不错，很好玩，宝宝玩的很高兴                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_9" value="1508659021" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_9">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=350720 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=350720 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                            <div class="delivery_status">
+                    <div class="title">
+                        <div class="left">
+                            <p class="checkbox"></p>
+                            <span class="order_mark iconfont icon-biaoji" type="0" orderId="339978"></span>
+                            <span>2017-10-15 11:01:16</span>
+                            <span class="order-num">订单编号：<b>339978</b></span>
+                            <span> 帮帮熊奥迪玩具店</span>
+                                                            <img class="taobao-icon" src="/images/merchant/bg_tb_default.png" alt="">
+                            
+                                                    </div>
+                        <div class="right">
+                                                            <a target="_blank"
+                                   href="Merchant_order_details?order_id=339978&extra=0">查看详情 &gt;&gt;</a>
+                                                    </div>
+
+                    </div>
+                    <div class="detalis" id="list">
+                        <ul>
+                            <li class="product-name">
+                                <img class="left" src="http://pic-img.shike8888.com/ln_mnt3/201710/12/m/5/c768fbd7-1209-f996-b081-713cac6e460f1507788644.jpeg?imageView2/2/w/348" alt="">
+                                <p class="name">熊心百变套装</br><span
+                                            style="color:#666666;font-size: 14px;"> 商品价格：45.00</span>
+                                </p>
+
+                            </li>
+                            <li class="member-bindTB">
+                                <p>邵199261026</p>
+                            </li>
+                            <li class="order-num-TB">
+                                <p>73720896721790762</p>
+                            </li>
+                            <li class="pay">
+                                <p>45.00元</p>
+                            </li>
+                            <li class="pic" data-context="宝贝收到了，物流很快，卖家服务态度很好，宝贝特别喜欢，很可爱的玩意，满意极了，">
+                                <p class="link-pic" style="text-align: center">
+
+                                                                                                                        <b style="height: 28px;line-height: 28px;"></b>
+                                        
+                                                                                <a class="pinjia" data-context="                                        评价内容：宝贝收到了，物流很快，卖家服务态度很好，宝贝特别喜欢，很可爱的玩意，满意极了，                                                                                " href="javascript:void(0)">查看评价内容</a>
+                                                                                <span style='display:inline-block;height:15px;width:100%;'></span>未分配到晒图任务                                    
+                                </p>
+                            </li>
+                            <li class="operation">
+                                                                                                    <p class="delivery_2 operation_box">
+                                        <input type="hidden"  id="start_time_down_10" value="1508649698" />
+                                        <a class="time_down" href="javascript:;"><b id="time_notice_10">00:00:00 后</b><br>自动审核通过</a>
+                                        <a class="order_sh main_btn"
+                                           data-context=339978 href="javascript:void(0)">确定审核</a>
+                                        <a class="back_content" style="color:#666666"
+                                           data-context=339978 href="javascript:void(0)">驳回</a>
+                                    </p>
+                                                                                                                            </li>
+                        </ul>
+                    </div>
+                </div>
+                        <div id="pagin" style="width:347px;margin: 0 auto;"><div style="text-align:center;"></div></div>
+
+        </div>
+        <div id="first"></div>
+        <input type="hidden" id="count" value="11">
+        <input type="hidden" id="shop_id" value="2102">
+        <input type="hidden" id="type" value="2">
+    </div>
+
+    <!--截图弹框sgdfgsd--一张图-->
+    <div class="lookScreenshot" style="visibility: hidden;">
+        <div class="lookScreenshot_modal">
+            <h1 class="header">
+                <span class="close_btn">
+                    <img src="/images/winningManage/order_icon_popup_off_default.png" alt="">
+                </span>
+            </h1>
+            <div>
+                <img id="show_img" src="" alt="">
+            </div>
+        </div>
+        <div class="mask_layer_shot"></div>
+    </div>
+
+    <!--截图弹框--一张图-->
+    <div class="lookScreenshot_many" style="visibility: hidden;">
+        <div class="lookScreenshot_modals">
+            <h1 class="header"><span class="close_btns"><img
+                            src="/images/winningManage/order_icon_popup_off_default.png" alt=""></span></h1>
+            <div class="center_carousel left">
+                <!--轮播图-->
+                <div id="myCarousel" class=" slide">
+                    <!--图片-->
+                    <div class="carousel-inner">
+                        <div class="item  active">
+                            <img id="img_0" src="" alt="">
+                        </div>
+                        <div class="item">
+                            <img id="img_1" src="" alt="">
+                        </div>
+                        <div class="item">
+                            <img id="img_2" src="" alt="">
+                        </div>
+                        <div class="item">
+                            <img id="img_3" src="" alt="">
+                        </div>
+                    </div>
+                    <!--左右滑动按钮-->
+                    <a style="margin-left: -200px; top:48%; margin-top:-42px;opacity: 1;background-image: none" class="left carousel-control"
+                       href="#myCarousel" data-slide="prev">
+                        <img src="/images/winningManage/order_icon_popup_life_default.png" alt="">
+                    </a>
+                    <a style="margin-right: -200px; top:48%; margin-top:-42px;opacity: 1;background-image: none"
+                       class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <img src="/images/winningManage/order_icon_popup_right_default.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mask_layer_shot"></div>
+
+    </div>
+</section>
+<input type="hidden" id="status" value="2">
+
+<!--弹框--确认发货-->
+
+<script src="/js/mall/jquery.twbsPagination.js"></script>
+<script src="/js/Shike.js"></script>
+<script src="/js/merchant/lookScreenshot_modal.js"></script>
+<script>
+
+    $(function () {
+        var order_list_count = 11;
+
+        for(var i=0;i<order_list_count;i++) {
+            var timestamp = $("#start_time_down_" + i).val();
+            var obj = $("#time_notice_" + i);
+            var now = "1508660400";
+            var s = parseInt(timestamp) + 3600 * 24 - parseInt(now);
+
+            ydcountdown(s, obj, i);
+        }
+
+        //        标题的点击事件
+        $('.order').bind('click', function () {
+            $(this).find('a').addClass('personal_active');
+            $(this).siblings().find('a').removeClass('personal_active');
+        });
+        //          弹框
+        //        模态框的高度(500：表示头部和尾部高度的和)；
+        $('.mask_layer').height(document.body.offsetHeight + 500);
+        $('#audit').bind('click', function () {
+            $('.audit_modal').css('display', 'block');
+            disableScroll();
+        });
+        //        确认通过
+        $('#confirm_pass').bind('click', function () {
+            $('.pass_modal').css('display', 'block');
+            disableScroll();
+        });
+
+        $('.close,.cancel,.confirm').bind('click', function () {
+            $('.delivery_modal,.audit_modal,.pass_modal').css('display', 'none');
+            enableScroll();
+        });
+
+        //绑定订单标记事件
+        clickOrderMark();
+    })
+    //全部选中店铺
+    var order_arr = [];
+    $('p.checkbox').on('click', function (e) {
+        $(this).hasClass('selected') ? $(this).removeClass('selected') : $(this).addClass('selected');
+        //如果点击的是全选按钮
+        $(e.target).parent().hasClass('select-all') ? toggleALLCheck($(e.target)) : null;
+        var order_num = $(this).parent().children('.order-num').children('b');
+
+        order_num = order_num ? order_num.html() : null;
+
+        order_arr.push(order_num);
+        //统计有多少选中
+        var num = $('.delivery_status p.selected').length;
+        $('#pl').find('span').html(num);
+
+        function toggleALLCheck($allCheck) {
+            //如果全选按钮已选中，则点击后全不选
+            if (!$allCheck.hasClass('selected')) {
+                $('.delivery_status p.checkbox').removeClass('selected');
+            } else {
+                $('.delivery_status p.checkbox').each(function (index, el) {
+                    $(el).hasClass('selected') ? null : $(this).addClass('selected');
+                })
+            }
+        }
+    });
+    //选择店铺的时候去执行
+    function search(url) {
+        var type = $('#type').val();
+        var shop_id = $("#shop_id").val();
+        window.location.href = "merchant_order_list.html?type=" + type + "&shop_id=" + shop_id;
+    }
+    //选择完店铺去搜索
+    function search2(url) {
+        var outer_id = $("#outer_id").val();
+        var taobao_id = $("#taobao_id").val() ? $("#taobao_id").val() : '';
+        var type = $('#type').val();
+        var shop_id = $("#shop_id").val();
+        window.location.href = "merchant_order_list.html?type=" + type + "&shop_id=" + shop_id + "&taobao_id=" + taobao_id + "&outer_id=" + outer_id;
+    }
+    // 倒计时
+    function ydcountdown(s,obj, i){
+        var remain_seconds = s;
+        var hour = parseInt(remain_seconds/3600);
+        hour = (hour<10?'0'+hour:hour);
+        var minutes = parseInt(remain_seconds%3600/60);
+        minutes = (minutes<10?'0'+minutes:minutes);
+        var seconds = parseInt(remain_seconds%60);
+        seconds = (seconds<10)?'0'+seconds:seconds;
+        if(s<0){
+            return;
+        }
+
+        var timestring = '';
+
+        timestring = hour+':'+minutes+':'+seconds+' 后';
+
+        obj.text(timestring);
+
+        if(s == 0){
+            location.reload();
+            return;
+        }
+
+        setTimeout("ydcountdown("+(s-1)+",$('#time_notice_" + i + "'),"+i+")","1000");
+    }
+
+    /**
+     * 给每个订单做标记信息
+     */
+    function clickOrderMark(){
+        //记录点击的id
+        var order_id = 0;
+        var alert_extendDOM = '';
+        alert_extendDOM +=' <div class="mark_pop_up">'
+                             +'<p class="order_info clearfix"><span class="left">订单编号：<b id="order_id"></b></span><span class="clear_mark right">删除标记</span></p>'
+                             +'<p class="order_info">试客淘宝账号：<b id="user_TB_id"></b></p>'
+                             +'<p class="order_info">淘宝订单账号：<b id="TB_order_id"></b></p>'
+                             +'<div>'
+                                +'<ul class="select_mark_list clearfix">'
+                                    +'<li class="mark_item actived left">'
+                                        + '<span class="order_mark iconfont icon-biaoji" type="1"></span>'
+                                    +'</li>'
+                                    +'<li class="mark_item left">'
+                                         + '<span class="order_mark iconfont icon-biaoji" type="2"></span>'
+                                    +'</li>'
+                                    +'<li class="mark_item left">'
+                                       + '<span class="order_mark iconfont icon-biaoji" type="3"></span>'
+                                    +'</li>'
+                                    +'<li class="mark_item left">'
+                                           + '<span class="order_mark iconfont icon-biaoji" type="4"></span>'
+                                    +'</li>'
+                                    +'<li class="mark_item left">'
+                                           + '<span class="order_mark iconfont icon-biaoji" type="5"></span>'
+                                    +'</li>'
+                                 +'</ul>'
+                             +'</div>'
+                            +'<textarea class="mark_content" maxlength="100" name="mark_content" id="mark_content" placeholder="请填写标记信息，字数在100字以内，必填！"></textarea>'
+                            +'<p class="error iconfont icon-shiyongjinzhan_jingshi hided">标记信息必填，请填写标记信息！</p>'
+                        + '</div>';
+
+        //弹框
+        $('.order_mark').on('click',function(){
+
+            order_id = $(this).attr('orderId');
+
+            Shike.custom(['保存','取消'],function(){},alert_extendDOM);
+
+            //弹框，切换标记类型
+            $('.mark_pop_up .mark_item').on('click', function () {
+                $(this).addClass('actived').siblings().removeClass('actived')
+            });
+
+
+            //获取标记信息
+            getMarkContent(order_id);
+
+            function getMarkContent(order_id){
+
+                $.get('/merchant_order_list/get_order_tag',{order_id:order_id},function(data){
+                    //渲染订单号、试客账号、淘宝订单号
+                    $('#order_id').html(data.order_id);
+                    $('#user_TB_id').html(data.taobao_id);
+                    $('#TB_order_id').html(data.outer_orderid);
+
+                    //渲染标记
+                    $('.mark_item').removeClass('actived');
+                    data.order_tag != 0 ?$('.order_mark[type='+data.order_tag +']').parent('.mark_item').addClass('actived'):$('.order_mark[type="1"]').parent('.mark_item').addClass('actived');
+
+                    //渲染内容
+                    $('#mark_content').val(data.order_tag_note)
+                },'json');
+
+            }
+
+            //点击确定增加标记信息
+            $('#alert_do').on('click',function(){
+
+                if($('#mark_content').val().trim().length != 0){
+                    //准备数据发送请求
+                    var order_tag = $('.mark_item[class *= actived]').find('.order_mark').attr('type');
+                    var order_tag_note = $('#mark_content').val().trim();
+
+                    var data = {
+                        order_id:order_id,
+                        order_tag:order_tag,
+                        order_tag_note:order_tag_note
+                    };
+                    //发送请求
+                    $.post('/merchant_order_list/add_order_tag',data);
+                    //反写列表中的标记
+                    $('.order_mark[orderId='+ order_id +']').attr('type',order_tag);
+                    $('.mark_pop_up .error').addClass('hided');
+                    Shike.close();
+
+                }else{
+                    $('.mark_pop_up .error').removeClass('hided')
+                }
+            })
+
+            //点击删除，清空标记信息
+            $('.clear_mark').on('click',function(){
+                $.post('/merchant_order_list/delete_order_tag',{order_id:order_id});
+                $('.order_mark[orderId='+ order_id +']').attr('type',0);
+                Shike.close();
+            })
+        })
+    }
+</script>
+<script>
+
+
+    //查看截图
+    $(function () {
+        bindEves()
+    });
+    function bindEves() {
+        //收藏店铺
+        $('.look_shot').on('click', function () {
+            var url = $(this).data('context');
+            Shike.alert($(this).data('context'), '确定');
+        });
+
+        function lookBtns() {
+            $('.lookScreenshot_many').css('visibility', 'visible');
+            // disableScroll();
+        }
+
+        //关闭收藏店铺
+        function closeBtn() {
+            $('.lookScreenshot').css('visibility', 'hidden');
+            enableScroll();
+        }
+
+        // 批量审核  2=》5
+        $('#delivery_sh').on('click', function () {
+            var order_arr = new Array();
+            $("p.checkbox").each(function (e, index) {
+                if ($(this).hasClass('selected')) {
+                    e = e - 1;
+                    var order_num = $(".checkbox").parent().children('.order-num').children('b').eq(e);
+                    order_num = order_num ? order_num.html() : null;
+                    order_arr.push(order_num);
+                }
+            });
+            if (order_arr == '') {
+                Shike.alert('请先选择要处理的订单', '确定');
+                return false;
+            }
+            Shike.confirm('批量审核？', ['确定', '取消'], function () {
+                    return show_audit_modal(order_arr);
+                }
+            )
+        })
+
+        // 批量发货 1=》6
+        $('#delivery_fh').on('click', function () {
+            var order_arr = new Array();
+            $("p.checkbox").each(function (e, index) {
+                if ($(this).hasClass('selected')) {
+                    e = e - 1;
+                    var order_num = $(".checkbox").parent().children('.order-num').children('b').eq(e);
+                    order_num = order_num ? order_num.html() : null;
+                    order_arr.push(order_num);
+                }
+            });
+            if (order_arr == '') {
+                Shike.alert('请先选择要处理的订单', '确定');
+                return false;
+            }
+
+            Shike.confirm('批量发货？', ['确定', '取消'], function () {
+                    return show_deliver_modal(order_arr);
+
+                }
+            )
+        })
+        $('#delivery_zp').on('click', function () {
+            Shike.confirm('批量追评？', ['确定', '取消'], function () {
+                    return show_pass_modal2();
+                }
+            )
+        });
+        $('.order_zp').on('click', function () {
+            var order_num = $(this).data('context');
+            Shike.confirm('确认通过追评？', ['确定', '取消'], function () {
+                    return show_pass_modal2(order_num);
+                }
+            )
+        });
+
+        // 批量确认评价 3=》7/9
+        $('#delivery_pj').on('click', function () {
+            var order_arr = new Array();
+            $("p.checkbox").each(function (e, index) {
+                if ($(this).hasClass('selected')) {
+                    e = e - 1;
+                    var order_num = $(".checkbox").parent().children('.order-num').children('b').eq(e);
+                    order_num = order_num ? order_num.html() : null;
+                    order_arr.push(order_num);
+                }
+            });
+            if (order_arr == '') {
+                Shike.alert('请先选择要处理的订单', '确定');
+                return false;
+            }
+            Shike.confirm('批量评价？', ['确定', '取消'], function () {
+                    return show_pass_modal(order_arr);
+                }
+            )
+        })
+
+        $('.order_fh').on('click', function () {
+            var order_num = $(this).data('context');
+            var wuliu = $(this).data('wuliu');
+            var yundan = $(this).data('yundan');
+            if (wuliu || yundan) {
+                var str = ''
+                    + "<div class='confirm_delivery' action=''><label for='logistics2'>物&nbsp;流 &nbsp;商</label>"
+                    + "<input id='logistics2' type='text' value='" + wuliu + "'>" + "<p><span id='logistics_error2'></span></p>"
+                    + "<label for='waybill_number2'>运单号</label><input id='waybill_number2' type='text' value='" + yundan + "'>"
+                    + "<p><span id='waybill_number_error2'></span></p>"
+                    + "</div>";
+                Shike.custom(['发货', '取消'], function () {
+                        Shike.close();
+                        return show_deliver_modal(order_num);
+                    }, str
+                )
+            } else {
+                Shike.confirm('确定发货？', ['确定', '取消'], function () {
+                        return show_deliver_modal(order_num);
+                    }
+                )
+
+            }
+        });
+        $('.order_pj').on('click', function () {
+            var order_num = $(this).data('context');
+            Shike.confirm('确认通过？', ['确定', '取消'], function () {
+                    return show_pass_modal(order_num);
+                }
+            )
+        });
+
+        //发货的驳回
+        $(".back_content").on('click', function () {
+            var order_num = $(this).data('context');
+
+//       Shike.prompt('注意：每个订单每个状态最多只能驳回两次，请谨慎填写', ['确定', '取消'], '请填写驳回原因', function () {
+//                var text_content = $('#textarea_content').val();
+////                 rollback(order_num,);
+//                rollback(order_num, text_content);
+//            });
+            check_rollback_nums(order_num);
+//            rollback(order_num, text_content);
+
+        })
+        $('.order_sh').on('click', function () {
+            var order_num = $(this).data('context');
+            Shike.confirm('确认审核通过？', ['确定', '取消'], function () {
+                    return show_audit_modal(order_num);
+                }
+            )
+        })
+        $('.show_img').on('click', function () {
+
+        });
+        //填写运单
+        var str = "<span id='waybill_number_error'>请认真填写物流单号,若商家审核发现有误将会冻结您的资金</span>"
+            + "<form class='confirm_delivery' action=''>"
+            + "<label for='logistics'>物流商：</label><input id='logistics' type='text'>"
+            + "<p><span id='logistics_error'></span></p>"
+            + "<label for='waybill_number'>运单号：</label>"
+            + "<input id='waybill_number' type='text'></form>";
+
+
+        $('#yundanNum').on('click', function () {
+            var order_num = $(this).data('yundan');
+            Shike.custom(['确定', '取消'], function () {
+                    Shike.close();
+                    post_yundanNum(order_num);
+                }, str
+            );
+        });
+    }
+    //发货
+    function post_yundan(order_arr) {
+
+        if (!(typeof(order_arr) == 'string')) {
+            order_arr = JSON.stringify(order_arr);
+        }
+
+        var order_id = order_arr;
+
+        $.ajax({
+            url: '/merchant_personal/update_confirm_ship',
+            data: {order_id: order_id},
+            type: 'post',
+            cache: false,
+            success: function (data) {
+                data = parseInt(data)
+                if (data === 1000) {
+                    Shike.alert("确认发货成功", '确定');
+                    $('#alert_do,.yc-close ').on('click', function () {
+                        location.reload();
+                    })
+                }
+                else {
+                    Shike.alert("确认发货失败", '确定');
+                    $('#alert_do,.yc-close ').on('click', function () {
+                        enableScroll();
+                    })
+                }
+            }
+        })
+    }
+
+
+    //试客已填写单号的确认发货
+    function post_yundan2() {
+        var wuliu = $("#logistics2").val();
+        var yundan = $("#waybill_number2").val();
+        var order_id = $("#hidden_orderid").val();
+        if (!wuliu) {
+            $("#logistics_error2").text("物流不能为空");
+            return;
+        }
+        if (!yundan) {
+            $("#waybill_number_error2").text("运单号不能为空");
+            return;
+        }
+        $.ajax({
+            url: '/merchant_personal/update_confirm_ship',
+            data: {wuliu: wuliu, yundan: yundan, order_id: order_id},
+            //data:{order_id:order_id},
+            type: 'post',
+            cache: false,
+            success: function (data) {
+                if (data == 'true') {
+                    Shike.alert("确认发货成功", '确定');
+                    $('#alert_do,.yc-close ').on('click', function () {
+                        location.reload();
+                    })
+                }
+                else {
+                    Shike.alert("确认发货失败", '确定');
+                    $('#alert_do,.yc-close ').on('click', function () {
+                        enableScroll();
+                    })
+                }
+            },
+            error: function (XMLHttpRequest, textStatus) {
+                alert(2);
+            }
+        })
+    }
+
+    //弹出驳回框
+    $('.btn_alert_one,.btn_alert_two').on('click', function (e) {
+        if ($(e.target).data('pannel')) {
+            var id = $(e.target).data('pannel');
+            $('.audit_modal').hide();
+            $('.pass_modal').hide();
+            $('#' + id + ',.mask_layer').show();
+            //$('body').css('overflow','hidden');
+            disableScroll();
+        }
+    })
+
+
+    // 关闭弹框
+    $('.close,.cancel').on('click', function () {
+        $('.reject').hide();
+        enableScroll();
+    });
+    //点击驳回触发的ajax判断次数
+    function check_rollback_nums(order_num) {
+        $.ajax({
+            url: '/merchant_personal/check_rollback_nums',
+            data: {order_id: order_num},
+            type: 'post',
+            cache: false,
+            success: function (data) {
+                if (data == 1000) {
+                    Shike.prompt('注意：每个订单每个状态最多只能驳回三次，请谨慎填写', ['确定', '取消'], '请填写驳回原因', function () {
+                        var text_content = $('#textarea_content').val();
+                        rollback(order_num, text_content);
+                    });
+
+                } else if (data == 1001) {
+                    Shike.alert('未知的订单ID', '确定');
+
+                } else if (data == 1002) {
+                    Shike.alert('查询的订单跟商家不匹配', '确定');
+                } else {
+                    Shike.alert('已达到最大驳回次数，不能再驳回</br>如有问题，请联系客服', '确定');
+                    return false;
+                }
+            }
+        });
+    }
+
+
+    //商家确认/审核评价的驳回
+    function rollback(order_num, content) {
+        if (content.length == 0) {
+            Shike.alert('请输入驳回的原因', '确定');
+            return false;
+        }
+        var act_id = $("#act_id").val();
+        if (!((typeof(order_num) == 'undefined'))) {
+            var order_id = order_num;
+        } else {
+
+            var order_id = $("#hidden_orderid").val();
+        }
+        shenhe(order_id, content, act_id);
+
+    }
+    //审核方法
+    function shenhe(order_id, content, act_id) {
+
+        $.ajax({
+            url: '/merchant_personal/rollback_shenhe',
+
+            data: {order_id: order_id, content: content, act_id: act_id},
+            type: 'post',
+            cache: false,
+            success: function (data) {
+                if (data == 'true') {
+
+                    Shike.alert('驳回审核成功', '确定');
+                    $('#alert_do,.yc-close ').on('click', function () {
+                        location.reload();
+                    })
+                } else {
+                    Shike.alert('驳回审核失败', '确定');
+                    $('#alert_do,.yc-close ').on('click', function () {
+                        enableScroll();
+                    })
+                }
+            }
+        })
+    }
+    //填写运单号
+    function post_yundanNum(order_id) {
+
+        var wuliu = $("#logistics").val();
+        var yundan = $("#waybill_number").val();
+        if (!wuliu) {
+            //没填写物流信息
+            $("#logistics_error").text("物流不能为空");
+            return;
+        } else if (!yundan) {
+            //没填写运单号
+            $("#waybill_number_error").text("运单号不能为空");
+            return;
+        } else {
+            //已经填写物流信息、运单号
+            $.ajax({
+                url: '/shike_personal/update_confirm_ship',
+                data: {wuliu: wuliu, yundan: yundan, order_id: order_id},
+                //data:{order_id:order_id},
+                type: 'post',
+                cache: false,
+                success: function (data) {
+                    if (data == 1000) {
+                        Shike.alert('提交成功', '确定');
+                        $('#alert_do,.yc-close ').on('click', function () {
+                            location.reload();
+                        })
+                    }
+                    else {
+                        Shike.alert('提交失败', '确定');
+                        $('#alert_do,.yc-close ').on('click', function () {
+                            enableScroll();
+                        })
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus) {
+                }
+            })
+        }
+
+    }
+
+
+    //关闭弹框
+    function clo() {
+        $('.delivery_modal').css('display', 'none');
+        $('.delivery_modal2').css('display', 'none');
+        enableScroll();
+    }
+
+    //关闭弹窗
+    function clo2() {
+        $('.pass_modal2').css('display', 'none');
+        enableScroll();
+        $('.delivery_modal').css('display', 'none');
+    }
+
+
+    function post_shenhe(order_arr) {
+
+        if (!(typeof(order_arr) == 'string')) {
+            order_arr = JSON.stringify(order_arr);
+        }
+        var order_id = order_arr;
+        $.ajax({
+            url: '/merchant_personal/update_shenhe',
+            data: {order_id: order_id},
+            type: 'post',
+            cache: false,
+            success: function (data) {
+                if (data == 1000) {
+                    Shike.alert('确认审核成功', '确定');
+                    $('#alert_do,.yc-close ').on('click', function () {
+                        location.reload();
+                    })
+                } else {
+                    Shike.alert('确认审核失败', '确定');
+                }
+            },
+            error: function (XMLHttpRequest, textStatus) {
+                alert(2);
+            }
+        })
+    }
+
+    function post_tongguo(order_arr) {
+        if (!(typeof(order_arr) == 'string')) {
+            order_arr = JSON.stringify(order_arr);
+        }
+        var order_id = order_arr;
+        $.ajax({
+            url: '/merchant_personal/tongguo_shenhe',
+            data: {order_id: order_id},
+            type: 'post',
+            cache: false,
+            success: function (data) {
+                var data = JSON.parse(data);
+                var datas = data.data;
+                if (datas.length > 0) {
+                    var str = "订单" + datas.join(',') + "确认通过失败";
+                }
+                if (data.code == 1) {
+                    Shike.alert("确认通过成功", '确定');
+                    $('#alert_do,.yc-close ').on('click', function () {
+                        location.reload();
+                    })
+
+                } else {
+                    Shike.custom(['确定'], function () {
+                            Shike.close();
+                            enableScroll();
+                        }, str
+                    );
+                }
+            },
+            error: function (XMLHttpRequest, textStatus) {
+                alert(2);
+            }
+        })
+    }
+    //发货
+    function show_deliver_modal(order_arr) {
+        if (order_arr) {
+            var order_arr = '[' + order_arr + ']';
+        } else {
+            var order_arr = new Array();
+            $("p.checkbox").each(function (e, index) {
+                if ($(this).hasClass('selected')) {
+                    e = e - 1;
+                    var order_num = $(".checkbox").parent().children('.order-num').children('b').eq(e);
+                    order_num = order_num ? order_num.html() : null;
+                    order_arr.push(order_num);
+                }
+            });
+        }
+        $('.delivery_modal').css('display', 'block');
+        $('#hidden_orderid').val(order_arr);
+        post_yundan(order_arr);
+    }
+    function show_deliver_modal2(o, wuliu, yundan) {
+        $('.delivery_modal2').css('display', 'block');
+        $('#hidden_orderid').val(o);
+        $("#logistics2").val(wuliu);
+        $("#waybill_number2").val(yundan);
+
+    }
+    //批量审核
+    function show_audit_modal(order_arr) {
+        if (order_arr) {
+            var order_arr = '[' + order_arr + ']';
+        } else {
+            var order_arr = [];
+            $("p.checkbox").each(function (e, index) {
+                if ($(this).hasClass('selected')) {
+                    e = e - 1;
+                    var order_num = $(".checkbox").parent().children('.order-num').children('b').eq(e);
+                    order_num = order_num ? order_num.html() : null;
+                    order_arr.push(order_num);
+                }
+            });
+        }
+
+//        order_arr = JSON.stringify(order_arr);
+        $('.audit_modal').css('display', 'block');
+        $('#hidden_orderid').val(order_arr);
+        post_shenhe(order_arr);
+        disableScroll();
+    }
+    //确认评价
+    function show_pass_modal(order_arr) {
+        if (order_arr) {
+            var order_arr = '[' + order_arr + ']';
+        } else {
+            var order_arr = [];
+            $("p.checkbox").each(function (e, index) {
+                if ($(this).hasClass('selected')) {
+                    e = e - 1;
+                    var order_num = $(".checkbox").parent().children('.order-num').children('b').eq(e);
+                    order_num = order_num ? order_num.html() : null;
+                    order_arr.push(order_num);
+                }
+            });
+        }
+//        order_arr = JSON.stringify(order_arr);
+        $('.pass_modal').css('display', 'block');
+        disableScroll();
+        $('#hidden_orderid').val(order_arr);
+        post_tongguo(order_arr);
+
+    }
+
+
+    //确认追评
+    function show_pass_modal2(order_arr) {
+        if (order_arr) {
+            var order_arr = '[' + order_arr + ']';
+        } else {
+            var order_arr = [];
+            $("p.checkbox").each(function (e, index) {
+                if ($(this).hasClass('selected')) {
+                    e = e - 1;
+                    var order_num = $(".checkbox").parent().children('.order-num').children('b').eq(e);
+                    order_num = order_num ? order_num.html() : null;
+                    order_arr.push(order_num);
+                }
+            });
+        }
+        $('.pass_modal2').css('display', 'block');
+//        disableScroll();
+        $('#hidden_orderid').val(order_arr);
+        agree_add_comment(order_arr)
+    }
+
+    //同意追评
+    function agree_add_comment(order_arr) {
+        if (!(typeof(order_arr) == 'string')) {
+            order_arr = JSON.stringify(order_arr);
+        }
+        var order_id = order_arr;
+        $.ajax({
+            url: '/merchant_order_details/agree_add_comment',
+            data: {
+                order_id: order_id
+            },
+            type: 'post',
+            cache: false,
+            success: function (data) {
+                var data = JSON.parse(data);
+                var datas = data.data;
+
+                if (datas.length > 0) {
+                    var str = datas.join('-');
+                }
+                if (data.code == '1') {
+                    Shike.alert("确认通过成功", '确定');
+                    $('#alert_do,.yc-close ').on('click', function () {
+                        location.reload();
+                    })
+                } else {
+                    Shike.alert("订单" + str + "确认通过失败", '确定');
+                    $('#alert_do,.yc-close ').on('click', function () {
+                        enableScroll();
+                    })
+                }
+
+            }
+        })
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal" style="display:none">
+        <div class="modal_box" style="max-width: 500px">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="https://www.shike8888.com/images/mall/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="modal_content">
+                <p style="line-height: 40px;margin: 30px 20px 30px 20px;font-size: 16px ">提示的内容</p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li>关于试客巴</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>联系客服</li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li>
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+
+    </div>
+
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+    </div>
+</footer>
+</div>
+
+<script src="https://www.shike8888.com/js/mall/mask_layer.js"></script>
+
+</body>
+</html>

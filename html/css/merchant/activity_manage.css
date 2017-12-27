@@ -1,0 +1,576 @@
+.personal_active {
+  color: #f10180 !important;
+}
+#section .section_main .content .activity_manage {
+  background-color: #fff;
+  padding: 30px;
+}
+#section .section_main .content .activity_manage .order_status {
+  padding-top: 10px;
+}
+#section .section_main .content .activity_manage .order_status ul {
+  overflow: hidden;
+  height: 38px;
+  background-color: #f5f5f5;
+  width: 100%;
+  margin: 18px 0;
+}
+#section .section_main .content .activity_manage .order_status ul li {
+  float: left;
+  font-size: 14px;
+  padding-left: 18px;
+  line-height: 38px;
+}
+#section .section_main .content .activity_manage .order_status ul li > a span {
+  color: #f10180;
+}
+#section .section_main .content .activity_manage .order_status ul li > a:hover {
+  color: #f10180;
+}
+#section .section_main .content .activity_manage .order_status ul li > b {
+  font-weight: normal;
+  color: #969696;
+  margin-left: 16px;
+}
+#section .section_main .content .activity_manage .delivery_status {
+  margin-bottom: 35px;
+}
+#section .section_main .content .activity_manage .delivery_status .title {
+  overflow: hidden;
+  padding: 10px;
+}
+#section .section_main .content .activity_manage .delivery_status .title p {
+  font-size: 14px;
+  height: 16px;
+}
+#section .section_main .content .activity_manage .delivery_status .title p a {
+  color: #005ea7;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul {
+  height: 115px;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 15px 0;
+  overflow: hidden;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li {
+  box-sizing: border-box;
+  float: left;
+  color: #323232;
+  height: 80px;
+  padding: 0 25px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li p {
+  font-size: 12px;
+  color: #969696; 
+  line-height: 20px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li p span {
+  color: #323232 !important;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(2),
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(3) {
+  border-right: 1px solid #f5f5f5;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(1) {
+  width: 120px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(2) {
+  width: 350px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(2) p {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(3) {
+  width: 200px;
+  text-align: center;
+  padding-top: 30px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(3) p {
+  font-size: 14px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(4) {
+  text-align: center;
+  width: 290px;
+  padding: 10px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(4) input {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #f10180;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #f10180;
+  font-size: 14px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(4) p img {
+  margin-left: 5px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(4) p:first-of-type {
+  font-size: 14px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(4) p:last-of-type span {
+  color: #969696;
+}
+.delivery_status .title p span b {
+  color: #e61e28;
+}
+.delivery_status .detalis ul li .status span a {
+  color: #005ea7;
+}
+.delivery_status .detalis .tryNum_detail {
+  padding: 10px 0 30px 0;
+  border-bottom: 5px solid #f5f5f5;
+}
+.delivery_status .detalis .tryNum_detail span {
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 16px;
+  color: #333;
+}
+.delivery_status .detalis .tryNum_detail span b {
+  color: #e61e28;
+}
+.pay_now_modal,
+.payment_modal,
+.paymentFailure_modal {
+  display: none;
+}
+.pay_now_modal .modal_content,
+.payment_modal .modal_content,
+.paymentFailure_modal .modal_content {
+  text-align: center;
+}
+.pay_now_modal .modal_content p,
+.payment_modal .modal_content p,
+.paymentFailure_modal .modal_content p {
+  font-size: 16px;
+  padding-top: 50px;
+}
+.pay_now_modal .modal_content table,
+.payment_modal .modal_content table,
+.paymentFailure_modal .modal_content table {
+  margin: 20px 0 25px 130px;
+  width: 187px;
+}
+.pay_now_modal .modal_content table td,
+.payment_modal .modal_content table td,
+.paymentFailure_modal .modal_content table td {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c8c8c8;
+}
+.pay_now_modal .modal_content table td input,
+.payment_modal .modal_content table td input,
+.paymentFailure_modal .modal_content table td input {
+  width: 30px;
+  height: 30px;
+  padding-left: 12px;
+}
+.pay_now_modal .modal_content table td input:focus,
+.payment_modal .modal_content table td input:focus,
+.paymentFailure_modal .modal_content table td input:focus {
+  border: 2px solid #a6cef1;
+}
+.pay_now_modal .succeed_content,
+.payment_modal .succeed_content,
+.paymentFailure_modal .succeed_content {
+  padding-top: 24px;
+}
+.pay_now_modal .succeed_content p.payment_succeed,
+.payment_modal .succeed_content p.payment_succeed,
+.paymentFailure_modal .succeed_content p.payment_succeed {
+  color: #323232;
+  font-size: 16px;
+  padding: 15px 0 10px 0;
+}
+.pay_now_modal .succeed_content p,
+.payment_modal .succeed_content p,
+.paymentFailure_modal .succeed_content p {
+  font-size: 14px;
+}
+.pay_now_modal .modal_submit,
+.payment_modal .modal_submit,
+.paymentFailure_modal .modal_submit {
+  padding-top: 15px;
+}
+.pay_now_modal .modal_submit input,
+.payment_modal .modal_submit input,
+.paymentFailure_modal .modal_submit input {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #f10180;
+  border-radius: 5px;
+}
+.pay_now_modal .modal_submit input:nth-of-type(2),
+.payment_modal .modal_submit input:nth-of-type(2),
+.paymentFailure_modal .modal_submit input:nth-of-type(2) {
+  margin-left: 35px;
+}
+.personal_active {
+  color: #f10180 !important;
+}
+#section .section_main .content .activity_manage {
+  background-color: #fff;
+  padding: 30px;
+}
+#section .section_main .content .activity_manage .order_status {
+  padding-top: 10px;
+}
+#section .section_main .content .activity_manage .order_status ul {
+  overflow: hidden;
+  height: 38px;
+  background-color: #f5f5f5;
+  width: 100%;
+  margin: 18px 0;
+}
+#section .section_main .content .activity_manage .order_status ul li {
+  float: left;
+  font-size: 14px;
+  padding-left: 18px;
+  line-height: 38px;
+}
+#section .section_main .content .activity_manage .order_status ul li > a span {
+  color: #f10180;
+}
+#section .section_main .content .activity_manage .order_status ul li > a:hover {
+  color: #f10180;
+}
+#section .section_main .content .activity_manage .order_status ul li > b {
+  font-weight: normal;
+  color: #969696;
+  margin-left: 16px;
+}
+#section .section_main .content .activity_manage .delivery_status {
+  margin-bottom: 35px;
+}
+#section .section_main .content .activity_manage .delivery_status .title {
+  overflow: hidden;
+  padding: 10px;
+}
+#section .section_main .content .activity_manage .delivery_status .title p {
+  font-size: 14px;
+  height: 16px;
+}
+#section .section_main .content .activity_manage .delivery_status .title p a {
+  color: #005ea7;
+}
+/*#section .section_main .content .activity_manage .delivery_status .title p:first-of-type {
+  background: url(../images/line.png) left no-repeat;
+  padding-left: 25px;
+}*/
+
+#section .section_main .content .activity_manage .delivery_status .title .type5 {
+  background: url(/images/merchant/05.png) left no-repeat;
+  padding-left: 25px;
+  color:#309850;
+}
+#section .section_main .content .activity_manage .delivery_status .title .type4 {
+  background: url(/images/merchant/01.png) left no-repeat;
+  padding-left: 22px;
+  color:#7154ea;
+}
+#section .section_main .content .activity_manage .delivery_status .title .type2 {
+  background: url(/images/merchant/02.png) left no-repeat;
+  padding-left: 25px;
+  color:#50acf7;
+}
+#section .section_main .content .activity_manage .delivery_status .title .type3 {
+  background: url(/images/merchant/03.png) left no-repeat;
+  padding-left: 25px;
+  color:#ed6e1f;
+}
+#section .section_main .content .activity_manage .delivery_status .title .type1 {
+  background: url(/images/merchant/04.png) left no-repeat;
+  padding-left: 25px;
+  color:#f71674;
+}
+
+#section .section_main .content .activity_manage .delivery_status .title p:first-of-type span {
+  margin-right: 40px;
+  padding-top:2px;
+  padding-bottom:2px;
+}
+#section .section_main .content .activity_manage .delivery_status .title p:first-of-type  span:first-of-type  {
+  display:inline-block;
+  width:200px;
+  margin-right: 0px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul {
+  height: 115px;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 15px 0;
+  overflow: hidden;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li {
+  box-sizing: border-box;
+  float: left;
+  color: #323232;
+  height: 80px;
+  padding: 0 25px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li p {
+  font-size: 12px;
+  color: #969696;
+  line-height: 20px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li p span {
+  color: #323232;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(2),
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(3) {
+  border-right: 1px solid #f5f5f5;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(1) {
+  width: 120px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(2) {
+  width: 350px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(2) p {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(3) {
+  width: 200px;
+  text-align: center;
+  padding-top: 30px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(3) p {
+  font-size: 14px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(4) {
+  text-align: center;
+  width: 290px;
+  padding: 10px;
+  display: table;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li .table_cell{
+  display:table-cell;
+  vertical-align: middle;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li .table_cell p{
+  line-height:28px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(4) input {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #f10180;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #f10180;
+  font-size: 14px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(4) p img {
+  margin-left: 5px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(4) p:first-of-type {
+  font-size: 14px;
+}
+#section .section_main .content .activity_manage .delivery_status .detalis ul li:nth-of-type(4) p:last-of-type span {
+  color: #969696;
+}
+.delivery_status .title p span b {
+  color: #e61e28;
+}
+.delivery_status .detalis ul li .status span a {
+  color: #005ea7;
+}
+.delivery_status .detalis .tryNum_detail {
+  padding: 10px 0 30px 0;
+  border-bottom: 5px solid #f5f5f5;
+}
+.delivery_status .detalis .tryNum_detail span {
+  display: inline-block;
+  margin-right: 40px;
+  font-size: 16px;
+  color: #333;
+}
+.delivery_status .detalis .tryNum_detail span b {
+  color: #e61e28;
+}
+.pay_now_modal,
+.payment_modal,
+.paymentFailure_modal {
+  display: none;
+}
+.pay_now_modal .modal_content,
+.payment_modal .modal_content,
+.paymentFailure_modal .modal_content {
+  text-align: center;
+}
+.pay_now_modal .modal_content p,
+.payment_modal .modal_content p,
+.paymentFailure_modal .modal_content p {
+  font-size: 16px;
+  padding-top: 50px;
+}
+.pay_now_modal .modal_content table,
+.payment_modal .modal_content table,
+.paymentFailure_modal .modal_content table {
+  margin: 20px 0 25px 130px;
+  width: 187px;
+}
+.pay_now_modal .modal_content table td,
+.payment_modal .modal_content table td,
+.paymentFailure_modal .modal_content table td {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c8c8c8;
+}
+.pay_now_modal .modal_content table td input,
+.payment_modal .modal_content table td input,
+.paymentFailure_modal .modal_content table td input {
+  width: 30px;
+  height: 30px;
+  padding-left: 12px;
+}
+.pay_now_modal .modal_content table td input:focus,
+.payment_modal .modal_content table td input:focus,
+.paymentFailure_modal .modal_content table td input:focus {
+  border: 2px solid #a6cef1;
+}
+.pay_now_modal .succeed_content,
+.payment_modal .succeed_content,
+.paymentFailure_modal .succeed_content {
+  padding-top: 24px;
+}
+.pay_now_modal .succeed_content p.payment_succeed,
+.payment_modal .succeed_content p.payment_succeed,
+.paymentFailure_modal .succeed_content p.payment_succeed {
+  color: #323232;
+  font-size: 16px;
+  padding: 15px 0 10px 0;
+}
+.pay_now_modal .succeed_content p,
+.payment_modal .succeed_content p,
+.paymentFailure_modal .succeed_content p {
+  font-size: 14px;
+}
+.pay_now_modal .modal_submit,
+.payment_modal .modal_submit,
+.paymentFailure_modal .modal_submit {
+  padding-top: 15px;
+}
+.pay_now_modal .modal_submit input,
+.payment_modal .modal_submit input,
+.paymentFailure_modal .modal_submit input {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #f10180;
+  border-radius: 5px;
+}
+.pay_now_modal .modal_submit input:nth-of-type(2),
+.payment_modal .modal_submit input:nth-of-type(2),
+.paymentFailure_modal .modal_submit input:nth-of-type(2) {
+  margin-left: 35px;
+}
+
+/*<!--查询和回收站-->*/
+.inquire_recycleBin{
+  padding:20px 0;
+}
+.inquire_box ul li{
+  float:left;
+  height: 34px;
+  line-height: 34px;
+}
+.inquire_box ul .goods_name{
+  font-size:14px;
+  color:#333;
+}
+.inquire_box ul .input_box>input {
+  width: 200px;
+  height: 34px;
+  line-height: 34px;
+  border:1px solid #f5f5f5;
+}
+.inquire_box ul .inquire_btn>input {
+  width: 100px;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 5px;
+  border: 1px solid #f10180;
+  background-color: #f10180;
+  color: #fff;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.recycle_bin>a{
+  display:block;
+  width: 120px;
+  height: 34px;
+  line-height: 34px;
+  text-align:center;
+  font-size:14px;
+  color:#666;
+  border:1px solid #c8c8c8;
+  border-radius:5px;
+  cursor:pointer;
+}
+.into_recycleBin{
+  cursor:pointer;
+  font-size:14px !important ;
+  color:#969696 !important ;
+  margin-right:9px !important ;
+}
+.reduction_try{
+  display:block;
+  font-size:14px !important ;
+  color:#005ea7 !important ;
+  padding-top:20px;
+  cursor:pointer;
+}
+.close{
+  opacity: 1 !important ;
+}
+.close:hover{
+  opacity: 1 !important ;
+}
+.delete_activity .activity_ID,.reduction_activity .activity_ID{
+  font-size:16px;
+  color:#646464;
+  line-height:32px;
+}
+.delete_activity .activity_ID>span,.reduction_activity .activity_ID>span{
+  color:#f10180;
+}
+.delete_activity .yes,.reduction_activity .yes{
+  font-size:16px;
+  color:#323232;
+}
+.reduction_activity .reduction{
+  color:#646464;
+  font-size:14px;
+  padding-top:5px;
+}
+.reduction_activity .reduction>span{
+  color:#f10180;
+}
+.delete_activity{
+  padding-top:55px;
+}
+.reduction_activity{
+  padding-top:45px;
+}
+
+
+
+
+
+
+
+
+

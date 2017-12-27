@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>会员管理</title>
+    <link rel="stylesheet" href="//staitc-h5-alicnd.shike8888.com/css/mobile_reset.css?v=1502438181">
+    <link rel="stylesheet" href="//staitc-h5-alicnd.shike8888.com/css/mui.css?v=1502438181">
+    <link rel="stylesheet" href="//staitc-h5-alicnd.shike8888.com/css/number_manage/number_manage.css?v=1502438181">
+    <script>
+        (function () {
+            document.addEventListener('DOMContentLoaded', function () {
+                var html = document.documentElement;
+                var windowWidth = html.clientWidth;
+                html.style.fontSize = windowWidth / 7.5 + 'px';
+                // 等价于html.style.fontSize = windowWidth / 750 * 100 + 'px';
+            }, false);
+
+
+        })();
+
+        // 这个7.5就是根据设计稿的横向宽度来确定的，假如你的设计稿是640
+        // 那么 html.style.fontSize = windowWidth / 6.4 + 'px';
+    </script>
+</head>
+<body>
+    <div class="layout-container">
+        <div class="number_type">
+            <p class="putongNumber">马上开通VIP会员，尊享VIP特权吧！</p>
+            <p class="VIPNumber">会员到期时间：<b id="end_time"></b></p>
+        </div>
+        <div class="number_priceList">
+            <!--价格表-->
+            <h1>试客巴VIP会员套餐</h1>
+            <div class="priceList">
+                <div class="clearfix numberPrice numberPrice_active">
+                    <div class="left" data-type="1">1个月 <span>&yen;20</span></div>
+                    <div class="right"></div>
+                </div>
+                <div class="clearfix numberPrice">
+                    <div class="left" data-type="2">6个月 <span>&yen;80</span></div>
+                    <div class="right"></div>
+                </div>
+                <div class="clearfix numberPrice">
+                    <div class="left" data-type="3">12个月 <span>&yen;120</span></div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <!--支付方式-->
+           <!-- <h1 class="pay_wey">请选择支付方式</h1>
+            <div class="payWey">
+                <div class="clearfix numberPrice numberPrice_active">
+                    <div class="left weixin">
+                        <b>微信</b>
+                    </div>
+                    <div class="right"></div>
+                </div>
+                <div class="clearfix numberPrice">
+                    <div class="left zhifubao">
+                        <b>支付宝</b>
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>-->
+        </div>
+
+        <div class="pay_button">
+            <input type="button" value="立即开通" id="submit">
+        </div>
+        <div class="number_privilege">
+            <div class="table_title">
+                <img src="/"/images/number_manage/vip_bg_text_default@2x.png" alt="">
+            </div>
+            <table>
+            <tr>
+                <th>会员特权</th>
+                <th>VIP会员</th>
+                <th>普通会员</th>
+            </tr>
+            <tr>
+                <td>每日最多中奖机会</td>
+                <td>3次</td>
+                <td>1次</td>
+            </tr>
+            <tr>
+                <td>专属客服服务</td>
+                <td>优先接待</td>
+                <td>排队等候</td>
+            </tr>
+            <tr>
+                <td>提现审核</td>
+                <td>优先审核</td>
+                <td>排队等候</td>
+            </tr>
+            <tr>
+                <td>VIP专享标识</td>
+                <td>VIP专享标识</td>
+                <td>没有标识</td>
+            </tr>
+            <tr>
+                <td>专享活动</td>
+                <td>可参与</td>
+                <td>不能参与</td>
+            </tr>
+            <tr>
+                <td>权重提升速度</td>
+                <td>加速提升</td>
+                <td>不能参与</td>
+            </tr>
+            <tr>
+                <td>申请试用限制</td>
+                <td>没有限制</td>
+                <td>有限制</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    <input type="hidden" id="openId" name="openId" value="">
+</body>
+<script src="//staitc-h5-alicnd.shike8888.com/js/jquery-1.10.2.min.js?v=1502438181"></script>
+<script src="//staitc-h5-alicnd.shike8888.com/js/mui.min.js?v=1502438181"></script>
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js?v=1502438181"></script>
+<script src="//staitc-h5-alicnd.shike8888.com/js/tools.js?v=1502438181"></script>
+<script src="//staitc-h5-alicnd.shike8888.com/js/number_manage/number_manage.js?v=1502438181 "></script>
+<script> var _hmt = _hmt || [];(function() {var hm = document.createElement("script");  hm.src = "https://hm.baidu.com/hm.js?73046f18e9201a9fb38a6900a362aaab";  var s =document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s);})();</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

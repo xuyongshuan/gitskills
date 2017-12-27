@@ -1,0 +1,102 @@
+.modal_box,
+.modal_box_keyword {
+  display: none;
+  z-index: 99999999;
+}
+.modal_box .modal_content,
+.modal_box_keyword .modal_content {
+  width: 6.9rem;
+  min-height: 4.06rem;
+  background-color: #fff;
+  border-radius: 0.1rem;
+  position: fixed;
+  z-index: 1000;
+  top: 45%;
+  left: 50%;
+  margin-left: -3.45rem;
+  margin-top: -2.03rem;
+   z-index: 99999999;
+}
+.modal_box .modal_content p,
+.modal_box_keyword .modal_content p {
+  text-align: center;
+  margin-bottom: 0px;
+}
+.modal_box .modal_content .theme_content,
+.modal_box_keyword .modal_content .theme_content {
+  width: 6.9rem;
+  display: table;
+  min-height: 1.7rem;
+  margin-bottom: 0.1rem;
+}
+.modal_box .modal_content .theme_content .main,
+.modal_box_keyword .modal_content .theme_content .main {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.modal_box .modal_content .hint span,
+.modal_box_keyword .modal_content .hint span {
+  display: inline-block;
+  padding-top: 0.32rem;
+  color: #333;
+  font-size: 0.32rem;
+  margin-left: 0.5rem;
+}
+.modal_box .modal_content .hint img,
+.modal_box_keyword .modal_content .hint img {
+  display: inline-block;
+  float: right;
+  width: 0.37rem;
+  height: 0.37rem;
+  margin: 0.24rem 0.24rem 0 0;
+}
+.modal_box .modal_content .main,
+.modal_box_keyword .modal_content .main {
+  font-size: 0.28rem;
+  color: #666;
+  padding: 0.65rem;
+}
+.modal_box .modal_content .btns input,
+.modal_box_keyword .modal_content .btns input {
+  width: 3rem;
+  height: 0.86rem;
+  border: 1px solid #f10180;
+  border-radius: 0.1rem;
+  font-size: 0.3rem;
+  margin: 0 0.15rem;
+}
+.modal_box .modal_content .btns input:first-of-type,
+.modal_box_keyword .modal_content .btns input:first-of-type {
+  background-color: #f10180;
+  color: #fff;
+}
+.modal_box .modal_content .btns input,
+.modal_box_keyword .modal_content .btns input {
+  background-color: #fff;
+  color: #f10180;
+}
+.modal_box .modal_content .confirm input,
+.modal_box_keyword .modal_content .confirm input {
+  width: 6.3rem;
+  height: 0.86rem;
+  background-color: #f10180;
+  color: #fff;
+  border: 1px solid #f10180;
+  border-radius: 0.1rem;
+  font-size: 0.3rem;
+}
+.modal_box .mask_layer,
+.modal_box_keyword .mask_layer {
+  background-color: #000;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+
+#how_many_duo_mony{
+	color:#f10180
+}

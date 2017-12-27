@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes"><!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mui.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mobile_reset.css?v=1502438181">
+    <link rel="stylesheet" href="/fonts/iconfont.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/login.css?v=1502438181">
+    <title>登录</title>
+    
+</head>
+<body>
+    <div class="login_box">
+        <p class="phone">
+        	<i class="icon iconfont icon-yonghuming"></i>
+           <!--  <img src=""/images/login_icon_accounts_default.png" alt=""> -->
+            <input type="text" name="logname" placeholder="请输入账号/手机号">
+        </p>
+         <p class="password">
+         	<i class="icon iconfont icon-mianmidenglu_yanzhengma"></i>
+            <!-- <img src=""/images/login_icon_password_default.png" alt=""> -->
+            <span class="mui-input-row mui-password">
+           		 <input type="password" name="pwd"  class="mui-input-password" placeholder="请输入密码">
+            </span>
+        </p>
+        
+<!--         <p class="verification_code  input_box"> -->
+<!--          <img src=""/images/logoIn/img_code.png" alt=""> -->
+<!--            <span class="code icon iconfont icon-zhuce_tuxingyanzhengma"></span> --> 
+<!--             <input class="left" type="text" id="validCode" placeholder="图形验证码"> -->
+<!--             <img  src="auth/code"  id="verify"> -->
+<!--         </p> -->
+        
+        <p class="login">
+            <input id="login_btn" type="button" value="登录">
+        </p>
+        <p class="last">
+
+            <span class="left" onclick="goRegPage();">新用户注册</span>
+            <!--<a href="freePwd_login.html">手机免密登录</a>-->
+             <a class="right" href="auth/forgetPwd"><span>忘记密码</span></a>
+        </p>
+        <!-- 其他登录方式 -->
+        <div class="other_login">
+       		<p class="title">
+	       		<i class="left"></i>
+	       		<span>其他登录方式</span>
+	       		<i class="right"></i>
+       		</p>
+       		<p class="weixin_logo">
+	       		<i class="icon iconfont icon-weixin" id="weixin"></i>
+	       		<span>微信</span>
+       		</p>
+        </div>
+    </div>
+    <!-- 页面底部 -->
+	<div class="footer_ad">
+		 <img id="exchange_ad" src="" alt="">
+	</div>
+    <p class="error_hind" hidden="true"><span class="error"></span></p>
+</body><script> var _hmt = _hmt || [];(function() {var hm = document.createElement("script");  hm.src = "https://hm.baidu.com/hm.js?73046f18e9201a9fb38a6900a362aaab";  var s =document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s);})();</script>
+    <script type="text/javascript" src="/js/jquery-1.10.2.min.js?v=1502438181"></script>
+    <script src="/js/mui.min.js?v=1502438181"></script>
+    <script src="/js/tools.js?v=1502438181"></script>
+    <script type="text/javascript" src="/js/login.js?v=1502438181"></script>
+</html>

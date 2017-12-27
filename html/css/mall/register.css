@@ -1,0 +1,148 @@
+.line {
+    width: 100%;
+    height: 10px;
+    background: -webkit-linear-gradient(#eaeaea, #f5f5f5);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#eaeaea, #f5f5f5);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#eaeaea, #f5f5f5);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(#eaeaea, #f5f5f5);
+    /* 标准的语法（必须放在最后） */
+}
+#section {
+    width: 1200px;
+    margin: 0 auto;
+    padding:60px 0 40px 0;
+    overflow: hidden;
+    background-color:#fff;
+}
+#section .register_information {
+    width: 655px;
+}
+/*#section .register_information .phone,
+#section .register_information .register_name,
+#section .register_information .affirm_password,
+#section .register_information .auth_code {
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+}*/
+#section .register_information .phone span,
+#section .register_information .register_name span,
+#section .register_information .affirm_password span,
+#section .register_information .auth_code span,
+#section .register_information .register_qq span{
+    letter-spacing: 3px;
+    display: inline-block;
+    font-size: 14px;
+    width:170px;
+    text-align:right;
+    padding-right:15px;
+}
+/*#section .register_information .phone input,
+#section .register_information .register_name input,
+#section .register_information .affirm_password input,
+#section .register_information .auth_code input*/
+#section .register_information input{
+    font-size: 12px;
+    width: 280px;
+    color: #333;
+    height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+    padding-left:10px;
+}
+#section .register_information .auth_code input {
+    width: 170px;
+}
+#section .register_information .auth_code span.gain {
+    width: 106px;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #646464;
+    height: 40px;
+    line-height: 38px;
+    cursor: pointer;
+}
+#section .register_information .auth_code span.gain input {
+    width: 106px;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #646464;
+    height: 40px;
+    line-height: 38px;
+    cursor: pointer;
+}
+#section .register_information .registration_protocol {
+    padding-bottom: 20px;
+    color: #969696;
+    padding-left: 190px;
+}
+#section .register_information .registration_protocol a {
+    color: #2e87fd;
+}
+#section .register_information .registration_protocol input {
+    color: #f10180;
+    margin-right: 10px;
+    width:16px;
+    height:16px;
+}
+#section .register_information .register_now {
+    padding-left:190px;
+}
+#section .register_information .register_now a{
+    color:#f10180;
+}
+#section .register_information .register_now input {
+    width: 280px;
+    height: 46px;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    line-height: 46px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #f10180;
+}
+#section .register_information .error {
+    height: 40px;
+    line-height: 40px;
+    width: 185px;
+    float: left;
+    padding-left:10px;
+}
+#section .register_information .error span {
+    color: #e61e28;
+    size: 14px;
+}
+#section .account_related {
+   /* width: 565px;
+    padding: 42px 0 0 100px;*/
+}
+/*#section .account_related .has_account h1,
+#section .account_related .no_account h1 {
+    color: #323232;
+    font-size: 16px;
+    padding-bottom: 18px;
+}
+#section .account_related .has_account input,
+#section .account_related .no_account input {
+    width: 330px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    border: 1px solid #f10180;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #f10180;
+}
+#section .account_related .has_account input {
+    margin-bottom: 70px;
+}
+#section .account_related .no_account input:first-of-type {
+    margin-bottom: 30px;
+}*/

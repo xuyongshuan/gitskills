@@ -1,0 +1,132 @@
+.recommend-try .recommend-try-goods {
+  padding: 0 0.24rem 0.3rem 0.24rem;
+    background-color: #fff;
+}
+.recommend-try .recommend-try-goods ul {
+  overflow: hidden;
+}
+.recommend-try .recommend-try-goods ul li:nth-of-type(2n) {
+  margin-left: 0.22rem;
+}
+
+
+.pack_goods {
+  position: relative;
+  float: left;
+  margin-top: 0.25rem;
+}
+.pack_goods a .img_award {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+}
+.pack_goods a img {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 5px;
+}
+
+/* 已兑换完情况，遮罩 */
+.pack_goods .stock_over{
+    position:absolute;
+    display:table-cell;
+    width: 3.4rem;
+    height: 3.4rem;
+    z-index:10;
+    background-color: #000;
+    opacity: .5;
+    text-align:center;
+    vertical-align: middle; 
+    pointer-events: none;
+    border-radius:5px;
+
+
+}
+
+.pack_goods .stock_over .stock_over_icon,
+.pack_goods .stock_over .stock_over_des{
+    color: #fff;
+    font-size:0.32rem;
+}
+
+.pack_goods .stock_over .stock_over_icon{
+    margin-top:1rem;
+    font-size:0.6rem;
+}
+
+
+
+.pack_goods .goods-description {
+    padding: 0 0.08rem;
+}
+.pack_goods .goods-description p {
+    color: #666666;
+    font-size: 0.24rem;
+    margin-bottom: 0 !important;
+}
+.pack_goods .goods-description p.one {
+    color: #333;
+    width: 3.24rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pack_goods .goods-description p.two span b,
+.pack_goods .goods-description .three span b {
+    font-weight: normal;
+    color: #f10180;
+    font-size: 0.26rem;
+}
+.pack_goods .goods-description p.two span.applyFor,
+.pack_goods .goods-description .three span.applyFor {
+    display: inline-block;
+    float: right;
+}
+.pack_goods .goods-description p.two span.pinkage,
+.pack_goods .goods-description .three span.pinkage,
+.pack_goods .goods-description p.two span.notPinkage,
+.pack_goods .goods-description .three span.notPinkage {
+    display: inline-block;
+    float: right;
+    width: 0.72rem;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    color: #fff;
+    background-color: #37bd9f;
+    text-align: center;
+    border-radius: 0.1rem;
+    margin-top:0.03rem;
+}
+.pack_goods .goods-description p.two span.notPinkage,
+.pack_goods .goods-description .three span.notPinkage {
+    background-color: #a763e7;
+}
+
+
+.ex_indian{
+	 position:absolute;
+	 right:2%;
+	 top:57%;
+     width:2.62rem;
+     height:0.48rem;
+     color:#fff;
+     border-radius:0.24rem ;
+     background: -webkit-linear-gradient(left, rgba(250, 140, 200, 0.85) 0%,
+     rgba(241, 1, 128, 0.85) 100%);
+     background: -moz-linear-gradient(right, rgba(250,140, 200, 0.85) 0%,
+     rgba(241, 1, 128, 0.85) 100%);
+     background: -o-linear-gradient(right, rgba(250,140, 200, 0.85) 0%,
+     rgba(241, 1, 128, 0.85) 100%);
+     background:linear-gradient(to right, rgba(250,140, 200, 0.85) 0%,
+     rgba(241, 1, 128, 0.85) 100%);
+	
+}
+
+.ex_price{
+	color: #fff;
+    font-size: 0.24rem;
+    text-align: center;
+    margin-bottom: 0;
+    line-height: 0.48rem;
+	
+}

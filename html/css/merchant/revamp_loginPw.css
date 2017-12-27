@@ -1,0 +1,110 @@
+#section .section_main .basic_setup .revamp_content {
+  padding: 50px 0 30px 0;
+}
+#section .section_main .basic_setup .revamp_content label {
+  display: inline-block;
+  width: 420px;
+  text-align: right;
+  font-size: 14px;
+  color: #969696;
+  font-weight:normal;
+}
+#section .section_main .basic_setup .revamp_content input {
+  width: 200px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #969696;
+  border-radius: 5px;
+}
+#section .section_main .basic_setup .revamp_content input#authCode {
+  width: 90px;
+}
+#section .section_main .basic_setup .revamp_content input[type='button'] {
+  width: 100px;
+  margin-left: 6px;
+  color: #646464;
+}
+#section .section_main .basic_setup .revamp_content p {
+  height: 30px;
+  padding-top: 3px;
+}
+#section .section_main .basic_setup .revamp_content p span {
+  font-size: 12px;
+  color: #e61e28;
+  padding-left: 420px;
+}
+#section .section_main .basic_setup .revamp_content p.btns {
+  width: 100%;
+  padding-left: 92px;
+  text-align: center;
+}
+#section .section_main .basic_setup .revamp_content p.btns input {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 32px;
+  color: #f10180;
+  border: 1px solid #f10180;
+  background-color: #fff;
+}
+#section .section_main .basic_setup .revamp_content p.btns input:first-of-type {
+  color: #fff;
+  background-color: #f10180;
+}
+#section .section_main .basic_setup .revamp_content > table td:not(:first-child) {
+  width: 30px;
+  height: 30px;
+}
+#section .section_main .basic_setup .revamp_content > table td:not(:first-child) input {
+  /*width: 30px;*/
+  height: 30px;
+  padding-left: 12px;
+}
+#section .section_main .basic_setup .revamp_content > table td:not(:first-child) input:focus {
+  border: 2px solid #a6cef1;
+  border-radius: 0;
+  padding-left: 12px;
+}
+#section .section_main .basic_setup .revamp_succeed {
+  padding-top: 50px;
+}
+#section .section_main .basic_setup .revamp_succeed p {
+  text-align: center;
+}
+#section .section_main .basic_setup .revamp_succeed p:nth-of-type(2) {
+  color: #7abd54;
+  font-size: 16px;
+  padding: 18px;
+}
+#section .section_main .basic_setup .revamp_succeed p:nth-of-type(3) {
+  color: #969696;
+  font-size: 14px;
+}
+#section .section_main .basic_setup .revamp_succeed p:nth-of-type(3) a {
+  color: #005ea7;
+}
+	.box{
+	 width: 190px; height: 30px; margin-top: 5px; line-height: 30px;
+	}
+	.box input.paw{ width: 30px; height: 30px; border: 1px solid #c8c8c8;
+	}
+	.box input.paw:nth-child(1){
+	 margin-left: 0;
+	}
+	.box input.paw:focus{outline:0;}
+	.box .pawDiv{
+	 display: inline-block; line-height: 30px; width: 31px; height: 31px; margin-top: -2px; float: left;
+	}
+	
+	.box2{
+	 width: 190px; height: 30px; margin-top: 5px; line-height: 30px;
+	}
+	.box2 input.paw2{ width: 30px; height: 30px; border: 1px solid #c8c8c8;
+	}
+	.box2 input.paw2:nth-child(1){
+	 margin-left: 0;
+	}
+	.box2 input.paw2:focus{outline:0;}
+	.box2 .pawDiv2{
+	 display: inline-block; line-height: 30px; width: 31px; height: 31px; margin-top: -2px; float: left;
+	}

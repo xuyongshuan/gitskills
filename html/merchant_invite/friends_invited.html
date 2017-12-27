@@ -1,0 +1,493 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3" />
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b" />
+    <meta name="sogou_site_verification" content="fXrXuBQkI2"/>
+   
+
+    <title>好友邀请</title>
+
+    <link rel="stylesheet" href="/css/merchant/left_nav.css">
+    <link rel="stylesheet" href="/css/merchant/store_manage.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap">
+    <link rel="stylesheet" href="/css/plugins/dataTables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/merchant/header.css">
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <!--<link rel="stylesheet" href="">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/mall/html5.js"></script>
+    <script src="/js/mall/respond.min.js"></script>
+    <script src="/js/mall/selectivizr-min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.10.2.js"></script>
+<!--	<script src="/js/WdatePicker.js"></script>-->
+    <script src="/js/common.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+
+<!-- Page-Level Plugin Scripts - Tables -->
+<!--<script src="js/plugins/dataTables/jquery.dataTables.js"></script>-->
+<!--<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>-->
+    <script src="/js/merchant/merchant_common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul>
+                <li ><a href="/">返回首页</a></li>
+                <li><a href="/merchant_personal.html">欢迎您：<span>13510541770  <img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>                <li><a href="/login/logout">退出</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <div class="left" style="padding-top: 9px;">
+            <img class="logo" onclick="location.href='/'" src="/images/merchant/xqy_logo_default.png" alt="">
+            <span class="details_title">商家中心</span>
+        </div>
+
+      <!--<div class="advertisement right" >
+                   <a href="" target="_blank" title="">
+             <img style="margin-top:-3px;" src="images/merchant/adv4.png" alt="">
+         </a>
+        </div>-->
+
+    </div>
+    <div class="line"></div>
+</div>
+
+    <div class="left_nav">
+    <!-- 发布试用 -->
+    <div class="issue">
+        <a style=" cursor:pointer" onclick="issue_try()">发布试用</a>
+    </div>
+    <div class="title personal_center">
+        <a href="/merchant_personal.html">个人中心</a>
+    </div>
+    <div class="title store_manage">
+        <a href="/merchant_store.html">店铺管理</a>
+    </div>
+    <div class="title try_manage">
+        <a class="selected" href="javascript:void(0);">活动管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_activity_manage.html">试用管理</a></li>
+            <li><a href="/merchant_order_manage.html">订单管理</a></li>
+        </ul>
+    </div>
+    <div class="title account_information">
+        <a class="selected" href="javascript:void(0);">账号信息</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_basic_setup.html">基本设置</a></li>
+            <li><a href="/merchant_bankcard_manage.html">绑定银行卡</a></li>
+            <li><a href="/merchant_member_manage.html">会员管理</a></li>
+        </ul>
+    </div>
+    <div class="title fund_manage">
+        <a class="selected" href="javascript:void(0);">资金管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_deposit_recharge.html">我要充值</a></li>
+            <li><a href="/merchant_deposit_withdraw.html">押金提现</a></li>
+            <li><a href="/merchant_funds_record.html">资金记录</a></li>
+            <li><a href="/merchant_activity_subsidiary.html">活动明细</a></li>
+        </ul>
+    </div>
+    <div class="title invited_manage">
+        <a class="selected" href="javascript:void(0);">邀请返利</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_invite/friends_invited.html">好友邀请</a></li>
+            <li><a href="/merchant_invite/invited_reward.html">邀请奖励</a></li>
+        </ul>
+    </div>
+    <div class="title message_center">
+        <a id="message_num"  href="/merchant_message_center.html">消息中心</a>
+    </div>
+</div>
+
+<!--联系客服-->
+<!--<div class="contact_customerService">-->
+<!--    <div class="contact_wayContent">-->
+<!--        <div class="left contact_way">-->
+<!--            <div class="title">-->
+<!--                <p>在线客服</p>-->
+<!--            </div>-->
+<!--            <ul>-->
+<!--	    	    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852369353&site=qq&menu=yes" target="_blank">试客巴—阿育王</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506830&site=qq&menu=yes" target="_blank" >试客巴—张洁</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506831&site=qq&menu=yes" target="_blank">试客巴—大表哥</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506832&site=qq&menu=yes" target="_blank">试客巴—肖祥</a></li>-->
+<!--            </ul>-->
+<!--	 </div>-->
+<!--        <div class="right contact_wayBtn">-->
+<!--            <img id="customerService" src="../../images/lianxikefu/contact_bg_right_default.png" alt="">-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+
+<script src="//wp.qiye.qq.com/qidian/2852130118/cc918eff1c09f7ce9c9d5d3285818e2b" charset="utf-8"></script>
+
+<script>
+    (function() {
+        $('.title > a').on('click',function(){
+            var this_ul = $(this).parent().children('ul');
+
+            $(this).toggleClass('selected');
+            $(this).hasClass('selected')?this_ul.slideDown('fast'):this_ul.slideUp('fast');
+        })
+
+    })()
+    $(function(){
+
+        $('.contact_customerService').on('mouseover',function(){
+            $('.contact_way').show();
+        });
+        $('.contact_customerService').on('mouseout',function(){
+            $('.contact_way').hide();
+        });
+        $.ajax({
+            url : '/merchant_userapi/get_sideinfo',
+            data:{},
+            type : 'post',
+            dataType : 'json',
+            cache : false,
+            success : function (result){
+               // $("#act_num").text("试用管理");
+               // $("#order_num").text("订单管理("+result.order_count+")");
+                $("#message_num").text("消息中心("+result.mess_count+")");
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    });
+</script>    <div id="page-wrapper">
+
+   
+<link rel="stylesheet" href="/css/merchant/friends_invited.css">
+
+<section id="section">
+    <div class="section_main clearfix">
+        <!--左侧导航-->
+        <aside class="left" id="left_nav"></aside>
+        <!--右侧好友邀请-->
+        <div class="friend_invited left">
+            <p class="title"><img src="/images/merchant/invitation_rebate/invite_bg_poster_default.png" alt=""></p>
+            <p class="shike">本次活动最终解释权归试客巴官方所有</p>
+            <!--奖励说明-->
+            <div class="one">
+                <h1><img src="/images/merchant/invitation_rebate/invite_headline_01_default.png" alt=""></h1>
+                <ul class="clearfix reward_directions">
+                    <li>
+                        <div class="directions">
+                            <p>
+                               <img src="/images/merchant/invitation_rebate/invite_headline01_icon01_default.png" alt="">
+                            </p>
+                            <p class="content">
+                                每成功邀请一个人奖励800元，<br/>
+                                奖励会发放到您的金币账户上。
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="directions">
+                            <p>
+                                <img src="/images/merchant/invitation_rebate/invite_headline01_icon02_default.png" alt="">
+                            </p>
+                            <p class="content">
+                                被邀请人需加入VIP会员，<br/>
+                                邀请人才可获得现金奖励。
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="directions">
+                            <p>
+                                <img src="/images/merchant/invitation_rebate/invite_headline01_icon03_default.png" alt="">
+                            </p>
+                            <p class="content">
+                                被邀请人一定是通过邀请人的<br/>
+                                邀请链接注册会员，<br/>
+                                邀请人才可得到返利，<br/>
+                                否则为无效邀请，不计入邀请记录。
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="directions">
+                            <p>
+                                <img src="/images/merchant/invitation_rebate/invite_headline01_icon04_default.png" alt="">
+                            </p>
+                            <p class="content">
+                                此活动禁止自己邀请自己的舞弊行为，<br/>
+                                一经发现，取消当次奖励资格，<br/>
+                                且禁止继续参与此活动。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="two">
+                <h1><img src="/images/merchant/invitation_rebate/invite_headline_02_default.png" alt=""></h1>
+                <div class="invited_one">
+                    <h2>邀请方式一</h2>
+                    <p>复制您的专属链接，发给您的QQ、微信好友，好友通过您的邀请链接注册商家并成功开通VIP商家，即可获得邀请奖励</p>
+                    <p class="clearfix">
+                        <input class="links left" type="text" id="links" value="https://www.shike8888.com/mall/homepage/merchant_invite_apply?invite_id=3166" readonly="readonly">
+                        <input class="copy_links left" onclick="copytext('links')" type="button" value="复制链接">
+                    </p>
+                </div>
+                <div class="invited_two hided">
+                    <h2>邀请方式二</h2>
+                    <p>保存二维码，分享到朋友圈、微博、QQ空间，扫描您的二维码注册商家并成功开通VIP会员，也可获得邀请奖励</p>
+                    <div class="clearfix invited_way">
+                        <div class="left left_box">
+                            <div class="clearfix">
+                                <span class="left title">二维码：</span>
+                                <span class="left QR_code">
+                                    <img src="/merchant_invite/create_qrcode" >
+<!--                                    <img src="/images/merchant/invitation_rebate/invite_pic_QR-code_defalt.png" alt="">-->
+                                </span>
+                                <span class="right btns">
+                                    <input type="button" onclick="javascript:window.location.href='create_qrcode?type=download'"  value="保存二维码"><br/>
+                                    <input type="button" onclick="copytext('text')" value="复制文案">
+                                </span>
+                            </div>
+                            <div class="clearfix copy_example">
+                                <span class="left title">示例文案：</span>
+                                <textarea readonly class="left copyExample_content" id="text">从试客巴发布了2次任务后，店铺各方面数据都提升不少，那么给力的推广平台，一定要推荐给大家，有图有真相，亲自测试过，确实靠谱，长按二维码，赶快加入和我一起优化PC权重吧！</textarea>
+                            </div>
+                        </div>
+                        <div class="left right_box">
+                            <img src="/images/merchant/invitation_rebate/invite_pic_print_default.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="three">
+                <h1><img src="/images/merchant/invitation_rebate/invite_headline_03_default.png" alt=""></h1>
+                <div class="invited_ranking">
+                    <table>
+                        <tr>
+                            <th>排名</th>
+                            <th>商家账号</th>
+                            <th>邀请人数</th>
+                            <th>累计奖励金额</th>
+                        </tr>
+                                                <tr>
+                            <td>1</td>
+                            <td>时*美*衣*</td>
+                            <td>10</td>
+                            <td><span>8000.00</span></td>
+                        </tr>
+                                                <tr>
+                            <td>2</td>
+                            <td>仙*传*旗*店</td>
+                            <td>8</td>
+                            <td><span>6400.00</span></td>
+                        </tr>
+                                                <tr>
+                            <td>3</td>
+                            <td>恒*服*专*店</td>
+                            <td>7</td>
+                            <td><span>5600.00</span></td>
+                        </tr>
+                                                <tr>
+                            <td>4</td>
+                            <td>暴*后*祈*</td>
+                            <td>5</td>
+                            <td><span>4000.00</span></td>
+                        </tr>
+                                                <tr>
+                            <td>5</td>
+                            <td>1*3</td>
+                            <td>4</td>
+                            <td><span>3200.00</span></td>
+                        </tr>
+                                                <tr>
+                            <td>6</td>
+                            <td>楞*东*目</td>
+                            <td>2</td>
+                            <td><span>1600.00</span></td>
+                        </tr>
+                                                <tr>
+                            <td>7</td>
+                            <td>l*u*o*g*9</td>
+                            <td>1</td>
+                            <td><span>800.00</span></td>
+                        </tr>
+                                                <tr>
+                            <td>8</td>
+                            <td>1*3*2*2*4*0</td>
+                            <td>1</td>
+                            <td><span>800.00</span></td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+            <div class="four">
+                <h1><img src="/images/merchant/invitation_rebate/invite_headline_04_default.png" alt=""></h1>
+                <div class="common_problem">
+                    <ul>
+                        <li>
+                            <p class="problem">我邀请好友加入会员，奖励如何发放给我？</p>
+                            <p class="answer">
+                                <span  class="moreLine">
+                                    根据活动规则，邀请会员获得的奖励，将会以可用金币的形式发放到您的试客巴帐户，
+                                    成功邀请好友开通VIP商家后，可以联系在线客服QQ：3476289190咨询奖励具体发放时间。
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="problem">被邀请注册的商家需要开通会员吗？</p>
+                            <p class="answer">
+                                <span>
+                                    邀请的商家必须要加入商家会员，才可以获得奖励。
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="problem">是每次邀请成功都可以返现800元吗？</p>
+                            <p class="answer">
+                                <span>
+                                    是的，每成功邀请一个好友，就能获得800元奖励，邀请越多，获利越高。
+                                </span>
+                            </p>
+                        </li>
+                        <li class="hided">
+                            <p class="problem">我不是商家会员，可以邀请获利吗？</p>
+                            <p class="answer">
+                                <span class="moreLine">
+                                    不可以的哦，本次活动只支持VIP商家开放，如您需参加邀请返利的活动，
+                                    请先加入试客巴商家会员，如有疑问请咨询在线客服QQ：3476289190。
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="problem">我忘记使用邀请链接了，但他确实是我邀请加入你们会员的，怎么办？</p>
+                            <p class="answer">
+                                <span class="last">
+                                    如有特殊原因，请联系在线客服QQ：3476289190。
+                                </span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(function(){
+        $('.invited_manage ul>li').find('a').eq(0).addClass('leftNav_active');
+
+    })
+    function copyUrl2()
+    {
+        var Url2=document.getElementById("links");
+        Url2.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        alert("已复制好，可贴粘。");
+    }
+    function copytext(id)
+    {
+        var Url2=document.getElementById(id);
+        Url2.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        alert("已复制好，可贴粘。");
+    }
+
+</script>    </div>
+    <div class="modal" style="display:none">
+        <div class="modal_box" style="max-width: 500px">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/mall/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="modal_content">
+                <p style="line-height: 40px;margin: 30px 20px 30px 20px;font-size: 16px ">提示的内容</p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li>关于试客巴</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>联系客服</li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li>
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+
+    </div>
+
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+    </div>
+</footer>
+</div>
+
+<script src="/js/mall/mask_layer.js"></script>
+
+</body>
+</html>

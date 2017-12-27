@@ -1,0 +1,890 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3" />
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b" />
+    <meta name="sogou_site_verification" content="fXrXuBQkI2"/>
+   
+
+    <title>商家中心</title>
+
+    <link rel="stylesheet" href="/css/merchant/left_nav.css">
+    <link rel="stylesheet" href="/css/merchant/store_manage.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap">
+    <link rel="stylesheet" href="/css/plugins/dataTables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/merchant/header.css">
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <!--<link rel="stylesheet" href="">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/mall/html5.js"></script>
+    <script src="/js/mall/respond.min.js"></script>
+    <script src="/js/mall/selectivizr-min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.10.2.js"></script>
+<!--	<script src="/js/WdatePicker.js"></script>-->
+    <script src="/js/common.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+
+<!-- Page-Level Plugin Scripts - Tables -->
+<!--<script src="js/plugins/dataTables/jquery.dataTables.js"></script>-->
+<!--<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>-->
+    <script src="/js/merchant/merchant_common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul>
+                <li ><a href="/">返回首页</a></li>
+                <li><a href="/merchant_personal.html">欢迎您：<span>13510541770  <img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>                <li><a href="/login/logout">退出</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <div class="left" style="padding-top: 9px;">
+            <img class="logo" onclick="location.href='/'" src="/images/merchant/xqy_logo_default.png" alt="">
+            <span class="details_title">商家中心</span>
+        </div>
+
+      <!--<div class="advertisement right" >
+                   <a href="" target="_blank" title="">
+             <img style="margin-top:-3px;" src="images/merchant/adv4.png" alt="">
+         </a>
+        </div>-->
+
+    </div>
+    <div class="line"></div>
+</div>
+
+    <div class="left_nav">
+    <!-- 发布试用 -->
+    <div class="issue">
+        <a style=" cursor:pointer" onclick="issue_try()">发布试用</a>
+    </div>
+    <div class="title personal_center">
+        <a href="/merchant_personal.html">个人中心</a>
+    </div>
+    <div class="title store_manage">
+        <a href="/merchant_store.html">店铺管理</a>
+    </div>
+    <div class="title try_manage">
+        <a class="selected" href="javascript:void(0);">活动管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_activity_manage.html">试用管理</a></li>
+            <li><a href="/merchant_order_manage.html">订单管理</a></li>
+        </ul>
+    </div>
+    <div class="title account_information">
+        <a class="selected" href="javascript:void(0);">账号信息</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_basic_setup.html">基本设置</a></li>
+            <li><a href="/merchant_bankcard_manage.html">绑定银行卡</a></li>
+            <li><a href="/merchant_member_manage.html">会员管理</a></li>
+        </ul>
+    </div>
+    <div class="title fund_manage">
+        <a class="selected" href="javascript:void(0);">资金管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_deposit_recharge.html">我要充值</a></li>
+            <li><a href="/merchant_deposit_withdraw.html">押金提现</a></li>
+            <li><a href="/merchant_funds_record.html">资金记录</a></li>
+            <li><a href="/merchant_activity_subsidiary.html">活动明细</a></li>
+        </ul>
+    </div>
+    <div class="title invited_manage">
+        <a class="selected" href="javascript:void(0);">邀请返利</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_invite/friends_invited.html">好友邀请</a></li>
+            <li><a href="/merchant_invite/invited_reward.html">邀请奖励</a></li>
+        </ul>
+    </div>
+    <div class="title message_center">
+        <a id="message_num"  href="/merchant_message_center.html">消息中心</a>
+    </div>
+</div>
+
+<!--联系客服-->
+<!--<div class="contact_customerService">-->
+<!--    <div class="contact_wayContent">-->
+<!--        <div class="left contact_way">-->
+<!--            <div class="title">-->
+<!--                <p>在线客服</p>-->
+<!--            </div>-->
+<!--            <ul>-->
+<!--	    	    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852369353&site=qq&menu=yes" target="_blank">试客巴—阿育王</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506830&site=qq&menu=yes" target="_blank" >试客巴—张洁</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506831&site=qq&menu=yes" target="_blank">试客巴—大表哥</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506832&site=qq&menu=yes" target="_blank">试客巴—肖祥</a></li>-->
+<!--            </ul>-->
+<!--	 </div>-->
+<!--        <div class="right contact_wayBtn">-->
+<!--            <img id="customerService" src="../../images/lianxikefu/contact_bg_right_default.png" alt="">-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+
+<script src="//wp.qiye.qq.com/qidian/2852130118/cc918eff1c09f7ce9c9d5d3285818e2b" charset="utf-8"></script>
+
+<script>
+    (function() {
+        $('.title > a').on('click',function(){
+            var this_ul = $(this).parent().children('ul');
+
+            $(this).toggleClass('selected');
+            $(this).hasClass('selected')?this_ul.slideDown('fast'):this_ul.slideUp('fast');
+        })
+
+    })()
+    $(function(){
+
+        $('.contact_customerService').on('mouseover',function(){
+            $('.contact_way').show();
+        });
+        $('.contact_customerService').on('mouseout',function(){
+            $('.contact_way').hide();
+        });
+        $.ajax({
+            url : '/merchant_userapi/get_sideinfo',
+            data:{},
+            type : 'post',
+            dataType : 'json',
+            cache : false,
+            success : function (result){
+               // $("#act_num").text("试用管理");
+               // $("#order_num").text("订单管理("+result.order_count+")");
+                $("#message_num").text("消息中心("+result.mess_count+")");
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    });
+</script>    <div id="page-wrapper">
+
+   <link rel="stylesheet" href="/css/merchant/reset_content.css">
+<link rel="stylesheet" href="/fonts/iconfont.css">
+<link rel="stylesheet" href="/css/merchant/personal_center.css">
+<link rel="stylesheet" href="/css/merchant/modal_alert.css">
+<script src="/js/merchant/personal.js"></script>
+<section id="section">
+    <div class="section_main">
+        <div><a href="/merchant_invite/friends_invited.html"><img src="/images/merchant/sj_bg_top01_default.png" alt=""></a></div>
+        <!--左侧导航-->
+        <aside class="left" id="left_nav"></aside>
+        <!--右侧个人中心-->
+        <div id="my_main" class="content left">
+<!--            <div style="border: 1px solid #eee;background-color: white;margin-bottom: 10px;font-size: 14px;color: #ef2528;padding: 10px;">-->
+<!--                <b style="font-weight: bold;">通知：</b>试客巴2017年国庆中秋假期安排如下：1号、4号为放假时间，余下6天均有运营和客服值班，因审核任务较多，请商家提前做好准备。-->
+<!--            </div>-->
+            <!--会员信息及试用押金说明-->
+            <div class="member_power">
+                <!--个人信息-->
+                <div class="left personal_details">
+                    <div class="left  avatar">
+                        <img src="/images/merchant/sj_grzx_icon_touxiang_default.png" alt="">
+                    </div>
+                    <div class="left username">
+                        <h1>13510541770</h1>
+                        <p>会员等级：<span>
+                                正式会员<b>2018-08-31到期</b>
+                        </p>
+                        <input type="button" value=续费 onclick="window.open('/merchant_member_recharge.html')"/>
+                        <input type="button" value="发布试用任务" onclick="issue_try()"/>
+                    </div>
+                </div>
+                <!--试用任务-->
+                <div class="left try_task">
+                    <div class="try_monery">
+                        <!--<input type="button" value="发布试用任务" onclick="window.open('/merchant_issue_try')"/>-->
+
+                        可用押金：<span>178.68</span>元
+                        <a href="/merchant_deposit_recharge.html">充值押金</a>
+                        冻结押金：<span>22144.05</span>元
+                        <br/>
+                        金&nbsp; &nbsp;&nbsp; &nbsp; 币：<span
+                            style="margin-top: 5px;display: inline-block;">0.00</span>元
+                        <a id="exchange_money" href="javascript:void(0);">兑换金币</a>
+                    </div>
+                    <p>
+                        押&nbsp; &nbsp;&nbsp; &nbsp;金：可用来支付平台一切费用，可提现、可兑换金币。
+                    </p>
+
+                    <p>
+                        冻结押金：试用任务中支付的押金和保证金费用，试用任务结束，押金打给试客，保证金返还到可用押金上
+                    </p>
+
+                    <p>
+                        金&nbsp; &nbsp;&nbsp; &nbsp;币：金币可用来支付试用任务的服务费，不可提现。
+                    </p>
+                </div>
+            </div>
+            <!--任务说明-->
+            <div class="task_specification left">
+                <h2>待处理任务</h2>
+                <div class="task_list">
+                    <div class="task">
+                        <p class="task_title">试客已下单，待发货：</p>
+                        <ul class="shop_list clearfix">
+                                                            <a target="_blank"  href="/Merchant_order_list.html?type=1&shop_id=2102">
+                                <li class="shop actived left">
+
+                                    <p class="shop_name"> 帮帮熊奥迪玩具店                                                                                    <img src="/images/merchant/bg_tb_default.png" alt="">
+                                                                            </p>
+                                    <p class="shop_order">待处理：（<b>4</b>）</p>
+                                </li>
+                                </a>
+                                                            <a target="_blank"  href="/Merchant_order_list.html?type=1&shop_id=2203">
+                                <li class="shop actived left">
+
+                                    <p class="shop_name"> 同步拼装玩具店                                                                                    <img src="/images/merchant/bg_tb_default.png" alt="">
+                                                                            </p>
+                                    <p class="shop_order">待处理：（<b>11</b>）</p>
+                                </li>
+                                </a>
+                                                            <a target="_blank"  href="/Merchant_order_list.html?type=1&shop_id=2304">
+                                <li class="shop actived left">
+
+                                    <p class="shop_name"> 小滑头益智玩具                                                                                    <img src="/images/merchant/bg_tb_default.png" alt="">
+                                                                            </p>
+                                    <p class="shop_order">待处理：（<b>0</b>）</p>
+                                </li>
+                                </a>
+                                                    </ul>
+                    </div>
+                </div>
+                <div class="task_list">
+                    <div class="task">
+                        <p class="task_title">试客已在试客巴评价，待审核评价：</p>
+                        <ul class="shop_list clearfix">
+                                                            <a target="_blank"  href="/Merchant_order_list.html?type=2&shop_id=2102">
+                                    <li class="shop actived left">
+                                        <p class="shop_name"> 帮帮熊奥迪玩具店                                                                                            <img src="/images/merchant/bg_tb_default.png" alt="">
+                                            </p>
+                                        <p class="shop_order">待处理：（<b>7</b>）</p>
+                                    </li>
+                                </a>
+                                                            <a target="_blank"  href="/Merchant_order_list.html?type=2&shop_id=2203">
+                                    <li class="shop actived left">
+                                        <p class="shop_name"> 同步拼装玩具店                                                                                            <img src="/images/merchant/bg_tb_default.png" alt="">
+                                            </p>
+                                        <p class="shop_order">待处理：（<b>8</b>）</p>
+                                    </li>
+                                </a>
+                                                            <a target="_blank"  href="/Merchant_order_list.html?type=2&shop_id=2304">
+                                    <li class="shop actived left">
+                                        <p class="shop_name"> 小滑头益智玩具                                                                                            <img src="/images/merchant/bg_tb_default.png" alt="">
+                                            </p>
+                                        <p class="shop_order">待处理：（<b>0</b>）</p>
+                                    </li>
+                                </a>
+                                                    </ul>
+                    </div>
+                </div>
+                <div class="task_list">
+                    <div class="task">
+                        <p class="task_title">试客已在淘宝评价，待确认评价：</p>
+                        <ul class="shop_list clearfix">
+                                                            <a target="_blank" href="/Merchant_order_list.html?type=3&shop_id=2102">
+                                    <li class="shop actived left">
+                                        <p class="shop_name"> 帮帮熊奥迪玩具店                                                                                            <img src="/images/merchant/bg_tb_default.png" alt="">
+                                            </p>
+
+                                        <p class="shop_order">待处理：（<b>37</b>）</p>
+                                    </li>
+                                </a>
+                                                            <a target="_blank" href="/Merchant_order_list.html?type=3&shop_id=2203">
+                                    <li class="shop actived left">
+                                        <p class="shop_name"> 同步拼装玩具店                                                                                            <img src="/images/merchant/bg_tb_default.png" alt="">
+                                            </p>
+
+                                        <p class="shop_order">待处理：（<b>26</b>）</p>
+                                    </li>
+                                </a>
+                                                            <a target="_blank" href="/Merchant_order_list.html?type=3&shop_id=2304">
+                                    <li class="shop actived left">
+                                        <p class="shop_name"> 小滑头益智玩具                                                                                            <img src="/images/merchant/bg_tb_default.png" alt="">
+                                            </p>
+
+                                        <p class="shop_order">待处理：（<b>46</b>）</p>
+                                    </li>
+                                </a>
+                                                    </ul>
+                    </div>
+                </div>
+                <div class="task_list">
+                    <div class="task">
+                        <p class="task_title">试客已在淘宝追评，待确认追评：</p>
+                        <ul class="shop_list clearfix">
+                                                            <a target="_blank" href="/Merchant_order_list.html?type=10&shop_id=2102">
+                                <li class="shop actived left">
+                                    <p class="shop_name"> 帮帮熊奥迪玩具店                                                                                <img src="/images/merchant/bg_tb_default.png" alt="">
+                                                                                </p>
+                                    <p class="shop_order">待处理：（<b>0</b>）</p>
+                                </li>
+                                </a>
+                                                            <a target="_blank" href="/Merchant_order_list.html?type=10&shop_id=2203">
+                                <li class="shop actived left">
+                                    <p class="shop_name"> 同步拼装玩具店                                                                                <img src="/images/merchant/bg_tb_default.png" alt="">
+                                                                                </p>
+                                    <p class="shop_order">待处理：（<b>0</b>）</p>
+                                </li>
+                                </a>
+                                                            <a target="_blank" href="/Merchant_order_list.html?type=10&shop_id=2304">
+                                <li class="shop actived left">
+                                    <p class="shop_name"> 小滑头益智玩具                                                                                <img src="/images/merchant/bg_tb_default.png" alt="">
+                                                                                </p>
+                                    <p class="shop_order">待处理：（<b>0</b>）</p>
+                                </li>
+                                </a>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 最新资讯 -->
+            <div class="news-list right">
+                <h2>最新资讯<a href="/merchant_message_center/" class="more right" target="_blank">查看更多&nbsp;&gt;</a></h2>
+
+                <p class="news">
+                    <a  target="_blank" href="/mall/help_center/merchant_process">商家规则更新，赶快了解~~</a>
+                </p>
+                <p class="news">
+                    <a target="_blank"  href="/mall/help_center/merchant_punishRule">商家处罚规则</a>
+                </p>
+                                    <p class="news">
+                        <a target="_blank"  href="merchant_message_details?message_id=1046378"
+                         style="color:#666666">您申请发布的商品审核不通过...</a>
+                    </p>
+                                    <p class="news">
+                        <a target="_blank"  href="merchant_message_details?message_id=756958"
+                         style="color:#666666">关于9.1号凌晨更新说明...</a>
+                    </p>
+                                    <p class="news">
+                        <a target="_blank"  href="merchant_message_details?message_id=695858"
+                         style="color:#666666">关于9.1号凌晨更新公告...</a>
+                    </p>
+                                    <p class="news">
+                        <a target="_blank"  href="merchant_message_details?message_id=355792"
+                         style="color:#666666">关于平台展示主图规范...</a>
+                    </p>
+                                    <p class="news">
+                        <a target="_blank"  href="merchant_message_details?message_id=286920"
+                         style="color:#666666">针对今日手淘更新造成影响的说明...</a>
+                    </p>
+                                    <p class="news">
+                        <a target="_blank"  href="merchant_message_details?message_id=213760"
+                         style="color:#666666">平台更新公告...</a>
+                    </p>
+                                    <p class="news">
+                        <a target="_blank"  href="merchant_message_details?message_id=137914"
+                         style="color:#666666">关于商家处罚规则的再次声明！...</a>
+                    </p>
+                                    <p class="news">
+                        <a target="_blank"  href="merchant_message_details?message_id=100778"
+                         style="color:#666666">针对6月21号版本更新后续优化...</a>
+                    </p>
+                                    <p class="news">
+                        <a target="_blank"  href="merchant_message_details?message_id=46200"
+                         style="color:#666666">试客巴商家规范及处罚！...</a>
+                    </p>
+                                    <p class="news">
+                        <a target="_blank"  href="merchant_message_details?message_id=1253929"
+                         style="color: #999999" >2017年国庆节假期安排通知...</a>
+                    </p>
+                            </div>
+        </div>
+    </div>
+
+
+    <div class="credits_exchange">
+        <div class="modal_box">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/merchant/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="exchange_details">
+                <p class="credits">
+                    <span class="left">当前金币：<b>0.00金币</b></span>
+                    <span class="right" id="myMoney">可兑押金：<b>178.68元</b></span>
+                </p>
+
+                <div class="exchange_principal">
+                    <p class="one">兑换押金</p>
+
+                    <p class="two">
+                        <input onblur="exchange()" id="principal" type="text" placeholder="0" onkeyup="checkBlus(this)"
+                               onKeyPress="if((event.keyCode<48 || event.keyCode>57) && event.keyCode!=46 || /\.\d\d$/.test(value))event.returnValue=false;">
+                        <!--<b>&yen;150</b>-->
+                    </p>
+                    <p class="three"><span>1元押金可以兑换1金币</span></p>
+                </div>
+                <p class="get_principal">可获得金币：<span class="get_money">0</span></p>
+                <!--错误提示-->
+                <p class="error"><span class="principal_error"></span></p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm_exchange" type="button" value="确定兑换"/>
+                <input class="cancel" type="button" value="取消"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    <!--金币获取-->
+    <div class="credits_get" style="display:none;">
+        <div class="modal_box">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/shike/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="succeed_content">
+                <p><img src="/images/shike/sj_fbsy_tc_icon_right_default.png" alt=""></p>
+
+                <p class="payment_succeed">恭喜您获得<span></span>金币！</p>
+
+                <p class="reduce"></p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" onclick="location.reload()" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+
+    <!--弹框--确认发货试客已填写单号-->
+    <div class="delivery_modal2 " style="display:none;">
+
+        <div class="exchange_details">
+            <p class="credits">
+                <span class="left">当前金币：<b>0.00金币</b></span>
+                <span class="right" id="myMoney">可兑押金：<b>178.68元</b></span>
+            </p>
+
+            <div class="exchange_principal">
+                <p class="one">兑换押金</p>
+
+                <p class="two">
+                    <input onblur="exchange()" id="principal" type="text" placeholder="0" onkeyup="checkBlus(this)"
+                           onKeyPress="if((event.keyCode<48 || event.keyCode>57) && event.keyCode!=46 || /\.\d\d$/.test(value))event.returnValue=false;">
+                    <!--<b>&yen;150</b>-->
+                </p>
+
+                <p class="three"><span>1元押金可以兑换1金币</span></p>
+            </div>
+            <p class="get_principal">可获得金币：<span class="get_money">0</span></p>
+            <!--错误提示-->
+            <p class="error"><span class="principal_error"></span></p>
+        </div>
+        <div class="modal_submit">
+            <input class="confirm_exchange" type="button" value="确定兑换"/>
+            <input class="cancel" type="button" value="取消"/>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+
+    <!--金币获取-->
+    <div class="credits_get" style="display:none;">
+        <div class="modal_box">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/shike/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="succeed_content">
+                <p><img src="/images/shike/sj_fbsy_tc_icon_right_default.png" alt=""></p>
+                <p class="payment_succeed">恭喜您获得<span></span>金币！</p>
+                <p class="reduce"></p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" onclick="location.reload()" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+
+
+    <!--弹框--商家发布活动弹框-->
+    <div class="modal_issue" style="display:none;">
+        <div class="modal_box">
+        <div class="modal_prompt">
+            <span>提示</span>
+            <a class="close" href="javascript:void(0);">
+                <img src="/images/shike/sj_grzx_tc_off_default.png" alt="">
+            </a>
+        </div>
+        <div class="succeed_content">
+
+        </div>
+        <div class="modal_submit">
+                        <input class="cancel" type="button" value="取消"/>
+        </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+
+</section>
+    <script src="/js/Shike.js"></script>
+    <script>
+        var q1 = $('#Q1').find('.radio');
+        var q2 = $('#Q2').find('.radio');
+        var q3 = $('#Q3').find('.radio');
+
+        // 隐藏问卷调查弹框
+        function hide_question_block(){
+            $('.question_close').css('display', 'none');
+            $('.question_mask').css('display', 'none');
+            $('.question_pannel').css('display', 'none');
+            enableScroll();
+        }
+
+        q1.bind('click', function(){
+            q1.removeClass('radio_actived');
+            $(this).addClass('radio_actived');
+            if(q1.eq(0).hasClass('radio_actived')){
+                $('.que_shop_list').css('display', 'none');
+                $('.que_shop_list').find('li').removeClass('checkbox_actived');
+            }else{
+                $('.que_shop_list').css('display', 'block');
+            }
+        });
+
+        q2.bind('click', function(){
+            q2.removeClass('radio_actived');
+            $(this).addClass('radio_actived');
+            if(q2.eq(2).hasClass('radio_actived')){
+                $('#Q2_other').removeAttr('disabled').addClass('textarea_actived');
+            }else{
+                $('#Q2_other').removeClass('textarea_actived').attr('disabled', 'disabled').val('');
+            }
+        });
+
+        q3.bind('click', function(){
+            q3.removeClass('radio_actived');
+            $(this).addClass('radio_actived');
+            if(q3.eq(3).hasClass('radio_actived')){
+                $('#Q3_other').removeAttr('disabled').addClass('textarea_actived');
+            }else{
+                $('#Q3_other').removeClass('textarea_actived').attr('disabled', 'disabled').val('');
+            }
+        });
+
+        $('.que_shop_list').find('li').bind('click', function(){
+            if($(this).hasClass('checkbox_actived')){
+                $(this).removeClass('checkbox_actived');
+            }else{
+                $(this).addClass('checkbox_actived');
+            }
+        });
+
+        // 是否重复提交问卷调查信息，默认为否
+        var is_repeat_post_question = 0;
+
+        // 提交问卷调查信息
+        function post_question(){
+            if(is_repeat_post_question){
+                return;
+            }
+
+            var question_1 = $('#Q1').find('.radio_actived').data('val');
+            var question_1_other = '';
+
+            if(question_1 == null){
+                $('#que_error').addClass('icon-cuowu').text(' 您还有问题没有选择！');
+                return;
+            }else{
+                $('#que_error').removeClass('icon-cuowu').text('');
+            }
+
+            if(2 == question_1){
+                $('.que_shop_list').find('.checkbox_actived').each(function(){
+                    question_1_other += $(this).text() + ',';
+                });
+
+                if(!question_1_other){
+                    $('#que_error').addClass('icon-cuowu').text(' 您还未选择入围的店铺！');
+                    return;
+                }else{
+                    $('#que_error').removeClass('icon-cuowu').text('');
+                }
+            }else{
+                $('#que_error').removeClass('icon-cuowu').text('');
+            }
+
+            var question_2 = $('#Q2').find('.radio_actived').data('val');
+            var question_2_other = $('#Q2_other').val();
+
+            if(question_2 == null){
+                $('#que_error').addClass('icon-cuowu').text(' 您还有问题没有选择！');
+                return;
+            }else{
+                $('#que_error').removeClass('icon-cuowu').text('');
+            }
+
+            if(3 == question_2 && !question_2_other){
+                $('#que_error').addClass('icon-cuowu').text(' 其他需求不能为空！');
+                return;
+            }else{
+                $('#que_error').removeClass('icon-cuowu').text('');
+            }
+
+            var question_3 = $('#Q3').find('.radio_actived').data('val');
+            var question_3_other = $('#Q3_other').val();
+
+            if(question_3 == null){
+                $('#que_error').addClass('icon-cuowu').text(' 您还有问题没有选择！');
+                return;
+            }else{
+                $('#que_error').removeClass('icon-cuowu').text('');
+            }
+
+            if(4 == question_3 && !question_3_other){
+                $('#que_error').addClass('icon-cuowu').text(' 其他需求不能为空！');
+                return;
+            }else{
+                $('#que_error').removeClass('icon-cuowu').text('');
+            }
+
+            is_repeat_post_question = 1;
+
+            $.ajax({
+                url: '/Merchant_personal/post_question',
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                data: {
+                    question_1: question_1,
+                    question_2: question_2,
+                    question_3: question_3,
+                    question_1_other: question_1_other,
+                    question_2_other: question_2_other,
+                    question_3_other: question_3_other
+                },
+                success: function (result) {
+                    if(result.success == true){
+                        hide_question_block();
+
+                        $('.question_mask').css('display', 'block');
+
+                        Shike.custom(['确定'], function(){
+                            Shike.close();
+                            location.reload();
+                        },'<p style="height: 50px;line-height: 50px;margin: 50px 0 30px 0;font-size: 15px;">感谢您的参与！</p>');
+
+                        $('.yc-close').css('fontSize', '12px').bind('click', function(){
+                            location.reload();
+                        });
+                    }else{
+                        is_repeat_post_question = 0;
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus) {
+                }
+            });
+        }
+
+        /**
+         * 实时动态强制更改用户录入兑换价格 必须是大于零的整数
+         * arg1 inputObject
+         **/
+        function checkBlus(th){
+            var regStrs = [
+                ['^0(\\d+)$', '$1'], //禁止录入整数部分两位以上，但首位为0
+                ['[^\\d\\.]+$', ''], //禁止录入任何非数字和点
+                ['(\\d?)\\.+', '$1'], //禁止录入两个以上的点
+                ['^(\\d+\\.\\d{2}).+', '$1'] //禁止录入小数点后两位以上
+            ];
+            for(var i=0; i<regStrs.length; i++){
+                var reg = new RegExp(regStrs[i][0]);
+                th.value = th.value.replace(reg, regStrs[i][1]);
+            }
+        }
+
+        function exchange(){
+            var money = parseInt($("#principal").val());
+            if(money > 0)  $(".get_money").html(money);
+        }
+
+        $(function () {
+            $('.personal_center').find('a').addClass('selected');
+            $('.mask_layer').height(document.body.scrollHeight+1000);
+        })
+        $('#exchange_money').bind('click', function () {
+            $('.credits_exchange').css('display', 'block');
+            disableScroll();
+        });
+
+        $('.confirm_exchange').bind('click', function () {
+            var to_exchange = $("#principal").val();
+            if (to_exchange <= 0) {
+                return;
+            }
+            $.ajax({
+                url: '/Merchant_personal/exchange_gold',
+                type: 'POST',
+                cache: false,
+                dataType: 'json',
+                data: {
+                    to_exchange: to_exchange
+                },
+                success: function (result) {
+                    if (result.success == true) {
+                        $('.credits_get').css('display', 'block');
+                        $('.credits_exchange').css('display', 'none');
+                        $('.payment_succeed span').text(to_exchange);
+                        $('.reduce').text('已扣除' + to_exchange + '押金');
+                        disableScroll();
+                    }
+                    else {
+                        /*var modal2 = new Modal('.modal2');
+                         modal2.open();*/
+                        code = result.code;
+                        //$('.exchange_modal').css('display','none');
+                        switch (code) {
+                            case 1:
+                                //alert('您已经申请过该产品');
+                                //$('.modal2 .modal_content p').text('本金不足');
+                                $(".principal_error").text("本金不足");
+                                $("#myMoney b").text(result.data.my_money + '元');
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus) {
+                }
+            })
+        });
+        // 关闭弹框
+        $('.close,.cancel').on('click', function () {
+            $('.reject').hide();
+            enableScroll();
+        });
+        $('.close,.cancel,.confirm').bind('click', function () {
+            $('.delivery_modal,.delivery_modal2,.audit_modal,.pass_modal,.credits_exchange,.pass_modal2').css('display', 'none');
+            $('#principal').val(0);
+            $('.get_money').text(0);
+            $('.principal_error').text();
+            enableScroll();
+        });
+
+        $.ajax({
+            url:'/Merchant_personal/shop_search',
+            type:'POST',
+            success:function (data) {
+                var data=JSON.parse(data);
+                $.each(data,function (index,e) {
+                    $('.shop_name_search').html(e.shop_name)
+                });
+            }
+        })
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal" style="display:none">
+        <div class="modal_box" style="max-width: 500px">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/mall/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="modal_content">
+                <p style="line-height: 40px;margin: 30px 20px 30px 20px;font-size: 16px ">提示的内容</p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li>关于试客巴</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>联系客服</li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li>
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+
+    </div>
+
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+    </div>
+</footer>
+</div>
+
+<script src="/js/mall/mask_layer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+#section .section_main .store_content {
+  padding-bottom: 20px;
+}
+#section .section_main .store_content .progress_bar {
+  padding: 50px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+#section .section_main .store_content .have_bindingShops h2.title,
+#section .section_main .store_content .no_bindingShops h2.title {
+  font-size: 16px;
+  padding: 18px 0;
+}
+#section .section_main .store_content .have_bindingShops h3.title,
+#section .section_main .store_content .no_bindingShops h3.title {
+  font-size: 14px;
+  padding-bottom: 18px;
+  padding-left: 14px;
+  color: #323232;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded {
+  padding-left: 25px;
+  padding-bottom: 40px;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop {
+  overflow: hidden;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall {
+  width: 367px;
+  min-height: 250px;
+  border: 1px solid #ffe3e6;
+  padding: 10px 50px 30px 50px;
+  background-color: #fffcfc;
+  margin-right: 60px;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao p,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao p,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall p,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall p {
+  text-align: center;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao p b,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao p b,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall p b,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall p b {
+  font-size: 14px;
+  color: #323232;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao p img,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao p img,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall p img,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall p img {
+  margin-bottom: 10px;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name {
+  width: 265px;
+  height: 60px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.shop_name_active{
+  background-color: rgba(241,1,128,.05) !important;
+}
+
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name .shopName,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name .shopName,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name .shopName,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name .shopName {
+  width: 208px;
+  border-right: 1px dashed #c8c8c8;
+  margin: 5px 0;
+  height: 50px;
+  padding: 0 10px;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name .shopName p,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name .shopName p,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name .shopName p,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name .shopName p {
+  width: 188px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 24px;
+  text-align: left;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name .shopName p b,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name .shopName p b,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name .shopName p b,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name .shopName p b {
+  font-size: 14px;
+  color: #323232;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name .select_btn,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name .select_btn,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name .select_btn,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name .select_btn {
+  width: 55px;
+  height: 60px;
+  background: url(/images/merchant/issue_try/release_icon_choice_default.png) center no-repeat;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name_active,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name_active,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name_active,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name_active {
+  border: 1px solid #f10180;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name_active .shopName,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name_active .shopName,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name_active .shopName,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name_active .shopName {
+  border-right: 1px dashed #f10180;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name_active .select_btn,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_taobao .shop_name_active .select_btn,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name_active .select_btn,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .bounded_select_shop .shopType_tmall .shop_name_active .select_btn {
+  background: url(/images/merchant/issue_try/release_icon_choice_selected.png) center no-repeat;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .unbounded_select_shop,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .unbounded_select_shop {
+  /*display: none;*/
+  width: 272px;
+  border: 1px solid #ffe3e6;
+  padding: 20px;
+  background-color: #fffcfc;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .unbounded_select_shop p,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .unbounded_select_shop p {
+  text-align: center;
+  font-size: 14px;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .unbounded_select_shop p a,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .unbounded_select_shop p a,
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .unbounded_select_shop p b,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .unbounded_select_shop p b {
+  display: inline-block;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .unbounded_select_shop p b,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .unbounded_select_shop p b {
+  font-size: 16px;
+  color: #323232;
+  margin-top: 15px;
+}
+#section .section_main .store_content .have_bindingShops .bounded_and_unbounded .unbounded_select_shop p a,
+#section .section_main .store_content .no_bindingShops .bounded_and_unbounded .unbounded_select_shop p a {
+  color: #005ea7;
+  margin-top: 10px;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType,
+#section .section_main .store_content .no_bindingShops .select_tryType {
+  padding-left: 25px;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .select_title,
+#section .section_main .store_content .no_bindingShops .select_tryType .select_title {
+  position: relative;
+  top: 1px;
+  padding-left: 10px;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .select_title a,
+#section .section_main .store_content .no_bindingShops .select_tryType .select_title a {
+  font-size: 14px;
+  margin: 0 5px;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ffe3e6;
+  border-bottom: 1px solid #f10180;
+  border-radius: 5px 5px 0 0;
+  background-color: #fffcfc;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .select_title a span,
+#section .section_main .store_content .no_bindingShops .select_tryType .select_title a span {
+  display: inline-block;
+  padding-left: 20px;
+  background: url(/images/merchant/checkbox_default.png) left center no-repeat;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .select_title .a_active,
+#section .section_main .store_content .no_bindingShops .select_tryType .select_title .a_active {
+  border: 1px solid #f10180;
+  border-bottom: 1px solid #fffcfc;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .select_title .a_active span,
+#section .section_main .store_content .no_bindingShops .select_tryType .select_title .a_active span {
+  color:#333;
+  background: url(/images/merchant/checkbox.png) left center no-repeat;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content {
+  width: 794px;
+  min-height: 225px;
+  border: 1px solid #ffe3e6;
+  border-top: 1px solid #f10180;
+  background-color: #fffcfc;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highValue_try,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highValue_try,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highSynthesize_try,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highSynthesize_try {
+  display: none;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highPopularity_try,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highPopularity_try,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highValue_try,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highValue_try,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highSynthesize_try,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highSynthesize_try {
+  padding: 20px 0 20px 20px;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highPopularity_try table th,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highPopularity_try table th,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highValue_try table th,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highValue_try table th,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highSynthesize_try table th,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highSynthesize_try table th {
+  background-color: #f5f5f5;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highPopularity_try table td,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highPopularity_try table td,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highValue_try table td,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highValue_try table td,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highSynthesize_try table td,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highSynthesize_try table td {
+  background-color: #fff;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highPopularity_try table th,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highPopularity_try table th,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highValue_try table th,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highValue_try table th,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highSynthesize_try table th,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highSynthesize_try table th,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highPopularity_try table td,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highPopularity_try table td,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highValue_try table td,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highValue_try table td,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highSynthesize_try table td,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highSynthesize_try table td {
+  text-align: center;
+  border: 1px solid #f5f5f5;
+  height: 50px;
+  padding: 0 14px;
+  color: #323232;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highPopularity_try p,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highPopularity_try p,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highValue_try p,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highValue_try p,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highSynthesize_try p,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highSynthesize_try p {
+  color: #323232;
+  line-height: 20px;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highPopularity_try p span,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highPopularity_try p span,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highValue_try p span,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highValue_try p span,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highSynthesize_try p span,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highSynthesize_try p span {
+  display: inline-block;
+  color: #f10180;
+  margin-top: 15px;
+}
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highPopularity_try p b,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highPopularity_try p b,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highValue_try p b,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highValue_try p b,
+#section .section_main .store_content .have_bindingShops .select_tryType .tryType_content .highSynthesize_try p b,
+#section .section_main .store_content .no_bindingShops .select_tryType .tryType_content .highSynthesize_try p b {
+  padding-left: 40px;
+}
+#section .section_main .store_content .have_bindingShops .nextStep_btn input,
+#section .section_main .store_content .no_bindingShops .nextStep_btn input {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 30px;
+  background-color: #f10180;
+  margin-left: 25px;
+}

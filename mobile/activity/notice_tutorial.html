@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>新手教程</title>
+    <script>
+        (function () {
+            document.addEventListener('DOMContentLoaded', function () {
+                var html = document.documentElement;
+                var windowWidth = html.clientWidth;
+                html.style.fontSize = windowWidth / 7.5 + 'px';
+                // 等价于html.style.fontSize = windowWidth / 750 * 100 + 'px';
+            }, false);
+
+
+        })();
+
+        // 这个7.5就是根据设计稿的横向宽度来确定的，假如你的设计稿是640
+        // 那么 html.style.fontSize = windowWidth / 6.4 + 'px';
+    </script>
+    <link rel="stylesheet" href="css/mobile_reset.css">
+    <style>
+        .main{
+            width:7.5rem;
+            height:12.06rem;
+            background:url(/images/video/course_bg_default@2x.png) center / 7.5rem 12.06rem no-repeat;
+        }
+        .main .shipin{
+            width:6.5rem;
+            height:3.65rem;
+            margin:0 0.4rem 0 0.6rem;
+            position:relative;
+        }
+        .main .shipin video {
+            margin-top: 3rem;
+            background-color: #000;
+        }
+        .main .apply_btn{
+            text-align:center;
+            margin-top:6.2rem;
+        }
+        .main .apply_btn img{
+            width:4.88rem;
+            height:0.95rem;
+        }
+        .play_btn{
+            width:1.26rem;
+            position:absolute;
+            z-index: 9;
+            top: 107%;
+            left: 41%;
+        }
+    </style>
+</head>
+<body>
+<header id="header_nav"></header>
+    <div class="main">
+        <div class="shipin">
+        <video id="video1" width="100%" height="100%" controls>
+            <source src="images/video/novice_tutorail.mp4"  type="video/mp4">
+        </video>
+        </div>
+
+        <div class="apply_btn">
+            <img onclick="location.href='activity/goExpertSort?category=0&shop_type=0&yf_type=0&sy_type=0&sp_type=0&order=0&classes=0&type=0'" src="images/video/course_button_apply_default@2x.png" alt="">
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js?v=1502438181"></script>
+<script>
+	$(function(){
+		$('#header_nav').load('html/common/header_nav.html',function(){
+			$('#header_nav ').find('.title').text('新手教程');
+			$('.header_nav').css('backgroundColor','#f5f5f5')
+		})
+	})
+</script>
+</html>

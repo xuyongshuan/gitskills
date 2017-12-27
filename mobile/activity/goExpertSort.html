@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>全部商品</title>
+	<link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mobile_reset.css?v=1502438181">
+	<link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mui.css?v=1502438181">
+	<link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/all_goods/recommend_try.css?v=1502438181">
+	<link rel="stylesheet" href="fonts/iconfont.css?v=1502438181">
+	<link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/pack_goods.css?v=1502438181">
+	<link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/all_goods/all_goods.css?v=1502438181">
+	<link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/all_goods/top_nav.css?v=1502438181">
+	<link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/common/header_nav.css?v=1502438181">
+	<script>
+
+		(function () {
+			document.addEventListener('DOMContentLoaded', function () {
+				var html = document.documentElement;
+				var windowWidth = html.clientWidth;
+				html.style.fontSize = windowWidth / 7.5 + 'px';
+				// 等价于html.style.fontSize = windowWidth / 750 * 100 + 'px';
+			}, false);
+
+
+		})();
+
+		// 这个7.5就是根据设计稿的横向宽度来确定的，假如你的设计稿是640
+		// 那么 html.style.fontSize = windowWidth / 6.4 + 'px';
+	</script>
+</head>
+
+<body>
+
+
+<div  id="offCanvasWrapper"  class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+	<!-- 侧滑导航根容器 -->
+	<aside id="offCanvasSide" class="mui-off-canvas-right">
+		<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div class="content">
+					<div class="type_selection">
+						<div class="main">
+							<h1>店铺类型</h1>
+							<ul>
+								<li class="shop_type" data-shop_type="0"><a class="main_active" href="javascript:void(0);">不限</a></li>
+								<li class="shop_type" data-shop_type="1"><a href="javascript:void(0);">淘宝</a></li>
+								<li class="shop_type" data-shop_type="2"><a href="javascript:void(0);">天猫</a></li>
+							</ul>
+						</div>
+						<!--<div class="main">
+                            <h1>试用类型</h1>
+                            <ul>
+                                <li><a href="javascript:void(0);">不限</a></li>
+                                <li><a href="javascript:void(0);">普通试用</a></li>
+                                <li><a href="javascript:void(0);">兑换试用</a></li>
+                                <li><a href="javascript:void(0);">追赏试用</a></li>
+                            </ul>
+                        </div>-->
+						<div class="main">
+							<h1>邮费类型</h1>
+							<ul>
+								<li class="yf_type" data-yf_type="0"><a class="main_active" href="javascript:void(0);" >不限</a></li>
+								<li class="yf_type" data-yf_type="1"><a href="javascript:void(0);" >包邮</a></li>
+								<li class="yf_type" data-yf_type="2"><a href="javascript:void(0);" >付邮</a></li>
+							</ul>
+						</div>
+						<div class="main">
+							<h1>试用数量</h1>
+							<ul>
+								<li class="sy_type" data-sy_type="0"><a class="main_active" href="javascript:void(0);">不限</a></li>
+								<li class="sy_type" data-sy_type="2"><a href="javascript:void(0);">海量</a></li>
+								<li class="sy_type" data-sy_type="1"><a href="javascript:void(0);">限量</a></li>
+							</ul>
+						</div>
+						<!--<div class="main">
+                            <h1>商品类型</h1>
+                            <ul>
+                                <li class="sp_type" data-sp_type="0"><a class="main_active" href="javascript:void(0);" >不限</a></li>
+                                <li class="sp_type" data-sp_type="3"><a href="javascript:void(0);">高价值商品</a></li>
+                                <li class="sp_type" data-sp_type="6"><a href="javascript:void(0);">高中奖率商品</a></li>
+                                &lt;!&ndash;<li><a href="javascript:void(0);">新品</a></li>&ndash;&gt;
+                            </ul>
+                        </div>-->
+					</div>
+					<p class="reset_finish">
+						<input id="reset" type="button" value="重置">
+						<input id="offCanvasHide" type="button" value="完成">
+					</p>
+				</div>
+			</div>
+		</div>
+	</aside>
+	<!--页面最顶部-->
+	<div class="mui-inner-wrap">
+		<div class="top_return">
+			<!-- <p>
+                <span><img src=""/images/all_goods/icon_return_default.png" alt=""></span>
+                <span>全部商品</span>
+                <span><img src=""/images/all_goods/nav_icon_search_default@2x.png" alt=""></span>
+            </p> -->
+			<div class="header_nav clearfix">
+				<a  href="javascript:history.go(-1);" class="left return_prev icon iconfont  icon-toubu_fanhuijiantou"></a>
+				<span class="left title">全部商品</span>
+				<span id="home" class="right return_home icon iconfont  icon-shikeshouye"></span>
+			</div>
+
+		</div>
+
+		<!-- 主页面标题 -->
+		<div class="mui-bar mui-bar-nav header">
+			<div id="fenlei" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<div class="mui-scroll  category_navigation">
+					<b class="category mui-control-item" data-category="0">
+						全部商品
+					</b>
+					<b class="category mui-control-item" data-category="1">
+						时尚女装
+					</b>
+					<b class="category mui-control-item" data-category="2">
+						精品男装
+					</b>
+					<b class="category mui-control-item" data-category="3">
+						护肤美妆
+					</b>
+					<b class="category mui-control-item" data-category="4">
+						鞋包配饰
+					</b>
+					<b class="category mui-control-item" data-category="5">
+						居家生活
+					</b>
+					<b class="category mui-control-item" data-category="6">
+						数码电器
+					</b>
+					<b class="category mui-control-item" data-category="7">
+						母婴儿童
+					</b>
+					<b class="category mui-control-item" data-category="8">
+						户外运动
+					</b>
+					<b class="category mui-control-item" data-category="9">
+						食品酒水
+					</b>
+					<b class="category mui-control-item" data-category="10">
+						其他试用
+					</b>
+				</div>
+			</div>
+			<!-- 新增 -->
+			<div id="fenleizhuangtai" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<div class="mui-scroll  category_navigation">
+					<b class="mui-control-item classes" data-classes="0" >
+						<span>全部</span>
+					</b>
+					<b class="mui-control-item classes"  data-classes="1" style="display: none" id="apply">
+						<span>我未申请</span>
+					</b>
+					<b class="mui-control-item classes" data-classes="2">
+						<span>高价值</span>
+					</b>
+					<!--<a class="mui-control-item">
+                        <span>申请试用</span>
+                    </a>
+                    <a class="mui-control-item">
+                        <span>关注试用</span>
+                    </a>-->
+					<b class="mui-control-item classes" data-classes="3">
+						<span>高中奖率</span>
+					</b>
+					<b class="mui-control-item classes" data-classes="4">
+						<span>追赏</span>
+					</b>
+					<!--	<a class="mui-control-item">
+                            <span>实时开奖</span>
+                        </a>-->
+
+				</div>
+			</div>
+			<!-- end -->
+			<div class="classify_nav">
+				<ul>
+					<li class="classify order" data-order="0">
+						<a href="javascript:void(0);">综合</a>
+					</li>
+					<li class="classify order" data-order="1">
+						<a href="javascript:void(0);" class="">上线时间</a>
+					</li>
+					<li class="classify order" data-order="2">
+						<a href="javascript:void(0);" class="">剩余份数</a>
+					</li>
+					<li class="classify order" data-order="3">
+						<a href="javascript:void(0);" class="">价格</a>
+					</li>
+					<li id="offCanvasBtn">
+						<b style="font-weight:normal;" class="">筛选</b>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 主页面内容容器 -->
+		<div class="mui-content mui-scroll-wrapper section" id="main-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--分类精选-->
+				<div class="recommend-try">
+					<!--分类精选商品-->
+					<div class="recommend-try-goods">
+						<ul id="list">
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--遮罩层-->
+		<div class="mui-off-canvas-backdrop"></div>
+	</div>
+</div>
+
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js?v=1502438181"></script>
+<script src="/js/mui.min.js?v=1502438181"></script>
+<script src="/js/tools.js?v=1502438181"></script>
+<script src="/js/common/pack_goods.js?v=1502438181"></script>
+<script src="/js/all_goods/all_goods.js?v=1502438181"></script>
+<script>
+	$(function(){
+		$('#home').on('tap',function(){
+			window.location.href = '';
+		})
+	})
+	//    禁止屏幕旋转
+	mui.plusReady(function () {
+		plus.screen.lockOrientation("portrait-primary");
+	});
+	mui.init({
+		swipeBack: false
+	});
+	var offCanvasWrapper = mui('#offCanvasWrapper');
+	document.getElementById('offCanvasBtn').addEventListener('tap', function() {
+		offCanvasWrapper.offCanvas('show');
+	});
+	document.getElementById('offCanvasHide').addEventListener('tap', function() {
+		offCanvasWrapper.offCanvas('close');
+	});
+	// 如果有历史浏览记录，则返回到对应的位置
+	var param = location.search;
+	var history_scrollY = param.split("?")[1].split('&').filter(function(val) {
+		return val.split('=')[0] == 'scrollY'
+
+	});
+	if (history_scrollY[0]) {
+
+		history_scrollY = history_scrollY[0].split('=')[1] - 0;
+
+	} else {
+		history_scrollY = 0;
+	}
+	// 根据历史记录，滚动到对应的位置
+	mui('.mui-content').scroll({
+		startY: history_scrollY,
+		deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+	});
+</script>
+<script src="/js/all_goods/index_tab.js?v=1502438181"></script>
+<script> var _hmt = _hmt || [];(function() {var hm = document.createElement("script");  hm.src = "https://hm.baidu.com/hm.js?73046f18e9201a9fb38a6900a362aaab";  var s =document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s);})();</script>
+
+</body>
+</html>
+
+

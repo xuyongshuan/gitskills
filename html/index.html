@@ -1,0 +1,447 @@
+﻿<link href='css/mall/carousel.css?1495769188' rel="stylesheet" type="text/css" />
+<link href='css/mall/bookmark_page.css?1495613160' rel="stylesheet" type="text/css" />
+<link href='css/mall/index.css?1503461819' rel="stylesheet" type="text/css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>试客巴——一个提供商品免费试用平台</title>
+    <meta name="keywords" content="试客,免费试用,试客巴,试客巴试用,试客巴官网,试客巴试客,试客巴免费试用,免费试用平台,专业打造人气权重,淘宝商品免费领,试客联盟" />
+    <meta name="description" content="试客巴是专门为试客提供商品免费试用和优惠购物的平台，中奖无需返还试用商品，仅需对商品进行客观评价。满足各阶段消费者和商家的需求,致力于试用体验和口碑营销,持续为用户创造价值。" />
+    <meta name="toTop" content="true">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3" />
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b" />
+    <meta name="sogou_site_verification" content="fXrXuBQkI2">
+	<link rel="shortcut icon" href="http://www.shike8888.com/favicon.ico" />
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <link rel="stylesheet" href="/css/mall/header.css">
+    <link rel="stylesheet" href="/css/mall/modal_alert.css">
+</head>
+<body>
+<script src="/js/mall/jquery-1.10.2.js"></script>
+<script src="/js/mall/modal_scrollbar.js"></script>
+<script src="/js/mall/mask_layer.js"></script>
+<script src="/js/common.js"></script>
+
+
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul class="left">
+                <li id="collection">
+                    <img class="collection" src="/images/mall/top_bg_ctrl_default.png" alt="">
+                    <a href="javascript:void(0);"><img src="/images/mall/home_icon_star_default.png"  alt=""> 收藏本站</a>
+                </li>
+                <li><b>/</b></li>
+                <li><a class="waiting" href="javascript:void(0);">网站导航</a></li>
+                <li><b>/</b></li>
+                <li>
+                    <img src="/images/mall/home_icon_phone_default.png"  alt="">
+                    <a href="javascript:void(0);">手机客户端</a>
+                </li>
+                <li><b>/</b></li>
+                <li class="top_active"><a class="waiting" href="javascript:void(0);">邀请好友送夺宝币，速抢>></a></li>
+            </ul>
+            <ul class="right"> 
+            	<li><a href="/merchant_personal.html">欢迎您：<span>13510541770<img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>
+                <li class="top_active">
+                    <a href="/mall/homepage/login/login.html">登录</a></li><li><b>/</b></li><li><a href="/mall/register/shike_register.html">买家注册</a></li><li><b>/</b></li><li><a href="/mall/register/merchant_register.html">商家注册</a></li>                </li>
+                <li><b>/</b></li>
+                <li><a href="/mall/help_center/merchant_aboutShike.html">帮助中心</a></li>
+                <li><b>/</b></li>
+                <li><a href=/mall/register/constact>联系客服</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <!--左侧logo-->
+        <div class="left">
+            <img class="logo" onclick="location.href=''" src="/images/mall/logo_default.png" alt="">
+        </div>
+        <!--中间搜索框和页面导航-->
+        <div class="center_section">
+            <div class="search_box">
+                <div class="form">
+                <span class="left"><img src="/images/mall/home_icon_looper_default.png" alt=""></span>
+                <span class="center"><input class="search_input" type="text" placeholder="搜索最好的试用商品"></span>
+                    <input class="right search_button" id="search_button"  type="button" value="搜索">
+                </div>
+
+            </div>
+            <div class="pages_nav">
+                <ul>
+                    <li id="first" class="nav pages_navActive"><a data-type="1" href=/ >首页</a></li>
+                    <li><b class="first">|</b></li>
+                    <li class="nav "><a data-type="2" href=/mall/homepage/classify.html?category=11&sy_num=1>限量试用</a></li>
+                    <li><b>|</b></li>
+                    <li class="nav "><a data-type="3" href=/mall/homepage/classify.html?category=11&sy_num=2>海量试用</a></li>
+                    <li><b>|</b></li>
+                    <li class="nav "><a data-type="4" href="/mall/homepage/exchange_index.html?date_type=0&category=11&dp_type=0&yf_type=0&orderby=1">兑换专区</a></li>
+                    <li><b>|</b></li>
+                    <li class="nav"><a class="waiting" data-type="5" href="javascript:void(0)">任务中心</a></li>
+                    <li><b>|</b></li>
+                    <li class="nav"><a data-type="6" href="javascript:void(0);" target="_blank">超值满减</a></li>
+                    <li><b>|</b></li>
+                    <li class="nav"><a class="waiting" data-type="7" href="javascript:void(0)">试用报告</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <!--右侧二维码关注公众号-->
+        <div class="right">
+            <div class="official_accounts">
+                <p> &nbsp;关注微信公众号</p>
+                <p><span>手机随时随地申请</span></p>
+            </div>
+			<div class="share_btn">
+			<input type="button" value="买家分享赚"> <input type="button" value="商家报名" onclick="window.location.href='mall/homepage/merchant_apply'">            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+</div>
+    <div class="modal" style="display:none">
+        <div class="modal_box">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/mall/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="modal_content">
+                <p class="content_box">提示的内容</p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" type="button" value="确定" style=" background-color: #f10180;border-radius: 5px;color: #fff;height: 30px;line-height: 30px;width: 80px;">
+                <input id="qubangding" onclick="location.href='shike_basic_setup'" style="display:none"  type="button" value="去绑定">
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+
+<!--弹框--商家发布活动弹框-->
+<div class="modal_issue" style="display:none;">
+    <div class="modal_box">
+        <div class="modal_prompt">
+            <span>提示</span>
+            <a class="close" href="javascript:void(0);">
+                <img src="/images/shike/sj_grzx_tc_off_default.png" alt="">
+            </a>
+        </div>
+        <div class="succeed_content">
+
+        </div>
+        <div class="modal_submit">
+                        <input class="cancel" type="button" value="取消">
+        </div>
+    </div>
+    <div class="mask_layer"></div>
+</div>
+
+<script>
+
+    var search_url = "/mall/homepage/search/";
+
+</script>
+
+<script src="/js/mall/header.js"></script>
+<!--返回顶部-->
+<div class="return_top">
+    <img src="/images/mall/right_icon_top_default.png" alt="">
+</div>
+<!--页面的头部-->
+<header id="header"></header>
+<!--轮播部分-->
+<nav id="nav">
+
+        <!--左侧导航-->
+        <div class="left_nav">
+            <ul>
+                                    <li class="left_nav_title"><a href="/mall/homepage/classify.html?category=1">时尚女装</a></li>
+                                    <li class="left_nav_title"><a href="/mall/homepage/classify.html?category=2">精品男装</a></li>
+                                    <li class="left_nav_title"><a href="/mall/homepage/classify.html?category=3">护肤美妆</a></li>
+                                    <li class="left_nav_title"><a href="/mall/homepage/classify.html?category=4">鞋包配饰</a></li>
+                                    <li class="left_nav_title"><a href="/mall/homepage/classify.html?category=5">居家生活</a></li>
+                                    <li class="left_nav_title"><a href="/mall/homepage/classify.html?category=6">数码电器</a></li>
+                                    <li class="left_nav_title"><a href="/mall/homepage/classify.html?category=7">母婴儿童</a></li>
+                                    <li class="left_nav_title"><a href="/mall/homepage/classify.html?category=8">户外运动</a></li>
+                                    <li class="left_nav_title"><a href="/mall/homepage/classify.html?category=9">食品酒水</a></li>
+                                    <li class="left_nav_title"><a href="/mall/homepage/classify.html?category=10">其他试用</a></li>
+                
+            </ul>
+            <!--快捷入口-->
+            <div class="shortcutIn">
+                <img src="/images/mall/kuaijierukou.png" alt="">
+                <br/>
+                <!--入口类型-->
+                <div class="shortcut_type">
+                    <ul>
+                        <li>
+                            <a href="/mall/homepage/classify.html?sp_type=1">高价值</a>
+                        </li>
+                        <li>
+                            <a href="/mall/homepage/classify.html?sp_type=3">高人气</a>
+                        </li>
+<!--                        <li>-->
+<!--                            <a href="--><!--">新品</a>-->
+<!--                        </li>-->
+                    </ul>  
+                </div>
+            </div>  
+        </div>
+        <!--中间轮播广告-->
+
+          <!--下方导航-教程-->
+            <div class="all_course">
+                <ul>
+                    <!--试客教程-->
+                    <li class="shike_course" onclick="location.href='mall/help_center/shike_process'">
+                        <a href="/mall/help_center/shike_process.html"> </a>
+                    </li>
+                    <!--商家教程教程-->
+                    <li class="merchant_course" onclick="location.href='mall/help_center/merchant_process'" >
+                        <a href="/mall/help_center/merchant_process.html"></a>
+                    </li>
+                    <!--中奖秘笈-->
+                    <li class="winning_tips" onclick="location.href='mall/homepage/winning_miji'">
+                        <a href="/mall/homepage/winning_miji"></a>
+                    </li>
+                </ul>
+            </div>
+      
+        <!--右侧登录-->
+        <div class="right_login">
+            <!--商城登录-->
+            <div class="store_login">
+                <div class="register_btn">
+                     <p>您好，欢迎来到试客巴！</p><p><input onclick="location.href='/mall/homepage/login/login.html'" class="login_btn" type="button" value="登录"></p><p><input onclick="location.href='mall/register/shike_register'" class="login_btn" type="button" value="注册买家"></p><p><input onclick="location.href='mall/register/merchant_register'" class="login_btn" type="button" value="注册商家"></p>                </div>
+                <div class="project_pitching">
+                    <ul>
+                        <li><a style="text-align: left;" href="/mall/homepage/affiche_details/110">节后工作恢复正常</a></li><li><a style="text-align: left;" href="/mall/homepage/affiche_details/109">2017年国庆节假期安排通知</a></li><li><a style="text-align: left;" href="/mall/homepage/affiche_details/108">2017年国庆节假期安排通知</a></li>                    </ul>
+                </div>
+                <div class="required">
+                    <p><a class="waiting" href="javascript:void(0);"><span>商家必读</span></a><b></b><a class="waiting" href="javascript:void(0);"><span>买家必读</span></a></p>
+                    <p><a class="waiting" href="javascript:void(0);">查账号权重&gt;&gt;</a></p>
+                    <p><a class="waiting" href="javascript:void(0);">做任务赚奖金&gt;&gt;</a></p>
+                    <p><a class="waiting" href="javascript:void(0);">邀请好友 夺宝币送不停&gt;&gt;</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- 轮播图 -->
+        <div class="flexslider">
+            <ul class="slides">
+                <li onclick="javascript:window.location.href='http://www.shike8888.com/mall/homepage/merchant_invite_apply?source=pt-yangkang'" style="background:url(/images/carousel/home_bg_hb2_default.png) 50% 0 no-repeat;cursor:pointer"></li>
+<!--                <li style="background:url(images/carousel/home_bg_hb_default.png) 50% 0 no-repeat;"></li>-->
+<!--                <li style="background:url(images/carousel/home_bg_hb1_default.png) 50% 0 no-repeat;"></li>-->
+
+            </ul>
+        </div>
+</nav>
+
+<!--中间导航-->
+<div class="middle_navigation">
+    <!--试用步骤-->
+    <div class="try_step">
+        <img src="/images/mall/home_bg_lc_default.png" alt="">
+    </div>
+    <div class="platform_data">
+        <div class="left goodsOnline_num">
+            <p style="margin: 49px 155px 20px 30px;">14330&nbsp;件</p>
+        </div>
+        <div class="left businessSettled_num">
+            <p>11352&nbsp;家</p>
+        </div>
+        <div class="left tryUser_num">
+            <p>744064&nbsp;位</p>
+        </div>
+        <div class="left publishEvents_num">
+            <p>50412&nbsp;个</p>
+        </div>
+    </div> 
+    <!--新加专场-->
+    <a id="brand_special" href="brand_mark">
+        <img id="brand_mark" src="/images/brand_special/pcBannar.jpg" alt="">
+    </a>
+
+</div>
+<section id="section">
+    <div class="section_content">
+        <!--推荐试用-->
+        <!--导航-->
+        <div class="section_title_01">
+            <p class="left">
+                <span class="left">推荐试用</span><i class="left">平台每日精选</i>
+            </p>
+            <ul class="right">
+                <li><a class="types" style="color:#2e5516;text-decoration:underline;" data-type="1" href="javascript:void(0);">高价值商品</a></li>
+                <li><b>|</b></li>
+                <li><a class="types" data-type="2" href="javascript:void(0);">高中奖率商品</a></li>
+                <li><b>|</b></li>
+
+                <li><a class="types" data-type="4" href="javascript:void(0);">追赏任务商品</a></li>
+            </ul>
+        </div>
+
+        <div class="recommend_trial" id="recommend_trial">
+        </div>
+
+
+        <!--试用进行中-->
+        <!--导航-->
+        <div class="section_title_02">
+            <p class="left">
+                <span class="left">试用进行中</span><i class="left"> 每日持续更新</i>
+            </p>
+            <ul class="right">
+                <li><a class="category" style="color:#ac7418;text-decoration:underline;" data-type="5" href="javascript:void(0);">全部分类</a></li>
+
+                                    <li><b>|</b></li>
+                    <li><a class="category" data-type="6" href="javascript:void(0);">时尚女装</a></li>
+                                    <li><b>|</b></li>
+                    <li><a class="category" data-type="7" href="javascript:void(0);">精品男装</a></li>
+                                    <li><b>|</b></li>
+                    <li><a class="category" data-type="8" href="javascript:void(0);">护肤美妆</a></li>
+                                    <li><b>|</b></li>
+                    <li><a class="category" data-type="9" href="javascript:void(0);">鞋包配饰</a></li>
+                                    <li><b>|</b></li>
+                    <li><a class="category" data-type="10" href="javascript:void(0);">居家生活</a></li>
+                                    <li><b>|</b></li>
+                    <li><a class="category" data-type="11" href="javascript:void(0);">数码电器</a></li>
+                                    <li><b>|</b></li>
+                    <li><a class="category" data-type="12" href="javascript:void(0);">母婴儿童</a></li>
+                                    <li><b>|</b></li>
+                    <li><a class="category" data-type="13" href="javascript:void(0);">户外运动</a></li>
+                                    <li><b>|</b></li>
+                    <li><a class="category" data-type="14" href="javascript:void(0);">食品酒水</a></li>
+                                    <li><b>|</b></li>
+                    <li><a class="category" data-type="15" href="javascript:void(0);">其他试用</a></li>
+                
+            </ul>
+        </div>
+        <!--排序方式-->
+        <div class="sort_order">
+            <ul>
+                <li class="sort sort_orderActive">
+                    <a class="orderby" data-order="1" data-type="5" onclick="order(1,5)" href="javascript:void(0);">人气</a>
+                </li>
+                <li class="sort">
+                    <a class="orderby" data-order="3" data-type="5" onclick="order(3,5)" href="javascript:void(0);">上线时间</a>
+                </li>
+                <li class="sort">
+                    <a class="orderby" data-order="5" data-type="5" onclick="order(5,5)" href="javascript:void(0);">剩余份数</a>
+                </li>
+                <li class="sort">
+                    <a class="orderby" data-order="7" data-type="5" onclick="order(7,5)" href="javascript:void(0);">价值</a>
+                </li>
+            </ul>
+            <a class="lookMore" href="/mall/homepage/classify.html?category=11">查看更多</a>
+
+        </div>
+
+        <div class="recommend_trial" id="recommending"> </div>
+
+        <div class="see_more">
+            <input onclick="location.href='/mall/homepage/classify.html?category=11'" type="button"></input>
+        </div>
+
+</section>
+<!--弹框--商家发布活动弹框-->
+<div class="modal_issue" style="display:none;">
+    <div class="modal_box">
+        <div class="modal_prompt">
+            <span>提示</span>
+            <a class="close" href="javascript:void(0);">
+                <img src="/images/shike/sj_grzx_tc_off_default.png" alt="">
+            </a>
+        </div>
+        <div class="succeed_content">
+
+        </div>
+        <div class="modal_submit">
+                        <input class="cancel" type="button" value="取消">
+        </div>
+    </div>
+    <div class="mask_layer"></div>
+</div>
+<!--页面的尾部-->
+<script src="/js/mall/jquery.flexslider-min.js"></script>
+<script src="/js/mall/jquery.twbsPagination.js"></script>
+<script>
+    var getRecommend = "/mall/homepage/getRecommend";
+    var login_url = '/mall/homepage/login/login.html';
+</script>
+<script src="/js/mall/index.js"></script>
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li><a href=/mall/register/constact>关于试客巴</a></li>
+                <li>|</li>
+                <li><a href=/mall/register/constact>联系我们</a></li>
+                <li>|</li>
+                <li><a href=/mall/register/constact>联系客服</a></li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>   
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li> 
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 	浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+    </div>
+    <!--<div id="bottommost">-->
+    <!--<img src="/images/footer.png " alt="">-->
+    <!--</div>-->
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+    </div>
+</footer>
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<![endif]-->
+<script src="/js/mall/html5shiv.min.js"></script>
+<script src="/js/mall/respond.min.js"></script>
+<script src="/js/mall/selectivizr-min.js"></script>
+
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type="text/javascript">
+    $(".waiting").click(function(){
+        $('.modal').myAlert('功能正在开发中，尽请期待……');
+        disableScroll();
+    });
+    $('.close,.cancel,.confirm').bind('click',function(){
+        $('.modal,.modal_issue').hide();
+        enableScroll();
+    });
+</script>
+</body>
+</html>
+

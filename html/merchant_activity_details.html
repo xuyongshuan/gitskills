@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3" />
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b" />
+    <meta name="sogou_site_verification" content="fXrXuBQkI2"/>
+   
+
+    <title>商家后台</title>
+
+    <link rel="stylesheet" href="/css/merchant/left_nav.css">
+    <link rel="stylesheet" href="/css/merchant/store_manage.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap">
+    <link rel="stylesheet" href="/css/plugins/dataTables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/merchant/header.css">
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <!--<link rel="stylesheet" href="">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/mall/html5.js"></script>
+    <script src="/js/mall/respond.min.js"></script>
+    <script src="/js/mall/selectivizr-min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.10.2.js"></script>
+<!--	<script src="/js/WdatePicker.js"></script>-->
+    <script src="/js/common.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+
+<!-- Page-Level Plugin Scripts - Tables -->
+<!--<script src="js/plugins/dataTables/jquery.dataTables.js"></script>-->
+<!--<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>-->
+    <script src="/js/merchant/merchant_common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul>
+                <li ><a href="/">返回首页</a></li>
+                <li><a href="/merchant_personal.html">欢迎您：<span>13510541770  <img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>                <li><a href="/login/logout">退出</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <div class="left" style="padding-top: 9px;">
+            <img class="logo" onclick="location.href='/'" src="/images/merchant/xqy_logo_default.png" alt="">
+            <span class="details_title">商家中心</span>
+        </div>
+
+      <!--<div class="advertisement right" >
+                   <a href="" target="_blank" title="">
+             <img style="margin-top:-3px;" src="images/merchant/adv4.png" alt="">
+         </a>
+        </div>-->
+
+    </div>
+    <div class="line"></div>
+</div>
+
+        <div id="page-wrapper">
+
+   <link rel="stylesheet" href="/css/merchant/activity_details.css">
+<link rel="stylesheet" href="/css/merchant/evolve_datails.css">
+<link rel="stylesheet" href="/fonts/iconfont.css">
+<link rel="stylesheet" href="/css/public_alert/modal_alert_new.css">
+<section id="section">
+    <!--活动详情-->
+    <div class="activity_details">
+        <!--所在位置-->
+        <div class="location_title">
+            <ul>
+                <li>你所在的位置：</li>
+                <li class="order">
+                    <a class="personal_active" href='https://www.shike8888.com/'>首页</a>
+                </li>
+                <li class="order"><img src="/images/merchant/sj_hdgl_icon_arrow_default.png" alt=""></li>
+                <li class="order">
+                    <a class="personal_active" href="/merchant_personal.html">商家中心</a>
+                </li>
+                <li class="order"><img src="/images/merchant/sj_hdgl_icon_arrow_default.png" alt=""></li>
+                <li class="order">
+                    <a href="/merchant_activity_manage.html">试用进展</a>
+                </li>
+                <li class="order"><img src="/images/merchant/sj_hdgl_icon_arrow_default.png" alt=""></li>
+                <li class="order">进展详情</li>
+            </ul>
+        </div>
+        <!--商品发货状态-->
+        <div class="commodity_information">
+            <h1>试用信息：</h1>
+            <div class="title">
+                <p class="left">
+                    <span>发布时间：2017-10-22</span>
+                    <span>活动订单号：16931</span>
+                </p>
+            </div>
+            <div class="details" id="details">
+                <ul>
+                    <li><img style='width: 80px;height: 80px' src="http://pic-img.shike8888.com/ln_mnt3/201710/12/m/5/08aa683e-4f8b-423e-2d17-e0709301c1561507771433.jpeg?imageView2/2/w/348" alt="">
+                    </li>
+                    <li>
+                        <div>
+                            <p>店铺名称：<span> 帮帮熊奥迪玩具店</span></p>
+                            <p>平台：<span>淘宝</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>商品名称：<span>超级飞侠玩具 卡尔叔叔+战车兽魂</span></p>
+                            <p>商品分类：<span>母婴儿童</span></p>
+                            <p>商品规格：<span>迷你卡尔叔叔+战车兽魂</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>单价：<span><b
+                                            style="margin-right:10px;">&yen;59.00</b>每单拍<b>1</b>件</span>
+                            </p>
+                            <p>试用份数：<b>20份</b></p>
+                            <p>商品运费：<span>全国包邮</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="evolve_dateil">
+                <div class="evolve_dateil_tab">
+                    <ul>
+                        <a href="/merchant_activity_details?type=1&act_id=16931">
+                            <li id="pro_1" class="bg_active">试用详情</li>
+                        </a>
+                        <a href="/merchant_activity_details?type=2&act_id=16931">
+                            <li id="pro_2">试用进展</li>
+                        </a>
+                        <a href="/merchant_activity_details?type=3&act_id=16931">
+                            <li id="pro_3">中奖进展</li>
+                        </a>
+                                                <a href="/merchant_activity_details?type=4&act_id=16931">
+                            <li id="pro_4">兑换进展</li>
+                        </a>
+                                                <a href="/merchant_activity_details?type=5&act_id=16931">
+                            <li id="pro_5">费用信息</li>
+                        </a>
+                    </ul>
+                </div>
+                
+                <div class="try_state">
+                                        <div style="display:block;" class="try_content try_details" id="try_1">
+<!--                        <h1 class="title">-->
+<!--                            平台将会根据您发放的试用活动，为您挑选优质的试客通过不同的渠道领取试用并下单，以及审核收货好评和晒单。-->
+<!--                        </h1>-->
+                        <div class="details_content">
+                            <div class="left left_information">
+                                <ul>
+                                    <li>
+
+                                        <p>
+                                            <span>总共发放试用：<b><i>20</i>份</b></span>
+                                            <span>今日发放试用：<b><i>10</i>份(兑换<i>2</i>份，免费中奖<i> 8</i>份)</b></span>
+                                        </p>
+                                        <p>
+                                            <span>已申请试用：<b><i>60</i>人</b></span>
+
+                                            <span>已通过试用资格：<b><i>4</i>人(<i>4</i>人下单，<i>0</i>人待下单,<i>0</i>人取消)</b></span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h2>试用发放方式</h2>
+                                                                                                                                                                <p>手机淘宝搜索关键词：<b>超级飞侠玩具、超级飞侠、</b></p>                                                                                                                     </li>
+                                    <li>
+                                        <p>押金合计：<b><i>1239.00 </i>元</b></p>
+                                        <p>金币合计：<b><i>43.60</i>元</b></p>
+                                    </li>
+                                    <li>
+                                        <p>任务编号：<b>16931</b></p>
+                                        <p>店铺名：<b> 帮帮熊奥迪玩具店</b></p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="left right_state">
+                                <!--右侧状态提示-->
+                                <div class="status_alert">
+                                    <!--已结束-->
+
+                                    <div class="status_content">
+                                                                                                                                                                                                        
+                                            <h3>活动已发布，正在试客巴展示</h3>
+                                            <p>您的试用活动已发布，请实时关注订单信息</p>
+
+                                                                                                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="try_plan">试用份数发放计划</h2>
+                        <table id="try_plan_table"></table>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <input id="act_id" type="hidden" value="16931"/>
+</section>
+<!--弹框--取消订单-->
+<script src="/js/merchant/evolve_detail.js"></script>
+<script src="/js/Shike.js"></script>
+<script>
+
+$(function () {
+    // 标题的点击事件
+    $('.order').bind('click', function () {
+        $(this).find('a').addClass('personal_active');
+        $(this).siblings().find('a').removeClass('personal_active');
+    });
+
+    // 模态框的高度(500：表示头部和尾部高度的和)；
+    $('.mask_layer').height(document.body.offsetHeight + 1600);
+    // 确认付款弹框
+    $('#cancel_order').bind('click', function () {
+        $('.cancel_order_modal').css('display', 'block');
+        disableScroll();
+    });
+
+    $('.close,.cancel,.confirm').bind('click', function () {
+        $('.cancel_order_modal,.paymentFailure_modal,.payment_modal').css('display', 'none');
+        enableScroll();
+    });
+});
+
+// 是否重复点击一键重新发布试用，默认为否
+var is_repeat_repost_check = 0;
+
+// 验证一键重新发布试用
+function repost_check(seller_id, act_id, platform_id){
+    if(is_repeat_repost_check){
+        return;
+    }
+
+    var url = '/merchant_issue_try2?platform_id='+ platform_id +'&seller_id='+ seller_id +'&old_act_id=' + act_id;
+
+    is_repeat_repost_check = 1;
+
+    $.ajax({
+        url : '/merchant_activity_manage/repost_check',
+        data:{seller_id: seller_id},
+        type : 'post',
+        dataType:'json',
+        cache : false,
+        success : function (result){
+            if(result.status){
+                location.href = url;
+            }else{
+                is_repeat_repost_check = 0;
+
+                Shike.alert(result.msg, '确定');
+            }
+        },
+        error : function (XMLHttpRequest, textStatus){
+        }
+    })
+}
+</script>
+
+
+
+
+
+
+    </div>
+    <div class="modal" style="display:none">
+        <div class="modal_box" style="max-width: 500px">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/mall/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="modal_content">
+                <p style="line-height: 40px;margin: 30px 20px 30px 20px;font-size: 16px ">提示的内容</p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li>关于试客巴</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>联系客服</li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li>
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+
+    </div>
+
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+    </div>
+</footer>
+</div>
+
+<script src="/js/mall/mask_layer.js"></script>
+
+</body>
+</html>

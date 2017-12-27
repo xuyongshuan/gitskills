@@ -1,0 +1,238 @@
+#section {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
+}
+#section .rechange_details {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+#section .rechange_details .location_title {
+  padding: 30px;
+  border-bottom: 1px solid #f5f5f5;
+}
+#section .rechange_details .location_title ul {
+  overflow: hidden;
+}
+#section .rechange_details .location_title ul li {
+  float: left;
+  font-size: 14px;
+  padding-right: 10px;
+}
+#section .rechange_details .location_title ul li a:hover {
+  color: #f10180;
+}
+#section .rechange_details .member_rechange {
+  padding: 0 30px;
+}
+#section .rechange_details .member_rechange h1 {
+  padding: 30px 0 20px 0;
+  font-size: 16px;
+  color: #323232;
+}
+#section .rechange_details .member_rechange ul.select_duration {
+  overflow: hidden;
+  padding: 20px;
+}
+#section .rechange_details .member_rechange ul.select_duration li:nth-of-type(1) {
+  border: 1px solid #f10180;
+}
+#section .rechange_details .member_rechange ul.select_duration li {
+  float: left;
+  width: 210px;
+  height: 170px;
+  border: 1px solid #fff;
+  margin-right: 80px;
+  cursor: pointer;
+  background: url(../../images/merchant/sj_zhxx_bg_hycz_default.png) center no-repeat;
+}
+#section .rechange_details .member_rechange ul.select_duration li:hover {
+  background: url(../../images/merchant/sj_zhxx_bg_hycz_selected.png) center no-repeat;
+}
+#section .rechange_details .member_rechange ul.select_duration li p {
+  text-align: center;
+}
+#section .rechange_details .member_rechange ul.select_duration li p:nth-of-type(2) {
+  padding-top: 20px;
+  padding-left: 45px;
+  color: #fff;
+  font-size: 14px;
+}
+#section .rechange_details .member_rechange ul.select_duration li p:nth-of-type(2) b {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  margin-left: 60px;
+}
+#section .rechange_details .member_rechange ul.select_duration li p:nth-of-type(1) {
+  padding-top: 42px;
+  font-size: 14px;
+  color: #f10180;
+  font-weight: bold;
+}
+#section .rechange_details .member_rechange ul.select_duration li p:nth-of-type(1) span {
+  font-size: 26px;
+  color: #f10180;
+  font-weight: bold;
+}
+#section .rechange_details .member_rechange .need_pay {
+  width: 100%;
+  height: 100px;
+  background-color: #fbfcff;
+  padding: 20px 24px;
+}
+#section .rechange_details .member_rechange .need_pay p {
+  color: #323232;
+  font-size: 16px;
+}
+#section .rechange_details .member_rechange .need_pay p.one {
+  padding-bottom: 8px;
+}
+#section .rechange_details .member_rechange .need_pay p.one b {
+  color: #f10180;
+}
+#section .rechange_details .member_rechange .need_pay p.two span {
+  font-size: 24px;
+  color: #e61e28;
+  margin-left: 10px;
+}
+#section .rechange_details .member_rechange table {
+  margin-left: -10px;
+  border-collapse: separate;
+  /*border-spacing: 30px;*/
+}
+#section .rechange_details .member_rechange table td {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  /*border: 1px solid #c8c8c8;*/
+  /*border-spacing: 15px;*/
+  text-align: center;
+  cursor: pointer;
+  padding:15px;
+  position:relative;
+}
+#section .rechange_details .member_rechange table td.pay_select_active img{
+  border:1px solid #e61e28;
+}
+#section .rechange_details .member_rechange table td.pay_select_active .pitchOn{
+  display:block !important;
+}
+#section .rechange_details .member_rechange table td .pitchOn{
+  display:none;
+  width: 180px;
+  height: 40px;
+  position:absolute;
+  bottom:14px;
+  right:14px;
+  z-index:9;
+  background: url(/images/bank/pitch_on.png) right bottom no-repeat;
+}
+#section .rechange_details .member_rechange table td.rechange_way{
+  padding:0;
+  text-align:left;
+}
+#section .rechange_details .member_rechange table td.rechange_way p{
+  margin-left:15px;
+  font-size:14px;
+  color:#333;
+  background: url(/images/merchant/sj_fbsy_icon_quan_default.png) left center no-repeat;
+  padding-left:22px;
+}
+#section .rechange_details .member_rechange table td.rechange_way .rechange_waySE{
+  background: url(/images/merchant/spot.png) left center no-repeat;
+}
+#section .rechange_details .member_rechange table td img {
+  width: 180px;
+  height: 40px;
+  margin-top: -2px;
+  border: 1px solid #c8c8c8;
+}
+#section .rechange_details .member_rechange table td a {
+  color: #005ea7;
+  display:inline-block;
+  width: 180px;
+  height: 40px;
+  border: 1px solid #c8c8c8;
+}
+
+/*#section .rechange_details .member_rechange table {
+  margin-left: -10px;
+  border-collapse: separate;
+  border-spacing: 30px;
+}
+#section .rechange_details .member_rechange table td {
+  width: 182px;
+  height: 42px;
+  line-height: 40px;
+  border: 1px solid #c8c8c8;
+  border-spacing: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+#section .rechange_details .member_rechange table td img {
+  width: 180px;
+  height: 40px;
+  margin-top: -3px;
+}
+#section .rechange_details .member_rechange table td a {
+  color: #005ea7;
+}*/
+#section .rechange_details .member_rechange .confirm_btn {
+  width: 100%;
+  padding: 20px 0 50px 7px;
+  border-bottom: 1px solid #f5f5f5;
+}
+#section .rechange_details .member_rechange .confirm_btn input {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #f10180;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f10180;
+  color: #fff;
+}
+#section .rechange_details .member_rechange .warm_prompt {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+#section .rechange_details .member_rechange .warm_prompt h1 {
+  color: #323232;
+  font-size: 14px;
+  padding: 30px 0 10px 0;
+}
+#section .rechange_details .member_rechange .warm_prompt p {
+  padding-top: 10px;
+}
+#section .rechange_details .member_rechange .warm_prompt p img {
+  margin-top: -2px;
+}
+.pay_modal {
+  display: none;
+}
+.pay_modal .modal_content {
+  text-align: center;
+}
+.pay_modal .modal_content p {
+  font-size: 14px;
+  color: #323232;
+  line-height: 32px;
+  margin: 43px 0;
+}
+.pay_modal .modal_submit {
+  padding-top: 15px;
+}
+.pay_modal .modal_submit input {
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #f10180;
+  border-radius: 5px;
+}
+.pay_modal .modal_submit input:nth-of-type(2) {
+  margin-left: 35px;
+}

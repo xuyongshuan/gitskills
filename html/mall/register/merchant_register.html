@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<title>商城头部</title>-->
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <link rel="stylesheet" href="/css/mall/header.css">
+</head>
+<body>
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul class="right">
+                <li><a href="">返回首页</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search" style="height:80px;">
+        <div style="padding-top:9px">
+            <img class="logo" onclick="location.href=''" src="/images/mall/xqy_logo_default.png" alt="">
+            <span class="details_title">欢迎登录</span>
+        </div>
+    </div>
+</div>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商家注册</title>
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="/css/mall/register.css">
+    <link rel="stylesheet" href="/css/mall/modal_alert.css">
+</head>
+<body>
+<header id="header"></header>
+<div class="line"></div>
+<div style="background-color:#f5f5f5; padding-bottom:50px;">
+    <section id="section">
+        <!--修改密码-->
+        <div class="register_information clearfix left">
+            <div class="register_name left">
+                <span>用户名</span>
+                <input id="username" maxlength="12" type="user_name" class="user_name" placeholder="您的账户名和登录名" />
+            </div>
+            <!--错误提示-->
+            <p class="user_name error left"><span class="username_error"></span></p>
+            <div class="phone left">
+                <span>手机号码</span>
+                <input type="text" maxlength="11"  id="phone" class="phone2" placeholder="建议使用常用手机" />
+            </div>
+            <!--错误提示-->
+            <p class="error left"><span class="phone_error"></span></p>
+            <div class="affirm_password left">
+                <span>登录密码</span>
+                <input type="password" maxlength="16" id="loginPwd" class="password" placeholder="建议使用至少两种字符组合" />
+            </div>
+            <!--错误提示-->
+            <p class="error left"><span class="loginPwd_error"></span></p>
+            <div class="affirm_password left">
+                <span>确认密码</span>
+                <input id="confirmPwd" maxlength="16" type="password" class="re_password" placeholder="请再次输入密码" />
+            </div>
+            <!--错误提示-->
+            <p class="error left"><span class="confirmPwd_error"></span></p>
+            <div class="register_qq left">
+                <span>QQ号</span>
+                <input id="qq" maxlength="11" type="text" class="user_qq" placeholder="建议使用常用的QQ号" />
+            </div>
+            <!--错误提示-->
+            <p class="error left"><span class="qq_error"></span></p>
+
+            <!--获取图形验证码-->
+            <div class="auth_code left">
+                <span>验证码</span>
+                <input type="text" maxlength="4" class="verification_code verification_img_code"  placeholder="填写验证码(不区分大小写)" onblur="check_img_codes()" />
+                <span class="gain"><img src="/mall/Register/code" alt="" onclick= this.src="/mall/Register/code/"+Math.random() style="cursor: pointer;" title="看不清？点击更换另一个验证码。"></span>
+            </div>
+            <p class="error left"><span class="code_img_error "></span></p>
+            <div class="auth_code left">
+                <span>验证码</span>
+                <input type="text" maxlength="4" class="verification_code verification_code_code" placeholder="请输入手机验证码" onblur="check_code()">
+                <span class="gain"><input onclick="get_phone_code()" id="testGetCode" type="button" value="获取验证码" disabled="true" /></span>
+            </div>
+            <!--错误提示-->
+            <p class="error left"><span class="code_error"></span></p>
+            <!--注册协议-->
+            <div class="registration_protocol left">
+                <input class="left" type="checkbox"  disabled="disabled" checked><span>我已认证阅读并同意试客巴的 <a target="_blank" href="/mall/help_center/service_agreement ">《用户注册协议》</a></span>
+            </div>
+            <div class="register_now left">
+                <input type="button" class="enter" onclick="register()" value="立即注册">
+                <p class="clearfix">
+                    <span class="left"><a href="/mall/register/shike_register.html">注册买家</a></span>
+                    <span class="right">已有账号？<a href="/mall/homepage/login/login.html">立即登录</a></span>
+                </p>
+            </div>
+        </div>
+        <!--账户信息-->
+        <div class="account_related left">
+            <img src="/images/mall/register_bg_sj_default.png" alt="">
+        </div>
+    </section>
+</div>
+<div class="myAlert">
+
+</div>
+<footer id="footer"></footer>
+<script src="/js/mall/jquery-1.10.2.js"></script>
+<script src="/js/mall/input_verify.js"></script>
+<script src="/js/mall/modal_scrollbar.js"></script>
+<script src="/js/mall/mask_layer.js"></script>
+<script>
+    $(function(){
+        $('.details_title').text('商家注册');
+    })
+//    验证码校验
+    function get_phone_code(obj) {
+        var phone = $('#phone').val();
+        var phone_error = $(".phone_error").text();
+
+        if(phone.length == 0 || phone_error){
+            phone_error.html('<i class="iconfont icon-cuowu"></i>请先填写手机号码');
+            return false;
+        }
+        if(!(/^1[34578]\d{9}$/.test(phone))){
+            phone_error.html('<i class="iconfont icon-cuowu"></i>手机号码有误，请重填');
+            return false;
+        }
+        check_img_code();
+
+
+    }
+//    校验验证码不能为空
+     function check_code(){
+        var code=$('.verification_code_code').val();
+        if(code===''){
+            $('.code_error').html('<i class="iconfont icon-cuowu"></i>验证码不能为空');
+        }else{
+            $('.code_error').html(' ');
+        }
+    }
+
+      //  只检测图形验证码是否为空
+    function check_img_codes() {
+        var verification_img_code = $('.verification_img_code').val();
+        if (verification_img_code === '') {
+            $('.code_img_error').html('<i class="iconfont icon-cuowu"></i>图形验证码不能为空');
+            return false;
+        } else {
+            $('.code_img_error').html('');
+        }
+    }
+    //校验图形验证码不能为空
+    function check_img_code(){
+        var verification_img_code=$('.verification_img_code').val();
+        if(verification_img_code===''){
+            $('.code_img_error').html('<i class="iconfont icon-cuowu"></i>图形验证码不能为空');
+	    return false;
+        } else{
+            $.ajax({
+                url:"/mall/register/verification_img_code",
+                method: 'post',
+                data:{
+                    verification_img_code:verification_img_code
+                },
+                success:function(result){
+                    result = JSON.parse(result);
+                    code = result.code;
+                    if(code==5){
+//                         $('#testGetCode').bind('click',function(){
+
+                        var timesobj= document.getElementById('testGetCode');
+                        settime(timesobj);
+
+//                         });
+                        var phone = $('#phone').val();
+                        $('.code_img_error').text('');
+                        $.ajax({
+                            url:'sendcloud/regist_send',
+                            method:'post',
+                            data:{
+                                tel:phone,
+                                code:verification_img_code
+                            },
+                            success : function (result){
+                                if(result == 1){
+
+                                    //$("#testGetCode").text("验证码已发送，请稍后");
+                                    //$(obj).unbind('click').removeAttr('onclick').click(function(){$("#testGetCode").text("验证码已发送，请稍后");});
+                                } else {
+                                    alert("发送失败");
+                                }
+                            }
+                        }) ;
+                    }
+                        if(code == 4)
+                        {
+                            $('.code_img_error').html('<i class="iconfont icon-cuowu"></i>图形验证码不正确');
+                            return false;
+                        }
+                }
+            })
+        }
+
+    }
+    //手机验证码获取的倒计时
+    var countdown=60;
+    function settime(obj){
+        var phone = $('#phone').val();
+        var phonereg = /^1[3|4|5|7|8]\d{9}$/;
+        if (phone.length == 0) {
+            $('.phone_error').html('<i class="iconfont icon-cuowu"></i>请输入手机号码！');
+            return false;
+        }
+        if (!phonereg.test(phone)){
+            $('.phone_error').html('<i class="iconfont icon-cuowu"></i>请输入正确的手机号码！');
+            return false;
+        }
+        if(countdown==0){
+            obj.removeAttribute('disabled');
+            obj.value='获取验证码';
+            countdown =60;
+            return ;
+        }else{
+            obj.setAttribute('disabled',true);
+            obj.value='重新发送（'+countdown+'s）';
+            countdown --;
+        }
+        setTimeout(function(){
+            settime(obj)
+        },1000);
+    }
+
+    //用户名校验
+    $('#username').on('blur',function () {
+        var user_name = $('#username').val();
+        user_name = $.trim(user_name);
+        // 标记用户名是否正确
+        var flag = 0;
+
+        //var reg=/^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){5,19}$/;
+        var reg = /^[\u4E00-\u9FA5\uF900-\uFA2D\w]{5,12}$/;
+
+        if(user_name == ""){
+            // 如果为空
+            $('.username_error').html('<i class="iconfont icon-cuowu"></i>用户名不能为空');
+//            $("#username").focus();
+            return false;
+
+        }else if(!reg.test(user_name)){
+            // 用户名不为5-12个字符
+            $('.username_error').html('<i class="iconfont icon-cuowu"></i>5-12个汉字,字母,数字组合');
+//            $("#username").focus();
+            return false;
+
+        }else{
+            // 查询用户名是否已被注册
+            $.post('mall/register/check_username',{user_name:user_name},function(data) {
+                // 用户名重复
+                data.code == 1002?$('.username_error').text('用户名已注册'):null;
+                data.code == 1000?$('.username_error').text(''):null;
+            },'json');
+        }
+    });
+
+    //    检查QQ是否重复
+    $('#qq').on('blur',function () {
+        var qq = $('#qq').val().trim();
+        if(qq.length == 0){
+            // 如果为空
+            $('.qq_error').html('<i class="iconfont icon-cuowu"></i>QQ不能为空');
+            return false;
+        }
+        if(!(/^[1-9]\d{4,11}$/.test(qq))){ //qq号正则匹配
+            $('.qq_error').html('<i class="iconfont icon-cuowu"></i>qq格式错误');
+            return false;
+        }
+        $.ajax({
+            url: "/mall/register/check_qq",
+            method: 'post',
+            data: {
+                qq: qq
+            },
+            success: function (result) {
+                result = JSON.parse(result);
+                if (result.success == true) {
+                    $('.qq_error').text('')
+                    $('.qq_error').show();
+                } else {
+                    code = result.code;
+                    if (code == 1) {
+                        $('.qq_error').show();
+                        $('.qq_error').html('<i class="iconfont icon-cuowu"></i>QQ已注册');
+                    }
+                }
+            },
+        })
+    });
+
+//    点击立即注册按钮
+    function register(){
+        var user_name = $('.user_name').val();
+        var phone = $('.phone2').val();
+        var password = $('.password').val();
+        var confirmPwd = $('#confirmPwd').val();
+        var user_qq = $('.user_qq').val();
+        var verification_code = $('.verification_code_code').val();
+        var verification_img_code = $('.verification_img_code').val();
+        var username_error = $(".username_error").html();
+        user_name ==""?$('.username_error').html('<i class="iconfont icon-cuowu"></i>用户名不能为空'):null;
+        phone ==""?$('.phone_error').html('<i class="iconfont icon-cuowu"></i>手机号码不能为空'):null;
+        password ==""?$('.loginPwd_error').html('<i class="iconfont icon-cuowu"></i>密码不能为空'):null;
+        confirmPwd ==""?$('.confirmPwd_error').html('<i class="iconfont icon-cuowu"></i>确认密码和密码不一致'):null;
+        user_qq ==""?$('.qq_error').html('<i class="iconfont icon-cuowu"></i>QQ不能为空'):null;
+        verification_code ==""?$('.code_error').html('<i class="iconfont icon-cuowu"></i>验证码不能为空'):null;
+        verification_img_code==""?$('.code_img_error').html('<i class="iconfont icon-cuowu"></i>图形验证码不能为空'): null;
+
+        if(!(user_name && phone && password && user_qq &&verification_code&&verification_img_code))
+        {
+            return
+        }
+        if(password != confirmPwd)
+        {
+            $('.confirmPwd_error').html('<i class="iconfont icon-cuowu"></i>确认密码和密码不一致');
+            return
+        }
+        if($('.qq_error').html() != ''){
+            return;
+        }
+        $.ajax({
+            url:"/mall/register/register_merchant",
+            method: 'post',
+            data:{
+                user_name:user_name,
+                phone:phone,
+                password:password,
+                user_qq:user_qq,
+                verification_code:verification_code,
+                verification_img_code: verification_img_code
+            },
+            success:function(result){
+                result = JSON.parse(result);
+                if(result.success==true){
+                    //alert('注册成功')
+                    myalert = '<div class="modal">'+
+                        '<div class="modal_box">'+
+                        '<div class="modal_prompt">'+
+                        '<span>提示</span>'+
+                        '<a class="close" href="javascript:void(0);">'+
+                        '<img src="../../images/mall/sj_grzx_tc_off_default.png" alt="">'+
+                        '</a>'+
+                        '</div>'+
+                        '<div class="modal_content">'+
+                        '<p>注册成功</p>'+
+                        '</div>'+
+                        '<div class="modal_submit">'+
+                        '<input class="confirm" type="button" value="确定">'+
+                        '</div>'+
+                        '</div>'+
+                        '<div class="mask_layer"></div>'+
+                        '</div>';
+                    $('.myAlert').append(myalert);
+                    $('.mask_layer').height(document.body.scrollHeight+1000);
+                    disableScroll();
+                } else {
+                    code = result.code;
+                    if(code == 1)
+                    {
+                        $('.phone_error').html('<i class="iconfont icon-cuowu"></i>手机号已注册');
+
+                    }else if(code == 2)
+                    {
+                        $('.code_error').html('<i class="iconfont icon-cuowu"></i>短信验证码不正确');
+                    }
+                    else if(code == 3)
+                    {
+                        $('.username_error').html('<i class="iconfont icon-cuowu"></i>用户名已注册');
+                    }
+                    else if(code == 4)
+                    {
+                        $('.code_img_error').html('<i class="iconfont icon-cuowu"></i>图形验证码不正确');
+                    }
+                }
+            },
+            error:function(){
+                alert('error');
+            }
+        })
+    }
+    $('.myAlert').on('click','.close,.cancel,.confirm',function(){
+        $('.modal').css('display','none');
+        enableScroll();
+        location.href = "login";
+    })
+
+
+//手机号校验
+    $('.phone2').on('blur',function(){
+        var phone = $('.phone2').val().trim();
+        var reg=/^1[3|4|5|7|8]\d{9}$/;
+        if($('#phone').val()==""){
+            $('.phone_error').html('<i class="iconfont icon-cuowu"></i>手机号码不能为空！');
+          
+   
+        }else if(!(reg.test(phone))){
+            $('.phone_error').html('<i class="iconfont icon-cuowu"></i>手机号码格式不正确！');
+        
+        }else{
+            $('.phone_error').html('');
+            $('#testGetCode').attr('disabled',false);
+
+            $.ajax({
+                url:"/mall/register/check_phone",
+                method: 'post',
+                data:{
+                    phone:phone 
+                }, 
+                success:function(result){
+                    result = JSON.parse(result);
+                    if(result.success==true){ 
+                        $('#testGetCode').removeAttr('disabled')
+                    }
+                    else{
+                        code = result.code;
+                        if(code == 1)
+                        {
+                            $('.phone_error').html('<i class="iconfont icon-cuowu"></i>手机号已注册');
+                            $('#testGetCode').attr('disabled','disabled')
+                        }
+                    }
+                },
+                error:function(){
+                    //alert('error');
+                }
+            })
+        }
+    })
+
+</script>
+
+</body>
+</html>
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li><a href=/mall/register/constact>关于试客巴</a></li>
+                <li>|</li>
+                <li><a href=/mall/register/constact>联系我们</a></li>
+                <li>|</li>
+                <li><a href=/mall/register/constact>联系客服</a></li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>   
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li> 
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 	浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+    </div>
+    <!--<div id="bottommost">-->
+    <!--<img src="../images/footer.png " alt="">-->
+    <!--</div>-->
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+    </div>
+</footer>
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<![endif]-->
+<script src="/js/mall/html5shiv.min.js"></script>
+<script src="/js/mall/respond.min.js"></script>
+<script src="/js/mall/selectivizr-min.js"></script>
+
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type="text/javascript">
+    $(".waiting").click(function(){
+        $('.modal').myAlert('功能正在开发中，尽请期待……');
+        disableScroll();
+    });
+    $('.close,.cancel,.confirm').bind('click',function(){
+        $('.modal,.modal_issue').hide();
+        enableScroll();
+    });
+</script>
+</body>
+</html>
+

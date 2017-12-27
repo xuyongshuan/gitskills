@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes"><!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>试客巴</title>
+    <link rel="stylesheet" href="/css/mobile_reset.css?v=1502438181">
+    <link rel="stylesheet" href="/css/mui.css?v=1502438181">
+    <link rel="stylesheet" href="/css/modal_alert.css?v=1502438181">
+    <link rel="stylesheet" href="/css/pack_goods.css?v=1502438181">
+    <link rel="stylesheet" href="/css/index.css?v=1502438181">
+    <link rel="stylesheet" href="/fonts/iconfont.css?v=1502438181">
+    <link rel="stylesheet" href="/css/bottom_common.css?v=1502438181">
+
+</head>
+<body>
+<div class="mui-scroll-wrapper">
+    <div class="mui-scroll" style="position: static">
+        <!--搜索框---新增-->
+        <div id="search_goods">
+
+            <div class="left  classify_btn">
+                <span class="logo_shike"><img src=""/images/index/logo-@2x.png" alt=""></span>
+            </div>
+
+            <div class="search_box left">
+                <span id="search" class="mui-icon mui-icon-search"></span>
+                <input onfocus="javascript:window.location.href='activity/goSearchExpertSort'" type="search" placeholder="搜索最好的试用商品..." >
+            </div>
+            <div class="left  information">
+                <span id="goMsgPage" class="icon iconfont icon-xiaoxi"></span>
+                <span id="message_count"></span>
+            </div>
+        </div>
+        <!--轮播图-->
+        <div id="slider" class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+            </div>
+            <div class="mui-slider-indicator">
+            </div>
+        </div>
+        <!-- 邀请好友 -->
+        <div class="invite_friends">
+            <div class="person_nav clearfix">
+                <div class="left">
+                    <p>
+                        <a href="activity/goExpertSort?category=0&shop_type=0&yf_type=0&sy_type=0&sp_type=0&order=0&classes=0&type=0">
+                            <span><img src=""/images/index/home_icon_all_default@2x.png" alt=""></span>
+                            <br/>
+                            <span>全部商品</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="left">
+                    <p>
+                        <a href="#" id="gosign">
+                            <span><img src=""/images/invite_friends/home_icon_qdlb_default@2x.png" alt=""></span>
+                            <br/>
+                            <span>签到领币</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="left">
+                    <p>
+                        <a href="invite/invitedFriends">
+                            <span><img src=""/images/invite_friends/home_icon_yqhy_default@2x.png" alt=""></span>
+                            <br/>
+                            <span>邀请好友</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="left">
+                    <p>
+                      	<a href="user/myAward">
+                            <span><img src=""/images/invite_friends/home_icon_wdjl_default@2x.png" alt=""></span>
+                            <br/>
+                            <span>我的奖励</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="left" id="my_task">
+                    <p>
+                        <a href="user/myMission">
+                            <span><img src="images/index/home_icon_wdrw_default.png" alt=""></span>
+                            <br/>
+                            <span>每日任务 &nbsp;</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="left">
+                    <p>
+                        <a href="activity/goExpertSort?category=0&shop_type=0&yf_type=0&sy_type=0&sp_type=0&order=0&classes=3&type=0">
+                            <span><img src="images/index/home_icon_gzjlsy_default@2x.png" alt=""></span>
+                            <br/>
+                            <span>高中奖率试用</span>
+                        </a>
+                    </p>
+                </div>
+               <!--  <div class="left">
+                   <p>
+                       <a href="activity/goExpertSort?category=0&shop_type=0&yf_type=0&sy_type=0&sp_type=0&order=0&classes=2&type=0">
+                           <span><img src="images/index/home_icon_gjzsy_default@2x.png" alt=""></span>
+                           <br/>
+                           <span>高价值试用</span>
+                       </a>
+                   </p>
+               </div> -->
+                <div class="left">
+                    <p>
+                        <a href="collect/collectGoods">
+                            <span><img src="images/index/home_icon_wdsc_default@2x.png" alt=""></span>
+                            <br/>
+                            <span>我的收藏</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="left">
+                    <p>
+                        <a href="help/center">
+                            <span><img src="images/index/home_icon_xsbz_default@2x.png" alt=""></span>
+                            <br/>
+                            <span>新手帮助</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <!--<div class="bashi_headline clearfix">
+                <div class="left title">
+                    <span><img src=""/images/invite_friends/home_bg_bstt_default@2x.png" alt=""></span>
+                </div>
+                <div class="left content">
+                    <p>今日新增商品：<span><b id="todayAddGoods">0</b>份</span>，送出商品：<span><b id="todaySendGoods"></b>份</span></p>
+                    &lt;!&ndash; <p>截止目前：<span></span>已经通过试客巴省下<span><b>100000</b>元</span></p> &ndash;&gt;
+                    <div class="wrap">
+                        <div class="roll-wrap" id="roll-wrap">
+                            <ul id="ycbig">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+
+        <!--  新手专区 -->
+        <div class="novice_area">
+            <a href="activity/goNovice"><img src=""/images/index/home_bg_xinshou1_default.png" alt=""></a>
+        </div>
+
+        <!--品牌专场-->
+        <div class="newbBrand_special">
+            <img src=""/images/new_index/novice_area.png" alt="">
+        </div>
+
+        <!--新品上货——今日有好货-->
+        <div class="new_goods">
+            <!--推荐试用标题-->
+            <h1 class="recommend-try-title">
+                <b><i></i>新上货</b>
+                <span>今日有好货</span>
+                <a href="activity/goExpertSort?category=0&shop_type=0&yf_type=0&sy_type=0&sp_type=0&order=1&type=0">查看更多 <i class="icon iconfont icon-jiantou"></i></a>
+            </h1>
+            <!--新品上货商品推荐轮播-->
+            <div class="new-try-goods">
+                <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <div id="newGoodsId" class="mui-scroll">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--实时开奖商品推荐-->
+        <div class="goods_recommend realTime_lottery">
+            <!-- 推荐试用标题 -->
+            <h1 class="recommend-try-title">
+                <b>实时开奖商品</b>
+                <span>12点-20点每四小时开奖</span>
+                <a href="activity/goRealGoods/?category=0&shop_type=0&yf_type=0&sy_type=0&sp_type=0&order=0&type=3">查看更多 &gt;</a>
+            </h1>
+            <!-- 实时中奖商品推荐轮播 -->
+            <div class="new-try-goods">
+                <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <div id="highRateList" class="mui-scroll">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--推荐试用-->
+        <div class="recommend_try">
+            <div class="recommend_try_title">
+                <b class="lt"></b>
+                <i class="icon iconfont icon-aixin"></i>
+                <span>推荐试用</span>
+                <b class="rt"></b>
+            </div>
+
+        </div>
+        <div class="bottom_bus">
+            <p class="one"><i class="icon iconfont icon-dibushuoming"></i></p>
+            <p class="two">巴士已到站无更多内容了~~</p>
+        </div>
+    </div>
+</div>
+<!--关注我们-->
+<div class="follow_us">
+    <img src=""/images/follow_us/gz_icon_liwu_default@2x.png" alt="">
+</div>
+
+<!--新手礼包弹框-->
+<div class="novicePacks_modal" id="gift">
+    <div class="novicePacks_box">
+        <p class="picture" onclick="window.location.href='activity/goNovice'"><input type="button" data-type="1" id="go_gift" value="立即领取"></p>
+        <p class="novicePacks_close"><img id="close" data-type="2" src=""/images/invite_friends/sign_icon_popup_off_default@2x.png" alt=""></p>
+    </div>
+    <div class="mask_layer"></div>
+</div>
+<!--页面底部导航条-->
+<footer id="footer_nav"></footer>
+<!--关注我们弹框-->
+<div class="modal_box followUs_box" style="display:none">
+    <div class="modal_content">
+        <div class="main">
+            <p><img src="images/follow_us/gz_tc_bg_ewm1_deafult@2x.png" alt=""></p>
+        </div>
+        <p class="close"><img src="images/follow_us/gz_icon_off_default@2x.png" alt=""></p>
+    </div>
+    <div class="mask_layer"></div>
+</div>
+</body>
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js?v=1502438181"></script>
+<script type="text/javascript" src="/js/mui.min.js?v=1502438181"></script>
+<script src="/js/all_goods/index_tab.js?v=1502438181"></script>
+<script src="/js/tools.js?v=1502438181"></script>
+<script src="/js/mui.previewimage.js?v=1502438181"></script>
+<script src="/js/alert.js?v=1502438181"></script>
+<script src="/js/common/pack_goods.js?v=1502438181"></script>
+<script src="/js/new_index.js?v=1502438181"></script>
+<script src="/js/invite_friends/scroll_top.js?v=1502438181"></script>
+<script src="/js/poster/poster.js?v=1502438181"></script>
+<script type="text/javascript" charset="utf-8">
+    //    取消禁止a标签的跳转
+    mui('body').on('tap','a',function(){document.location.href=this.href;});
+    
+   /*  setTimeout(function(){
+		$('.mui-scroll').css("transform","translate3d(0px, 0px, 0px)");
+	},0) */
+</script>
+<script> var _hmt = _hmt || [];(function() {var hm = document.createElement("script");  hm.src = "https://hm.baidu.com/hm.js?73046f18e9201a9fb38a6900a362aaab";  var s =document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s);})();</script>
+</html>

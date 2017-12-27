@@ -1,0 +1,483 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3" />
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b" />
+    <meta name="sogou_site_verification" content="fXrXuBQkI2"/>
+   
+
+    <title>押金提现</title>
+
+    <link rel="stylesheet" href="/css/merchant/left_nav.css">
+    <link rel="stylesheet" href="/css/merchant/store_manage.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap">
+    <link rel="stylesheet" href="/css/plugins/dataTables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/merchant/header.css">
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <!--<link rel="stylesheet" href="">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/mall/html5.js"></script>
+    <script src="/js/mall/respond.min.js"></script>
+    <script src="/js/mall/selectivizr-min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.10.2.js"></script>
+<!--	<script src="/js/WdatePicker.js"></script>-->
+    <script src="/js/common.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+
+<!-- Page-Level Plugin Scripts - Tables -->
+<!--<script src="js/plugins/dataTables/jquery.dataTables.js"></script>-->
+<!--<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>-->
+    <script src="/js/merchant/merchant_common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul>
+                <li ><a href="/">返回首页</a></li>
+                <li><a href="/merchant_personal.html">欢迎您：<span>13510541770  <img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>                <li><a href="/login/logout">退出</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <div class="left" style="padding-top: 9px;">
+            <img class="logo" onclick="location.href='/'" src="/images/merchant/xqy_logo_default.png" alt="">
+            <span class="details_title">商家中心</span>
+        </div>
+
+      <!--<div class="advertisement right" >
+                   <a href="" target="_blank" title="">
+             <img style="margin-top:-3px;" src="images/merchant/adv4.png" alt="">
+         </a>
+        </div>-->
+
+    </div>
+    <div class="line"></div>
+</div>
+
+    <div class="left_nav">
+    <!-- 发布试用 -->
+    <div class="issue">
+        <a style=" cursor:pointer" onclick="issue_try()">发布试用</a>
+    </div>
+    <div class="title personal_center">
+        <a href="/merchant_personal.html">个人中心</a>
+    </div>
+    <div class="title store_manage">
+        <a href="/merchant_store.html">店铺管理</a>
+    </div>
+    <div class="title try_manage">
+        <a class="selected" href="javascript:void(0);">活动管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_activity_manage.html">试用管理</a></li>
+            <li><a href="/merchant_order_manage.html">订单管理</a></li>
+        </ul>
+    </div>
+    <div class="title account_information">
+        <a class="selected" href="javascript:void(0);">账号信息</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_basic_setup.html">基本设置</a></li>
+            <li><a href="/merchant_bankcard_manage.html">绑定银行卡</a></li>
+            <li><a href="/merchant_member_manage.html">会员管理</a></li>
+        </ul>
+    </div>
+    <div class="title fund_manage">
+        <a class="selected" href="javascript:void(0);">资金管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_deposit_recharge.html">我要充值</a></li>
+            <li><a href="/merchant_deposit_withdraw.html">押金提现</a></li>
+            <li><a href="/merchant_funds_record.html">资金记录</a></li>
+            <li><a href="/merchant_activity_subsidiary.html">活动明细</a></li>
+        </ul>
+    </div>
+    <div class="title invited_manage">
+        <a class="selected" href="javascript:void(0);">邀请返利</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_invite/friends_invited.html">好友邀请</a></li>
+            <li><a href="/merchant_invite/invited_reward.html">邀请奖励</a></li>
+        </ul>
+    </div>
+    <div class="title message_center">
+        <a id="message_num"  href="/merchant_message_center.html">消息中心</a>
+    </div>
+</div>
+
+<!--联系客服-->
+<!--<div class="contact_customerService">-->
+<!--    <div class="contact_wayContent">-->
+<!--        <div class="left contact_way">-->
+<!--            <div class="title">-->
+<!--                <p>在线客服</p>-->
+<!--            </div>-->
+<!--            <ul>-->
+<!--	    	    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852369353&site=qq&menu=yes" target="_blank">试客巴—阿育王</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506830&site=qq&menu=yes" target="_blank" >试客巴—张洁</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506831&site=qq&menu=yes" target="_blank">试客巴—大表哥</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506832&site=qq&menu=yes" target="_blank">试客巴—肖祥</a></li>-->
+<!--            </ul>-->
+<!--	 </div>-->
+<!--        <div class="right contact_wayBtn">-->
+<!--            <img id="customerService" src="../../images/lianxikefu/contact_bg_right_default.png" alt="">-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+
+<script src="//wp.qiye.qq.com/qidian/2852130118/cc918eff1c09f7ce9c9d5d3285818e2b" charset="utf-8"></script>
+
+<script>
+    (function() {
+        $('.title > a').on('click',function(){
+            var this_ul = $(this).parent().children('ul');
+
+            $(this).toggleClass('selected');
+            $(this).hasClass('selected')?this_ul.slideDown('fast'):this_ul.slideUp('fast');
+        })
+
+    })()
+    $(function(){
+
+        $('.contact_customerService').on('mouseover',function(){
+            $('.contact_way').show();
+        });
+        $('.contact_customerService').on('mouseout',function(){
+            $('.contact_way').hide();
+        });
+        $.ajax({
+            url : '/merchant_userapi/get_sideinfo',
+            data:{},
+            type : 'post',
+            dataType : 'json',
+            cache : false,
+            success : function (result){
+               // $("#act_num").text("试用管理");
+               // $("#order_num").text("订单管理("+result.order_count+")");
+                $("#message_num").text("消息中心("+result.mess_count+")");
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    });
+</script>    <div id="page-wrapper">
+
+   
+    <link rel="stylesheet" href="/css/merchant/reset_content.css">
+    <link rel="stylesheet" href="/css/merchant/modal_alert.css">
+
+<section id="section">
+    <div class="section_main">
+        <!--左侧导航-->
+        <aside class="left" id="left_nav"></aside>
+        <!--押金提现-->
+        <div id="my_main" class="deposit_withdraw left">
+            <h1 class="title">押金提现</h1>
+            <h2>填写提现金额</h2>
+            <!--填写金额先关的信息-->
+            <div class="fillIn_money">
+                <div class="main_one"><b>可用押金：</b><span class="avail_deposit">&yen;178.68</span></div>
+                <div class="main_two">
+                    <b>可用银行卡：</b>
+                                        <div class="left bankCard_two">
+                        <p><img onclick="location.href='/merchant_add_bankCard'" src="/images/merchant/sj_zjgl_icon_bdyhk_default.png" alt="" ></p>
+                        <p>请先绑定银行卡</p>
+                    </div>
+                                        <span class="error" id="banckcard_error"></span>
+                </div>
+                <div class="main_three">
+                    <b>提现金额：</b>
+                    <input id="tixian" type="text" onKeyUp="amount(this)" onblur="overFormat(this);get_money()"  />
+                    <span class="error" id="tixianerror"></span>
+                    <br/>
+                    <p class="one">单次最少提现500元，提现操作平台将收取1%的手续费</p>
+                    <p class="two">预计2个工作日内（国家法定节假日和双休日顺延）平台完成提现操作。<br/>
+                        到账时间以各大银行为准，预计3-5个工作日左右。</p>
+                </div>
+                <div class="main_four">
+                    <b>实际到账金额：</b>
+                    <span id="daozhang"></span>
+                </div>
+                <div class="main_five">
+
+                     <!--修改前-->
+                    <!--<b>提现密码：</b>-->
+                    <!--<input type="text" id="tixian_pwd"/>-->
+                    <!--<span class="error" id="pwderror"></span>-->
+                     <!--修改后-->
+                     <table>
+                        <tr>
+                           <td><b>提现密码：</b></td>
+                           <td><input class="passwd" type="password" name="passwd" id="passwd" maxlength="20" /></td>
+                           <td><span class="error" id="pwderror"></span></td>
+                        </tr>
+                    </table>
+                    <span class="error" id="pwderror"></span>
+                    <br/>
+                    <p class="one">忘记密码请联系客服：<img src="/images/merchant/sj_grzx_icon_qq_default.png" alt="" onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes')" ></p>
+                </div>
+            </div>
+            <p class="confirm_btn">
+                                    <input id="confirm_withdraw" type="button" value="确认提现" onclick="post_tixian()" />
+                
+            </p>
+            <div class="warm_prompt">
+                <h1>温馨提示：</h1>
+                <p>1、信用卡支付时银行会自动提示风险安全提醒，可继续支付，请勿担心；</p>
+                <p>2、请注意您的银行卡充值限制，以便造成不便；</p>
+                <p>3、禁止洗钱、信用卡套现、虚假交易等行为，一经发现并确认，将终止该账号的试用；</p>
+                <p>
+                    4、如果充值金额没有及时到账，请联系客服。
+                    <img src="/images/merchant/sj_grzx_icon_qq_default.png" alt="" onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes')" >
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--确认提现成功弹框-->
+<div class="withdraw_modal">
+    <div class="modal_box">
+        <div class="modal_prompt">
+            <span>提示</span>
+            <a class="close" href="javascript:void(0);" onclick="location.reload();">
+                <img src="/images/merchant/sj_grzx_tc_off_default.png" alt="">
+            </a>
+        </div>
+        <div class="succeed_content">
+            <p><img src="/images/merchant/sj_fbsy_tc_icon_right_default.png" alt=""></p>
+            <p class="payment_succeed">提现成功！</p>
+            <p>请在3-5个工作日后查询银行账户，如有问题请联系客服。</p>
+        </div>
+        <div class="modal_submit">
+            <input class="confirm" type="button" value="确定" onclick="check_ok()"/>
+        </div>
+    </div>
+    <div class="mask_layer"></div>
+</div>
+<!--确认提现失败--原因一：可用押金金额不足-->
+<div class="withdrawFailure_modal">
+    <div class="modal_box">
+        <div class="modal_prompt">
+            <span>提示</span>
+            <a class="close" href="javascript:void(0);">
+                <img src="/images/merchant/sj_grzx_tc_off_default.png" alt="">
+            </a>
+        </div>
+        <div class="succeed_content">
+            <p><img src="/images/merchant/sj_fbsy_tc_icon_no_default.png" alt=""></p>
+            <p class="payment_succeed">支付失败！</p>
+            <p style="height:20px;">提现密码错误</p>
+        </div>
+        <div class="modal_submit">
+            <input class="confirm" type="button" value="确定" onclick="check_fail()"/>
+        </div>
+    </div>
+    <div class="mask_layer"></div>
+</div>
+<script src="/js/money_verify.js"></script>
+<script>
+    $(function(){
+        $('.fund_manage ul>li').find('a').eq(1).addClass('leftNav_active')
+//        模态框的高度(500：表示头部和尾部高度的和)；
+        $('.mask_layer').height(document.body.offsetHeight+500);
+        $('.close,.cancel').bind('click',function(){
+            $('.withdrawFailure_modal,.withdraw_modal').css('display','none');
+            enableScroll();
+        });
+    })
+
+    function check_ok(){
+        location.reload();
+    }
+    function check_fail(){
+        $('.withdrawFailure_modal,.withdraw_modal').css('display','none');
+        return;
+    }
+    function get_money(){
+        
+        var tixian = $("#tixian").val();
+        var reg = /\d+\.\d{0,2}|\d$/;
+        if(!reg.test(tixian)){
+            $("#tixianerror").text("非法输入");
+            return;
+        }
+        if(tixian < 500){
+            $("#tixianerror").text("单次最少提现500元");
+            $("#daozhang").text("");
+            return;
+        }
+        var money = (tixian*0.99).toFixed(2);
+        if(tixian){
+            $("#daozhang").text("￥"+money);
+            $("#tixianerror").text("");
+            return;
+        }
+        return;
+    }
+    function post_tixian(){
+        if(!0)
+        {
+            $("#banckcard_error").text("请先绑定银行卡");
+            return
+        }
+        var tixian = $("#tixian").val();
+		var tixian_pwd = $("#passwd").val();
+		if(tixian_pwd.length == 0 || tixian_pwd.length < 6|| tixian_pwd.length > 20){
+			$("#pwderror").text("请填写完整的提现密码");
+            return;
+		}		
+		 $("#pwderror").text("");	
+       
+        var avail_deposit = 178.68;
+        if(!tixian){
+            $("#tixianerror").text("提现金额不能为空");
+            return;
+        } else if(tixian < 500){
+            $("#tixianerror").text("单次最少提现500元");
+            $("#daozhang").text("");
+            return;
+        }
+        if(avail_deposit < tixian){
+            $("#tixianerror").text("金额不足");
+            return;
+        }
+        if(1 == 1){
+            $("#pwderror").text("请先设置提现密码");
+            return;
+        }
+        var tixianerror = $("#tixianerror").text();
+        if(tixianerror!='')
+        {
+            return ;
+        }
+
+        $.ajax({
+            url : '/merchant_deposit_withdraw/post_tixian',
+            data:{tixian:tixian,tixian_pwd:tixian_pwd},
+            type : 'post',
+            cache : false,
+            datatype : "json",
+            success : function (result){
+                result = JSON.parse(result);
+                var code = result.code;
+                if(code == 0){
+                    $('.withdrawFailure_modal').css('display','block');
+                    $("#pwderror").text("提现密码错误");
+                    return;
+                }else if(code == -1){
+                    $("#tixianerror").text("金额不足");
+                    $('.avail_deposit').text("￥"+result.data)
+                }else{
+                    $('.withdraw_modal').css('display','block');
+                    return;
+                }
+
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    }
+</script>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal" style="display:none">
+        <div class="modal_box" style="max-width: 500px">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/mall/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="modal_content">
+                <p style="line-height: 40px;margin: 30px 20px 30px 20px;font-size: 16px ">提示的内容</p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li>关于试客巴</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>联系客服</li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li>
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+
+    </div>
+
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+    </div>
+</footer>
+</div>
+
+<script src="/js/mall/mask_layer.js"></script>
+
+</body>
+</html>

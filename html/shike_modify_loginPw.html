@@ -1,0 +1,448 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3">
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b">
+    <meta name="sogou_site_verification" content="fXrXuBQkI2">
+    <base href="">
+    <title>修改登录密码</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="/cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" >
+    <link rel="stylesheet" href="/css/plugins/dataTables/dataTables.bootstrap.css" >
+    <link rel="stylesheet" href="/css/common.css" >
+    <link rel="stylesheet" href="/css/shike/reset.css">
+    <link rel="stylesheet" href="/css/shike/left_nav.css">
+    <link rel="stylesheet" href="/css/shike/header.css ">
+    <link rel="stylesheet" href="/css/mall/footer.css">
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/shike/shike_common.js"></script>
+    <script src="/js/mall/html5shiv.min.js"></script>
+    <script src="/js/mall/respond.min.js"></script>
+    <script src="/js/mall/selectivizr-min.js"></script>
+
+    <script src="/js/WdatePicker.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul>
+                <li><a href="">返回首页</a></li>
+                
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined index: user_name</p>
+<p>Filename: common/shike_top.php</p>
+<p>Line Number: 11</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /var/www/html/shike2/application/views/common/shike_top.php<br />
+			Line: 11<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /var/www/html/shike2/application/views/shike_default.php<br />
+			Line: 42<br />
+			Function: include			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /var/www/html/shike2/application/controllers/Shike_modify_loginPw.php<br />
+			Line: 14<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: /var/www/html/shike2/index.php<br />
+			Line: 326<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div><li><a href="shike_personal">欢迎您：<span>  <img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>                <li><a href="login/logout">退出</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <div class="left" style="padding-top: 9px;">
+            <img class="logo" onclick="location.href=''"
+                 src="/images/shike/xqy_logo_default.png" alt="">
+            <span class="details_title">试客中心</span>
+        </div>
+    </div>
+    <div class="line"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="left_nav" style="float:left">
+    <div class="title personal_center">
+        <a href="shike_personal">个人中心</a>
+    </div>
+    <div class="title my_collect">
+        <a href="shike_collect">收藏夹</a>
+    </div>
+    <div class="title try_manage">
+        <a  href="javascript:void(0);">试用管理</a>
+        <ul>
+            <li><a href="shike_application_record">申请记录</a></li>
+            <li><a id="win_num" href="shike_try_winningManage">中奖管理</a></li>
+            <li><a id="buy_num" href="shike_exchange_manage">兑换管理</a></li>
+        </ul>
+    </div>
+    <div class="title account_information">
+        <a href="javascript:void(0);">账号信息</a>
+        <ul>
+            <li><a href="shike_basic_setup">基本设置</a></li>
+            <li><a href="shike_bankcard_manage">绑定银行卡</a></li>
+            <li><a href="shike_member_manage">会员管理</a></li>
+            <li><a href="shike_virtual_money_manage">虚拟币记录</a></li>
+        </ul>
+    </div>
+    <div class="title fund_manage">
+        <a href="javascript:void(0);">资金管理</a>
+        <ul>
+            <li><a href="shike_deposit_withdraw">本金提现</a></li>
+            <li><a href="shike_funds_record">资金记录</a></li>
+        </ul>
+    </div>
+    <div class="title message_center">
+        <a id="mess_num" href="shike_message_center">消息中心</a>
+    </div>
+
+</div>
+<script>
+    $(function(){
+        $.ajax({
+            url : 'shike_userapi/get_sideinfo',
+            data:{},
+            type : 'post',
+            dataType : 'json',
+            cache : false,
+            success : function (result){
+                //$("#win_num").text("中奖管理（"+result.win_count+"）");
+                //$("#buy_num").text("兑换管理（"+result.buy_count+"）");
+                $("#mess_num").text("消息中心("+result.mess_count+")");
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    });
+</script>    <div id="page-wrapper">
+        
+    <link rel="stylesheet" href="/css/shike/reset_content.css">
+    <link rel="stylesheet" href="/css/shike/revamp_loginPw.css">
+
+<section id="section">
+    <div class="section_main">
+        <!--左侧导航-->
+        <aside class="left" id="left_nav"></aside>
+        <!--修改登录密码-->
+        <div id="my_main" class="basic_setup left">
+            <h1 class="title">修改登录密码</h1>
+            <form class="revamp_content">
+                <label for="phone">已验证手机：</label>
+                <input id="phone" type="text" />
+                <br/>
+                <p><span id="phone_error"></span></p>
+
+                <label for="mewPw">新密码：</label>
+                <input id="mewPw" type="password" onblur="check_pw()">
+                <br/>
+                <p><span id="mewPw_error"></span></p>
+
+                <label for="confirmPw">确认新密码：</label>
+                <input id="confirmPw" type="password" onblur="verify_pwd()">
+                <br/>
+                <p><span id="confirmPw_error"></span></p>
+
+                <label for="authCode">验证码：</label>
+                <input id="authCode" type="text">
+                <input id="get_code" type="button" value="获取验证码" onclick="get_phone_code(this)">
+                <br/>
+                <p><span id="yzm_errors"></span></p>
+                <!--<p><span id="yzm_send" style="color:black"></span></p>-->
+
+                <p class="btns">
+                    <input onclick="info_post()" type="button" value="确定">
+                    <input type="button" onclick="location.href='shike_basic_setup'" value="取消">
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(function(){
+           $('.account_information ul>li').find('a').eq(0).addClass('left_nav_active');
+    })
+
+  
+    function check_pw(){
+        if($("#mewPw").val()==''){
+            $("#mewPw_error").text("密码不能为空");
+        }else{
+            $("#mewPw_error").text("");
+        }
+    }
+    $('#phone').on('blur',function(){
+        var phone = $('#phone').val().trim();
+        var reg=/^1[3|4|5|7|8]\d{9}$/;
+        if(phone===""){
+            $('#phone_error').text('手机号码不能为空！');
+            return false;
+        }
+        else if(!(reg.test(phone))){
+            $('#phone_error').text('手机号码格式不正确！');
+            return false;
+        }
+        else {
+            $('.phone_error').css('display','none');
+            $.ajax({
+                url:"/mall/register/check_phone2",
+                method: 'post',
+                data:{
+                    phone:phone
+                },
+                success:function(result){
+                    result = JSON.parse(result);
+                    if(result.success==true){
+                        $('#phone_error').text('');
+                        $('#phone_error').show();
+                    }else{
+                        code = result.code;
+                        if(code == 0)
+                        {
+                            $('#phone_error').show();
+                            $('#phone_error').text('请填写您注册时绑定的手机号');
+                            return false;
+                        }
+                    }
+                },
+                error:function(){
+                }
+            })
+        }
+    })
+
+    function verify_pwd(){
+        var mewPw = $("#mewPw").val();
+        var confirmPw = $("#confirmPw").val();
+        if(mewPw != confirmPw){
+             $("#confirmPw_error").text("两次密码输入不同");
+            return;
+        }
+        $("#confirmPw_error").text("");
+    }
+
+    var seconds=60;
+    function get_phone_code(obj){
+        var phone_error = $("#phone_error").text();
+        if(phone_error){
+            return;
+        }
+        var mewPw = $("#mewPw").val();
+        var confirmPw = $("#confirmPw").val();
+        if(!mewPw){
+            $("#mewPw_error").text("密码不能为空");
+            return;
+        }
+        $("#mewPw_error").text("");
+        if(mewPw != confirmPw){
+            $("#confirmPw_error").text("两次密码输入不同");
+            return;
+        }
+        $("#confirmPw_error").text("");
+
+        var tel = $("#phone").val();
+        $.ajax({
+        url : 'sendcloud',
+        type : 'POST',
+        cache : false,
+        dataType:'json',
+        async : false,
+        data : {tel:tel},
+        success : function (result){
+            if(result == 1){
+               // $("#yzm_send").text("验证码已发送，请稍后");
+               // $(obj).unbind('click').removeAttr('onclick').click(function(){
+               //     $("#yzm_send").text("验证码已发送，请稍后");
+               // });
+                $("#get_code").val('重新发送('+seconds+'s)');
+                setTimeout("countdown()",1000);
+            }
+            
+        }
+    })
+    }
+
+
+    function countdown(){
+        var obj = $("#get_code");
+        <!-- var seconds = $("#get_code").val();-->
+        if(seconds == 0){
+            $("#get_code").val("获取验证码");
+            $("#get_code").unbind('click').removeAttr('onclick').click(function(){get_phone_code(obj);});
+            $("#yzm_send").text("");
+            return;
+        }
+        seconds -=1;
+        $("#get_code").val('重新发送('+seconds+'s)');
+        setTimeout("countdown()",1000);
+
+    }
+
+    function info_post(){
+        var authcode = $("#authCode").val();
+        var mewPw = $("#mewPw").val();
+        var confirmPw = $("#confirmPw").val();
+        if(!mewPw){
+            $("#mewPw_error").text("密码不能为空");
+            return;
+        }
+       
+        if(!authcode){
+            $("#yzm_errors").text("验证码不能为空");
+            return;
+        }
+       
+        if(mewPw != confirmPw){
+             $("#confirmPw_error").text("两次密码输入不同");
+            return;
+        }
+      
+        $.ajax({
+        url : 'shike_userapi/get_session',
+        type : 'POST',
+        cache : false,
+        dataType:'json',
+        async : false,
+        data : {authcode:authcode,passwd:mewPw},
+        success : function (result){
+            if(result.res == 1){
+                window.location.href="shike_loginPw_modify_succeed";
+            }else{
+                $("#yzm_send").text(result.msg);
+            }
+        }
+        })
+    }
+</script>
+
+
+
+
+
+
+
+
+
+    </div>
+    <!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li>关于试客巴</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>联系客服</li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li>
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+    </div>
+    <div style="display:none;">
+
+        <script>
+            var _hmt = _hmt || [];
+            (function () {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </div>
+</footer>
+</div>
+
+</body>
+</html>
+
+
+

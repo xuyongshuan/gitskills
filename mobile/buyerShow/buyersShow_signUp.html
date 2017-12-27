@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes"><!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mobile_reset.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mui.css?v=1502438181">
+    <link rel="stylesheet" href="fonts/iconfont.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/buyersShow_signUp/buyersShow_signUp.css?v=1502438181 ">
+    <title>买家秀报名</title>
+    <script>
+        (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                var html = document.documentElement;
+                var windowWidth = html.clientWidth;
+                html.style.fontSize = windowWidth / 7.5 + 'px';
+                // 等价于html.style.fontSize = windowWidth / 750 * 100 + 'px';
+            }, false);
+        })();
+
+        // 这个7.5就是根据设计稿的横向宽度来确定的，假如你的设计稿是640
+        // 那么 html.
+    </script>
+</head>
+<body>
+<header id="header_nav"></header>
+<div class="buyersShow_signUp">
+    <!--个人信息介绍-->
+    <div class="personal_information">
+        <div class="clearfix">
+            <div class="left avatar">
+                <img src=""/images/user/gift_bg_head_default@2x.png " alt="">
+            </div>
+            <div class="left information">
+                <p id="userName" class="userName clearfix"></p>
+                <p class="buyers_show">
+                    <span class="left">已获得的徽章：</span><span class="left noHave">还未获得</span>
+                    <span class="left"><img class="beautyShow hided"  alt=""></span>
+                    <span class="left"><img class="manShow hided"  alt=""></span>
+                    <span class="left"><img class="motherChildShow hided" alt=""></span>
+                    <span class="left"><img class="childShow hided" alt=""></span>
+                </p>
+            </div>
+        </div>
+        <div class="directions">
+            <p>成功报名不同类型的买家秀，可获得相应的徽章，只有获得买家秀徽章的试客才可申请专属买家秀试用品。</p>
+        </div>
+    </div>
+    <!--买家秀说明-->
+    <div class="buyersShow_directions">
+        <h1><i class="iconfont icon-shuxian"></i>买家秀介绍</h1>
+        <p>
+            买家秀根据报名人的年龄和人群划分为：美女秀，男神秀，母婴秀，儿童秀。
+            一旦报名通过你将拥有专属的买家秀徽章，在买家秀专属试用，
+            您可以第一时间抢下试用商品获得试用资格，同时在任务完成后，
+            还会获得平台的赏金奖励，赏金可以直接兑换本金并提现到银行卡中。
+        </p>
+    </div>
+   <!--美女秀 男神秀 宝宝秀  报名-->
+    <div class="signUp">
+        <!--美女秀-->
+        <div class="buyers_show">
+            <div class="clearfix">
+                <i class="iconfont icon-meinvxiu_liang left"></i>
+                <div class="left claim">
+                    <p><b>美女秀：</b>年龄在14-35岁之间的女性</p>
+                    <p>适用于：<span>妻子、姐妹、女儿</span></p>
+                </div>
+            </div>
+            <p class="trial_category">可参与试用品类：时尚女装、鞋包配饰、护肤美妆等</p>
+            <a href="javascript:void(0);" class="sign_up">
+            	<input data-status="status" data-type="buyer_show_type" id="beautyShow" type="button" value="立即报名">
+            </a>
+        </div>
+        <!--男神秀-->
+        <div class="buyers_show">
+            <div class="clearfix">
+                <i class="iconfont icon-nanshenxiu_liang left"></i>
+                <div class="left claim">
+                    <p><b>男神秀：</b>年龄在14-35岁之间的男性</p>
+                    <p>适用于：<span>丈夫、兄弟、儿子</span></p>
+                </div>
+            </div>
+            <p class="trial_category">可参与试用品类：精品男装、鞋包配饰等</p>
+            <a href="javascript:void(0);" class="sign_up">
+            <input data-status="status" data-type="buyer_show_type" id="manShow" type="button" value="立即报名">
+            </a>
+        </div>
+        <!--母婴秀-->
+        <div class="buyers_show">
+            <div class="clearfix">
+                <i class="iconfont icon-muyingxiu_liang left"></i>
+                <div class="left claim">
+                    <p><b>母婴秀：</b>已孕妈妈或3岁以内的儿童</p>
+                    <p>适用于：<span>妻子、宝宝</span></p>
+                </div>
+            </div>
+            <p class="trial_category">可参与试用品类：母婴儿童等</p>
+            <a href="javascript:void(0);" class="sign_up"><input id="motherChildShow" type="button" value="立即报名"></a>
+        </div>
+        <!--儿童秀-->
+        <div class="buyers_show">
+            <div class="clearfix">
+                <i class="iconfont icon-ertongxiu left"></i>
+                <div class="left claim">
+                    <p><b>儿童秀：</b>要求3-13岁之间的青少年</p>
+                    <p>适用于：<span>子女等</span></p>
+                </div>
+            </div>
+            <p class="trial_category">可参与试用品类：母婴儿童等</p>
+            <a href="javascript:void(0);" class="sign_up"><input id="childShow" type="button" value="立即报名"></a>
+        </div>
+    </div>
+    <!--买家秀徽章特权-->
+    <div class="buyersShow_privilege">
+        <h1><i class="iconfont icon-shuxian"></i>买家秀徽章特权</h1>
+        <p><img src=""/images/buyersShow_signUp/show_bg_vip_default@2x.png" alt=""></p>
+    </div>
+    <!--常见问题-->
+    <div class="common_problem">
+        <h1><i class="iconfont icon-shuxian"></i>常见问题</h1>
+        <p class="question">
+            <i class="iconfont icon-wenti"></i>
+            <span>请问我怎么知道自己是否通过买家秀审核了？</span>
+        </p>
+        <p class="answer clearfix ">
+            <i class="iconfont icon-daan left"></i>
+            <span class="left answer_content">
+                你可以在买家秀报名页面查看到自己的买家秀审核结果，
+                同时你也可以通过自己获得的徽章了解到买家秀审核的结果。
+            </span>
+        </p>
+        <p class="question">
+            <i class="iconfont icon-wenti"></i>
+            <span>为什么我没有通过买家秀审核？</span>
+        </p>
+        <p class="answer clearfix ">
+            <i class="iconfont icon-daan left"></i>
+            <span class="left answer_content">
+                非常抱歉，我们平台针对买家秀的人群个人形象和身材都有一定要求。
+                如果你个人的买家秀徽章申请没有通过，你依然可以上传家人的照片和资料申请其他类型的买家秀徽章。
+            </span>
+        </p>
+        <p class="question">
+            <i class="iconfont icon-wenti"></i>
+            <span>我报名认证买家秀有什么好处？</span>
+        </p>
+        <p class="answer clearfix ">
+            <i class="iconfont icon-daan left"></i>
+            <span class="left answer_content">
+                买家秀徽章申请通过后，你可以参与专属买家秀试用获得试用资格，
+                同时获得赏金奖励。
+            </span>
+        </p>
+        <p class="question">
+            <i class="iconfont icon-wenti"></i>
+            <span>我获得买家秀徽章了之后我需要做什么？</span>
+        </p>
+        <p class="answer clearfix ">
+            <i class="iconfont icon-daan left"></i>
+            <span class="left answer_content last">
+                恭喜您获得了平台买家秀的徽章，您只需要在有买家秀试用标识的商品中选择自己中意的商品进行申请，
+                就可以获得该商品的试用资格，完成试用还能获得赏金奖励。
+            </span>
+        </p>
+    </div>
+</div>
+<script src="/js/jquery-1.10.2.js?v=1502438181"></script>
+<script src="/js/mui.js?v=1502438181"></script>
+<script type="text/javascript" src="/js/tools.js?v=1502438181"></script>
+<script type="text/javascript" src="/js/utils.js?v=1502438181"></script>
+<script src="/js/buyersShow_signUp/buyersShow_signUp.js?v=1502438181"></script>
+</body>
+</html>

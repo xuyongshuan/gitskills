@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3" />
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b" />
+    <meta name="sogou_site_verification" content="fXrXuBQkI2"/>
+   
+
+    <title>发布试用</title>
+
+    <link rel="stylesheet" href="/css/merchant/left_nav.css">
+    <link rel="stylesheet" href="/css/merchant/store_manage.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap">
+    <link rel="stylesheet" href="/css/plugins/dataTables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/merchant/header.css">
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <!--<link rel="stylesheet" href="">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/mall/html5.js"></script>
+    <script src="/js/mall/respond.min.js"></script>
+    <script src="/js/mall/selectivizr-min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.10.2.js"></script>
+<!--	<script src="/js/WdatePicker.js"></script>-->
+    <script src="/js/common.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+
+<!-- Page-Level Plugin Scripts - Tables -->
+<!--<script src="js/plugins/dataTables/jquery.dataTables.js"></script>-->
+<!--<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>-->
+    <script src="/js/merchant/merchant_common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul>
+                <li ><a href="/">返回首页</a></li>
+                <li><a href="/merchant_personal.html">欢迎您：<span>13510541770  <img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>                <li><a href="/login/logout">退出</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <div class="left" style="padding-top: 9px;">
+            <img class="logo" onclick="location.href='/'" src="/images/merchant/xqy_logo_default.png" alt="">
+            <span class="details_title">商家中心</span>
+        </div>
+
+      <!--<div class="advertisement right" >
+                   <a href="" target="_blank" title="">
+             <img style="margin-top:-3px;" src="images/merchant/adv4.png" alt="">
+         </a>
+        </div>-->
+
+    </div>
+    <div class="line"></div>
+</div>
+
+    <div class="left_nav">
+    <!-- 发布试用 -->
+    <div class="issue">
+        <a style=" cursor:pointer" onclick="issue_try()">发布试用</a>
+    </div>
+    <div class="title personal_center">
+        <a href="/merchant_personal.html">个人中心</a>
+    </div>
+    <div class="title store_manage">
+        <a href="/merchant_store.html">店铺管理</a>
+    </div>
+    <div class="title try_manage">
+        <a class="selected" href="javascript:void(0);">活动管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_activity_manage.html">试用管理</a></li>
+            <li><a href="/merchant_order_manage.html">订单管理</a></li>
+        </ul>
+    </div>
+    <div class="title account_information">
+        <a class="selected" href="javascript:void(0);">账号信息</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_basic_setup.html">基本设置</a></li>
+            <li><a href="/merchant_bankcard_manage.html">绑定银行卡</a></li>
+            <li><a href="/merchant_member_manage.html">会员管理</a></li>
+        </ul>
+    </div>
+    <div class="title fund_manage">
+        <a class="selected" href="javascript:void(0);">资金管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_deposit_recharge.html">我要充值</a></li>
+            <li><a href="/merchant_deposit_withdraw.html">押金提现</a></li>
+            <li><a href="/merchant_funds_record.html">资金记录</a></li>
+            <li><a href="/merchant_activity_subsidiary.html">活动明细</a></li>
+        </ul>
+    </div>
+    <div class="title invited_manage">
+        <a class="selected" href="javascript:void(0);">邀请返利</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_invite/friends_invited.html">好友邀请</a></li>
+            <li><a href="/merchant_invite/invited_reward.html">邀请奖励</a></li>
+        </ul>
+    </div>
+    <div class="title message_center">
+        <a id="message_num"  href="/merchant_message_center.html">消息中心</a>
+    </div>
+</div>
+
+<!--联系客服-->
+<!--<div class="contact_customerService">-->
+<!--    <div class="contact_wayContent">-->
+<!--        <div class="left contact_way">-->
+<!--            <div class="title">-->
+<!--                <p>在线客服</p>-->
+<!--            </div>-->
+<!--            <ul>-->
+<!--	    	    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852369353&site=qq&menu=yes" target="_blank">试客巴—阿育王</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506830&site=qq&menu=yes" target="_blank" >试客巴—张洁</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506831&site=qq&menu=yes" target="_blank">试客巴—大表哥</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506832&site=qq&menu=yes" target="_blank">试客巴—肖祥</a></li>-->
+<!--            </ul>-->
+<!--	 </div>-->
+<!--        <div class="right contact_wayBtn">-->
+<!--            <img id="customerService" src="../../images/lianxikefu/contact_bg_right_default.png" alt="">-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+
+<script src="//wp.qiye.qq.com/qidian/2852130118/cc918eff1c09f7ce9c9d5d3285818e2b" charset="utf-8"></script>
+
+<script>
+    (function() {
+        $('.title > a').on('click',function(){
+            var this_ul = $(this).parent().children('ul');
+
+            $(this).toggleClass('selected');
+            $(this).hasClass('selected')?this_ul.slideDown('fast'):this_ul.slideUp('fast');
+        })
+
+    })()
+    $(function(){
+
+        $('.contact_customerService').on('mouseover',function(){
+            $('.contact_way').show();
+        });
+        $('.contact_customerService').on('mouseout',function(){
+            $('.contact_way').hide();
+        });
+        $.ajax({
+            url : '/merchant_userapi/get_sideinfo',
+            data:{},
+            type : 'post',
+            dataType : 'json',
+            cache : false,
+            success : function (result){
+               // $("#act_num").text("试用管理");
+               // $("#order_num").text("订单管理("+result.order_count+")");
+                $("#message_num").text("消息中心("+result.mess_count+")");
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    });
+</script>    <div id="page-wrapper">
+
+   
+<link rel="stylesheet" href="/css/merchant/reset_content.css">
+<link rel="stylesheet" href="/fonts/iconfont.css">
+<link rel="stylesheet" href="/css/merchant/fill_information.css">
+
+
+<section id="section">
+    <div class="section_main">
+        <!--左侧导航-->
+        <aside class="left" id="left_nav"></aside>
+        <!--头部说明图片-->
+        <div  class="left"  style="width: 1040px;overflow: hidden;background-color: #ffffff;margin: 0 0 8px 10px;"><img src="/images/merchant/issue_try/release_header_show.png" alt="" /></div>
+        <!--右侧店铺管理-->
+        <div id="my_main" class="store_content left">
+            <h1 class="title">发布试用</h1>
+            <!--进度条-->
+            <div class="progress_bar">
+                <img src="/images/merchant/sj_fbsy_bg_jdt_02_default.png" alt="">
+            </div>
+            <!--2.填写商品信息-->
+            <div class="fill_information">
+                <h2 class="title">2.填写商品信息</h2>
+                <div class="shop_information">
+                    <div class="commodity_information">
+                        <input type="hidden" name="act_id" id="act_id" value="" />
+                        <input type="hidden" name="old_act_id" id="old_act_id" value="" />
+
+                        <label for="commodity_name"><span>*</span>商品名称：</label>
+                        <input id="commodity_name" type="text" value="" >
+                        <span id="product_name_error"></span>
+                        <br/>
+                        <p>
+                            请输入试用品名称，
+                            <a href="javascript:void(0);">不要和淘宝商品名称相同，</a>
+                            防止试客直接搜索名称购买，请控制在20个字内
+                        </p>
+
+                        <label for="goods_name"><span>*</span>淘宝商品标题：</label>
+                        <input id="goods_name" type="text" value="" >
+                        <span id="goods_name_error"></span>
+                        <br/>
+                        <p>
+                            请输入淘宝完整标题，
+                            <a href="javascript:void(0);">和淘宝商品标题完全相同，</a>
+                            请将商品在淘宝显示的完整名称复制到此输入框，如果商品名称<br/>中有空格，请连着空格一起复制粘贴。
+                            <a href="javascript:void(0);" style="color:#e61e28;font-weight:bold;font-style: normal">活动期间淘宝网上的商品标题不得更改！</a>
+                        </p>
+
+
+                        <label for="shop_url"><span>*</span>商品链接：</label>
+                        <input id="shop_url" type="text" value="">
+                        <span class="error" id="product_link_error"></span>
+                        <br/>
+                        <p>平台会根据您填写的商品链接抓取对应淘宝商品的宝贝描述，显示在试用详情页。</p>
+                        <label for="commodity_classify"><span>*</span>商品的分类：</label>
+                        <select id="commodity_classify">
+                                                         <option value="1" >时尚女装</option>                            <option value="2" >精品男装</option>                            <option value="3" >护肤美妆</option>                            <option value="4" >鞋包配饰</option>                            <option value="5" >居家生活</option>                            <option value="6" >数码电器</option>                            <option value="7" >母婴儿童</option>                            <option value="8" >户外运动</option>                            <option value="9" >食品酒水</option>                            <option value="10" >其他试用</option>                        </select>
+                        <br/>
+                        <p><a>此分类为试客巴平台分类</a></p>
+                        <div class="upload_image">
+                            <label class="left"><span>*</span>平台展示图：</label>
+                            <div class="up_img left" >
+                                <input type="file" name="fileToUpload" class="fileToUpload" id="picture_urls" data-img=""/>
+                                <input type="text" name="compressValue" class="compressValue" style="display:none;" />
+                                <input type="hidden" class="imgBase64" name="imgBase64" value="" />
+                                <img id="picture_url" class="imgList img" src="images/shike/sk_zjgl_lqxd_icon_jiahao_default.png" />
+                                <div class='displayValue' style="word-spacing: normal;word-wrap: break-word;"></div>
+                            </div>
+                            <i class="img_tips icon iconfont left" id="picture_url_error"></i>
+
+                        </div>
+
+                        <p class="upload_image_hint">
+                            上传的商品图将会展示在试客巴平台，图片尺寸为：
+                            <b>800*800</b>,格式为：<b>jpg、png、jpeg、gif</b>，图片大小在<b>1M以内</b><br/>
+                           <b>展示图要求：白底背景，必须是所送的商品，不能出现图片拼接、水印、logo、及其他文字。</b>
+                        </p>
+
+                        <!--****************商品规格*******************-->
+                        <div class="goods_standard">
+                            <div class="left norms">商品规格：</div>
+                            <div class="left goods_standard_details">
+                                <div class="goods_standard_content" style="margin-top: 10px;">
+                                    <ul>
+                                        <li>
+                                            <p class="title"><span>*</span> 单品售价(元)</p>
+                                            <p class="price"><input type="text" id="unit_price" value="" placeholder="请填写" onKeyUp="amount(this)" onblur="overFormat(this);"></p>
+                                        </li>
+                                        <li>
+                                            <p class="title"><span>*</span> 商品搜索价格(元)</p>
+                                            <p class="price"><input type="text" id="iphone_unit_price" value="" placeholder="请填写" onKeyUp="amount(this)" onblur="overFormat(this);"></p>
+                                        </li>
+                                        <li>
+                                            <p class="title"><span>*</span> 试客每单拍(件)</p>
+                                            <p class="price"><input type="text" id="buy_sum"  onKeyPress="onlyNum()" value="1" placeholder="请填写"></p>
+                                        </li>
+                                        <li>
+                                            <p class="title">商品规格</p>
+                                            <p class="price"><input type="text" id="thecolor" value="" placeholder="颜色、尺寸等"></p>
+                                        </li>
+                                    </ul>
+                                    <p>单品售价：需要试客实际下单付款的商品SKU价格；</p>
+                                    <p>商品搜索价格：商品在搜索结果页面显示的价格；</p>
+                                    <p>如需试客拍下指定规格，请务必填写商品规格信息，如不填写，默认买手可以拍下任意规格的商品；</p>
+                                    <p><span>鞋子服装类商品，不可限制产品的尺寸</span></p>
+                                    <p>
+                                        <span>如有疑问，请联系在线客服QQ：
+                                            <a href="http://wpa.qq.com/msgrd?v=3&uin=2852369353&site=qq&menu=yes"><img src="/images/merchant/sj_grzx_icon_qq_default.png" alt=""></a>
+                                        </span>
+                                    </p>
+                                </div>
+                                <p style="padding: 0;">
+                                    <span id="product_format_error"></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <label for="is_huabei" style="width: 110px;">试客付款方式：</label>
+                        <span class="is_huabei_checkbox actived"><i></i>可以使用花呗或信用卡付款</span>
+                        <p style="margin: 10px 0;color: #646464;font-size: 14px;">若选中，则代表同意试客在淘宝的付款方式可以用花呗或信用卡，这会增加试客对商品申请的积极性</p>
+
+                        <label for="commodity_classify" style="width: 110px;">备注：</label>
+                        <input type="text"  style="margin: 0;" id="notice_remark" maxlength="20" value="" />
+                        <p style="margin: 10px 0;color: #646464;font-size: 14px;">限制（20字），如您有指定下单规格，请在备注中填写，我们会对试客下单时进行特别提醒，以免拍错！</p>
+                     <!--   <label for="unit_price">单品售价：</label>
+                        <input class="norms" id="unit_price" type="text" placeholder="元" value="" onblur="check_unit_price()">-->
+                       <!-- <label for="buy_sum">每单拍：</label>
+                        <input class="norms" id="buy_sum" type="text" placeholder="件" value="" onblur="check_unit_price()">
+                        <b style="color:#969696;"class="total_money">下单总金额：<span id="xdzje">0</span>元</b>
+                        <span id="unit_price_error"></span>-->
+                      <!--  <br/>
+                        <p style="padding-top:5px;">请填写淘宝/天猫搜索展示价格</p>
+                        <label for="buy_sum">试客每单拍：</label>
+                        <input class="norms" id="buy_sum" type="text" placeholder="件" value="" onblur="check_unit_price()">
+                        <b style="color:#969696;"class="total_money">每单下单总金额：<span id="xdzje"></span>元</b>
+                        <span id="unit_price_error"></span>
+                        <br/>-->
+
+                        <!-- <p class="total_money">下单总金额：<span id="xdzje">0</span>元</p>-->
+                        <label for="freight">商品运费：</label>
+
+                        <a href="javascript:void(0);">
+                            <span id="baoyou" class="pinkage">全国包邮</span>
+                            <span class="pinkage freight" id="yunfei">收取运费：</span>
+                        </a>
+
+                        <input class="norms" onkeypress="return event.keyCode>=48&&event.keyCode<=57" id="freight" type="text" placeholder="元" value="">
+                        <span id="freight_error_notice"></span>
+                        <p style="padding-top:5px;">运费设置需要与商品在销售平台（淘宝/天猫）上的邮资情况保持一致</p>
+                    </div>
+                </div>
+                <p class="note">
+                    <span  class="icon iconfont icon-tishi1"></span>
+                  <b>提示：</b>
+                    试客成功领取试用后，商家需按照提交的试用商品进行发货。若试客收到的商品与任务商品不一致，<br/>
+                    平台会对商家进行严厉的处罚。
+                </p>
+                <div class="nextStep_btn">
+                    <input type="hidden" id="shop_id" value="2102" />
+                    <input type="hidden" id="shopname" value=" 帮帮熊奥迪玩具店" />
+                    <input type="hidden" id="type" value="1" />
+                    <input onclick="location.href='/merchant_issue_try'" type="button" value="上一步">
+                    <input onclick="next_step()" type="button" value="下一步">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/js/tool.js"></script>
+<script src="/fonts/iconfont.js"></script>
+<script src="/js/money_verify.js"></script>
+<script type="text/javascript">
+var type = "1";
+    $(function () {
+        var isFreight = 0;
+        var baoYouObject = $('#baoyou');
+        var yunFeiObject = $('#yunfei');
+        var freightObject = $('#freight');
+
+        if(isFreight){
+            yunFeiObject.click();
+        }
+
+        if(baoYouObject.hasClass('ifchoose') && !isFreight){
+            freightObject.val('');
+        }
+
+        freightObject.bind('focus', function () {
+            $('#freight_error_notice').text("");
+        });
+
+        baoYouObject.bind('click', function () {
+            if(!isFreight){
+                freightObject.val('');
+            }else{
+                if(freightObject.val() != isFreight){
+                    freightObject.val('');
+                }
+            }
+        })
+    });
+    var platform_id = "1";
+</script>
+<script src="/js/issue_try/issue_try2.js"></script>
+    </div>
+    <div class="modal" style="display:none">
+        <div class="modal_box" style="max-width: 500px">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/mall/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="modal_content">
+                <p style="line-height: 40px;margin: 30px 20px 30px 20px;font-size: 16px ">提示的内容</p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li>关于试客巴</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>联系客服</li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li>
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+
+    </div>
+
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+    </div>
+</footer>
+</div>
+
+<script src="/js/mall/mask_layer.js"></script>
+
+</body>
+</html>

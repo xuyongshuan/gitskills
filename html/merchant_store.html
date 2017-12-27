@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3" />
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b" />
+    <meta name="sogou_site_verification" content="fXrXuBQkI2"/>
+   
+
+    <title>店铺管理</title>
+
+    <link rel="stylesheet" href="/css/merchant/left_nav.css">
+    <link rel="stylesheet" href="/css/merchant/store_manage.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap">
+    <link rel="stylesheet" href="/css/plugins/dataTables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/merchant/header.css">
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <!--<link rel="stylesheet" href="">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/mall/html5.js"></script>
+    <script src="/js/mall/respond.min.js"></script>
+    <script src="/js/mall/selectivizr-min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.10.2.js"></script>
+<!--	<script src="/js/WdatePicker.js"></script>-->
+    <script src="/js/common.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+
+<!-- Page-Level Plugin Scripts - Tables -->
+<!--<script src="js/plugins/dataTables/jquery.dataTables.js"></script>-->
+<!--<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>-->
+    <script src="/js/merchant/merchant_common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul>
+                <li ><a href="/">返回首页</a></li>
+                <li><a href="/merchant_personal.html">欢迎您：<span>13510541770  <img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>                <li><a href="/login/logout">退出</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <div class="left" style="padding-top: 9px;">
+            <img class="logo" onclick="location.href='/'" src="/images/merchant/xqy_logo_default.png" alt="">
+            <span class="details_title">商家中心</span>
+        </div>
+
+      <!--<div class="advertisement right" >
+                   <a href="" target="_blank" title="">
+             <img style="margin-top:-3px;" src="images/merchant/adv4.png" alt="">
+         </a>
+        </div>-->
+
+    </div>
+    <div class="line"></div>
+</div>
+
+    <div class="left_nav">
+    <!-- 发布试用 -->
+    <div class="issue">
+        <a style=" cursor:pointer" onclick="issue_try()">发布试用</a>
+    </div>
+    <div class="title personal_center">
+        <a href="/merchant_personal.html">个人中心</a>
+    </div>
+    <div class="title store_manage">
+        <a href="/merchant_store.html">店铺管理</a>
+    </div>
+    <div class="title try_manage">
+        <a class="selected" href="javascript:void(0);">活动管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_activity_manage.html">试用管理</a></li>
+            <li><a href="/merchant_order_manage.html">订单管理</a></li>
+        </ul>
+    </div>
+    <div class="title account_information">
+        <a class="selected" href="javascript:void(0);">账号信息</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_basic_setup.html">基本设置</a></li>
+            <li><a href="/merchant_bankcard_manage.html">绑定银行卡</a></li>
+            <li><a href="/merchant_member_manage.html">会员管理</a></li>
+        </ul>
+    </div>
+    <div class="title fund_manage">
+        <a class="selected" href="javascript:void(0);">资金管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_deposit_recharge.html">我要充值</a></li>
+            <li><a href="/merchant_deposit_withdraw.html">押金提现</a></li>
+            <li><a href="/merchant_funds_record.html">资金记录</a></li>
+            <li><a href="/merchant_activity_subsidiary.html">活动明细</a></li>
+        </ul>
+    </div>
+    <div class="title invited_manage">
+        <a class="selected" href="javascript:void(0);">邀请返利</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_invite/friends_invited.html">好友邀请</a></li>
+            <li><a href="/merchant_invite/invited_reward.html">邀请奖励</a></li>
+        </ul>
+    </div>
+    <div class="title message_center">
+        <a id="message_num"  href="/merchant_message_center.html">消息中心</a>
+    </div>
+</div>
+
+<!--联系客服-->
+<!--<div class="contact_customerService">-->
+<!--    <div class="contact_wayContent">-->
+<!--        <div class="left contact_way">-->
+<!--            <div class="title">-->
+<!--                <p>在线客服</p>-->
+<!--            </div>-->
+<!--            <ul>-->
+<!--	    	    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852369353&site=qq&menu=yes" target="_blank">试客巴—阿育王</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506830&site=qq&menu=yes" target="_blank" >试客巴—张洁</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506831&site=qq&menu=yes" target="_blank">试客巴—大表哥</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506832&site=qq&menu=yes" target="_blank">试客巴—肖祥</a></li>-->
+<!--            </ul>-->
+<!--	 </div>-->
+<!--        <div class="right contact_wayBtn">-->
+<!--            <img id="customerService" src="../../images/lianxikefu/contact_bg_right_default.png" alt="">-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+
+<script src="//wp.qiye.qq.com/qidian/2852130118/cc918eff1c09f7ce9c9d5d3285818e2b" charset="utf-8"></script>
+
+<script>
+    (function() {
+        $('.title > a').on('click',function(){
+            var this_ul = $(this).parent().children('ul');
+
+            $(this).toggleClass('selected');
+            $(this).hasClass('selected')?this_ul.slideDown('fast'):this_ul.slideUp('fast');
+        })
+
+    })()
+    $(function(){
+
+        $('.contact_customerService').on('mouseover',function(){
+            $('.contact_way').show();
+        });
+        $('.contact_customerService').on('mouseout',function(){
+            $('.contact_way').hide();
+        });
+        $.ajax({
+            url : '/merchant_userapi/get_sideinfo',
+            data:{},
+            type : 'post',
+            dataType : 'json',
+            cache : false,
+            success : function (result){
+               // $("#act_num").text("试用管理");
+               // $("#order_num").text("订单管理("+result.order_count+")");
+                $("#message_num").text("消息中心("+result.mess_count+")");
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    });
+</script>    <div id="page-wrapper">
+
+   
+    <link rel="stylesheet" href="/css/merchant/reset_content.css">
+    <link rel="stylesheet" href="/css/merchant/modal_alert.css">
+
+<section id="section">
+    <div class="section_main">
+        <!--左侧导航-->
+        <aside class="left" id="left_nav"></aside>
+        <!--右侧店铺管理-->
+        <div id="my_main" class="store_content left">
+            <h1 class="title">店铺管理</h1>
+            <div class="binding_shops">
+                <input id="binding_shops" type="button" onclick="check_binding_shop('3')" value="绑定新店铺"/>
+                试用会员最多可以绑定1家店铺，正式会员最多可以绑定3家店铺，如需换绑店铺请联系客服QQ:
+                <img src="/images/merchant/sj_grzx_icon_qq_default.png" alt="" onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=3004871218&site=qq&menu=yes')">
+            </div>
+            <div class="shops_details">
+                <div class="detalis">
+                                        <ul>
+                        <li>
+                            <img src="/images/merchant/sj_dpgl_bg_logo_default.png" alt=""/>
+                        </li>
+                        <li>
+                            <p class="clothes_name"><span>店铺：</span> 小滑头益智玩具</p>
+                            <p class="two" style="overflow:hidden; text-overflow: ellipsis;white-space:nowrap"><span>链接：</span><a onclick='window.open("https://shop116979875.taobao.com/")'>https://shop116979875.taobao.com/</a></p>
+                            <p><span>来源：</span>淘宝</p>
+                        </li>
+                        <li>
+                            <p>QQ：<b>249081178</b></p>
+                            <p class="two">微信：<b>13418652411</b></p>
+                            <p>手机：<b>13418652411</b></p>
+                        </li>
+                        <li>
+                            <p><input class="modify_contact" onclick="show_modify_contact(2304)" type="button" value="修改联系方式"/></p>
+                        </li>
+                        <li>
+                            <p>绑定时间：<b>2017-09-22</b></p>
+                        </li>
+                    </ul>
+                                        <ul>
+                        <li>
+                            <img src="/images/merchant/sj_dpgl_bg_logo_default.png" alt=""/>
+                        </li>
+                        <li>
+                            <p class="clothes_name"><span>店铺：</span> 同步拼装玩具店</p>
+                            <p class="two" style="overflow:hidden; text-overflow: ellipsis;white-space:nowrap"><span>链接：</span><a onclick='window.open("https://shop526584880.taobao.com/index.htm?spm=2013.1.w5002-16399483792.2.4b556901hZYPcN")'>https://shop526584880.taobao.com/index.htm?spm=2013.1.w5002-16399483792.2.4b556901hZYPcN</a></p>
+                            <p><span>来源：</span>淘宝</p>
+                        </li>
+                        <li>
+                            <p>QQ：<b>834299803</b></p>
+                            <p class="two">微信：<b>13510520846</b></p>
+                            <p>手机：<b>13510520846</b></p>
+                        </li>
+                        <li>
+                            <p><input class="modify_contact" onclick="show_modify_contact(2203)" type="button" value="修改联系方式"/></p>
+                        </li>
+                        <li>
+                            <p>绑定时间：<b>2017-09-11</b></p>
+                        </li>
+                    </ul>
+                                        <ul>
+                        <li>
+                            <img src="/images/merchant/sj_dpgl_bg_logo_default.png" alt=""/>
+                        </li>
+                        <li>
+                            <p class="clothes_name"><span>店铺：</span> 帮帮熊奥迪玩具店</p>
+                            <p class="two" style="overflow:hidden; text-overflow: ellipsis;white-space:nowrap"><span>链接：</span><a onclick='window.open("https://shop145053673.taobao.com/")'>https://shop145053673.taobao.com/</a></p>
+                            <p><span>来源：</span>淘宝</p>
+                        </li>
+                        <li>
+                            <p>QQ：<b>249081178</b></p>
+                            <p class="two">微信：<b>13418652411</b></p>
+                            <p>手机：<b>13418652411</b></p>
+                        </li>
+                        <li>
+                            <p><input class="modify_contact" onclick="show_modify_contact(2102)" type="button" value="修改联系方式"/></p>
+                        </li>
+                        <li>
+                            <p>绑定时间：<b>2017-08-31</b></p>
+                        </li>
+                    </ul>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<input type="hidden" id="hidden_shopid">
+<footer id="footer"></footer>
+<!--弹框--修改联系方式-->
+<div class="modify_modal">
+    <div class="modal_box">
+        <div class="modal_prompt">
+            <span>修改联系方式</span>
+            <a class="close" href="javascript:void(0);">
+                <img src="/images/merchant/sj_grzx_tc_off_default.png" alt="">
+            </a>
+        </div>
+        <div class="modal_content">
+            <!--修改联系方式-->
+            <form class="amend_box" action="">
+                <label for="logistics">QQ</label>
+                <input id="logistics" type="text"/>
+                <p><span id="qq_error"></span></p>
+                <label for="WeChat">微信</label>
+                <input id="WeChat" name="chargewx" type="text"/>
+                <p><span></span></p>
+                <label for="mobile_phone">手机</label>
+                <input id="mobile_phone" name="chargetel" type="text"/>
+                <p><span id="tel_error"></span></p>
+
+            </form>
+        </div>
+        <div class="modal_submit">
+            <input class="confirm" type="button" value="确定" onclick="change_content()" />
+        </div>
+    </div>
+    <div class="mask_layer"></div>
+</div>
+<!--弹框--绑定店铺（超过3次绑定）-->
+ <div class="binding_modal">
+    <div class="modal_box">
+        <div class="modal_prompt">
+            <span>提示</span>
+            <a class="close" href="javascript:void(0);">
+                <img src="/images/merchant/sj_grzx_tc_off_default.png" alt="">
+            </a>
+        </div>
+        <div class="modal_content">
+                            <p>最多只能绑定3家店铺</p>
+                <p style="font-size:16px">如需更换店铺，请联系客服QQ：54545487</p>
+        </div>
+        <div class="modal_submit">
+            <input class="confirm" type="button" value="确定"  />
+        </div>
+                </div>
+    <div class="mask_layer"></div>
+</div> 
+<!--弹框--绑定新店铺-->
+<div class="bindingShops_modal">
+    <div class="modal_box" style="margin-left:-340px;margin-top:-285px;">
+        <div class="modal_prompt">
+            <span>绑定新店铺（请认真填写绑定信息，一经提交无法修改）</span>
+            <a class="close" href="javascript:void(0);">
+                <img src="/images/merchant/sj_grzx_tc_off_default.png" alt="">
+            </a>
+        </div>
+        <div class="modal_content" >
+            <!--绑定新店铺-->
+            <form style="width:655px;     padding-right: 15px;" class="shop_information" enctype="multipart/form-data" method="post" action="/merchant_store.html/submit_new_shop" onsubmit="return check_form()">
+                <label for="shop_url">店铺首页网址：</label>
+                <input id="shop_url" name="shop_url" type="text"/>
+                <label for="shop_name">店铺名称：</label>
+                <input id="shop_name" name="shop_name" type="text"/>
+                <!--第一行的错误提示-->
+                <p>
+                <span id="shop_url_error"></span>
+                <span id="shop_name_error"></span>
+                </p>
+
+                <label style="margin-left: -302px;" for="wangwang">店铺主旺旺ID：</label>
+                <input id="wangwang" name="wangwang" type="text"/>
+                  <!--第二行的错误提示-->
+                <p>
+                 <span id="wangwang_error"></span>
+                </p>
+           <!--       <label style="margin-left: -91px;" for="shop_logo">店铺LOGO：</label>
+                 <a style="cursor:pointer;" class="file" href="javascript:void(0);">
+                     选择文件
+                     <input style="cursor:pointer" id="shop_logo" name="shop_logo" type="file" value="" onchange="handleFiles()"/>
+                 </a> -->
+             <!--      <span style="margin-right:0; font-size:12px;color:#969696;" id="shop_logo_name"></span>
+                   <b class="not_select"></b>
+                 <br/>
+                 <p><span id="shop_logo_error"></span></p> -->
+
+          <!--       <p style="margin-top:-10px;">请先上传店铺LOGO，要求：尺寸为260x260，大小不超过1M。</p> -->
+                <label style="margin-left: 18px;" for="auth_code">验证码：</label>
+               <!-- <input id="auth_code" type="button" name="auth_code" value=gmKThPal />-->
+                <!--<input class="clone"  type="button" value="复制" id="lala"/>-->
+                <input style="width: 93px;background-color: #fff; color: #f10180;" id="auth_code" type="text" name="auth_code" value=gmKThPal />
+                <input class="clone" type="button"  data-clipboard-action="copy" data-clipboard-target="#auth_code" value="复制">
+                <span id="clip_ok"></span>
+                <br/>
+                <p>1、将验证码加到您的店铺里某个上架商品的标题上，如下图</p>
+                <p class="picture"><span><img src="/images/merchant/sj_dpgl_tc_bg_jt_default.png" alt=""></span></p>
+                <p style="margin-bottom: -20px; margin-top: 10px;">2、再将这个商品的详情页链接，复制到下面输入框中进行验证。</p>
+                <br/>
+                <label for="good_url">待验证商品地址：</label>
+                <input id="good_url" name="good_url" type="text"/>
+<!--                <a href="javascript:void(0);" onclick="check_url()"> 验证</a>-->
+                <input type="hidden" name="is_right_url" id="is_right_url" value="-1" />
+                <label for="principal_qq" style="padding: 0;margin: 0;">负责人QQ：</label>
+                <input id="principal_qq" name="principal_qq" type="text"/>
+                <!--第三行的错误提示-->
+                <p>
+                <span id="good_url_error"></span>
+                <span id="principal_qq_error"></span>
+                </p>
+
+                <label for="principal_weChat">负责人微信：</label>
+                <input id="principal_weChat" name="principal_weChat" type="text"/>
+                <label for="principal_phone">负责人手机：</label>
+                <input id="principal_phone" name="principal_phone" type="text"/>
+                <!--第四行的错误提示-->
+                <p>
+                 <span id="principal_weChat_error"></span>
+                <span id="principal_phone_error"></span>
+                </p>
+        </div>
+        <div class="modal_submit">
+            <input class="confirm" style="padding-left:0;" type="submit" value="确定" />
+        </div>
+        </form>
+    </div>
+    <div class="mask_layer"></div>
+</div>
+
+<script src="/js/merchant/clipboard.min.js"></script>
+<script>
+
+    $(function(){
+          var clipboard = new Clipboard('.clone');
+             clipboard.on('success', function(e) {
+             });
+
+             clipboard.on('error', function(e) {
+             });
+//        控制左侧导航的颜色
+        $('.store_manage').find('a').addClass('selected');
+
+        $('.mask_layer').height(document.body.offsetHeight+500);
+        $('.close,.cancel,.confirm').bind('click',function(){
+            $('.binding_modal,.modify_modal,.bindingShops_modal').css('display','none');
+            enableScroll();
+        });
+    })
+
+    //    检查QQ是否重复
+    $('#logistics').on('blur',function () {
+        var qq = $('#logistics').val().trim();
+        if(qq.length == 0){
+            // 如果为空
+            $('#qq_error').text('QQ不能为空');
+            $("#logistics").focus();
+            return false;
+        }
+        if(!(/^[1-9]\d{4,11}$/.test(qq))){ //qq号正则匹配
+            $('#qq_error').text('qq格式错误');
+            $("#logistics").focus();
+            return false;
+        }
+        $.ajax({
+            url: "https://www.shike8888.com/mall/register/check_qq",
+            method: 'post',
+            data: {
+                qq: qq
+            },
+            success: function (result) {
+                result = JSON.parse(result);
+                if (result.success == true) {
+                    $('#qq_error').text('')
+                    $('#qq_error').show();
+                } else {
+                    code = result.code;
+                    if (code == 1) {
+                        $('#qq_error').show();
+                        $('#qq_error').text('QQ已注册');
+                        $("#logistics").focus();
+                    }
+                }
+            },
+        })
+    });
+
+    function change_content(obj){
+        var shop_id = $("#hidden_shopid").val();
+        var chargeqq = $("#logistics").val();
+        var chargewx = $("#WeChat").val();
+        var chargetel = $("#mobile_phone").val();
+        if(!chargeqq){
+            $("#qq_error").text("负责人QQ不能为空");
+            return;
+        }
+        if(!chargetel){
+            $("#tel_error").text("负责人手机号不能为空");
+            return;
+        }
+        if($('#qq_error').text() == 'QQ已注册') {
+            return;
+        }
+        $.ajax({
+            url : '/merchant_store.html/change_content',
+            type : "POST",
+            datatype : "json",
+            cache : false,
+            timeout : 20000,
+            data : {shop_id:shop_id, chargeqq:chargeqq, chargewx:chargewx, chargetel:chargetel},
+            success : function (result){
+                location.reload();
+
+            },
+            error : function(XMLHttpRequest, textStatus){
+            }
+        })
+    }
+    function show_modify_contact(o){
+        $('.modify_modal').css('display','block');
+        // disableScroll();
+        $('#hidden_shopid').val(o);
+        var shop_id = o;
+        $.ajax({
+            url : '/merchant_store.html/get_shop_detail',
+            type : "POST",
+            datatype : "json",
+            cache : false,
+            timeout : 20000,
+            data : {shop_id:shop_id},
+            success : function (result){
+                result = $.parseJSON(result);
+                $("#logistics").val(result.chargeqq);
+                $("#WeChat").val(result.chargewx);
+                $("#mobile_phone").val(result.chargetel);
+                return;
+            },
+            error : function(XMLHttpRequest, textStatus){
+            }
+        })
+
+
+    }
+    function check_binding_shop(o){
+        var allow_num = 3;
+        if(o >= allow_num){
+            $('.binding_modal').css('display','block');
+             disableScroll();
+        }else{
+            $('.bindingShops_modal').css('display','block');
+
+             disableScroll();
+        }
+    }
+	function check_url() {
+		var link = $("#good_url").val();
+		var keys = "gmKThPal";
+		$.ajax({
+			url : '/merchant_store.html/check_link',
+			type : "POST",
+			cache : false,
+			data : {link:link, keys:keys},
+			success: function (result){
+				var result = eval('('+result+')');
+				if(result.code == 0){
+					$("#good_url_error").html(result.msg);
+					$('#is_right_url').val(0);
+					return true;
+				} else {
+					$("#good_url_error").html(result.msg);
+					$('#is_right_url').val(1);
+					return false;
+				}
+				
+			}
+		});
+	}
+	
+    function check_form(){
+
+        var shop_url = $("#shop_url").val();
+        if(shop_url==''){
+            $("#shop_url_error").text("网址中不得为空");
+            return false;
+        }else{
+            $("#shop_url_error").text("");
+        }
+        var reg = /.*[\u4e00-\u9fa5]+.*$/;
+        if((reg.test(shop_url)) ){
+            $("#shop_url_error").text("网址中不得出现中文");
+            return false;
+        }else{
+            $("#shop_url_error").text("");
+        }
+
+        var shop_name = $("#shop_name").val();
+        if(shop_name==''){
+            $("#shop_name_error").text("商铺名称不得为空");
+            return false;
+        }else{
+            $("#shop_name_error").text("");
+        }
+
+        var wangwang = $("#wangwang").val();
+        if(wangwang==''){
+            $("#wangwang_error").text("旺旺ID不得为空");
+            return false;
+        }else{
+            $("#wangwang_error").text("");
+        }
+
+        var shop_logo = $("#shop_logo").val();
+        if(shop_logo==''){
+            $("#shop_logo_error").text("店铺logo不得为空");
+            return false;
+        }else{
+            $("#shop_logo_error").text("");
+        }
+
+        var good_url = $("#good_url").val();
+        if(good_url==''){
+            $("#good_url_error").text("商品地址不得为空");
+            return false;
+        }else{
+            $("#good_url_error").text("");
+        }
+
+        var reg = /.*[\u4e00-\u9fa5]+.*$/;
+        if((reg.test(good_url)) ){
+            $("#good_url_error").text("商品地址不得出现中文");
+            return false;
+        }else{
+            $("#good_url_error").text("");
+        }
+
+        // 验证商品地址是否合法，不合法则不允许提交
+        if(0 == $('#is_right_url').val()){
+            $("#good_url_error").text("链接不正确");
+            return false;
+        }else if(-1 == $('#is_right_url').val()){
+           // $('#good_url_error').text('请先验证商品地址');
+            // return false;
+        }else {
+            $("#good_url_error").text("");
+        }
+
+        var principal_qq = $("#principal_qq").val();
+        if(principal_qq==''){
+            $("#principal_qq_error").text("负责人QQ不得为空");
+            return false;
+        }else{
+            $("#principal_qq_error").text("");
+        }
+
+        var reg = /^[1-9][0-9]{4,9}$/;
+        if((!reg.test(principal_qq)) ){
+            $("#principal_qq_error").text("请输入正确的QQ号");
+            return false;
+        }else{
+            $("#principal_qq_error").text("");
+        }
+
+        var principal_weChat = $("#principal_weChat").val();
+        if(principal_weChat==''){
+            $("#principal_weChat_error").text("负责人微信不得为空");
+            return false;
+        }else{
+            $("#principal_weChat_error").text("");
+        }
+
+        var principal_phone = $("#principal_phone").val();
+        if(principal_phone==''){
+            $("#principal_phone_error").text("负责人手机号不得为空");
+            return false;
+        }else{
+            $("#principal_phone_error").text("");
+        }
+
+        var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|18[0-9]|17[0-9]|14[57])[0-9]{8}$/;
+        if((!reg.test(principal_phone)) ){
+            $("#principal_phone_error").text("请输入正确的手机号");
+            return false;
+        }else{
+            $("#principal_phone_error").text("");
+        }
+
+        return true;
+        //return true;
+    }
+    function submit_new_shop(){
+        var shop_link = $("#shop_url").val();
+        var shop_name = $("#shop_name").val();
+        var wangwang = $("#wangwang").val();
+        // var shop_logo = $("#shop_logo").val();
+        var good_url = $("#good_url").val();
+        var chargeqq = $("#principal_qq").val();
+        var chargewx = $("#principal_weChat").val();
+        var chargetel = $("#principal_phone").val();
+        $.ajax({
+            url : '/merchant_store.html/submit_new_shop',
+            type : "POST",
+            datatype : "json",
+            cache : false,
+            timeout : 20000,
+            data : {shop_link:shop_link, shop_name:shop_name, wangwang:wangwang, 
+                    good_url:good_url, chargeqq:chargeqq,
+                    chargewx:chargewx, chargetel:chargetel},
+            success : function (result){
+                location.reload();
+
+            },
+            error : function(XMLHttpRequest, textStatus){
+            }
+        })
+    }
+
+
+
+    function handleFiles(){
+//        shop_log=$('#shop_logo').val();
+        var file = $('#shop_logo')[0].files[0];
+        $('#shop_logo_name').text(file.name)
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal" style="display:none">
+        <div class="modal_box" style="max-width: 500px">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/mall/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="modal_content">
+                <p style="line-height: 40px;margin: 30px 20px 30px 20px;font-size: 16px ">提示的内容</p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li>关于试客巴</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>联系客服</li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li>
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+
+    </div>
+
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+    </div>
+</footer>
+</div>
+
+<script src="/js/mall/mask_layer.js"></script>
+
+</body>
+</html>

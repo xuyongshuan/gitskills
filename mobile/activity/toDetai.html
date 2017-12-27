@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>宝贝详情</title>
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mobile_reset.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mui.css?v=1502438181">
+    <link rel="stylesheet" href="/fonts/iconfont.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/modal_alert.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/bind_taomao_modal.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/new_detail.css?v=1502438181">
+    <script>
+    (function() {
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var html = document.documentElement;
+            var windowWidth = html.clientWidth;
+            html.style.fontSize = windowWidth / 7.5 + 'px';
+            // 等价于html.style.fontSize = windowWidth / 750 * 100 + 'px';
+        }, false);
+    })();
+    // 这个7.5就是根据设计稿的横向宽度来确定的，假如你的设计稿是640
+    // 那么 html.style.fontSize = windowWidth / 6.4 + 'px';
+    </script>
+</head>
+
+<body>
+    <header id="header_nav"></header>
+    <div class="mui-scroll-wrapper" id="pullrefresh">
+        <!-- 申请步骤 -->
+        <div class="apply_steps">
+          <img src="images/xqy_bg_lc_default@2x.png" alt="">
+        </div>
+        <div class="mui-scroll" style="position: static">
+            <input type="hidden" id="seller_id" value="">
+            <input type="hidden" id="shop_name" value="">
+            <div class="detail_page" id="detail_page">
+                <div class="goods_information">
+                    <p class="picture">
+                        <img id="pruduct_img" src="" alt="">
+                    </p>
+                    <!-- 下单金额和原价  倒计时 -->
+                    <div class="order_amount">
+                        <div class="money">
+                            <span> <b>&yen;<span id = "price"> </span></b>
+                            </span>
+                            <span class="buy-order">下单金额：<b id="buy-order">&yen;</b></span>
+                        </div>
+                        <div class="end_time">
+                            <span>距离活动结束还剩：</span><br/><b id="timer"></b>
+                        </div>
+                    </div>
+                    <p class="goods_name"><span id="goods_name"></span><img src=""/images/bg_tb_default.png" alt="" id="is_tb">
+                    </p>
+                    <!-- <b class="p-type" id="p_type"></b> -->
+                    <p class="price">
+                        <!-- <span> <b>&yen;<span id = "price" style="color: #f10180;font-size: 0.36rem;"> </span></b>
+                </span> -->
+                        <span class="kaijiang"><b class="p-type" id="p_type"></b></span>
+                        <span class="exemption" id="exemption"></span>
+                        <span class="tryout"><b id="triedPersons"> </b>人已申请</span>
+                    </p>
+                    <div class="jiangli">
+                        <p class="award " id="award" style="display: none"><i class="iconfont icon-shang_xin"></i>连续<b>3</b>天申请试用并完成任务未中奖，将获得夺宝币奖励</p>
+                        <p class="award shangjin" id="reward" style="display: none"><i class="iconfont icon-jiang_xin"></i>试客中奖并完成该试用，将会有额外的<b id="reward_num"></b>赏金奖励</p>
+                        <p class="award huabei" id="huabei" style="display: none"><i class="iconfont icon-huabeixinyongqia"></i>该商品支持使用花呗和信用卡进行垫付</p>
+                    </div>
+                    <!-- <p class="order">
+               <span class="buy-order">下单金额：<b id="buy-order">&yen;</b></span>
+                <span class="return-order" style="display: none">返还金额：<b id="return-order">&yen;1000.00</b></span>
+            </p> -->
+                    <p class="condition">
+                        <span>每单拍：<span id="buy_sum"></span>件</span>
+                        <span>规格：<span class="c_s" id="color" ></span></span>
+                        <!-- <span class="tryout">已申请<b id="triedPersons"> </b>人次</span> -->
+                    </p>
+                    <p class="amount">
+                        <span class="sum-order">试用总份数：<b id="sum_apply"></b>份</span>
+                        <span class="plan-order">开奖份数：<b id="plan_apply"></b>份</span>
+                        <span class="exc-order">兑换份数：<b id="exc_apply"></b>份</span>
+                    </p>
+                </div>
+                <!-- <div class="jiangli">
+            <p class="award " id="award" style="display: none">连续<b>3</b>天申请试用并完成任务未中奖，将获得夺宝币奖励</p>
+            <p class="award shangjin" id="reward" style="display: none">试客中奖并完成该试用，将会有额外的<b id="reward_num"></b>赏金奖励</p>
+        </div> -->
+                <!-- 倒计时 -->
+                <div class="timeFinal">
+                    <!--  <p class="time">
+                <span>距离活动结束还剩：<b id="timer"></b></span>
+            </p> -->
+                    <!--  <p class="condition">
+                <span>每单拍：<span id="buy_sum"></span>件</span>
+                <span>规格：<span class="c_s" id="color" ></span></span>
+                <span class="tryout">已申请<b id="triedPersons"> </b>人次</span>
+            </p> -->
+                </div>
+                <!-- <div class="apply_step">
+            <img src=""/images/det_bg_lct_default.png" alt="">
+        </div> -->
+                <div class="goods_detail">
+                    <div class="tabs" id="tabs">
+                        <p class="title tab selected" data-pannel="images_detail">商品详情</p>
+                        <p class="rule tab" data-pannel="rule_detail">申请规则</p>
+                        <p class="tips tab" data-pannel="ask_detail">常见问题</p>
+                    </div>
+                    <div class="pannel" id="pannel">
+                        <div class="images" id="images_detail"></div>
+                        <div class="rule_detail" id="rule_detail">
+                            <div class="wraps">
+                                <div class="wrap">
+                                    <p><b>试用流程</b></p>
+                                    <p>1、申请试用，获得试用资格。</p>
+                                    <p id="pricexx"></p>
+                                    <p>3、下单完成后，回试客巴填写购买付款的订单号。</p>
+                                    <p>4、等待收货 → 确认收货 → 给予宝贝评价。</p>
+                                    <p id="pricess"></p>
+                                </div>
+                                <div class="wrap">
+                                    <p><b>注意事项</b></p>
+                                    <p>1、禁止使用信用卡、淘金币、优惠券、红包、天猫积分等。</p>
+                                    <p>2、禁止通过淘宝客、返利网、一淘等返现返利网链接下单。</p>
+                                    <p>以上由于买家违规下单所产生的费用，由买家承担。试客巴有权冻结其帐号，限制提现操作，IP列入黑名单。</p>
+                                </div>
+                                <div class="wrap">
+                                    <p><b>温馨提示</b></p>
+                                    <p>1、用户获得试用资格后，请根据时间提示按时提交订单号。</p>
+                                    <p>2、若因未按时提交以上信息而被系统取消此次试用资格。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rule_detail" id="ask_detail">
+                            <div class="wraps">
+                                <div class="wrap">
+                                    <p><b>试用商品可以直接购买么？</b></p>
+                                    <p>试用商品不是直接购买的，需要按照任务流程申请，获得领取资格后， 去指定平台完成下单购买，如果不是按照流程完成的试用，平台是不予返还本金的。</p>
+                                </div>
+                                <div class="wrap">
+                                    <p><b>什么是垫付资金？</b></p>
+                                    <p>当你获得领取试用商品的资格后，需先垫付资金到指定的平台购买商品， 待完成收货好评等任务之后，平台将会将你垫付的资金返还。</p>
+                                </div>
+                                <div class="wrap">
+                                    <p><b>领取的商品支持退换货吗？</b></p>
+                                    <p>所有试用商品，一经领取成功，均不允许退换货。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="applyFor_btn" id="applyFor_btn">
+        <div class="left share_earn">
+            <b id="reward_money">奖励12.00元</b>
+            <i class="icon iconfont icon-xiangqingye_fenxiang"></i>
+            <span>分享赚</span>
+        </div>
+        <a href="javascript:void(0)" id="exchange_sub" data-type="3"></a>
+        <a class="apply_btn" href="javascript:void(0)" id="apply_sub" data-type="1">免费申请</a>
+    </div>
+    <div class="pc_product">
+        <p>此商品为电脑端试用</p>
+        <p>请前往电脑端（www.shike8888.com）进行申请</p>
+    </div>
+    <div class="modal_box detail_modal" id="first">
+        <div class="modal_content">
+            <p class="hint">
+                <span>提示</span>
+                <img class="close" src=""/images/tc_icon_off_default.png" alt=""></p>
+            <!--  <p class="main">兑换需要消耗<span class="dd" id="how_many_duo_mony"></span>个夺宝币，确认兑换？</p> -->
+            <div class="detail_main">
+                <p class="main">请确认使用<span class="dd" id="how_many_duo_mony"></span>个夺宝币兑换试用品</p>
+                <p class="apply_hint">申请兑换后需要在<span>今天晚上24点</span>内完成并提交任务，即可直接领取试用，无需等待系统审核。若中途放弃，或超时未领取，申请不通过且夺宝币不予返还。</p>
+            </div>
+            <p class="btns">
+                <input type="button" id="sure_exchange" class="ok" value="确定兑换">
+                <input class="close" type="button" value="取消">
+            </p>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    <div class="modal_box" id="second">
+        <div class=" modal_content">
+            <p class="hint">
+                <span>提示</span>
+                <img class="close" src=""/images/tc_icon_off_default.png" alt="">
+            </p>
+            <p class="main">兑换成功
+                <br/>请去"我的任务--已中奖待领取"中领取</p>
+            <p class="btns">
+                <input type="button" id="submit1" class="ok" value="确定">
+            </p>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    <div class="modal_box" id="errer">
+        <div class=" modal_content">
+            <p class="hint">
+                <span>提示</span>
+                <img class="close" src=""/images/tc_icon_off_default.png" alt="">
+            </p>
+            <p class="main" id="errtext"></p>
+            <p class="btns">
+                <input type="button" id="submit2" class="ok" value="确定">
+            </p>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    <!-- <div class="modal_box" style="display:none">
+    <div class="modal_content" >
+        <p class="hint">
+            <span>提示</span>
+            <img class="close" src=""/images/tc_icon_off_default.png" alt=""></p>
+        <p class="main" id="alert_msg"></p>
+        <p class="confirm">
+            <input type="button" value="确定">
+        </p>
+    </div>
+    <div class="mask_layer"></div>
+</div> -->
+    <div class="modal_box" id="sure">
+        <div class="modal_content">
+            <p class="hint">
+                <span>提示</span>
+                <img class="close" id="close" src=""/images/tc_icon_off_default.png" alt="">
+            </p>
+            <div class="theme_content">
+                <div class="main">
+                    <p>关注成功！请到收藏夹中查看</p>
+                    <p>明天来申请该宝贝，您的中奖概率将会提高</p>
+                </div>
+            </div>
+            <p class="btns">
+                <input type="button" value="去收藏夹" id="success">
+            </p>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    <div class="modal_box" id="todayOpen">
+        <div class="modal_content">
+            <p class="hint">
+                <span>提示</span>
+                <img class="close" src=""/images/tc_icon_off_default.png" alt="">
+            </p>
+            <div class="theme_content">
+                <div class="main">
+                    <p>此商品<b>当日申请当日就会开奖</b></p>
+                    <p>请实时关注开奖结果</p>
+                </div>
+            </div>
+            <p class="btns">
+                <input type="button" value="立即申请" id="apply_now">
+            </p>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    <div class="modal_box" id="bindTB">
+        <div class="modal_content">
+            <p class="hint">
+                <span>关联淘宝会员名</span>
+                <img class="close" src=""/images/tc_icon_off_default.png" alt="">
+            </p>
+            <h1 class="title">请按下述步骤在手机淘宝中找到淘宝会员名并填写:</h1>
+            <div class="notice">
+                <div class="left notice_title">注意：</div>
+                <div class="left notice_content">
+                    <p>1.淘宝会员名影响商品领取，请认真填写。</p>
+                    <p>2.关联的淘宝会员名注册需要超过3个月且信
+                        <br/> &nbsp;&nbsp;誉等级在两颗红心（<img style="width:0.33rem;" src="images/bdtb_bg_star_default.png " />）以上。
+                    </p>
+                    <p>3.请关联申请试所用的淘宝会员名</p>
+                </div>
+            </div>
+            <div class="new-try-goods">
+                <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <div class="mui-scroll">
+                        <div class="mui-control-item">
+                            <a class="first" href="#">
+                                <img src=""/images/bdtb_bg_01_default.png " />
+                            </a>
+                            <div class="goods-description">
+                                <p class="one">打开手机淘宝 - 找到我的淘宝 - 点击头像</p>
+                            </div>
+                        </div>
+                        <div class="mui-control-item">
+                            <a class="second" href="#">
+                                <img src=""/images/bdtb_bg_02_default.png " />
+                            </a>
+                            <div class="goods-description">
+                                <p class="one">进入个人资料 - 找到会员名 - 填写会员名</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="number_name">
+                <input id="taobao_id" type="text" placeholder="请填写淘宝会员名">
+            </p>
+            <p class="btns">
+                <input id="submit" type="button" value="提交">
+                <input class="close" type="button" value="取消">
+            </p>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    <!--分享弹框-->
+    <div class="share" style="display:none;">
+        <div class="share_box">
+            <div class="share_instructions">
+                <p class="one">1.点击右上角 <span></span><span></span><span></span></p>
+                <p class="one">2.点击
+                    <i class="icon iconfont icon-fenxiang1"></i> 或者 <i class="icon iconfont icon-pengyouquan"></i> 分享
+                </p>
+                <div class="box">
+                    <p>好友注册下单</p>
+                    <p>即可获18个夺宝币+<b id="reward_money1">2.39</b>元奖励</p>
+                </div>
+                <p class="tips">温馨提示</p>
+                <p class="tips_content">
+                    1.如果您使用浏览器打开页面，可以使用浏览 &nbsp; &nbsp;器自带的分享按钮分享哦~
+                </p>
+                <p class="tips_content">
+                    2.宝贝分享奖励，请在首页-我的奖励中查看
+                </p>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+</body>
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?73046f18e9201a9fb38a6900a362aaab";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js?v=1502438181"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js?v=1502438181"></script>
+<script type="text/javascript" src="/js/mui.min.js?v=1502438181"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="/js/tools.js?v=1502438181"></script>
+<script type="text/javascript" src="/js/utils.js?v=1502438181"></script>
+<script src="/js/alert.js?v=1502438181"></script>
+<script type="text/javascript" src="/js/new_detail.js?v=1502438181"></script>
+</html>
+

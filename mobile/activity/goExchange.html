@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mobile_reset.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mui.css?v=1502438181">
+    <link rel="stylesheet" href="fonts/iconfont.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/index.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/pack_goods.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/exchange/exchange_center.css?v=1502438181">
+    <title>兑换中心</title>
+    <script>
+    (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            var html = document.documentElement;
+            var windowWidth = html.clientWidth;
+            html.style.fontSize = windowWidth / 7.5 + 'px';
+            // 等价于html.style.fontSize = windowWidth / 750 * 100 + 'px';
+        }, false);
+    })();
+
+    // 这个7.5就是根据设计稿的横向宽度来确定的，假如你的设计稿是640
+    // 那么 html.style.fontSize = windowWidth / 6.4 + 'px';
+    </script>
+</head>
+
+<body>
+    <!-- 去帮助中心 -->
+    <div class="to_help">
+        <a href="help/center">
+            <p class="content"><em class="iconfont icon-laba" style="margin-right: 0.1rem;"></em>不知道怎么兑换商品？来看看全新的帮助中心吧！</p>
+        </a>
+    </div>
+    <!-- 切换11、18点场 -->
+    <div class="time_channel">
+        <p class="time_item actived left" data-time-type="1">11点场</p>
+        <p class="time_item left" data-time-type="2">18点场</p>
+    </div>
+    <nav>
+        <div class="left_nav">
+            <span class="order stock_order span_active" data-order="1" data-order-reverse="11">剩余份数</span>
+            <span class="order price_order" data-order="2" data-order-reverse="21">价格</span>
+        </div>
+        <div class="left nav mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+            <ul class="mui-scroll classify_list">
+                <li class="classify mui-control-item classify_active mui-active" data-category="0">全部类别</li>
+                <li class="classify mui-control-item" data-category="1">时尚女装</li>
+                <li class="classify mui-control-item" data-category="2">精品男装</li>
+                <li class="classify mui-control-item" data-category="3">护肤美妆</li>
+                <li class="classify mui-control-item" data-category="4">鞋包配饰</li>
+                <li class="classify mui-control-item" data-category="5">居家生活</li>
+                <li class="classify mui-control-item" data-category="6">数码电器</li>
+                <li class="classify mui-control-item" data-category="7">母婴儿童</li>
+                <li class="classify mui-control-item" data-category="8">户外运动</li>
+                <li class="classify mui-control-item" data-category="9">食品酒水</li>
+                <li class="classify mui-control-item" data-category="10">其它试用</li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 悬浮置顶撑页面用div -->
+    <div style="height: 2.48rem;"></div>
+    <!--推荐试用-->
+    <div class="recommend-try">
+        <!--推荐试用商品-->
+        <div class="recommend-try-goods">
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <!--页面底部导航条-->
+    <footer id="footer_nav"></footer>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?73046f18e9201a9fb38a6900a362aaab";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <script src="/js/jquery-1.10.2.min.js?v=1502438181 "></script>
+    <script src="/js/mui.min.js?v=1502438181 "></script>
+    <script src="/js/tools.js?v=1502438181"></script>
+    <script src="/js/common/pack_goods.js?v=1502438181"></script>
+    <script src="/js/exchange/exchange_index.js?v=1502438181 "></script>
+    <script>
+    </script>
+</body>
+
+</html>
+

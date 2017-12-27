@@ -1,0 +1,139 @@
+/**                                                
+ * *************************************************                                                  
+ * *************************************************
+ * 此文件为重置样式，全部页面都会引用，不允许修改！
+ * 如要修改，请通知所有前端人员，同意后，方可添加！
+ * *************************************************
+ * ************************************************* 
+ */
+
+/*通用样式*/
+body{
+    font:12px "Microsoft YaHei";
+    margin:0;
+    padding:0;
+    color:#646464;
+    background-color:#fff;
+}
+div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,form,
+fieldset, input, blockquote,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+h1, h2, h3, h4, h5, h6, strong, th{
+    font-size: 1.0em;
+    font-weight: normal;
+    font-style: normal;
+}
+article, aside, details, figcaption, figure,footer, header, menu, nav, section {
+    display: block;
+}
+/*取消聚焦边框*/
+input,button,select,textarea {
+    outline:none;
+    border:none;
+}
+textarea{
+    padding-left:10px;
+}
+input[type='button']{
+    cursor:pointer;
+    text-align:center;
+}
+input[type='text']{
+    padding-left:10px;
+    /*padding-right:10px;*/
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img{
+    border:none;
+    vertical-align: middle;
+}
+ul {
+    list-style: none;
+}
+q:before, q:after {
+    content: '';
+}
+b{
+    font-weight:normal;
+}
+a {
+    color:#646464;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+/*浮动相关*/
+.left   {float:left;}
+.right  {float:right;}
+.clear  {clear:both;}
+
+.passwd{
+    width: 200px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #969696;
+    border-radius: 5px;
+}
+/*清除浮动*/
+.clearfix:after{content:" "; display:block; height:0; visibility:hidden; clear:both; }   
+.clearfix {*zoom:1; } /* 为了适配ie6   */
+
+.container{width: 1200px;margin:0 auto;}
+/*返回到顶部*/
+.return_top {
+    position: fixed;
+    z-index: 99;
+    top: 90%;
+    right: 2%;
+}
+.return_top img {
+    cursor: pointer;
+}
+/*提示图标大小颜色*/
+.icon-tishi1{
+    display:inline-block !important;
+    margin-right:5px !important;
+    font-size: 18px !important;
+    color: #f29317 !important;
+}
+/*错误图标提示*/
+.icon-cuowu {
+    display:inline-block;
+    margin-right:5px;
+    color: #e61e28 !important;
+    font-size: 12px !important;
+}
+/*成功图标提示*/
+.icon-chenggong{
+    display: inline-block;
+    font-size: 12px !important;
+    color: #1ac63e !important;
+}
+/* 隐藏 */
+.hided{
+    display:none;
+}
+
+/* 显示 */
+.showed{
+    display:block;
+}
+
+/**                                                
+ * *************************************************                                                  
+ * *************************************************
+ * 此文件为重置样式，全部页面都会引用，不允许修改！
+ * 如要修改，请通知所有前端人员，同意后，方可添加！
+ * *************************************************
+ * ************************************************* 
+ */

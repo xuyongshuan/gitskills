@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes"><!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mobile_reset.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mui.css?v=1502438181">
+    <link rel="stylesheet" href="fonts/iconfont.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/modal_alert.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/buyersShow_signUp/beauty_show.css?v=1502438181 ">
+      <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/buyersShow_signUp/LCalendar.css?v=1502438181">
+ <!--   <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/buyersShow_signUp/motherChild_show.css">-->
+    <title>买家秀报名</title>
+    <script>
+        (function() {
+            document.addEventListener('DOMContentLoaded', function() {
+                var html = document.documentElement;
+                var windowWidth = html.clientWidth;
+                html.style.fontSize = windowWidth / 7.5 + 'px';
+                // 等价于html.style.fontSize = windowWidth / 750 * 100 + 'px';
+            }, false);
+        })();
+
+        // 这个7.5就是根据设计稿的横向宽度来确定的，假如你的设计稿是640
+        // 那么 html.
+    </script>
+</head>
+<body>
+<header id="header_nav"></header>
+<div>
+    <div style="position: fixed;z-index: 1066;top:50%;left: 50%;margin-left: -0.24rem;margin-top: -0.24rem;">
+        <span id="uploadWait"></span>
+    </div>
+    <div class="mask_layer1" style="position:absolute;z-index: 1065;top:0;left: 0;width: 100%;background-color: rgba(0,0,0,0.3);height: 20rem;display: none;"></div>
+</div>
+<!--驳回原因-->
+<div class="reject_reason">
+    <p><i class="iconfont icon-tishi"></i></p>
+    <p class="reject">商家驳回了报名，驳回原因如下：</p>
+    <p id="reject_reason" class="reason"></p>
+    <p class="hint">(请按照要求新改信息，并重新提交信息)</p>
+</div>
+<div class="personal_information mother">
+    <!--必填资料-->
+    <div class="requiredInf">
+        <h1><i class="iconfont icon-shuxian"></i>必填资料</h1>
+        <ul>
+            <li class="clearfix">
+                <b class="left heading">出生日期</b>
+                <input id='date_birth' class="left" type="text" readonly="readonly" value="">
+                <span   class="right select default">
+                    <b class="left">请选择</b>
+                </span>
+            </li>
+            <li class="clearfix">
+                <b class="left heading">性别</b>
+                <span id="baby_male">
+                    <span data-male="1" class="sex_boy gender sex_active">男</span>
+                    <span data-male="2" class="sex_girl gender">女</span>
+                </span>
+            </li>
+            <li class="clearfix">
+                <b class="left heading">身高</b>
+                <input id="height" class="left" type="number" placeholder="请填写身高，整数" onkeyup="numCheck(this.id)">
+                <span class="left select">
+                    <b class="left">cm</b>
+                </span>
+            </li>
+            <li class="clearfix">
+                <b class="left heading">体重</b>
+                <input id="body_weight" class="left" type="number" placeholder="请填写体重，整数" onkeyup="numCheck(this.id)">
+                <span class="left select">
+                    <b class="left">kg</b>
+                </span>
+            </li>
+            <li class="clearfix">
+                <b class="left heading">鞋子尺码</b>
+                <input id="shoe_size" class="left" type="number" placeholder="中国码" onkeyup="numCheck(this.id)">
+           		 <span class="left select">
+                    <b class="left">码</b>
+                </span>
+            </li>
+            <li class="clearfix" style="height:2.5rem;">
+                <b class="left heading clothes_size">衣服尺码</b>
+                <div id="clothes_size" class="right clothes_size">
+                    <span data-size="1" class="size_active">S</span>
+                    <span data-size="2">M</span>
+                    <span data-size="3">XL</span>
+                    <span data-size="4">XXL</span>
+                    <span data-size="5">XXXL</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--个性展示-->
+    <div class="personality_show">
+        <h1>
+            <i class="iconfont icon-shuxian"></i>
+            个性展示
+            <!-- <a class="right" href="#">查看正确的拍照示例图 <i class=" iconfont icon-jiantou"></i></a> -->
+        </h1>
+        <p>请上传<span>5张</span>以往拍摄清晰的照片，需包含：
+            <span>自拍照、全身照；
+                若买家秀作品和报名照片差异过大或非本人，一经发现直接冻结账户，不予提现！
+            </span>
+        </p>
+        <div class="upload_photos">
+            <form action="tryUse/uploadImg" id="uploadImg1" enctype="multipart/form-data" method="post" ></form>
+            <form action="tryUse/uploadImg" id="uploadImg2" enctype="multipart/form-data" method="post" ></form>
+            <form action="tryUse/uploadImg" id="uploadImg3" enctype="multipart/form-data" method="post" ></form>
+            <form action="tryUse/uploadImg" id="uploadImg4" enctype="multipart/form-data" method="post" ></form>
+            <form action="tryUse/uploadImg" id="uploadImg5" enctype="multipart/form-data" method="post" ></form>
+
+            <div class="goods_picture">
+                <a class="result" href="javascript:void(0);">
+                    <input class="file_input" name="file" type="file" form="uploadImg1" accept="image/*">
+                    <input id="product1"  type="hidden">
+                    <img src=""/images/shpj_icon_tj_default.png" alt="" class="showPic" id="result_img1">
+                </a>
+                <a class="result" href="javascript:void(0);">
+                    <input class="file_input" name="file" type="file" form="uploadImg2" accept="image/*">
+                    <input id="product2"   type="hidden">
+                    <img src=""/images/shpj_icon_tj_default.png" alt="" class="showPic" id="result_img2">
+                </a>
+                <a class="result" href="javascript:void(0);">
+                    <input class="file_input" name="file" type="file" form="uploadImg3" accept="image/*">
+                    <input id="product3"  type="hidden">
+                    <img src=""/images/shpj_icon_tj_default.png" alt="" class="showPic" id="result_img3">
+                </a>
+                <a class="result" href="javascript:void(0);">
+                    <input class="file_input" name="file" type="file" form="uploadImg4" accept="image/*">
+                    <input  id="product4"  type="hidden">
+                    <img src=""/images/shpj_icon_tj_default.png" alt="" class="showPic" id="result_img4">
+                </a>
+                <a class="result" href="javascript:void(0);">
+                    <input class="file_input" name="file" type="file" form="uploadImg5" accept="image/*">
+                    <input id="product5"  type="hidden">
+                    <img src=""/images/shpj_icon_tj_default.png" alt="" class="showPic" id="result_img5">
+                </a>
+                <canvas id="uploadimp" style="display:none"></canvas>
+            </div>
+        </div>
+        <p class="submit_inf"><input type="button" value="确认提交信息"></p>
+    </div>
+</div>
+
+<div class="modal_box confirm_box">
+        <div class="modal_content">
+            <p class="hint">
+                <span>提示</span>
+                <img class="close" src=""/images/tc_icon_off_default.png" alt="">
+            </p>
+            <p class="main">确认提交信息？</p>
+            <p class="btns">
+                <input data-type="buyer_show_type" data-status="status" type="button" id="confirmSubmit" class="ok" value="确定">
+                <input type="button" class="close" value="取消">
+            </p>
+        </div>
+        <div class="mask_layer"></div>
+</div>
+
+</body>
+<script src="/js/jquery-1.10.2.js?v=1502438181"></script>
+<script SRC="/js/mui.js?v=1502438181"></script>
+<script src="/js/tools.js?v=1502438181"></script>
+<script src="/js/utils.js?v=1502438181"></script>
+<script src="/js/buyersShow_signUp/LCalendar.js?v=1502438181"></script>
+<script src="/js/buyersShow_signUp/child_show.js?v=1502438181"></script>
+<script src="/js/alert.js?v=1502438181"></script>
+<script>
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger': '#date_birth', //标签id
+        'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+        'minDate': '1900-1-1', //最小日期
+        'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() //最大日期
+    });
+</script>
+</html>

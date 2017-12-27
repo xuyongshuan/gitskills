@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>帮助中心</title>
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mobile_reset.css?v=1502438181">
+    <link rel="stylesheet" href="/at.alicdn.com/t/font_321858_dmr452jg82qk6gvi.css">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mui.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/modal_alert.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/help/help_center.css?v=1502438181">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var html = document.documentElement;
+        var windowWidth = html.clientWidth;
+
+        // 如果用电脑打开，最大字体100px
+        html.style.fontSize = windowWidth > 1024 ? 100 + 'px' : windowWidth / 7.5 + 'px';
+        // 等价于html.style.fontSize = windowWidth / 750 * 100 + 'px';
+
+    }, false);
+    </script>
+</head>
+
+<body>
+    <header id="header_nav"></header>
+    <div class="layout-container">
+        <!-- 快捷帮助 -->
+        <div class="section short-help">
+            <h2><em class="iconfont icon-shuxian"></em>快捷帮助</h2>
+            <table style="width: 100%;text-align: center;vertical-align:middle;">
+                <tr style="width: 100%">
+                    <td>
+                        <a href="help/detail?typeId=1" style="display: block;">
+                            <em class="iconfont icon-xinshouwenti" style="color: #f777a4"></em>
+                            <p>新手问题</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="help/detail?typeId=2" style="display: block;">
+                            <em class="iconfont icon-shenqingshiyongwenti" style="color: #79c1fa"></em>
+                            <p>试用申请问题</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="help/detail?typeId=3" style="display: block;">
+                            <em class="iconfont icon-xiadanlingquwenti" style="color: #d974fa"></em>
+                            <p>下单领取问题</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="help/detail?typeId=4" style="display: block;">
+                            <em class="iconfont icon-shouhuopingjiawenti" style="color: #fccc6b"></em>
+                            <p>收货评价问题</p>
+                        </a>
+                    </td>
+                </tr>
+                <tr style="width: 100%">
+                    <td>
+                        <a href="help/detail?typeId=5" style="display: block;">
+                            <em class="iconfont icon-shikeliucheng" style="color: #fcd17b"></em>
+                            <p>试客流程</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="help/detail?typeId=6" style="display: block;">
+                            <em class="iconfont icon-shikeguize" style="color: #f98686"></em>
+                            <p>试客规则</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="help/detail?typeId=7" style="display: block;">
+                            <em class="iconfont icon-shikechufaguize" style="color: #f9ac86"></em>
+                            <p>试客处罚规则</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="activity/notice_tutorial" style="display: block;">
+                            <em class="iconfont icon-xinshoujiaochengshipin" style="color: #8d92ff"></em>
+                            <p>新手教程视频</p>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- 常见问题 -->
+        <div class="section">
+            <h2><em class="iconfont icon-shuxian"></em>常见问题</h2>
+            <div class="select_issue_box">
+                <ul class="select_issue_list clearfix">
+                    <li class="issue_item active left" data-type-name='freshman_pannel' data-index="1">新手问题</li>
+                    <li class="issue_item left" data-type-name='apply_pannel' data-index="2">试用申请</li>
+                    <li class="issue_item left" data-type-name='takeOrder_pannel' data-index="3">下单领取</li>
+                    <li class="issue_item left" data-type-name='evaluate_pannel' data-index="4">收货评价</li>
+                    <li class="issue_item left" data-type-name='process_pannel' data-index="5">试客流程</li>
+                    <li class="issue_item left" data-type-name='rule_pannel' data-index="6">试客规则</li>
+                    <li class="issue_item left" data-type-name='punish_pannel' data-index="7">处罚规则</li>
+                    <li class="issue_item left"><a href="activity/notice_tutorial" style="color: #999">新手教程</a></li>
+                </ul>
+            </div>
+            <div class="pannel">
+                <!-- 新手问题 -->
+                <div class="pannel_issue_list" id="freshman_pannel"></div>
+                <!-- 试客申请问题 -->
+                <div class="pannel_issue_list hided" id="apply_pannel"></div>
+                <!-- 下单领取问题 -->
+                <div class="pannel_issue_list hided" id="takeOrder_pannel"></div>
+                <!-- 收货评价问题 -->
+                <div class="pannel_issue_list hided" id="evaluate_pannel"></div>
+                <!-- 试客流程问题 -->
+                <div class="pannel_issue_list hided" id="process_pannel"></div>
+                <!-- 试客规则问题 -->
+                <div class="pannel_issue_list hided" id="rule_pannel"></div>
+                <!-- 试客处罚规则问题 -->
+                <div class="pannel_issue_list hided" id="punish_pannel"></div>
+            </div>
+        </div>
+        <!-- 联系客服 -->
+        <div class="contact_us">
+            <img src=""/images/button_icon_lxkf_default@2x.png" alt="">
+        </div>
+        <!-- 联系客服弹框 -->
+        <div class="modal_box contact_us_box">
+            <div class="modal_content">
+                <div class="main">
+                    <p><img src="http://pic-img.shike8888.com/help_bg_ewm_default@2x.png" alt=""></p>
+                </div>
+                <p class="close contact_us_close"><img src="../images/gz_icon_off_default@2x.png" alt=""></p>
+            </div>
+            <div class="mask_layer""></div>
+        </div>
+    </div>
+</body>
+<script src="/js/jquery-1.10.2.min.js?v=1502438181"></script>
+<script src="/js/mui.min.js?v=1502438181 "></script>
+<script src="/js/help/help_center.js?v=1502438181"></script>
+<script>
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?73046f18e9201a9fb38a6900a362aaab";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</html>
+

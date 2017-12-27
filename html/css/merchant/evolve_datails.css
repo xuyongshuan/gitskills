@@ -1,0 +1,388 @@
+#section {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
+}
+#section .activity_details {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+#section .activity_details .location_title {
+  padding: 30px;
+  border-bottom: 1px solid #f5f5f5;
+}
+#section .activity_details .location_title ul {
+  overflow: hidden;
+}
+#section .activity_details .location_title ul li {
+  float: left;
+  font-size: 14px;
+  padding-right: 10px;
+}
+#section .activity_details .location_title ul li a:hover {
+  color: #f10180;
+}
+#section .activity_details .commodity_information {
+  padding: 0 30px;
+}
+#section .activity_details .commodity_information > h1 {
+  padding-top: 30px;
+  font-size: 16px;
+  color: #323232;
+}
+#section .activity_details .commodity_information .title {
+  overflow: hidden;
+  padding: 10px;
+}
+#section .activity_details .commodity_information .title p {
+  font-size: 14px;
+  height: 16px;
+}
+#section .activity_details .commodity_information .title p a {
+  color: #005ea7;
+}
+#section .activity_details .commodity_information .title p:first-of-type {
+  background: url(../images/line.png) left no-repeat;
+  padding-left: 25px;
+}
+#section .activity_details .commodity_information .title p:first-of-type span {
+  margin-right: 40px;
+}
+#section .activity_details .commodity_information .details ul {
+  height: 115px;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 15px 0;
+  overflow: hidden;
+}
+#section .activity_details .commodity_information .details ul li {
+  box-sizing: border-box;
+  float: left;
+  color: #323232;
+  height: 80px;
+  width: 260px;
+}
+#section .activity_details .commodity_information .details ul li p {
+  width: 210px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #969696;
+  line-height: 20px;
+}
+#section .activity_details .commodity_information .details ul li p span {
+  color: #323232;
+}
+#section .activity_details .commodity_information .details ul li p b {
+  color: #f10180;
+}
+#section .activity_details .commodity_information .details ul li p a {
+  color: #005ea7;
+}
+#section .activity_details .commodity_information .details ul li:nth-of-type(1) {
+  width: 120px;
+  padding: 0 20px;
+}
+#section .activity_details .commodity_information .details ul li:nth-of-type(2),
+#section .activity_details .commodity_information .details ul li:nth-of-type(3),
+#section .activity_details .commodity_information .details ul li:nth-of-type(4) {
+  border-right: 1px solid #f5f5f5;
+  padding-left: 30px;
+}
+#section .activity_details .commodity_information .details ul li:nth-of-type(5) {
+  padding-left: 30px;
+  width: 240px;
+}
+#section .activity_details .commodity_information .details ul li:nth-of-type(3) p {
+  line-height: 28px;
+}
+
+#details ul li{
+  display: table !important;
+  /*border-right: 1px solid #f5f5f5 !important;*/
+  padding-left: 30px !important;
+}
+
+#section .activity_details .commodity_information .details ul li:nth-of-type(1){
+  border-right: 0;
+}
+#section .activity_details .commodity_information .details ul li:nth-of-type(4){
+  border-right: 0;
+}
+
+#section .activity_details .commodity_information .details ul li:nth-of-type(3) p{
+  line-height: 20px !important;
+}
+
+#details ul li div{
+  display: table-cell;
+  vertical-align: middle;
+  /*line-height: 20px !important;*/
+}
+#section .activity_details .commodity_information .evolve_dateil {
+  border: 1px solid #f5f5f5;
+  margin-top: 30px;
+}
+#section .activity_details .commodity_information .evolve_dateil .evolve_dateil_tab {
+  background-color: #f5f5f5;
+}
+#section .activity_details .commodity_information .evolve_dateil .evolve_dateil_tab ul {
+  overflow: hidden;
+}
+#section .activity_details .commodity_information .evolve_dateil .evolve_dateil_tab ul li {
+  float: left;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #323232;
+  cursor: pointer;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state {
+  padding: 12px 20px 14px 20px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .title,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .title {
+  color: #323232;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+#try_2 >.title{
+  float: left;
+}
+
+.try_content >.title3{
+  float: left;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content {
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid #f5f5f5;
+  padding-right:0;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .left_information ul,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .left_information ul {
+  width: 530px;
+  padding-right: 20px;
+  border-right: 2px solid #f5f5f5;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .left_information ul li,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .left_information ul li {
+  padding-top: 20px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .left_information ul li h2,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .left_information ul li h2 {
+  padding-bottom: 18px;
+  font-size: 16px;
+  color: #323232;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .left_information ul li p,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .left_information ul li p {
+  font-size: 14px;
+  color: #646464;
+  padding-bottom: 18px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .left_information ul li p span:first-of-type,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .left_information ul li p span:first-of-type {
+  margin-right: 30px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .left_information ul li p b,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .left_information ul li p b {
+  color: #323232;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .left_information ul li p b i,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .left_information ul li p b i {
+  color: #e61e28;
+  font-style: normal;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .left_information ul li:not(:first-child),
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .left_information ul li:not(:first-child) {
+  border-top: 1px dashed #c8c8c8;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .right_state,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .right_state {
+  display: table;
+  width: 546px;
+  height: 450px;
+  margin: 0 auto;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .right_state .status_alert,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .right_state .status_alert {
+  display: table-cell;
+  vertical-align: middle;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .right_state .status_alert .status_content h3,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .right_state .status_alert .status_content h3 {
+  font-size: 18px;
+  color: #323232;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .right_state .status_alert .status_content p,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .right_state .status_alert .status_content p {
+  font-size: 14px;
+  color: #323232;
+  text-align: center;
+  padding-bottom: 5px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .right_state .status_alert .status_content p span,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .right_state .status_alert .status_content p span {
+  color: #646464;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .right_state .status_alert .status_content p i,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .right_state .status_alert .status_content p i {
+  color: #e61e28;
+  font-style: normal;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details .details_content .right_state .status_alert .status_content p a,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve .details_content .right_state .status_alert .status_content p a {
+  color: #005ea7;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details h2.try_plan,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve h2.try_plan {
+  color: #323232;
+  font-size: 16px;
+  padding: 28px 0 10px 0;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details table,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve table {
+  width: 1098px;
+  border: 1px solid #f5f5f5;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details table th,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve table th,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details table td,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve table td {
+  border: 1px solid #f5f5f5;
+  height: 50px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 14px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details table th,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve table th {
+  background-color: #f5f5f5;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details table td b,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve table td b {
+  color: #323232;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_details table td span,
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve table td span {
+  color: #e61e28;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve table tr td {
+  color: #323232;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_evolve table tr td a {
+  color: #005ea7;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > p.total {
+  font-size: 16px;
+  text-align: right;
+  color: #323232;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > p.total span {
+  color: #e61e28;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table {
+  width: 1098px;
+  border: 1px solid #f5f5f5;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table td,
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table th {
+  border: 1px  solid #f5f5f5;
+  text-align: center;
+  height: 50px;
+  font-size: 14px;
+  color: #646464;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table tr.other td:nth-of-type(1) p {
+  font-size: 12px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table td {
+  padding: 10px 0 20px 0;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table td p {
+  padding-top: 10px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table td span {
+  color: #e61e28;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table td b {
+  color: #323232;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table td:nth-of-type(2) p {
+  font-size: 12px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table th:nth-of-type(1) {
+  width: 260px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table th:nth-of-type(2) {
+  width: 614px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .cost_information > table th:nth-of-type(3) {
+  width: 260px;
+}
+#section .activity_details .commodity_information .evolve_dateil .try_state .try_content {
+  display: none;
+}
+.bg_active {
+  background-color: #f10180;
+  color: #fff!important ;
+}
+
+#next{
+  margin-top: 20px;
+}
+
+ .seachform{
+   overflow:hidden;
+   float: right;
+   margin-bottom: 15px;
+}
+ .seachform li{
+  float:left;
+  height:38px;
+  line-height:38px;
+}
+.seachform li input[type='text']{
+  width:200px;
+  height:34px;
+  line-height:34px;
+}
+.seachform li input[type='button'],.seachform li input[type='submit']{
+  width:100px;
+  height:36px;
+  line-height:36px;
+  border-radius:5px;
+  border:1px solid #f10180;
+  background-color:#f10180;
+  color:#fff;
+  font-size:14px;
+  margin-left:5px;
+}
+
+
+.seachform li:not(:last-child){
+  border:1px solid #f5f5f5;
+}
+.vocation{
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+.vocation>select{
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+.vocation>select option{
+  background-color:#fff;
+}

@@ -1,0 +1,208 @@
+.leftNav_active {
+  color: #f10180 !important ;
+  background-color: #fef2f9  !important;
+  /* text-decoration: underline ;*/
+}
+#section {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
+}
+#section .section_main {
+  width: 1200px;
+  margin: 0 auto;
+}
+.friend_invited {
+  margin-left: 10px;
+  width: 1040px;
+  background-color: #fff;
+}
+.friend_invited p.shike {
+  font-size: 14px;
+  color: #323232;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.friend_invited h1 {
+  text-align: center;
+}
+.one ul.reward_directions {
+  padding: 75px 19px 50px 29px;
+}
+.one ul.reward_directions li {
+  float: left;
+}
+.one ul.reward_directions li:nth-of-type(1) > .directions,
+.one ul.reward_directions li:nth-of-type(2) > .directions {
+  width: 222px;
+}
+.one ul.reward_directions li:nth-of-type(3) > .directions,
+.one ul.reward_directions li:nth-of-type(4) > .directions {
+  width: 254px;
+}
+.one ul.reward_directions .directions {
+  height: 180px;
+  border: 1px solid #fcf8f5;
+  border-radius: 10px;
+  background-color: #fffbf8;
+  margin-right: 10px;
+}
+.one ul.reward_directions .directions > p {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  line-height: 28px;
+}
+.one ul.reward_directions .directions > p > img {
+  margin-top: -25px;
+}
+.one ul.reward_directions .directions p.content {
+  padding-top: 15px;
+}
+.two {
+  background: url(/images/merchant/invitation_rebate/invite_headline02_bg_default.png) center bottom no-repeat;
+  background-color: #fefaf1;
+  padding-top: 50px;
+}
+.two p,
+.two h2 {
+  text-align: center;
+}
+.two h2 {
+  font-size: 20px;
+  color: #ff0000;
+  font-weight: bold;
+  padding-top: 20px;
+}
+.two p {
+  font-size: 16px;
+  color: #333;
+  padding: 10px 0;
+}
+.two .invited_one h2 {
+  padding-top: 50px;
+}
+.two .invited_one input.links {
+  width: 726px;
+  height: 36px;
+  border: 1px solid #c8c8c8;
+  margin-left: 100px;
+}
+.two .invited_one input.copy_links {
+  width: 100px;
+  height: 36px;
+  border: 1px solid #f10180;
+  border-radius: 5px;
+  background-color: #f10180;
+  color: #fff;
+  margin-left: 10px;
+}
+.two .invited_two .title {
+  font-size: 16px;
+  color: #333;
+}
+.two .invited_two .invited_way {
+  padding: 20px 0 100px 0;
+}
+.two .invited_two .invited_way .left_box {
+  width: 58%;
+  padding-left: 130px;
+  padding-top: 35px;
+}
+.two .invited_two .invited_way .left_box .QR_code {
+  margin-left: 10px;
+}
+.two .invited_two .invited_way .left_box .btns {
+  padding-top: 30px;
+}
+.two .invited_two .invited_way .left_box .btns > input {
+  width: 156px;
+  height: 36px;
+  border: 1px solid #fe0000;
+  border-radius: 5px;
+  color: #fe0000;
+  font-size: 16px;
+  background-color: transparent;
+  margin-top: 30px;
+}
+.two .invited_two .invited_way .left_box .copy_example {
+  padding-top: 20px;
+}
+.two .invited_two .invited_way .left_box .copy_example .copyExample_content {
+  width: 340px;
+  height: 108px;
+  border: 1px solid #c8c8c8;
+  font-size: 14px;
+  color: #666;
+  padding: 5px 10px;
+  line-height: 24px;
+  resize: none;
+}
+.two .invited_two .invited_way .right_box {
+  display: inline-block;
+  width: 42%;
+  padding-left: 76px;
+}
+.three {
+  padding: 50px 0;
+}
+.three .invited_ranking table {
+  border: 1px solid #c8c8c8;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.three .invited_ranking table th,
+.three .invited_ranking table td {
+  border: 1px solid #c8c8c8;
+  height: 48px;
+  width: 218px;
+  vertical-align: middle;
+  color: #333;
+  text-align: center;
+  font-size: 14px;
+}
+.three .invited_ranking table th {
+  background-color: #fafafa;
+}
+.three .invited_ranking table span {
+  color: #f10180;
+}
+.four {
+  background: url(/images/merchant/invitation_rebate/invite_headeline04_bg_default.png) left;
+}
+.four > h1 {
+  padding-top: 50px;
+}
+.four ul {
+  width: 680px;
+  margin: 0 auto;
+  padding: 40px 0 20px 0;
+}
+.four ul p {
+  font-size: 14px;
+  color: #333;
+  line-height: 30px;
+}
+.four ul .problem {
+  height: 30px;
+  background: url(/images/merchant/invitation_rebate/invite_headline04_icon_questiion_default.png) left center no-repeat;
+  font-weight: bold;
+  padding-left: 40px;
+}
+.four ul .answer {
+  background: url(/images/merchant/invitation_rebate/invite_headline04_icon_answer_default.png) left 10px no-repeat;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+.four ul .answer > span {
+  display: inline-block;
+  width: 620px;
+  border-bottom: 1px solid #c8c8c8;
+  padding-bottom: 25px;
+}
+.four ul .answer span.moreLine {
+  padding-bottom: 15px;
+}
+.four ul .answer span.last {
+  border-bottom: none;
+}

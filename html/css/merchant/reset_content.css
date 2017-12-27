@@ -1,0 +1,556 @@
+.leftNav_active {
+  color: #f10180 !important ;
+  background-color: #fef2f9  !important;
+ /* text-decoration: underline ;*/
+}
+#section {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
+}
+#section .section_main {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#section .section_main .content{
+  width: 1040px;
+  margin-left: 10px;
+  min-height: 555px;
+}
+#section .section_main h1.title {
+  color: #323232;
+  font-size: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f5f5f5;
+}
+#section .section_main .store_content,
+#section .section_main .basic_setup,
+#section .section_main .bound_bankCard,
+#section .section_main .add_bankCard,
+#section .section_main .member_manage,
+#section .section_main .deposit_recharge,
+#section .section_main .deposit_withdraw,
+#section .section_main .funds_record,
+#section .section_main .message_notification {
+	width: 1040px;
+	margin-left: 10px;
+	padding: 30px;
+	background-color: #fff;
+	min-height: 555px;
+}
+
+/* 消息中心*/
+#section .section_main .message_notification table {
+  margin-top: 30px;
+  width: 980px;
+}
+#section .section_main .message_notification table tr {
+  height: 50px;
+}
+#section .section_main .message_notification table tr td {
+  font-size: 14px;
+  color: #323232;
+  text-align: center;
+}
+#section .section_main .message_notification table tr td a {
+  color: #005ea7;
+}
+#section .section_main .message_notification table tr td:not(:nth-of-type(2)) {
+  padding: 0 100px;
+}
+#section .section_main .message_notification table tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+/* 资金记录页面css*/
+
+#section .section_main .funds_record .allRecord {
+  overflow: hidden;
+  height: 38px;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 0 20px;
+  margin-top: 30px;
+}
+#section .section_main .funds_record .allRecord li {
+  float: left;
+  line-height: 38px;
+}
+#section .section_main .funds_record .allRecord li a {
+  font-size: 14px;
+  color: #323232;
+}
+#section .section_main .funds_record .allRecord li span {
+  color: #c8c8c8;
+  margin: 0 20px;
+}
+#section .section_main .funds_record table {
+  width: 980px;
+}
+#section .section_main .funds_record table td {
+  border: 1px solid #f5f5f5;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 14px;
+  width: 228px;
+}
+
+#section .section_main .funds_record table.recharge_record td {
+  width: 285px;
+}
+#section .section_main .funds_record .seachform{
+  overflow:hidden;
+  margin-top:20px;
+}
+#section .section_main .funds_record .seachform li{
+  float:left;
+  height:38px;
+  line-height:38px;
+}
+#section .section_main .funds_record .seachform li span{
+  font-size: 15px;
+}
+#section .section_main .funds_record .seachform li input[type='text']{
+  width:200px;
+  height:34px;
+  line-height:34px;
+  border:1px solid #f5f5f5;
+}
+#section .section_main .funds_record .seachform li input[type='button']{
+  width:100px;
+  height:34px;
+  line-height:34px;
+  border-radius:5px;
+  border:1px solid #f10180;
+  background-color:#f10180;
+  color:#fff;
+  font-size:14px;
+  margin-left:5px;
+  vertical-align: middle;
+}
+
+/* 我要充值页面css */
+#section .section_main .deposit_recharge h2 {
+  color: #323232;
+  font-size: 16px;
+}
+#section .section_main .deposit_recharge h2.select_bank {
+  padding-top: 30px;
+}
+#section .section_main .deposit_recharge table {
+  margin-left: -10px;
+  border-collapse: separate;
+}
+#section .section_main .deposit_recharge table td {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  padding:15px;
+  position:relative;
+}
+#section .section_main .deposit_recharge table td.pay_select_active img{
+  border:1px solid #e61e28;
+}
+#section .section_main .deposit_recharge table td.pay_select_active .pitchOn{
+  display:block !important;
+}
+#section .section_main .deposit_recharge table td .pitchOn{
+  display:none;
+  width: 180px;
+  height: 40px;
+  position:absolute;
+  bottom:14px;
+  right:14px;
+  z-index:99;
+  background: url(/images/bank/pitch_on.png) right bottom no-repeat;
+}
+#section .section_main .deposit_recharge table td.rechange_way{
+  padding:0;
+  text-align:left;
+}
+#section .section_main .deposit_recharge table td.rechange_way p{
+  margin-left:15px;
+  font-size:14px;
+  color:#333;
+  background: url(/images/merchant/sj_fbsy_icon_quan_default.png) left center no-repeat;
+  padding-left:22px;
+}
+#section .section_main .deposit_recharge table td.rechange_way .rechange_waySE{
+  background: url(/images/merchant/spot.png) left center no-repeat;
+}
+#section .section_main .deposit_recharge table td img {
+  width: 180px;
+  height: 40px;
+  margin-top: -2px;
+  border: 1px solid #c8c8c8;
+}
+#section .section_main .deposit_recharge table td a {
+  color: #005ea7;
+  display:inline-block;
+  width: 180px;
+  height: 40px;
+  border: 1px solid #c8c8c8;
+}
+#section .section_main .deposit_recharge .recharge_active {
+  background: url(/images/merchant/spot.png) left center no-repeat !important;
+}
+#section .section_main .deposit_recharge .recharge_type {
+  padding: 20px 0 30px 0;
+}
+#section .section_main .deposit_recharge .recharge_type span {
+  display: inline-block;
+  margin-left: 15px;
+  padding-left: 26px;
+  height: 20px;
+  font-size: 14px;
+  background: url(/images/merchant/sj_fbsy_icon_quan_default.png) left center no-repeat;
+  cursor:pointer;
+}
+#section .section_main .deposit_recharge .recharge_amount p {
+  font-size: 14px;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+#section .section_main .deposit_recharge .recharge_amount p span {
+  color: #e61e28;
+  font-size: 20px;
+}
+#section .section_main .deposit_recharge .recharge_amount p.recharge_amount {
+  padding-top: 30px;
+}
+#section .section_main .deposit_recharge .recharge_amount p.recharge_amount input {
+  width: 200px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #969696;
+  border-radius: 5px;
+}
+#section .section_main .deposit_recharge .recharge_amount p.recharge_amount b {
+  font-size: 12px;
+  color: #969696;
+  margin-left: 10px;
+}
+#section .section_main .deposit_recharge .recharge_amount p.error {
+  padding-left: 90px;
+  height: 30px;
+  padding-top: 3px;
+}
+#section .section_main .deposit_recharge .recharge_amount p.error span {
+  color: #e61e28;
+  font-size: 12px;
+}
+#section .section_main .deposit_recharge .confirm_btn {
+  width: 100%;
+  padding: 30px 0 50px 20px;
+  border-bottom: 1px solid #f5f5f5;
+}
+#section .section_main .deposit_recharge .confirm_btn input {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #f10180;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f10180;
+  color: #fff;
+}
+#section .section_main .deposit_recharge .warm_prompt {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+#section .section_main .deposit_recharge .warm_prompt h1 {
+  color: #323232;
+  font-size: 14px;
+  padding: 30px 0 10px 0;
+}
+#section .section_main .deposit_recharge .warm_prompt p {
+  padding-top: 10px;
+}
+#section .section_main .deposit_recharge .warm_prompt p img {
+  margin-top: -2px;
+  cursor: pointer;
+}
+.pay_modal {
+  display: none;
+}
+.pay_modal .modal_content {
+  text-align: center;
+}
+.pay_modal .modal_content p {
+  font-size: 14px;
+  color: #323232;
+  line-height: 32px;
+  margin: 43px 0;
+}
+.pay_modal .modal_submit {
+  padding-top: 15px;
+}
+.pay_modal .modal_submit input {
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #f10180;
+  border-radius: 5px;
+}
+.pay_modal .modal_submit input:nth-of-type(2) {
+  margin-left: 35px;
+}
+
+/* 押金提现 页面css */
+#section .section_main .deposit_withdraw h2 {
+  color: #323232;
+  font-size: 16px;
+  padding: 30px 0;
+}
+#section .section_main .deposit_withdraw .fillIn_money > div {
+  width: 1040px;
+}
+#section .section_main .deposit_withdraw .fillIn_money > div > b {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  font-size: 14px;
+}
+#section .section_main .deposit_withdraw .fillIn_money > div > span {
+  color: #e61e28;
+  font-size: 20px;
+}
+#section .section_main .deposit_withdraw .fillIn_money > div > input {
+  width: 200px;
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #969696;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+#section .section_main .deposit_withdraw .fillIn_money > div span.error {
+  font-size: 12px;
+  margin-left: 5px;
+}
+#section .section_main .deposit_withdraw .fillIn_money > div > p {
+  padding-left: 100px;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_two {
+  margin-top: 35px;
+  overflow: hidden;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_two b {
+  float: left;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_two .bankCard_one {
+  width: 236px;
+  height: 136px;
+  border: 1px solid #005ea7;
+  border-radius: 5px;
+  padding: 20px;
+  margin-right: 50px;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_two .bankCard_one p.one .bank_logo {
+  width: 105px;
+  height: 22px;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_two .bankCard_one p.two {
+  padding: 12px 0 20px 0;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_two .bankCard_one p.two span {
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: #005ea7;
+  color: #fff;
+  text-align: center;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_two .bankCard_one p.three {
+  color: #323232;
+  font-size: 16px;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_two .bankCard_two {
+  width: 236px;
+  height: 136px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  padding: 20px;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_two .bankCard_two > p {
+  text-align: center;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_two .bankCard_two > p img {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_three p.one,
+#section .section_main .deposit_withdraw .fillIn_money .main_five p.one {
+  color: #969696;
+  padding: 8px 0 25px 100px;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_three p.one img,
+#section .section_main .deposit_withdraw .fillIn_money .main_five p.one img {
+  margin-top: -2px;
+  cursor: pointer;
+}
+#section .section_main .deposit_withdraw .fillIn_money div.main_three p.two,
+#section .section_main .deposit_withdraw .fillIn_money .main_five p.two {
+  line-height: 28px;
+  font-size: 14px;
+  padding-bottom: 25px;
+}
+#section .section_main .deposit_withdraw .fillIn_money .main_five table {
+  margin-top: 10px;
+}
+#section .section_main .deposit_withdraw .fillIn_money .main_five table td b {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  font-size: 14px;
+}
+
+#section .section_main .deposit_withdraw .fillIn_money .main_five table td .passwd {
+  border: 1px solid #969696;
+  border-radius: 5px;
+  height: 28px;
+  width:200px;
+}
+#section .section_main .deposit_withdraw .fillIn_money .main_five table td span.error {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px;
+  color: #e61e28;
+  width: 500px;
+}
+#section .section_main .deposit_withdraw .fillIn_money .main_five table td:not(:first-child) {
+  width: 30px;
+  height: 30px;
+}
+#section .section_main .deposit_withdraw .fillIn_money .main_five table td:not(:first-child) input.pw {
+  width: 30px;
+  height: 30px;
+  border: none;
+  padding-left: 12px;
+}
+
+#section .section_main .deposit_withdraw .fillIn_money .main_five table td:not(:first-child) input.pw:focus {
+  border: 2px solid #a6cef1;
+  border-radius: 0;
+  padding-left: 12px;
+}
+#section .section_main .deposit_withdraw .fillIn_money .main_five table td:last-of-type {
+  border: none;
+}
+#section .section_main .deposit_withdraw .confirm_btn {
+  width: 100%;
+  padding: 25px 0 50px 20px;
+  border-bottom: 1px solid #f5f5f5;
+}
+#section .section_main .deposit_withdraw .confirm_btn input {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #f10180;
+  border-radius: 5px;
+  background-color: #f10180;
+  color: #fff;
+  font-size: 16px;
+}
+#section .section_main .deposit_withdraw .warm_prompt {
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+#section .section_main .deposit_withdraw .warm_prompt h1 {
+  color: #323232;
+  font-size: 14px;
+  padding: 30px 0 10px 0;
+}
+#section .section_main .deposit_withdraw .warm_prompt p {
+  padding-top: 10px;
+}
+#section .section_main .deposit_withdraw .warm_prompt p img {
+  margin-top: -2px;
+  cursor: pointer;
+}
+
+.withdraw_modal,
+.withdrawFailure_modal {
+  display: none;
+}
+.withdraw_modal .modal_content,
+.withdrawFailure_modal .modal_content {
+  text-align: center;
+}
+.withdraw_modal .modal_content p,
+.withdrawFailure_modal .modal_content p {
+  font-size: 16px;
+  padding-top: 50px;
+}
+.withdraw_modal .modal_content table,
+.withdrawFailure_modal .modal_content table {
+  margin: 20px 0 25px 130px;
+  width: 187px;
+}
+.withdraw_modal .modal_content table td,
+.withdrawFailure_modal .modal_content table td {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c8c8c8;
+}
+.withdraw_modal .modal_content table td input,
+.withdrawFailure_modal .modal_content table td input {
+  width: 30px;
+  height: 30px;
+}
+.withdraw_modal .modal_content table td input:focus,
+.withdrawFailure_modal .modal_content table td input:focus {
+  border: 1px solid #a6cef1;
+}
+
+.withdraw_modal .succeed_content,
+.withdrawFailure_modal .succeed_content {
+ /* padding-top: 24px;*/
+  min-width: 450px;
+ min-height: 149px;
+  display:table;
+}
+.withdraw_modal .succeed_content .table_cell,
+.withdrawFailure_modal .succeed_content .table_cell{
+  padding-top: 20px;
+  display:table-cell;
+  vertical-align: middle;
+}
+
+.withdraw_modal .succeed_content p.payment_succeed,
+.withdrawFailure_modal .succeed_content p.payment_succeed {
+  color: #323232;
+  font-size: 16px;
+  padding: 15px 0 10px 0;
+}
+.withdraw_modal .succeed_content p,
+.withdrawFailure_modal .succeed_content p {
+  font-size: 14px;
+}
+.withdraw_modal .modal_submit,
+.withdrawFailure_modal .modal_submit {
+  padding-top: 15px;
+}
+.withdraw_modal .modal_submit input,
+.withdrawFailure_modal .modal_submit input {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #f10180;
+  border-radius: 5px;
+}
+.withdraw_modal .modal_submit input:nth-of-type(2),
+.withdrawFailure_modal .modal_submit input:nth-of-type(2) {
+  margin-left: 35px;
+}
+.bfts, .fbfts{
+  font-size: 14px;
+  color:#f10180;
+}

@@ -1,0 +1,393 @@
+#section .section_main .store_content {
+  padding-bottom: 20px;
+}
+#section .section_main .store_content .progress_bar {
+  padding: 50px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+#section .section_main .store_content .fill_information h2.title {
+  font-size: 16px;
+  padding: 18px 0;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information label {
+  display: inline-block;
+  width: 115px;
+  text-align: right;
+  font-size: 14px;
+  font-weight:normal;
+  color:#323232;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information label span{
+  display: inline-block;
+  padding-right: 3px;
+  color: #f10180;
+  font-size: 16px;
+  font-weight: bold;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information input,
+#section .section_main .store_content .fill_information .shop_information .commodity_information select {
+  width: 600px;
+  height: 28px;
+  line-height: 28px;
+  margin: 15px 0 0 5px;
+  border: 1px solid #969696;
+  border-radius: 5px;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information span {
+  color: #e61e28;
+  display:inline-block;
+  line-height:24px;
+  margin-left: 5px;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information span span{
+  display:inline-block;
+  float:left;
+  margin-top:1.5px;
+  margin-right:5px;
+  font-size: 16px;
+
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information select {
+  width: 100px;
+  color: #646464;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information input.norms {
+  width: 100px;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information p {
+  padding-left: 120px;
+  color: #969696;
+  margin: 4px 0;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information p a {
+  cursor: text;
+  font-weight: bold;
+  color: #646464;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information p.total_money {
+  padding-left: 350px;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information p.total_money span {
+  color: #e61e28;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information span.pinkage {
+  display: inline-block;
+  padding-left: 20px;
+  font-size: 14px;
+  background: url(../../images/merchant/sj_fbsy_icon_quan_default.png) left center no-repeat;
+  color: #646464;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information span.freight {
+  margin-left: 57px;
+}
+#section .section_main .store_content .fill_information .nextStep_btn input {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-left: 0;
+  border: 1px solid #f10180;
+  margin: 50px 30px 30px 0;
+  background-color: #f10180;
+  color: #fff;
+}
+#section .section_main .store_content .fill_information .nextStep_btn input:first-of-type {
+  margin-left: 43px;
+  color: #f10180;
+  background-color: #fff;
+}
+#section .section_main .store_content .fill_information .note {
+  padding: 15px 0 0 43px;
+  line-height: 24px;
+}
+#section .section_main .store_content .fill_information .note b {
+  font-size: 14px;
+  color: #323232;
+}
+
+
+/*商品规格*/
+#section .section_main .store_content .fill_information .goods_standard {
+  overflow: hidden;
+}
+#section .section_main .store_content .fill_information .goods_standard .norms {
+  width: 115px;
+  text-align: right;
+  font-size: 14px;
+  color: #323232;
+  padding-top:4px;
+}
+#section .section_main .store_content .fill_information .goods_standard .norms span {
+  display: inline-block;
+  padding-right: 3px;
+  color: #f10180;
+  font-size: 16px;
+  font-weight: bold;
+}
+#section .section_main .store_content .fill_information .goods_standard .goods_standard_details p {
+  padding: 4px 0;
+  color:#646464;
+}
+#section .section_main .store_content .fill_information .goods_standard .goods_standard_details .goods_standard_content {
+  width: 600px;
+  border: 1px solid #fce5ea;
+  background-color: #fffcfd;
+  padding: 15px 0 12px 15px;
+}
+#section .section_main .store_content .fill_information .goods_standard .goods_standard_details .goods_standard_content ul {
+  overflow: hidden;
+}
+#section .section_main .store_content .fill_information .goods_standard .goods_standard_details .goods_standard_content ul li {
+  float: left;
+  width: 130px;
+  height: 86px;
+  border: 1px solid #99a1a7;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 0 15px 10px 0;
+}
+#section .section_main .store_content .fill_information .goods_standard .goods_standard_details .goods_standard_content ul li input {
+  width: 128px;
+  padding-left: 0;
+  text-align: center;
+  height: 56px;
+  margin:0;
+  border:none;
+}
+#section .section_main .store_content .fill_information .goods_standard .goods_standard_details .goods_standard_content ul li p.title {
+  text-align: center;
+  color: #fff;
+  line-height: 28px;
+  height: 28px;
+  background-color: #99a1a7;
+  font-size: 14px;
+  padding: 0;
+  margin:0;
+}
+#section .section_main .store_content .fill_information .goods_standard .goods_standard_details .goods_standard_content ul li p.price{
+  padding:0;
+  margin:0;
+}
+#section .section_main .store_content .fill_information .goods_standard .goods_standard_details .goods_standard_content p span {
+  color: #f10180;
+}
+#section .section_main .store_content .fill_information .goods_standard .goods_standard_details .goods_standard_content p img {
+  cursor:pointer;
+}
+#section .section_main .store_content .fill_information .goods_standard .goods_standard_details .goods_standard_content p{
+  color: #646464;
+}
+/*设置商品授权码运费的方式*/
+#section .section_main .store_content .fill_information .goodsFare_try p.title {
+  font-size: 14px;
+  color: #323232;
+  padding-left: 33px;
+  padding-top: 20px;
+}
+#section .section_main .store_content .fill_information .goodsFare_try p.title span {
+  display: inline-block;
+  padding-right: 3px;
+  color: #f10180;
+  font-size: 16px;
+  font-weight: bold;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try {
+  overflow: hidden;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice {
+  font-size: 14px;
+  color: #f10180;
+  padding-left: 43px;
+  padding-top: 4px;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content p {
+  font-size: 14px;
+  color: #646464;
+  padding-top:5px;
+  padding-left:0;
+  margin:0;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content p span {
+  color: #f10180;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content .select_way {
+  width: 600px;
+  border: 1px solid #fce5ea;
+  background-color: #fffcfd;
+  padding: 15px;
+  margin-left: 26px;
+  font-size: 14px;
+  margin-top: 15px;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content .select_way h1 {
+  color: #323232;
+  background: url(../../images/merchant/sj_fbsy_icon_quan_default.png) left center no-repeat;
+  padding-left: 20px;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content .select_way h1 input {
+  width: 100px;
+  height: 28px;
+  border: 1px solid #969696;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  margin-top:0;
+}
+h1.chargeShipping{
+  padding-top:15px;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content .select_way .h1_active {
+  background: url(../../images/merchant/spot.png) left center no-repeat;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content .select_way .goods_noPost {
+  padding-top: 15px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content .select_way p {
+  color: #969696;
+  background: url(../../images/merchant/sj_fbsy_icon_quan_default.png) left center no-repeat;
+  padding: 0;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content .select_way p b {
+  color: #646464;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content .select_way p i {
+  display: inline-block;
+  font-style: normal;
+  padding: 10px 0 0 20px;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content .select_way .p_active {
+  background: url(../../images/merchant/spot.png) left center no-repeat;
+}
+#section .section_main .store_content .fill_information .goodsFare_try .fare_try .notice_content .select_way > span {
+  color: #969696;
+  display: inline-block;
+  margin: 7px 0 10px 40px;
+}
+
+
+.note .icon{
+  display:inline-block;
+  float:left;
+  margin-top:1px;
+  width: 18px !important ;
+  height: 18px !important ;
+}
+.note b{
+  margin-left:5px;
+}
+
+
+/* 本地上传图片 */
+
+
+.upload_image{
+  overflow:hidden;
+}
+.upload_image label {
+  padding-top: 45px ;
+}
+.upload_image_hint{
+  font-size: 12px;
+  color: #646464 !important ;
+  line-height:28px;
+}
+.upload_image_hint b{
+  color: #f10180;
+}
+.up_img{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 10px;
+  border: 1px solid #969696;
+  text-align: center;
+}
+
+.up_img input[type='file']{
+  width: 100px !important;
+  height: 100px !important;
+  margin:0 !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+
+}
+
+.up_img img.img{
+  margin-top: 0px;
+  border-radius: 5px;
+  width: 98px;
+  height: 98px;
+}
+
+.img_tips{
+  display:none;
+  font-size:16px;
+  vertical-align: bottom;
+
+}
+
+.goods_picture i.error{
+  display:inline-block !important;
+}
+
+.upload_image #picture_url_error{
+  padding-top:92px;
+}
+
+.icon-cuowu::before{
+  display:inline-block;
+  margin-right:5px;
+}
+
+.correct{
+  display:inline-block !important;
+}
+.trial_table_style{
+  text-align: center;
+  margin: 0 auto;
+  width: 92%;
+}
+.trial_table_style th{
+  text-align: center;
+  height: 30px;
+  color: black;
+}
+#section .section_main .store_content .fill_information .shop_information .commodity_information .trial_table_input{
+  border: none;
+  width: 100%;
+  margin: 5px 0;
+  text-align: center;
+}
+
+/* 花呗选项 */
+.is_huabei_checkbox{
+  color: #323232 !important;
+  font-size: 14px;
+}
+.is_huabei_checkbox > i{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../../images/merchant/checkbox_default.png) left center no-repeat;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.is_huabei_checkbox.actived > i {
+  background: url(../../images/merchant/checkbox.png) left center no-repeat;
+}
+
+

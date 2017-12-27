@@ -1,0 +1,596 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="yvZwrjIyj3" />
+    <meta name="360-site-verification" content="635129cfa0e819480156bfc33ce16a3b" />
+    <meta name="sogou_site_verification" content="fXrXuBQkI2"/>
+   
+
+    <title>发布试用</title>
+
+    <link rel="stylesheet" href="/css/merchant/left_nav.css">
+    <link rel="stylesheet" href="/css/merchant/store_manage.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" id="bootstrap">
+    <link rel="stylesheet" href="/css/plugins/dataTables/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <!--避免浏览器兼容性的js-->
+    <link rel="stylesheet" href="/css/merchant/header.css">
+
+    <link rel="stylesheet" href="/css/mall/footer.css">
+    <link rel="stylesheet" href="/css/mall/reset.css">
+    <!--<link rel="stylesheet" href="">-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/mall/html5.js"></script>
+    <script src="/js/mall/respond.min.js"></script>
+    <script src="/js/mall/selectivizr-min.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.10.2.js"></script>
+<!--	<script src="/js/WdatePicker.js"></script>-->
+    <script src="/js/common.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+
+<!-- Page-Level Plugin Scripts - Tables -->
+<!--<script src="js/plugins/dataTables/jquery.dataTables.js"></script>-->
+<!--<script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>-->
+    <script src="/js/merchant/merchant_common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+    
+<!--商城的头部-->
+<div class="header">
+    <!--顶部-->
+    <div class="top">
+        <div class="top_main">
+            <ul>
+                <li ><a href="/">返回首页</a></li>
+                <li><a href="/merchant_personal.html">欢迎您：<span>13510541770  <img src="/images/mall/nav_icon_tx_default.png" alt=""></span></a></li>                <li><a href="/login/logout">退出</a></li>
+                <li><a href="/mall/help_center/index.html">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--Logo和搜索框-->
+    <div class="search">
+        <div class="left" style="padding-top: 9px;">
+            <img class="logo" onclick="location.href='/'" src="/images/merchant/xqy_logo_default.png" alt="">
+            <span class="details_title">商家中心</span>
+        </div>
+
+      <!--<div class="advertisement right" >
+                   <a href="" target="_blank" title="">
+             <img style="margin-top:-3px;" src="images/merchant/adv4.png" alt="">
+         </a>
+        </div>-->
+
+    </div>
+    <div class="line"></div>
+</div>
+
+    <div class="left_nav">
+    <!-- 发布试用 -->
+    <div class="issue">
+        <a style=" cursor:pointer" onclick="issue_try()">发布试用</a>
+    </div>
+    <div class="title personal_center">
+        <a href="/merchant_personal.html">个人中心</a>
+    </div>
+    <div class="title store_manage">
+        <a href="/merchant_store.html">店铺管理</a>
+    </div>
+    <div class="title try_manage">
+        <a class="selected" href="javascript:void(0);">活动管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_activity_manage.html">试用管理</a></li>
+            <li><a href="/merchant_order_manage.html">订单管理</a></li>
+        </ul>
+    </div>
+    <div class="title account_information">
+        <a class="selected" href="javascript:void(0);">账号信息</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_basic_setup.html">基本设置</a></li>
+            <li><a href="/merchant_bankcard_manage.html">绑定银行卡</a></li>
+            <li><a href="/merchant_member_manage.html">会员管理</a></li>
+        </ul>
+    </div>
+    <div class="title fund_manage">
+        <a class="selected" href="javascript:void(0);">资金管理</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_deposit_recharge.html">我要充值</a></li>
+            <li><a href="/merchant_deposit_withdraw.html">押金提现</a></li>
+            <li><a href="/merchant_funds_record.html">资金记录</a></li>
+            <li><a href="/merchant_activity_subsidiary.html">活动明细</a></li>
+        </ul>
+    </div>
+    <div class="title invited_manage">
+        <a class="selected" href="javascript:void(0);">邀请返利</a>
+        <ul class="parent_ul">
+            <li><a href="/merchant_invite/friends_invited.html">好友邀请</a></li>
+            <li><a href="/merchant_invite/invited_reward.html">邀请奖励</a></li>
+        </ul>
+    </div>
+    <div class="title message_center">
+        <a id="message_num"  href="/merchant_message_center.html">消息中心</a>
+    </div>
+</div>
+
+<!--联系客服-->
+<!--<div class="contact_customerService">-->
+<!--    <div class="contact_wayContent">-->
+<!--        <div class="left contact_way">-->
+<!--            <div class="title">-->
+<!--                <p>在线客服</p>-->
+<!--            </div>-->
+<!--            <ul>-->
+<!--	    	    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852369353&site=qq&menu=yes" target="_blank">试客巴—阿育王</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506830&site=qq&menu=yes" target="_blank" >试客巴—张洁</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506831&site=qq&menu=yes" target="_blank">试客巴—大表哥</a></li>-->
+<!--                <li><a href="http://wpa.qq.com/msgrd?v=3&uin=2852506832&site=qq&menu=yes" target="_blank">试客巴—肖祥</a></li>-->
+<!--            </ul>-->
+<!--	 </div>-->
+<!--        <div class="right contact_wayBtn">-->
+<!--            <img id="customerService" src="../../images/lianxikefu/contact_bg_right_default.png" alt="">-->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--</div>-->
+
+<script src="//wp.qiye.qq.com/qidian/2852130118/cc918eff1c09f7ce9c9d5d3285818e2b" charset="utf-8"></script>
+
+<script>
+    (function() {
+        $('.title > a').on('click',function(){
+            var this_ul = $(this).parent().children('ul');
+
+            $(this).toggleClass('selected');
+            $(this).hasClass('selected')?this_ul.slideDown('fast'):this_ul.slideUp('fast');
+        })
+
+    })()
+    $(function(){
+
+        $('.contact_customerService').on('mouseover',function(){
+            $('.contact_way').show();
+        });
+        $('.contact_customerService').on('mouseout',function(){
+            $('.contact_way').hide();
+        });
+        $.ajax({
+            url : '/merchant_userapi/get_sideinfo',
+            data:{},
+            type : 'post',
+            dataType : 'json',
+            cache : false,
+            success : function (result){
+               // $("#act_num").text("试用管理");
+               // $("#order_num").text("订单管理("+result.order_count+")");
+                $("#message_num").text("消息中心("+result.mess_count+")");
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    });
+</script>    <div id="page-wrapper">
+
+   
+    <link rel="stylesheet" href="/css/merchant/reset_content.css">
+    <link rel="stylesheet" href="/css/merchant/modal_alert.css">
+    <link rel="stylesheet" href="/css/merchant/mustSee_modal.css">
+    <link rel="stylesheet" href="/css/merchant/issue_try/issue_try.css">
+
+<section id="section">
+    <div class="section_main">
+        <!--左侧导航-->
+        <aside class="left" id="left_nav"></aside>
+        <!--头部说明图片-->
+        <div  class="left"  style="width: 1040px;overflow: hidden;background-color: #ffffff;margin: 0 0 8px 10px;"><img src="/images/merchant/issue_try/release_header_show.png" alt="" /></div>
+        <!--右侧店铺管理-->
+        <div class="store_content left">
+            <h1 class="title">发布试用</h1>
+            <!--进度条-->
+<!--            <div class="progress_bar">-->
+<!--                <img src="/images/merchant/sj_fbsy_bg_jdt_01_default.png" alt="">-->
+<!--            </div>-->
+            <!--当店铺管理已经绑定了店铺--选择发布试用内容的样式-->
+            <div class="have_bindingShops">
+                <h2 class="title">1.选择店铺、确定平台</h2>
+                <h3 class="title">1.选择平台和店铺</h3>
+                <!--选择平台和店铺-->
+                <!--已绑定和未绑定店铺-->
+                <div class="bounded_and_unbounded">
+                    <!--已经绑定店铺——————选择店铺-->
+                    <div class="bounded_select_shop">
+                        <!--店铺类型淘宝-->
+                                                <div class="left shopType_taobao">
+                            <p><img src="/images/merchant/issue_try/release_icon_tb_default.png" alt=""></p>
+                            <p><b>淘宝</b></p>
+                                                                                                <div class="shop_name shop_name_active">
+                                                                        <div class="left shopName">
+                                            <p><b> 帮帮熊奥迪玩具店</b></p>
+                                            <p>来源：<span>淘宝</span></p>
+                                            <input type="hidden" class="shop_id" value="2102">
+                                            <input type="hidden" class="platform_id" value="1">
+                                        </div>
+                                        <p class="left select_btn">
+                                        </p>
+                                    </div>
+                                                                                                <div class="shop_name">
+                                                                        <div class="left shopName">
+                                            <p><b> 同步拼装玩具店</b></p>
+                                            <p>来源：<span>淘宝</span></p>
+                                            <input type="hidden" class="shop_id" value="2203">
+                                            <input type="hidden" class="platform_id" value="1">
+                                        </div>
+                                        <p class="left select_btn">
+                                        </p>
+                                    </div>
+                                                                                                <div class="shop_name">
+                                                                        <div class="left shopName">
+                                            <p><b> 小滑头益智玩具</b></p>
+                                            <p>来源：<span>淘宝</span></p>
+                                            <input type="hidden" class="shop_id" value="2304">
+                                            <input type="hidden" class="platform_id" value="1">
+                                        </div>
+                                        <p class="left select_btn">
+                                        </p>
+                                    </div>
+                                                    </div>
+                                                <!--店铺类型天猫-->
+                                            </div>
+                    <!--未绑定店铺——————选择店铺-->
+                                        <div class="unbounded_select_shop" style="display: none">
+                                            <p><img src="../../images/merchant/issue_try/release_icon_mark_default.png" alt=""></p>
+                        <p><b>您还未绑定过店铺</b></p>
+                        <p>请先去<a href="https://www.shike8888.com/merchant_store.html/index">店铺管理</a>进行店铺绑定！</p>
+                    </div>
+                </div>
+                <h3 class="title">2.选择试用类型</h3>
+                <div class="select_tryType">
+                    <div class="select_title">
+                        <a class="try a_active" data-type="1" href="javascript:void(0);"><span>高人气提升试用</span></a>
+                        <a data-type="2" class="try" href="javascript:void(0);"><span>高价值商品试用</span></a>                        <a class="try" data-type="3" href="javascript:void(0);"><span>商品综合控制试用</span></a>
+                        <!--<a class="try" data-type="5" href="javascript:void(0);"><span>竞品搜索打标试用</span></a>-->
+                        <a class="try" data-type="4" href="javascript:void(0);"><span>内容营销试用</span></a>                    </div>
+                    <div class="tryType_content">
+                        <!--高人气商品试用-->
+                        <div class="try_content highPopularity_try">
+                            <table>
+                                <tr>
+                                    <th>适合店铺类型</th>
+                                    <th>试用商品类型</th>
+                                    <th>建议投放份数</th>
+                                    <th>建议投放频率</th>
+                                    <th>建议发布时间</th>
+                                    <th>试用抽奖时间</th>
+                                </tr>
+                                <tr>
+                                    <td>所有类型店铺</td>
+                                    <td>所有商品</td>
+                                    <td>10-25件起</td>
+                                    <td>每款商品连续投放4-6次</td>
+                                    <td>新品上架后即可</td>
+                                    <td>试用发布后次日10点开奖</td>
+                                </tr>
+                            </table>
+                            <p>
+                                <span>试客申请流程：</span>
+                                试客当天申请，平台于第二天10点抽奖。提升关键词点击率、收藏加购、重复访问等店铺和商品基础权重，快速提升商品排名。
+                            </p>
+                            <p>
+                                <span>特点：</span>首日流量最大化并且按天递减，次日试客下单形成转化，依赖免费商品份数换取大量的店铺流量和宝贝人气。
+                            </p>
+                            <p>
+                                <span>优势：</span>新品快速打开单品展现关键词。
+                            </p>
+                        </div>
+                                                <!--高价值商品试用-->
+                        <div class="try_content highValue_try">
+                            <table>
+                                <tr>
+                                    <th>适合店铺类型</th>
+                                    <th>试用商品类型</th>
+                                    <th>建议投放份数</th>
+                                    <th>建议投放频率</th>
+                                    <th>建议发布时间</th>
+                                    <th>试用抽奖时间</th>
+                                </tr>
+                                <tr>
+                                    <td>所有类型店铺</td>
+                                    <td>商品价值高于500元</td>
+                                    <td>2-10件起</td>
+                                    <td>每款商品连续投放4-6次</td>
+                                    <td>淘宝在线即可</td>
+                                    <td>4天或6天展示期后开奖</td>
+                                </tr>
+                            </table>
+                            <p>
+                                <span>提升权重：</span>
+                                延长抽奖周期至4天或6天，吸引更多试客申请更有助于提升收藏、加购、重复访问等店铺和商品基础权重快速提升商品排名，<br/>
+                                <b> &nbsp; &nbsp; &nbsp; &nbsp;打开无线端展现</b>
+                            </p>
+                            <p>
+                                <span>试客申请流程：</span>
+                                试客申请需重复3天进店，完成浏览、收藏店铺 宝贝、加购、深度访问等操作后，才可获得抽奖资格。
+                            </p>
+                        </div>
+                                                <!--商品综合优化试用-->
+                        <div class="try_content highSynthesize_try">
+                            <table>
+                                <tr>
+                                    <th>适合店铺类型</th>
+                                    <th>试用商品类型</th>
+                                    <th>建议投放份数</th>
+                                    <th>建议投放频率</th>
+                                    <th>建议发布时间</th>
+                                    <th>试用抽奖时间</th>
+                                </tr>
+                                <tr>
+                                    <td>所有类型店铺</td>
+                                    <td>新品</td>
+                                    <td>10-25件起</td>
+                                    <td>每款商品连续投放4-6次</td>
+                                    <td>新品淘宝上架后即可</td>
+                                    <td>每天12、16、20点开奖</td>
+                                </tr>
+                            </table>
+                            <p><span>商家发布试用时间提醒：</span></p>
+                            <p>每日16:00前发布的试用活动审核通过后将于当天上线展示，并当天开奖，有试客来下单。</p>
+                            <p>每日16:00后发布的试用活动审核通过后将于次日上线展示，并当天开奖，有试客来下单。</p>
+                            <p><span>试用特点：</span></p>
+                            <p>拥有自定义的每日自定义转化率控制，平台将控制每日成功申请人数，当天分时间段开奖，并保证及时有节奏的成交转化，</p>
+                            <p>试客依然拥有1~3天进店浏览、收藏、加购等回访操作拥有中奖资格。</p>
+                            <!--<P>商家可以自定义每日转化率：平台将控制每日成功申请人数，当天开奖保证新任务上线第一天的转化率。</P>-->
+                            <!--<p>同时保证每日申请人数、宝贝店铺收藏数、流量将全面进入每日递增的健康状态，让你的新品打造速度更快更有效，成本更低！</p>-->
+<!--                            <p>试客申请流程：试客申请需分1-3天进店完成浏览、收藏店铺宝贝、加购等操作后才可获得抽奖资格。</p>-->
+                        </div>
+                        <!--竞品打标搜索试用-->
+                        <!--<div class="try_content highSynthesize_try">
+                            <table>
+                                <tr>
+                                    <th>适合店铺类型</th>
+                                    <th>试用商品类型</th>
+                                    <th>建议投放份数</th>
+                                    <th>建议投放频率</th>
+                                    <th>建议发布时间</th>
+                                    <th>试用抽奖时间</th>
+                                </tr>
+                                <tr>
+                                    <td>所有类型店铺</td>
+                                    <td>所有商品</td>
+                                    <td>10-25件起</td>
+                                    <td>每款商品连续投放4-6次</td>
+                                    <td>新品上架后即可</td>
+                                    <td>试用发布后次日10点开奖</td>
+                                </tr>
+                            </table>
+                            <p><span>试客申请流程：</span></p>
+                            <p>试客当天申请，平台第二天10点抽奖，提升关键词搜索量，快速提升商品关键词排名</p>
+                            <p><span>试用特点：</span></p>
+                            <P>试客打上标后进行关键词搜索进店下单，快速提升商品关键词排名</P>
+                        </div>-->
+                        <!--内容营销试用-->
+                        <div class="try_content highSynthesize_try">
+                            <table>
+                                <tr>
+                                    <th>适合店铺类型</th>
+                                    <th>试用商品类型</th>
+                                    <th>建议投放份数</th>
+                                    <th>建议投放频率</th>
+                                    <th>建议发布时间</th>
+                                    <th>试用抽奖时间</th>
+                                </tr>
+                                <tr>
+                                    <td>所有类型店铺</td>
+                                    <td>新品</td>
+                                    <td>10-20件起</td>
+                                    <td>每款商品连续投放4-6次</td>
+                                    <td>新品淘宝上架后即可</td>
+                                    <td>每天12、16、20点开奖</td>
+                                </tr>
+                            </table>
+                            <p><span>商家发布试用时间提醒：</span></p>
+                            <p>每日16:00前发布的试用活动审核通过后将于当天上线展示，并当天开奖，有试客来下单。</p>
+                            <p>每日16:00后发布的试用活动审核通过后将于次日上线展示，并当天开奖，有试客来下单。</p>
+                            <p><span>试用特点：</span></p>
+                            <P>试客将通过电商平台的内容入口，主动关注商品的营销内容，通过搜索和购买强化商家与用户的标签关系，从而商家可以在电商平台上面获得</P>
+                            <p>更多符合电商平台逻辑的推荐流量，抓住当下内容营销大趋势，获得电商平台上面自然增长的推广效果。</p>
+                            <!--                            <p>试客申请流程：试客申请需分1-3天进店完成浏览、收藏店铺宝贝、加购等操作后才可获得抽奖资格。</p>-->
+                        </div>
+                    </div>
+                </div>
+                <!--底部下一步按钮-->
+                <div class="nextStep_btn">
+                    <input onclick="next_step();" type="button" value="下一步"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--商家必看弹框-->
+<div class="merchant_mustSee_modal">
+    <div class="modal_box">
+        <div class="modal_content">
+            <h1>商家必读</h1>
+            <p>1、试用商品小于100元，必须全国包邮，新疆、西藏除外</p>
+            <p>2、活动过程中保证库存充足，不得随意修改宝贝价格</p>
+            <p>3、平台严禁任何形式的拍A发B、虚高价格、以次充好、少发、漏发行为</p>
+            <p>4、请商家自觉遵守，如有违反，平台将进行处罚，由此造成的任何损失由商家自行承担</p>
+            <p style="color: #f10180;">5、任务期间请关闭淘宝客、村淘、分享有赏等淘客活动，若因淘客活动引起的佣金支出由商家自己承担！</p>
+        </div>
+        <div class="modal_submit">
+            <input id="confirm"  disabled="disabled" type="button" value=""/>
+        </div>
+    </div>
+    <div class="mask_layer"></div>
+</div>
+
+<script>
+    var shop_id = 0;
+    var type = 0;
+    var platform_id = 1;
+    var status = 1;
+
+    $(function () {
+        var status = 1;
+
+        if(!status){
+            //进行弹框提示
+            $('.modal').myAlert();
+            $('.confirm').bind('click', function () {
+                location.href = '/merchant_personal';
+            });
+            $('.close').bind('click', function () {
+                location.href = '/merchant_personal';
+            })
+        }
+    })
+</script>
+<script src="/js/merchant/mustSee_modal.js"></script>
+<script src="/js/issue_try/issue_try.js"></script>
+<script>
+    $(function(){
+        $('.try_manage ul>li').find('a').eq(0).addClass('leftNav_active')
+        $('.shop_name').first().click();
+    })
+
+    $('.mask_layer').height(document.body.scrollHeight+200);
+    function next_step(){
+        var seller_id = 3166;
+        $('.try').each(function(i){
+            if($(this).hasClass('a_active')){
+                type = $(this).data('type');
+            }
+        });
+        var can_issue_content = 0;
+        if(type == 5){
+            /*$('.modal').myAlert("此功能正在开发中，敬请期待！");
+            return;*/
+        }
+        if(type == 4 && can_issue_content != 1){
+            $('.modal').myAlert("您暂无权限发布该类型试用，如需发布该类型试用，请联系客服：2852369353");
+            return;
+        }
+        if(shop_id == 0){
+            $('.modal').myAlert('请先绑定店铺后再来发布商品');
+            return;
+        }
+
+        if(!status){
+            var msg = '';
+            // 根据商家会员等级判断是否可以发布活动
+            $('.modal').myAlert(msg);
+            return;
+        }
+
+        $.ajax({
+            url : '/merchant_issue_try/insert_fake_activity',
+            data:{
+                shop_id:shop_id,
+                type:type
+            },
+            type : 'post',
+            cache : false,
+            success : function (data){
+                if(data == 2){
+                    $('.modal').myAlert('请先绑定店铺后再来发布商品');
+                    return;
+                } else {
+                    location.href = "/merchant_issue_try2?platform_id="+platform_id+"&seller_id="+seller_id+"&shop_id="+shop_id+"&type="+type;
+                }
+            },
+            error : function (XMLHttpRequest, textStatus){
+            }
+        })
+    }
+</script>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="modal" style="display:none">
+        <div class="modal_box" style="max-width: 500px">
+            <div class="modal_prompt">
+                <span>提示</span>
+                <a class="close" href="javascript:void(0);">
+                    <img src="/images/mall/sj_grzx_tc_off_default.png" alt="">
+                </a>
+            </div>
+            <div class="modal_content">
+                <p style="line-height: 40px;margin: 30px 20px 30px 20px;font-size: 16px ">提示的内容</p>
+            </div>
+            <div class="modal_submit">
+                <input class="confirm" type="button" value="确定"/>
+            </div>
+        </div>
+        <div class="mask_layer"></div>
+    </div>
+    
+<!--页面底部-->
+<footer id="foot">
+    <div class="footer">
+        <div class="foot_box">
+            <ul>
+                <li>关于试客巴</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>联系客服</li>
+                <li>|</li>
+                <li>商家入驻</li>
+                <li>|</li>
+                <li>手机试客巴</li>
+                <li>|</li>
+                <li>诚聘英才</li>
+                <li>|</li>
+                <li>服务条款</li>
+                <li>|</li>
+                <li>会员介绍</li>
+                <li>|</li>
+                <li>廉政举报</li>
+                <li>|</li>
+                <li>法律声明及隐私权政策</li>
+                <li>|</li>
+                <li>知识产权</li>
+            </ul>
+        </div>
+        <p>友情链接：云推购 亲宝网 拍鞋网</p>
+        <p> 浙ICP备 16023334号 浙ICP备 16023334号-2 &nbsp; Copyright&copy;2016 版权所有 SHIKE8888.COM</p>
+
+    </div>
+
+    <div style="display:none;">
+<!--        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261779774'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261779774' type='text/javascript'%3E%3C/script%3E"));</script>-->
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?71dc791067ee1397564f20591e0bf1e6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+    </div>
+</footer>
+</div>
+
+<script src="/js/mall/mask_layer.js"></script>
+
+</body>
+</html>

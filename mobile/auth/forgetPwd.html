@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes"><!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mui.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/mobile_reset.css?v=1502438181">
+    <link rel="stylesheet" href="/fonts/iconfont.css?v=1502438181">
+    <link rel="stylesheet" href="/staitc-h5-alicnd.shike8888.com/css/forgetpassword.css?v=1502438181">
+    <title>忘记密码</title>
+    <script>
+        (function () {
+            document.addEventListener('DOMContentLoaded', function () {
+                var html = document.documentElement;
+                var windowWidth = html.clientWidth;
+                html.style.fontSize = windowWidth / 7.5 + 'px';
+                // 等价于html.style.fontSize = windowWidth / 750 * 100 + 'px';
+            }, false);
+        })();
+
+        // 这个7.5就是根据设计稿的横向宽度来确定的，假如你的设计稿是640
+        // 那么 html.style.fontSize = windowWidth / 6.4 + 'px';
+    </script>
+</head>
+
+<body>
+    <div class="forgetpassword_box">
+        <p class="input_box">
+            <span class="TelNumber icon iconfont icon-zhuce_shoujihao"></span>
+            <input type="text" id="phone" placeholder="手机号码">
+        </p>
+        <p class="error" id="t_error"></p>
+        <p class="input_box">
+            <span class="TelNumber icon iconfont icon-zhuce_denglumima"></span>
+            <input type="password" id="login_pw" placeholder="登录密码">
+        </p>
+        <p class="error" id="p_error"></p>
+
+        <p class="input_box">
+             <span class=" icon iconfont icon-zhuce_querenmima"></span>
+            <input type="password" id="confirm_pw" placeholder="确认密码">
+        </p>
+        <p class="error" id="m_error"></p>
+        <p  class="verification_code input_box">
+            <span class="code icon iconfont icon-zhuce_yanzhengma"></span>
+            <input type="text" id="code" placeholder="验证码">
+            <input class="right" id="testGetCode" type="button" value="获取验证码">
+        </p>
+        <p class="error" id="c_error"></p>
+        <p class="confirm_btn">
+            <input id="submit" type="button" value="提交">
+        </p>
+       <p class="last">
+            <span class="left" id="register">新用户注册</span>
+            <span class="right" id="goLogin">立即登录</span>
+        </p>
+    </div>
+
+
+</body>
+<script> var _hmt = _hmt || [];(function() {var hm = document.createElement("script");  hm.src = "https://hm.baidu.com/hm.js?73046f18e9201a9fb38a6900a362aaab";  var s =document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s);})();</script>
+<script src="/js/jquery-1.10.2.min.js?v=1502438181"></script>
+<script src="/js/mui.min.js?v=1502438181"></script>
+<script src="/js/forgetPwd.js?v=1502438181"></script>
+</html>

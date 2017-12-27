@@ -1,0 +1,164 @@
+#section .section_main .activity_pannel {
+    width: 1040px;
+    margin-left: 10px;
+    padding: 30px;
+    background-color: #fff;
+    min-height: 555px;
+}
+
+
+
+/* 搜索框 */
+
+#section .section_main .activity_pannel .seachform {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#section .section_main .activity_pannel .seachform select[name="act_state"] {
+    width: 90px;
+    height: 34px;
+    line-height: 34px;
+    padding-left:2px;
+    border: 1px solid #f5f5f5;
+    margin-right:10px;
+}
+
+#section .section_main .activity_pannel .seachform li {
+    float: left;
+    height: 38px;
+    line-height: 38px;
+}
+
+#section .section_main .activity_pannel .seachform li span {
+    font-size: 15px;
+}
+
+#section .section_main .activity_pannel .seachform li input[type='text'] {
+    width: 200px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #f5f5f5;
+}
+
+#section .section_main .activity_pannel .seachform li input[type='button'] {
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 5px;
+    border: 1px solid #f10180;
+    background-color: #f10180;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+
+/* 活动栏 */
+
+.item {
+    margin-top: 30px;
+}
+
+.item em {
+    font-style: normal;
+}
+
+.item b {
+    color: #323232;
+}
+
+.item .activity_list_title {
+    line-height: 38px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+}
+
+.item .activity_list_title .state_ing {
+    margin-left: 10px;
+    color: #f10180;
+}
+
+.item .activity_list_title .state_over {
+    margin-left: 10px;
+    color: #f77413;
+}
+
+.item .activity_list_title .state::before {
+    margin-right: 4px;
+}
+
+.item .activity_list_title .act,
+.item .activity_list_title .activity_productName {
+    margin-left: 40px;
+    color: #646464;
+}
+
+.item .activity_list_title .goDetail {
+    color: #005ea7;
+    padding-right: 10px;
+}
+
+
+/* 活动详情 */
+
+.item .activity_list_info {
+    font-size: 14px;
+    border: 1px solid #f5f5f5;
+    padding: 28px 36px 28px 20px;
+}
+
+.item .activity_list_info .open_order_detail,
+.item .activity_list_info .return_money_detail {
+    font-size: 12px;
+}
+
+.item .activity_list_info .brief_info .brief_info_top > span {
+    margin-right: 20px;
+}
+
+.item .activity_list_info .brief_info_top {
+    margin-bottom: 15px;
+}
+
+.item .activity_list_info .brief_info_bottom .bzj {
+    margin-top: 10px;
+
+}
+
+.item .activity_list_info .brief_info_bottom .bzj >em{
+    border: 1px solid transparent;
+    padding: 2px 5px;
+    color: #fff;
+    border-radius: 10px;
+
+}
+
+.item .activity_list_info .brief_info_bottom .bzj_over{
+    background-color: #74e4ab;
+}
+
+.item .activity_list_info .brief_info_bottom .bzj_none{
+    background-color: #f10180;
+}
+
+.item .activity_list_info .total_info {
+    width: 200px;
+    border-left: 1px solid #f5f5f5;
+    padding-left: 31px;
+}
+
+.item .activity_list_info .total_info > p {
+    margin-bottom: 8px;
+}
+
+/*导出活动*/
+.export_activity{
+    padding: 30px 20px 0 60px;
+}
+.export_activity p{
+    font-size: 15px;
+    padding-bottom: 8px;
+    text-align: left;
+}

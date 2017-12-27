@@ -1,0 +1,190 @@
+.personal_active {
+  color: #f10180 !important;
+}
+#section .section_main .content .activity_manage {
+  background-color: #fff;
+  padding: 30px;
+}
+#section .section_main .content .activity_manage .order_status {
+  padding-top: 10px;
+}
+#section .section_main .content .activity_manage .order_status ul {
+  overflow: hidden;
+  height: 38px;
+  background-color: #f5f5f5;
+  width: 100%;
+  margin: 18px 0;
+}
+#section .section_main .content .activity_manage .order_status ul li {
+  float: left;
+  font-size: 14px;
+  padding-left: 18px;
+  line-height: 38px;
+}
+#section .section_main .content .activity_manage .order_status ul li > a span {
+  color: #f10180;
+}
+#section .section_main .content .activity_manage .order_status ul li > a:hover {
+  color: #f10180;
+}
+#section .section_main .content .activity_manage .order_status ul li > b {
+  font-weight: normal;
+  color: #969696;
+  margin-left: 16px;
+}
+
+
+
+/* 商铺订单类型 */
+#section .section_main .content .task_specification {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 10px;
+  padding-bottom: 50px;
+}
+
+.task_specification b{
+  color: #f10180;
+}
+
+.content .task_specification h2{
+  font-size:20px;
+  color:#323232;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+
+.content .task_list .task{
+  margin-top: 30px;
+}
+
+.content .task .task_title{
+  font-size: 16px;
+  color: #323232;
+  background: url(../images/line.png) left no-repeat;
+  padding-left: 25px;
+}
+
+
+
+.content .task .shop_list .shop{
+  width: 240px;
+  height: 82px;
+  border: 1px solid #f5f5f5;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-left: -1px;
+  padding: 15px;
+}
+
+.content .task .shop_list .shop[class*='active']:hover{
+  border: 1px solid #ffe3e6;
+  background-color: #fffcfc;
+  cursor: pointer;
+}
+
+.content .shop_list .shop .shop_name{
+  font-size: 14px;
+  color: #646464;
+  width:208px;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+.content .shop_list .shop .shop_name img{
+  width: 15px;
+  height: 15px;
+  float: right;
+}
+
+.content .shop_list .shop .shop_order{
+  font-size: 12px;
+  color: #969696;
+  margin-top: 15px;
+}
+
+
+
+/* 弹框 */
+.pay_now_modal,
+.payment_modal,
+.paymentFailure_modal {
+  display: none;
+}
+.pay_now_modal .modal_content,
+.payment_modal .modal_content,
+.paymentFailure_modal .modal_content {
+  text-align: center;
+}
+.pay_now_modal .modal_content p,
+.payment_modal .modal_content p,
+.paymentFailure_modal .modal_content p {
+  font-size: 16px;
+  padding-top: 50px;
+}
+.pay_now_modal .modal_content table,
+.payment_modal .modal_content table,
+.paymentFailure_modal .modal_content table {
+  margin: 20px 0 25px 130px;
+  width: 187px;
+}
+.pay_now_modal .modal_content table td,
+.payment_modal .modal_content table td,
+.paymentFailure_modal .modal_content table td {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c8c8c8;
+}
+.pay_now_modal .modal_content table td input,
+.payment_modal .modal_content table td input,
+.paymentFailure_modal .modal_content table td input {
+  width: 30px;
+  height: 30px;
+  padding-left: 12px;
+}
+.pay_now_modal .modal_content table td input:focus,
+.payment_modal .modal_content table td input:focus,
+.paymentFailure_modal .modal_content table td input:focus {
+  border: 1px solid #a6cef1;
+}
+.pay_now_modal .succeed_content,
+.payment_modal .succeed_content,
+.paymentFailure_modal .succeed_content {
+  padding-top: 24px;
+}
+.pay_now_modal .succeed_content p.payment_succeed,
+.payment_modal .succeed_content p.payment_succeed,
+.paymentFailure_modal .succeed_content p.payment_succeed {
+  color: #323232;
+  font-size: 16px;
+  padding: 15px 0 10px 0;
+}
+.pay_now_modal .succeed_content p,
+.payment_modal .succeed_content p,
+.paymentFailure_modal .succeed_content p {
+  font-size: 14px;
+}
+.pay_now_modal .modal_submit,
+.payment_modal .modal_submit,
+.paymentFailure_modal .modal_submit {
+  padding-top: 15px;
+}
+.pay_now_modal .modal_submit input,
+.payment_modal .modal_submit input,
+.paymentFailure_modal .modal_submit input {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #f10180;
+  border-radius: 5px;
+}
+.pay_now_modal .modal_submit input:nth-of-type(2),
+.payment_modal .modal_submit input:nth-of-type(2),
+.paymentFailure_modal .modal_submit input:nth-of-type(2) {
+  margin-left: 35px;
+}
+
